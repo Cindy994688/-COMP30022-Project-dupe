@@ -1,3 +1,7 @@
+// app.js is the file that is actually executed on the server.
+// All of the servers functionality is linked to this file
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');

@@ -1,0 +1,4 @@
+Views
+
+The views folder holds the HTML templates that the server compiles and sends to
+the client (the pc accessing the website)

@@ -1,0 +1,82 @@
+Routes
+
+The routes folder holds the code that handles HTTP requests from the client (the pc accessing the website).
+To do this the routes use an express router object to handle the complexities.
+
+HTTP Request:
+A http request is an object sent by the client to the server to ask the server to perform a task.
+The object that is sent contains a name for the request and can also have data from the client.
+You already use requests all the time, most of the time when you click a link a request is sent.
+For example, typing https://www.google.com/ into your address bar sends a GET request with the name ""
+to the google servers, which responds to the request by sending back the html and js for the google home page.
+
+Here is another example of a request
+https://www.abc.net.au/news/
+
+This is made up of two parts, plus the data that accompanies it
+
+    The address          Request name
+https://www.abc.net.au      /news/
+
+Looking at a request like this from a browser we can only see the name of the request,
+Weather it is a GET or POST or ect is unknown as well as the data with the request.
+
+There are a few types of html request, but the basic ones are GET and POST
+
+GET: A get request asks the server for data, very common and can send some data, but not securely
+POST: Post requests send data, this can be to create or update data in the database, or perform a
+  task like securely logging in.
+
+
+Expect to see code that looks like this in this folder:
+
+######################################################
+
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+module.exports = router;
+
+######################################################
+
+This example is made of some simple working parts
+
+Require:
+
+var express = require('express');
+var router = express.Router();
+
+The request function is like import in python, it allows you to import modules, like mongo db
+and to connect different parts of the project together.
+Here we import the express module and then create a router object.
+
+Handling the request:
+
+router.get('/', function(req, res) {
+  res.render('index', { title: 'Express' });
+});
+
+This is where we tell our server to listen out for a specific request, and tell it
+what to do when it encounters it.
+
+The router.get() function takes two arguments and handles GET requests while router.post()
+handles POST requests
+The first argument is the name of the request, a string, eg "/", "/login" ect
+The second argument is called a callback, this is a function that is executed when
+the server receives a get request with the name specified in the first argument. In
+this case the callback uses ejs to render and send the index page to the client.
+
+NOTE: I believe we will replace ejs with react
+
+The callback is always passed req and res which are supplied by the express module.
+
+req: req holds details about the request the server has received. This includes cookie data,
+and in a post request it also holds the data sent from the client.
+
+res: The res object is used to compose the servers response to the client. The client
+will just keep waiting until it has a response to its 
