@@ -1,0 +1,9 @@
+Root
+
+This is the root directory of the application.
+
+.gitignore: list of files not to upload to github. Important not to upload the node_modules
+package.json: A list of the npm packages that are used in this project
+app.js: The main file for the project
+
+package-lock.json, README.md: idk ignore
