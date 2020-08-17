@@ -79,4 +79,12 @@ req: req holds details about the request the server has received. This includes 
 and in a post request it also holds the data sent from the client.
 
 res: The res object is used to compose the servers response to the client. The client
-will just keep waiting until it has a response to its 
+will just keep waiting until it has a response to its
+
+
+Making the code avaliable:
+
+module.exports = router;
+
+This exposes the router so it can be accessed from other code. We have to do this to
+link to app.js via the require() function
