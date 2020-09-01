@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
+import Profile from './Profile.js'
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Link to="/users">users</Link> is a link i guess \o/
         </p>
       </div>
+      <Profile />
     </div>
   )
 }
