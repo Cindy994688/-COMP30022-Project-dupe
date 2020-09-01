@@ -1,0 +1,20 @@
+.banner {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 35px;
+    border: 2px double white;
+    text-align: center;
+    background-image: url('./imgbanner.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*height: 500px*/
+    padding: 5em inherit;
+  }
+  
+  .title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    size: 150px;
+    text-align: center;
+  }

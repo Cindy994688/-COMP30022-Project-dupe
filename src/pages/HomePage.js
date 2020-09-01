@@ -1,13 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import './pages.css'
 
 export default function HomePage() {
   return (
-    <div className="container">
-      <h1>Home Page</h1>
-      <p>
+    <div>
+      <Jumbotron className = "banner">
+       <div className="title"><h1>EPORTFOLIO WOOT WOOT</h1></div>
+       <p> really inspiring tagline </p>
+      </Jumbotron>
+
+      <div className="container">
+        <p>
         <Link to="/users">users</Link> is a link i guess \o/
-      </p>
+        </p>
+      </div>
     </div>
   )
 }

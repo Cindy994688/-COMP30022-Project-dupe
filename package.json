@@ -10,7 +10,7 @@
     "client-install": "npm install --prefix comp30022-project",
     "client": "npm start --prefix comp30022-project",
     "dev": "concurrently \"npm run server\" \"npm run comp30022-project\""
-    },
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -25,6 +25,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
