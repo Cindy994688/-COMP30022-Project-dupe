@@ -5,12 +5,12 @@
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "react-scripts start",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm start --prefix comp30022-project",
+    "dev": "concurrently \"npm run server\" \"npm run comp30022-project\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix comp30022-project && npm run build --prefix comp30022-project"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
