@@ -6,9 +6,9 @@ export default function Profile() {
         <View style={styles.MainContainer}>
         <Image 
             source={require('./imgbanner.jpg')}  
-            style={{width: 400, height: 400, borderRadius: 400/ 2}} 
+            style={{width: 300, height: 300, borderRadius: 300/ 2}} 
         />
-        <Text style={styles.text}>Client name (oops this is too big)</Text>
+        <Text style={styles.text}>CLIENT NAME</Text>
       </View>
     )
   }
@@ -17,13 +17,16 @@ export default function Profile() {
     MainContainer: {
       flex: 1,
       justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#e0dcdc',
+      alignItems: 'left',
+      padding: "50px"
     },
     text: {
       marginTop: 30,
       fontSize: 40,
-      color: '#0250a3',
+      color: 'black',
       fontWeight: 'bold',
+      alignItems: 'center',
+      padding: "10px",
+      display: 'inline-block'
     },
   });

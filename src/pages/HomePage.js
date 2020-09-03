@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
 import Profile from './Profile.js'
+import Biotext from './Biotext.js'
 
 export default function HomePage() {
   return (
@@ -17,7 +18,23 @@ export default function HomePage() {
         <Link to="/users">users</Link> is a link i guess \o/
         </p>
       </div>
-      <Profile />
+      {/*first person*/}
+      <div style={{display: 'inline-block'}}>
+        <Profile />
+        </div>
+      <div style={{display: 'inline-block'}}>
+        <Biotext />
+        </div>
+
+        {/*second person*/}
+        <div style={{display: 'inline-block'}}>
+        <Biotext />
+        </div>
+      <div style={{display: 'inline-block'}}>
+        
+        <Profile />
+        </div>
+      
     </div>
   )
 }
