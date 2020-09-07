@@ -6,7 +6,7 @@ export default function Profile() {
         <View style={styles.MainContainer}>
         <Image 
             source={require('./imgbanner.jpg')}  
-            style={{width: 300, height: 300, borderRadius: 300/ 2}} 
+            style={{width: 300, height: 300, borderRadius: 300/ 2}}
         />
         <Text style={styles.text}>CLIENT NAME</Text>
       </View>

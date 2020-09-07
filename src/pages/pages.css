@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     /*height: 500px*/
-    padding: 5em inherit;
+    padding: 10em inherit;
   }
   
   .title {
@@ -17,4 +17,16 @@
     color: white;
     size: 150px;
     text-align: center;
+  }
+
+  .space {
+    padding: 10em inherit;
+  }
+
+  .intro {
+    padding: 5em;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
   }
