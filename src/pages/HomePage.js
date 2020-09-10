@@ -7,6 +7,9 @@ import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
 import Card from '../../src/components/Card.js'
+//import {clientBanner} from './clientbanner.jpg'
+//const clientBanner = "../../src/pages/clientbanner.jpg";
+
 
 class HomePage extends Component {
   state = {
@@ -23,8 +26,8 @@ render () {
     return (
       <div>
         <Jumbotron className = "banner">
-        <div className="title"><h1>EPORTFOLIO WOOT WOOT</h1></div>
-        <p> really inspiring tagline </p>
+        <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
+        <p> really awesome people </p>
         </Jumbotron>
 
         <div>
@@ -35,17 +38,16 @@ render () {
           <Card />
           <Card />
         </Carousel>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
         </div>
 
         <div className="intro">
-        <p> this is just a block of text. lorem ipsum i guess. or I can just write this stuff myself.
-          The french word for 'bird' is "oiseau". it kind of horrifies me that someone managed to fit
-          ALL THE VOWELS in such a short amount of space. wtf. truly frightening. There's also "oeuf" 
-          which is egg i think. Less horrifying but still pretty bad. Wow. Also i love names like
-          "Saoirse" and "Annaleise" bc that vowel ratio. Truly superb. The enemy of my enemy is not 
-          my friend. They're literally just the enemy of my enemy. Just like no news != good news.
-          no news == no news. end of story. 
+        <p> Hi, this is CRXMM, we are a team of
+           5 from the University of Melbourne. 
+          While we have different backgrounds, 
+          different passions, and are even in 
+          different timezones, we are in unity. 
+          We believe that as individuals we are 
+          strong, but together we are incredible. 
         </p>
         </div>
 
@@ -57,19 +59,19 @@ render () {
         </div>
         {/*first person*/}
         <div style={{display: 'inline-block'}}>
-          <Profile />
+          <Profile img = {require("./chaowei.jpg")} clientname = "Chao-Wei Chiang" />
           </div>
         <div style={{display: 'inline-block'}}>
-          <Biotext />
+          <Biotext clientdescr = "He is interested in different kinds of programming languages and has created different projects. Upon working in the field of automation, he realized the power of information technologies and believed it will make the world better. Later he determined himself to acquire advanced knowledge. Currently he is a student in the master of IT degree."/>
           </div>
 
           {/*second person*/}
           <div style={{display: 'inline-block'}}>
-          <Biotext />
+          <Biotext clientdescr = "Postgraduate student in cyber security. Interested in pentesting."/>
           </div>
         <div style={{display: 'inline-block'}}>
           
-          <Profile />
+        <Profile img = {require("./ron.jpg")} clientname = "Ron Chiu" />
           </div>
         
       </div>

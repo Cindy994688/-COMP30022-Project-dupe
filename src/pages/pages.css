@@ -4,19 +4,22 @@
     font-size: 35px;
     border: 2px double white;
     text-align: center;
-    background-image: url('./imgbanner.jpg');
+    background-image: url('./clientbanner.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*height: 500px*/
+    text-shadow: 2px 2px black;
+    height: 500px;
     padding: 10em inherit;
   }
   
   .title {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
+    font-size: 40px;
     size: 150px;
     text-align: center;
+    text-shadow: 5px 5px black;
   }
 
   .space {
@@ -28,5 +31,5 @@
     text-align: center;
     margin-left: 15px;
     margin-right: 15px;
-    font-size: 20px;
+    font-size: 30px;
   }

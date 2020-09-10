@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Image, Text } from 'react-native';
 
-export default function Profile() {
+
+
+
+class Profile extends React.Component {
+
+  render ( props ) {
     return (
         <View style={styles.MainContainer}>
         <Image 
-            source={require('./imgbanner.jpg')}  
+            //source={require('./imgbanner.jpg')}  
+            source={this.props.img}  
             style={{width: 300, height: 300, borderRadius: 300/ 2}}
         />
-        <Text style={styles.text}>CLIENT NAME</Text>
+        <Text style={styles.text}>{this.props.clientname}</Text>
       </View>
     )
   }
+}
 
   const styles = StyleSheet.create({
     MainContainer: {
@@ -30,3 +37,5 @@ export default function Profile() {
       display: 'inline-block'
     },
   });
+
+  export default Profile;
