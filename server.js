@@ -1,7 +1,6 @@
 // app.js is the file that is actually executed on the server.
 // All of the servers functionality is linked to this file
 
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -12,6 +11,10 @@ const PORT = process.env.PORT || 5000;
 var app = express();
 
 var tryConnect = require('./routes/connected');
+var userInfo = require('./routes/users');
+var imageMd5 = require('./routes/image');
+
+const connectDB = require('./config/db');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,6 +27,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', tryConnect);
+app.use('/user/:name', userInfo);
+app.use('/image/:name', imageMd5);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -40,6 +45,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+connectDB();
 
 // Lol
 app.listen(PORT, function(){
