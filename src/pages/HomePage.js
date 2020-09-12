@@ -5,8 +5,10 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import Carousel from 'react-elastic-carousel'
 import './pages.css'
 import Profile from './Profile.js'
+import UserInfo from './userInfo.js'
 import Biotext from './Biotext.js'
 import Card from '../../src/components/Card.js'
+import axios from 'axios'
 //import {clientBanner} from './clientbanner.jpg'
 //const clientBanner = "../../src/pages/clientbanner.jpg";
 
@@ -21,6 +23,7 @@ class HomePage extends Component {
       {id: 5, title: 'item #5'}
     ]
   }
+
 render () {
   const { items } = this.state;
     return (
@@ -32,7 +35,7 @@ render () {
 
         <div>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-       
+
         <Carousel className = "space">
           <Card />
           <Card />
@@ -42,12 +45,12 @@ render () {
 
         <div className="intro">
         <p> Hi, this is CRXMM, we are a team of
-           5 from the University of Melbourne. 
-          While we have different backgrounds, 
-          different passions, and are even in 
-          different timezones, we are in unity. 
-          We believe that as individuals we are 
-          strong, but together we are incredible. 
+           5 from the University of Melbourne.
+          While we have different backgrounds,
+          different passions, and are even in
+          different timezones, we are in unity.
+          We believe that as individuals we are
+          strong, but together we are incredible.
         </p>
         </div>
 
@@ -67,13 +70,20 @@ render () {
 
           {/*second person*/}
           <div style={{display: 'inline-block'}}>
+
+          <UserInfo clientname = "Medusa" type = "name"/>
+          <Profile img = "/image/robot.jpg" clientname = "Robot" />
+          <UserInfo clientname = "Medusa" type = "description"/>
+          <UserInfo clientname = "Medusa" type = "email"/>
+          <UserInfo clientname = "Medusa" type = "skills"/>
+
           <Biotext clientdescr = "Postgraduate student in cyber security. Interested in pentesting."/>
           </div>
         <div style={{display: 'inline-block'}}>
-          
+
         <Profile img = {require("./ron.jpg")} clientname = "Ron Chiu" />
           </div>
-        
+
       </div>
     )
   }
