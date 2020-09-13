@@ -60,16 +60,8 @@ render () {
           <Link to="/users">users</Link> is a link i guess \o/
           </p>
         </div>
-        {/*first person*/}
+        {/*medusa*/}
         <div style={{display: 'inline-block'}}>
-          <Profile img = {require("./chaowei.jpg")} clientname = "Chao-Wei Chiang" />
-          </div>
-        <div style={{display: 'inline-block'}}>
-          <Biotext clientdescr = "He is interested in different kinds of programming languages and has created different projects. Upon working in the field of automation, he realized the power of information technologies and believed it will make the world better. Later he determined himself to acquire advanced knowledge. Currently he is a student in the master of IT degree."/>
-          </div>
-
-          {/*second person*/}
-          <div style={{display: 'inline-block'}}>
 
           <UserInfo clientname = "Medusa" type = "name"/>
           <Profile img = "/image/robot.jpg" clientname = "Robot" />
@@ -77,12 +69,49 @@ render () {
           <UserInfo clientname = "Medusa" type = "email"/>
           <UserInfo clientname = "Medusa" type = "skills"/>
 
-          <Biotext clientdescr = "Postgraduate student in cyber security. Interested in pentesting."/>
+        </div>
+        {/*first person*/}
+        <div style={{display: 'inline-block'}}>
+          <Profile img = {require("./chaowei.jpg")} clientname = "Chao-Wei Chiang" />
           </div>
         <div style={{display: 'inline-block'}}>
-
-        <Profile img = {require("./ron.jpg")} clientname = "Ron Chiu" />
+          <Biotext className = "descr" clientdescr = "He is interested in different kinds of programming languages and has created different projects. Upon working in the field of automation, he realized the power of information technologies and believed it will make the world better. Later he determined himself to acquire advanced knowledge. Currently he is a student in the master of IT degree."/>
           </div>
+
+        {/*second person*/}
+          <div style={{display: 'inline-block'}}>
+            <Biotext clientdescr = "Postgraduate student in cyber security. Interested in pentesting."/>
+          </div>
+          <div style={{display: 'inline-block'}}>
+
+            <Profile img = {require("./ron.jpg")} clientname = "Ron Chiu" />
+          </div>
+
+        {/*third person*/}
+        <div style={{display: 'inline-block'}}>
+          <Profile img = {require("./mustafa.jpg")} clientname = "Mustafa Awni" />
+        </div>
+
+        <div style={{display: 'inline-block'}}>
+          <Biotext clientdescr = "Postgraduate engineering student and avid tennis player. Passionate about all things STEM!"/>
+        </div>
+        
+        {/*fourth person*/}
+        <div style={{display: 'inline-block'}}>
+            <Biotext clientdescr = "Postgraduate student in IT. Have blockchain research experience."/>
+        </div>
+        <div style={{display: 'inline-block'}}>
+            <Profile img = {require("./xuhan.jpg")} clientname = "Xu Han" />
+        </div>
+          
+        {/*fifth person*/}
+        <div style={{display: 'inline-block'}}>
+          <Profile img = {require("./mengyan.jpg")} clientname = "Mengyan Hou" />
+        </div>
+
+        <div style={{display: 'inline-block'}}>
+          <Biotext clientdescr = "A Penultimate year student majoring IT, specialized in Human-computer interaction."/>
+        </div>
 
       </div>
     )

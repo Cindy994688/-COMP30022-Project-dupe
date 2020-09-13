@@ -22,10 +22,11 @@ class Biotext extends React.Component {
       padding: "50px"
     },
     text2: {
-      marginTop: 30,
+      //marginTop: 50,
       fontSize: 20,
       color: 'black',
       alignItems: 'center',
+
     },
   });
 
