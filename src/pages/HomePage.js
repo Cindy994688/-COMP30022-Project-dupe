@@ -82,14 +82,14 @@ render () {
         <div className="dividerTitle"><h1>OUR PROJECT</h1></div>
         </Jumbotron>
         <p>here is where we will showcase your main project (the hair salon site)</p>
-        
+
         <Jumbotron className = "divider">
         <div className="dividerTitle"><h1>WHO WE ARE</h1></div>
         </Jumbotron>
 
         {/*<div className="container">
           <p>
-          <Link to="/users">users</Link> is a link i guess \o/
+          <Link to="/users">users</Link> is a link i guess \o/ yay
           </p>
         </div>*/}
 
