@@ -2,6 +2,7 @@
   "name": "comp30022-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "scripts": {
     "start": "concurrently \"node server.js\" \"react-scripts start\"",
     "build": "react-scripts build",
