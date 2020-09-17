@@ -8,39 +8,63 @@ import Profile from './Profile.js'
 import UserInfo from './userInfo.js'
 import Biotext from './Biotext.js'
 import Card from '../../src/components/Card.js'
-import axios from 'axios'
+import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
+//import axios from 'axios'
 //import {clientBanner} from './clientbanner.jpg'
 //const clientBanner = "../../src/pages/clientbanner.jpg";
 
 
 class HomePage extends Component {
   state = {
-    items: [
-      {id: 1, title: 'item #1'},
-      {id: 2, title: 'item #2'},
-      {id: 3, title: 'item #3'},
-      {id: 4, title: 'item #4'},
-      {id: 5, title: 'item #5'}
-    ]
+    galleryItems: [
+    <img src={require("./chaowei2.jpg")} alt="chaowei"/>,
+    <img src={require("./mengyan2.jpg")} alt="mengyan"/>, 
+    <img src={require("./mustafa2.jpg")} alt="mustafa"/>,
+    <img src={require("./ron2.jpg")} alt="ron"/>, 
+    <img src={require("./xuhan2.jpg")} alt="xuhan"/>
+     ].map((i) => <h2 key={i}>{i}</h2>),
+  }
+
+  responsive = {
+    0: { items: 1 },
+    1024: { items: 3 },
+  }
+  
+  stagePadding =   {
+    paddingLeft: 500,     // in pixels
+    paddingRight: 25
   }
 
 render () {
-  const { items } = this.state;
     return (
       <div>
+
         <Jumbotron className = "banner">
-        <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
-        <p> really awesome people </p>
+          <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
+          <p> really awesome people </p>
         </Jumbotron>
 
         <div>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <p>&nbsp;&nbsp;</p>
+        </div>
 
-        <Carousel className = "space">
-          <Card />
-          <Card />
-          <Card />
-        </Carousel>
+        <div className = "alice">
+        <AliceCarousel className = "alice"
+        items={this.state.galleryItems}
+        responsive={this.responsive}
+        controlsStrategy="responsive"
+        autoPlayInterval={2000}
+        autoPlayDirection="ltr"
+        autoPlay={true}
+        fadeOutAnimation={true}
+        mouseTrackingEnabled={true}
+        playButtonEnabled={true}
+        disableAutoPlayOnAction={true}
+        onSlideChange={this.onSlideChange}
+        onSlideChanged={this.onSlideChanged}
+        buttonsDisabled={true}
+        />
         </div>
 
         <div className="intro">
@@ -54,14 +78,23 @@ render () {
         </p>
         </div>
 
+        <Jumbotron className = "divider">
+        <div className="dividerTitle"><h1>OUR PROJECT</h1></div>
+        </Jumbotron>
+        <p>here is where we will showcase your main project (the hair salon site)</p>
+        
+        <Jumbotron className = "divider">
+        <div className="dividerTitle"><h1>WHO WE ARE</h1></div>
+        </Jumbotron>
 
-        <div className="container">
+        {/*<div className="container">
           <p>
           <Link to="/users">users</Link> is a link i guess \o/
           </p>
-        </div>
+        </div>*/}
+
         {/*medusa*/}
-        <div style={{display: 'inline-block'}}>
+        {/*<div style={{display: 'inline-block'}}>
 
           <UserInfo clientname = "Medusa" type = "name"/>
           <Profile img = "/image/robot.jpg" clientname = "Robot" />
@@ -69,7 +102,7 @@ render () {
           <UserInfo clientname = "Medusa" type = "email"/>
           <UserInfo clientname = "Medusa" type = "skills"/>
 
-        </div>
+      </div>*/}
         {/*first person*/}
         <div style={{display: 'inline-block'}}>
           <Profile img = {require("./chaowei.jpg")} clientname = "Chao-Wei Chiang" />
