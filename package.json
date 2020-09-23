@@ -5,8 +5,8 @@
   "homepage": ".",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "cd frontEnd && npm run build",
-    "local": "concurrently \"npm run server\" \"npm run comp30022-project\""
+    "heroku-postbuild": "cd react && npm run build",
+    "local": "concurrently \"npm run server\" \"npm run comp30022-project -prefix react\""
   },
   "proxy": "http://localhost:5000/",
   "dependencies": {
