@@ -4,13 +4,9 @@
   "private": true,
   "homepage": ".",
   "scripts": {
-    "start": "concurrently \"node server.js\" \"react-scripts start\"",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "test": "react-scripts test",
-    "client-install": "npm install --prefix comp30022-project",
-    "client": "npm start --prefix comp30022-project",
-    "dev": "concurrently \"npm run server\" \"npm run comp30022-project\""
+    "start": "node server.js",
+    "heroku-postbuild": "cd frontEnd && npm run build"
+    "local": "concurrently \"npm run server\" \"npm run comp30022-project\""
   },
   "proxy": "http://localhost:5000/",
   "dependencies": {

@@ -1,0 +1,72 @@
+.banner {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 35px;
+    border: 2px double white;
+    text-align: center;
+    background-image: url('./clientbanner.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px black;
+    height: 500px;
+    padding: 10em inherit;
+  }
+  
+  .title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 40px;
+    size: 150px;
+    text-align: center;
+    text-shadow: 5px 5px black;
+  }
+
+  .space {
+    padding: 10em inherit;
+  }
+
+  .intro {
+    padding: 25px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 30px;
+  }
+
+  .descr {
+    width: 800px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .alice {
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: auto;
+  }
+
+  .divider {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 25px;
+    border: 2px double black;
+    text-align: center;
+    background-color: slategrey;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px black;
+    height: 100px;
+    padding: 10em inherit;
+  }
+
+  .dividerTitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+    size: 100px;
+    text-align: center;
+    text-shadow: 5px 5px black;
+  }

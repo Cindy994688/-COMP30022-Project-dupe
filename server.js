@@ -6,6 +6,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var IS_HEROKU = process.env.IS_HEROKU || 0
 
 const PORT = process.env.PORT || 5000;
 var app = express();
@@ -24,11 +25,21 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'react/build')));
 
 app.use('/', tryConnect);
 app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
+
+if (IS_HEROKU){
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/react/build/index.html'));
+  });
+} else {
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/react/src/index.html'));
+  });
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
