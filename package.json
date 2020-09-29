@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "heroku-postbuild": "cd react && npm run build",
-    "local": "concurrently \"npm run server\" \"npm run comp30022-project -prefix react\""
+    "local": "concurrently \"npm start\" \"npm start -prefix react\""
   },
   "proxy": "http://localhost:5000/",
   "dependencies": {
