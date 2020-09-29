@@ -4,7 +4,7 @@
     font-size: 35px;
     border: 2px double white;
     text-align: center;
-    background-image: "/image/UniEntrance.jpg";
+    background-image: url('clientbanner.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
