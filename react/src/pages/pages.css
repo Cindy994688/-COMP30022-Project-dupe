@@ -12,7 +12,23 @@
     height: 500px;
     padding: 10em inherit;
   }
-  
+
+.punk {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+  }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  border: 2px dashed rgba(114, 186, 94, 0.35);
+  height: 400px;
+  background: rgba(114, 186, 94, 0.05);
+}
+
   .title {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;

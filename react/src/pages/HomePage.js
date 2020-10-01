@@ -59,9 +59,15 @@ render () {
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
           <p> really awesome people </p>
         </Jumbotron>
+
         <Sticky>{() => <h1 style={this.style}>Produced by Potato Powered Portfolios</h1>}</Sticky>
 
-        
+
+        <div className="punk">
+          <Image  source="/image/potato.jpg" style={{width: 100, height: 100, borderRadius: 100/ 2}}/>
+        </div>
+
+
 
 
 
