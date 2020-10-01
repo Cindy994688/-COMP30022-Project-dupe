@@ -5,8 +5,11 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
+import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
+import { StickyContainer, Sticky } from 'react-sticky';
+import { Image } from 'react-native';
 //import axios from 'axios'
 //import {clientBanner} from './clientbanner.jpg'
 //const clientBanner = "../../src/pages/clientbanner.jpg";
@@ -15,11 +18,11 @@ import 'react-alice-carousel/lib/alice-carousel.css'
 class HomePage extends Component {
   state = {
     galleryItems: [
-    <img src={require("./chaowei2.jpg")} alt="chaowei"/>,
-    <img src={require("./mengyan2.jpg")} alt="mengyan"/>, 
-    <img src={require("./mustafa2.jpg")} alt="mustafa"/>,
-    <img src={require("./ron2.jpg")} alt="ron"/>, 
-    <img src={require("./xuhan2.jpg")} alt="xuhan"/>
+    <img src="/image/ChaoWei.jpg" alt="chaowei"/>,
+    <img src="/image/Mengyan.jpg" alt="mengyan"/>,
+    <img src="/image/Mustafa.jpg" alt="mustafa"/>,
+    <img src="/image/Ron.jpg" alt="ron"/>,
+    <img src="/image/Xu.jpg" alt="xuhan"/>
      ].map((i) => <h2 key={i}>{i}</h2>),
   }
 
@@ -27,20 +30,40 @@ class HomePage extends Component {
     0: { items: 1 },
     1024: { items: 3 },
   }
-  
+
   stagePadding =   {
     paddingLeft: 500,     // in pixels
     paddingRight: 25
   }
 
+  style = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    zIndex: 10,
+    distanceFromBottom: 0,
+    marginLeft:1000,
+    fontFamily: 'Arial',
+    fontSize: 25,
+    align: 'right',
+    position: 'fixed',
+    color: '#8B008B'
+  }
+
+
 render () {
     return (
       <div>
+      <StickyContainer>
 
         <Jumbotron className = "banner">
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
           <p> really awesome people </p>
         </Jumbotron>
+        <Sticky>{() => <h1 style={this.style}>Produced by Potato Powered Portfolios</h1>}</Sticky>
+
+        
+
+
 
         <div>
           <p>&nbsp;&nbsp;</p>
@@ -100,49 +123,54 @@ render () {
           <UserInfo clientname = "Medusa" type = "skills"/>
 
       </div>*/}
+
         {/*first person*/}
         <div style={{display: 'inline-block'}}>
-          <Profile img = {require("./chaowei.jpg")} clientname = "Chao-Wei Chiang" />
+          <Profile img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
           </div>
         <div style={{display: 'inline-block'}}>
-          <Biotext className = "descr" clientdescr = "He is interested in different kinds of programming languages and has created different projects. Upon working in the field of automation, he realized the power of information technologies and believed it will make the world better. Later he determined himself to acquire advanced knowledge. Currently he is a student in the master of IT degree."/>
+          <UserInfo clientname = "Chao-Wei" type = "description"/>
           </div>
+
 
         {/*second person*/}
           <div style={{display: 'inline-block'}}>
-            <Biotext clientdescr = "Postgraduate student in cyber security. Interested in pentesting."/>
+            <UserInfo clientname = "Ron" type = "description"/>
           </div>
           <div style={{display: 'inline-block'}}>
 
-            <Profile img = {require("./ron.jpg")} clientname = "Ron Chiu" />
+            <Profile img = "/image/Ron.jpg" clientname = "Ron Chui" />
           </div>
+
 
         {/*third person*/}
         <div style={{display: 'inline-block'}}>
-          <Profile img = {require("./mustafa.jpg")} clientname = "Mustafa Awni" />
+          <Profile img = "/image/Mustafa.jpg" clientname = "Mustafa Awni" />
         </div>
 
         <div style={{display: 'inline-block'}}>
-          <Biotext clientdescr = "Postgraduate engineering student and avid tennis player. Passionate about all things STEM!"/>
+          <UserInfo clientname = "Mustafa" type = "description"/>
         </div>
-        
+
         {/*fourth person*/}
         <div style={{display: 'inline-block'}}>
-            <Biotext clientdescr = "Postgraduate student in IT. Have blockchain research experience."/>
+            <UserInfo clientname = "Xu" type = "description"/>
         </div>
         <div style={{display: 'inline-block'}}>
-            <Profile img = {require("./xuhan.jpg")} clientname = "Xu Han" />
+            <Profile img = "/image/Xu.jpg" clientname = "Xu Han" />
         </div>
-          
+
         {/*fifth person*/}
         <div style={{display: 'inline-block'}}>
-          <Profile img = {require("./mengyan.jpg")} clientname = "Mengyan Hou" />
+          <Profile img = "/image/Mengyan.jpg" clientname = "Mengyan Hou" />
         </div>
 
         <div style={{display: 'inline-block'}}>
-          <Biotext clientdescr = "A Penultimate year student majoring IT, specialized in Human-computer interaction."/>
+          <UserInfo clientname = "Mengyan" type = "description"/>
         </div>
 
+
+      </StickyContainer>
       </div>
     )
   }
