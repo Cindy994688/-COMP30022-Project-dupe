@@ -5,6 +5,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
+import ToggleProj from './ToggleProj.js'
 import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
@@ -36,7 +37,7 @@ class HomePage extends Component {
 
 render () {
     return (
-      <div>
+      <div className = "fullPage">
 
         <Jumbotron className = "banner">
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
@@ -76,10 +77,11 @@ render () {
         </p>
         </div>
 
-        <Jumbotron className = "divider">
-        <div className="dividerTitle"><h1>OUR PROJECT</h1></div>
-        </Jumbotron>
-        <p>here is where we will showcase your main project (the hair salon site)</p>
+      <ToggleProj>
+        <p>blah blah</p>
+      </ToggleProj>
+
+      <div><p>&nbsp;&nbsp;</p></div>
 
         <Jumbotron className = "divider">
         <div className="dividerTitle"><h1>WHO WE ARE</h1></div>

@@ -1,14 +1,20 @@
+:root {
+  --bg-color: #f8f4e3;
+  --second-color: #706c61;
+  --txt-color: #2a2b2a;
+}
+
 .banner {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
+    color: var(--bg-color);
     font-size: 35px;
-    border: 2px double white;
+    border: 2px double var(--bg-color);
     text-align: center;
     background-image: url('clientbanner.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px black;
+    text-shadow: 2px 2px var(--txt-color);
     height: 500px;
     padding: 10em inherit;
   }
@@ -51,9 +57,9 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 25px;
-    border: 2px double black;
+    /*border: 2px double black;*/
     text-align: center;
-    background-color: slategrey;
+    background-color: var(--second-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -64,9 +70,52 @@
 
   .dividerTitle {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
+    color: var(--bg-color);
     font-size: 20px;
     size: 100px;
+    text-align: center;
+    text-shadow: 5px 5px black;
+  }
+
+  .fullPage{
+    background-color: var(--bg-color);
+  }
+
+  .groupPr{
+    background-color: var(--txt-color);
+    font-size: 50px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px black;
+    height: 300px;
+    padding: 10em inherit;
+    /*border: 20px double var(--second-color);*/
+    border-radius: 25px;
+
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+  }
+
+  .groupPr:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+  }
+
+  .gradient-button-3 {background-image: linear-gradient(to right, #706c61 0%, #2a2b2a 15%, #706c61 100%)}
+  .gradient-button-3:hover { background-position: right center; }
+
+  .groupPrTitle{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--bg-color);
+    font-size: 50px;
+    size: 500px;
     text-align: center;
     text-shadow: 5px 5px black;
   }
