@@ -19,9 +19,6 @@ class ProjectsPage extends React.Component {
 
 
     render() {
-        const mouseHover = {
-            color: "blue"
-        }
         const clicked = {
             color: "#cdcdcd"
         }
@@ -61,7 +58,7 @@ class ProjectsPage extends React.Component {
                     onClick={this.handleChange}
                 >Project 3</button>
 
-                {this.state.project != "none" ?
+                {this.state.project !== "none" ?
                 <div><hr /><p>{project_desc}</p><hr /></div> :
                 <div></div>
                 }
