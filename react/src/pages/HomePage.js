@@ -63,7 +63,7 @@ render () {
         <Sticky>{() => <h1 style={this.style}>Produced by Potato Powered Portfolios</h1>}</Sticky>
 
 
-        <div className="punk">
+        <div class="punk">
           <Image  source="/image/potato.jpg" style={{width: 100, height: 100, borderRadius: 100/ 2}}/>
         </div>
 

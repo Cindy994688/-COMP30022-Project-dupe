@@ -13,21 +13,23 @@
     padding: 10em inherit;
   }
 
-.punk {
+  .punk {
     position: -webkit-sticky;
     position: sticky;
-    top: 4rem;
+    top: 500px;
+    margin-left: 1000px;
+    z-index: 10
   }
 
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-
-  border: 2px dashed rgba(114, 186, 94, 0.35);
-  height: 400px;
-  background: rgba(114, 186, 94, 0.05);
-}
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    border: 2px dashed rgba(114, 186, 94, 0.35);
+    height: 4000px;
+    background: rgba(114, 186, 94, 0.05);
+    z-index: -1
+  }
 
   .title {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
