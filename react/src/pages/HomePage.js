@@ -142,7 +142,7 @@ render () {
         <div style={{display: 'inline-block'}}>
           <Biotext clientdescr = "A Penultimate year student majoring IT, specialized in Human-computer interaction."/>
         </div>
-        <h1>Home page, or go to the <Link to="/:id">Projects</Link> page.</h1>
+        <h1>Home page, or go to the <Link to="/Projects">Projects</Link> page, or <Link to="/Login">Login</Link> page. :)</h1>
       </div>
     )
   }
