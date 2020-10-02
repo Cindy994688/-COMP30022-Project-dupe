@@ -16,9 +16,9 @@ class HomePage extends Component {
   state = {
     galleryItems: [
     <img src={require("./chaowei2.jpg")} alt="chaowei"/>,
-    <img src={require("./mengyan2.jpg")} alt="mengyan"/>, 
+    <img src={require("./mengyan2.jpg")} alt="mengyan"/>,
     <img src={require("./mustafa2.jpg")} alt="mustafa"/>,
-    <img src={require("./ron2.jpg")} alt="ron"/>, 
+    <img src={require("./ron2.jpg")} alt="ron"/>,
     <img src={require("./xuhan2.jpg")} alt="xuhan"/>
      ].map((i) => <h2 key={i}>{i}</h2>),
   }
@@ -27,7 +27,7 @@ class HomePage extends Component {
     0: { items: 1 },
     1024: { items: 3 },
   }
-  
+
   stagePadding =   {
     paddingLeft: 500,     // in pixels
     paddingRight: 25
@@ -125,7 +125,7 @@ render () {
         <div style={{display: 'inline-block'}}>
           <Biotext clientdescr = "Postgraduate engineering student and avid tennis player. Passionate about all things STEM!"/>
         </div>
-        
+
         {/*fourth person*/}
         <div style={{display: 'inline-block'}}>
             <Biotext clientdescr = "Postgraduate student in IT. Have blockchain research experience."/>
@@ -133,7 +133,7 @@ render () {
         <div style={{display: 'inline-block'}}>
             <Profile img = {require("./xuhan.jpg")} clientname = "Xu Han" />
         </div>
-          
+
         {/*fifth person*/}
         <div style={{display: 'inline-block'}}>
           <Profile img = {require("./mengyan.jpg")} clientname = "Mengyan Hou" />
@@ -142,7 +142,7 @@ render () {
         <div style={{display: 'inline-block'}}>
           <Biotext clientdescr = "A Penultimate year student majoring IT, specialized in Human-computer interaction."/>
         </div>
-
+        <h1>Home page, or go to the <Link to="/:id">Projects</Link> page.</h1>
       </div>
     )
   }
