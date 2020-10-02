@@ -67,13 +67,14 @@ render () {
         </div>
 
         <div className="intro">
-        <p> Hi, this is CRXMM, we are a team of
+        <p> <i>Hi, this is CRXMM, we are a team of
            5 from the University of Melbourne.
           While we have different backgrounds,
           different passions, and are even in
           different timezones, we are in unity.
           We believe that as individuals we are
           strong, but together we are incredible.
+          </i>
         </p>
         </div>
 
@@ -104,46 +105,58 @@ render () {
 
       </div>*/}
         {/*first person*/}
-        <div style={{display: 'inline-block'}}>
-          <Profile img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
-          </div>
-        <div style={{display: 'inline-block'}}>
-          <UserInfo clientname = "Chao-Wei" type = "description"/>
-          </div>
+        <div>
+          <div  style={{display: 'inline-block'}}>
+            <Profile className = "txtColor" img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
+            </div>
+          <div style={{display: 'inline-block'}}>
+            <UserInfo clientname = "Chao-Wei" type = "description"/>
+            </div>
+        </div>
 
         {/*second person*/}
-          <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Ron" type = "description"/>
-          </div>
-          <div style={{display: 'inline-block'}}>
+          <div className = "bgSecondary" >
+            <div style={{display: 'inline-block'}}>
+              <div ><UserInfo clientname = "Ron" type = "description"/></div>
+              <div><p>Email: ron's email</p></div>
+              
+            </div>
+            <div style={{display: 'inline-block'}}>
 
-            <Profile img = "/image/Ron.jpg" clientname = "Ron Chui" />
+              <Profile img = "/image/Ron.jpg" clientname = "Ron Chui" />
+            </div>
           </div>
 
         {/*third person*/}
-        <div style={{display: 'inline-block'}}>
-          <Profile img = "/image/Mustafa.jpg" clientname = "Mustafa Awni" />
-        </div>
+        <div>
+          <div style={{display: 'inline-block'}}>
+            <Profile img = "/image/Mustafa.jpg" clientname = "Mustafa Awni" />
+          </div>
 
-        <div style={{display: 'inline-block'}}>
-          <UserInfo clientname = "Mustafa" type = "description"/>
+          <div style={{display: 'inline-block'}}>
+            <UserInfo clientname = "Mustafa" type = "description"/>
+          </div>
         </div>
 
         {/*fourth person*/}
-        <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Xu" type = "description"/>
-        </div>
-        <div style={{display: 'inline-block'}}>
-            <Profile img = "/image/Xu.jpg" clientname = "Xu Han" />
+        <div className = "bgSecondary">
+          <div style={{display: 'inline-block'}}>
+              <UserInfo clientname = "Xu" type = "description"/>
+          </div>
+          <div style={{display: 'inline-block'}}>
+              <Profile img = "/image/Xu.jpg" clientname = "Xu Han" />
+          </div>
         </div>
 
         {/*fifth person*/}
-        <div style={{display: 'inline-block'}}>
-          <Profile img = "/image/Mengyan.jpg" clientname = "Mengyan Hou" />
-        </div>
+        <div>
+          <div style={{display: 'inline-block'}}>
+            <Profile img = "/image/Mengyan.jpg" clientname = "Mengyan Hou" />
+          </div>
 
-        <div style={{display: 'inline-block'}}>
-          <UserInfo clientname = "Mengyan" type = "description"/>
+          <div style={{display: 'inline-block'}}>
+            <UserInfo clientname = "Mengyan" type = "description"/>
+          </div>
         </div>
 
       </div>
