@@ -79,7 +79,15 @@ render () {
         </div>
 
       <ToggleProj>
-        <p>blah blah</p>
+        <div className = "intro">
+        <p>In this project, we help Beth, a local business owner of beauty care services 
+          in Melbourne, build the e-commerce website for her business. It is expected 
+          that the system can not just make the appointment procedure automation but also 
+          help promote the business to different regions.</p>
+          <p><i>Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung; 
+            Test Manager - Mustafa; 
+            Developer - Chao-Wei and Zoe</i> </p>
+        </div>
       </ToggleProj>
 
       <div><p>&nbsp;&nbsp;</p></div>

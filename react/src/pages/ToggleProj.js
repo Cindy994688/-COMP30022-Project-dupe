@@ -16,7 +16,7 @@ export default class ToggleProj extends Component {
         return (
             <div>
                 <Jumbotron className = "groupPr gradient-button-3" onClick = {this.toggle} style={{cursor:'pointer'}}>
-                    <div className="groupPrTitle"><h1>OUR PROJECT</h1><p>{this.state.on && this.props.children}</p></div>
+                    <div className="groupPrTitle"><h1>OUR PROJECT</h1><p>Beth’s Beauty - Your best beauty services</p></div>
                 </Jumbotron>
                 {/*<button onClick = {this.toggle}>clickme</button>*/}
 
