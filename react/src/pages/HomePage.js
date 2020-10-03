@@ -53,19 +53,11 @@ class HomePage extends Component {
 render () {
     return (
       <div>
-      <StickyContainer>
 
         <Jumbotron className = "banner">
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
           <p> really awesome people </p>
         </Jumbotron>
-
-        <Sticky>{() => <h1 style={this.style}>Produced by Potato Powered Portfolios</h1>}</Sticky>
-
-
-        <div class="punk">
-          <Image  source="/image/potato.jpg" style={{width: 100, height: 100, borderRadius: 100/ 2}}/>
-        </div>
 
 
 
@@ -91,6 +83,10 @@ render () {
         onSlideChanged={this.onSlideChanged}
         buttonsDisabled={true}
         />
+        </div>
+
+        <div class="punk">
+          <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
         <div className="intro">
@@ -175,8 +171,6 @@ render () {
           <UserInfo clientname = "Mengyan" type = "description"/>
         </div>
 
-
-      </StickyContainer>
       </div>
     )
   }
