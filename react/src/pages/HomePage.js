@@ -22,6 +22,7 @@ class HomePage extends Component {
     <img src={require("./xuhan2.jpg")} alt="xuhan"/>
      ].map((i) => <h2 key={i}>{i}</h2>),
   }
+  
 
   responsive = {
     0: { items: 1 },
