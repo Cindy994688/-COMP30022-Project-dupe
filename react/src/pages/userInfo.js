@@ -20,22 +20,22 @@ class UserInfo extends React.Component {
           console.log(res.data[0].description);
           if(this.props.type==="name"){
             this.setState({
-              output: "name: " + res.data[0].name,
+              output: res.data[0].name,
             })
           }
           if(this.props.type==="description"){
             this.setState({
-              output: "description: " + res.data[0].description,
+              output: res.data[0].description,
             })
           }
           if(this.props.type==="email"){
             this.setState({
-              output: "email: " + res.data[0].email,
+              output: res.data[0].email,
             })
           }
           if(this.props.type==="skills"){
             this.setState({
-              output: "skills: " + res.data[0].skills,
+              output: res.data[0].skills,
             })
           }
 
