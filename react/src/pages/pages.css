@@ -169,3 +169,20 @@
     transform: translateY(250px);
     -webkit-transform: translateY(250px);
   }
+
+  .box {
+    position: relative;
+  }
+
+  .bioText {
+    font-size: 25px;
+    width: 700px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translate(50px,-250px);
+    color: var(--txt-color);
+    
+  }
+

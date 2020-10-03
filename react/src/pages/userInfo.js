@@ -1,6 +1,7 @@
 import React from 'react';
 import Biotext from './Biotext.js'
 import axios from 'axios'
+import './pages.css'
 
 
 class UserInfo extends React.Component {
@@ -48,7 +49,7 @@ class UserInfo extends React.Component {
     const data = this.state.output;
 
     return (
-      <Biotext clientdescr = {data}/>
+      <div className = "bioText">{data}</div>
     )
   }
 }

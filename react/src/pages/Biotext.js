@@ -19,7 +19,8 @@ class Biotext extends React.Component {
       padding: "30px",
       display: 'inline-block',
       width: '800px',
-      padding: "50px"
+      padding: "50px",
+     
     },
     text2: {
       //marginTop: 50,

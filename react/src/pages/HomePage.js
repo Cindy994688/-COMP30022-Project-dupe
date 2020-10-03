@@ -128,30 +128,29 @@ render () {
 
       </div>*/}
         {/*first person*/}
-        <div>
+        <div className = "box">
           <div  style={{display: 'inline-block'}}>
             <Profile className = "txtColor" img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
             </div>
           <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Chao-Wei" type = "description"/>
-            </div>
+          <UserInfo clientname = "Chao-Wei" type = "description"/>
+          </div>
         </div>
 
         {/*second person*/}
-          <div className = "bgSecondary"  >
+          <div className = "bgSecondary box"  >
             <div style={{display: 'inline-block'}}>
               <div ><UserInfo clientname = "Ron" type = "description"/></div>
-              <div><p>Email: ron's email</p></div>
               
             </div>
             <div style={{display: 'inline-block'}}>
 
-              <Profile img = "/image/Ron.jpg" clientname = "Ron Chiu" />
+              <Profile img = "/image/Ron.jpg" clientname = "     Ron Chiu" />
             </div>
           </div>
 
         {/*third person*/}
-        <div>
+        <div className = "box">
           <div style={{display: 'inline-block'}}>
             <Profile img = "/image/Mustafa.jpg" clientname = "Mustafa Awni" />
           </div>
@@ -162,17 +161,17 @@ render () {
         </div>
 
         {/*fourth person*/}
-        <div className = "bgSecondary">
+        <div className = "bgSecondary box">
           <div style={{display: 'inline-block'}}>
               <UserInfo clientname = "Xu" type = "description"/>
           </div>
           <div style={{display: 'inline-block'}}>
-              <Profile img = "/image/Xu.jpg" clientname = "Xu Han" />
+              <Profile img = "/image/Xu.jpg" clientname = "      Xu Han" />
           </div>
         </div>
 
         {/*fifth person*/}
-        <div>
+        <div className = "box">
           <div style={{display: 'inline-block'}}>
             <Profile img = "/image/Mengyan.jpg" clientname = "Mengyan Hou" />
           </div>
