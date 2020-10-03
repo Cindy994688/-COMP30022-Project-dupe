@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 //import {View} from 'react-native'
-import { Link } from 'react-router-dom'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
 import Profile from './Profile.js'
@@ -9,6 +8,11 @@ import ToggleProj from './ToggleProj.js'
 import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
+import ChaoHover from './chaohover.png'
+import RonHover from './ronhover.png'
+import MusHover from './mushover.png'
+import XuHover from './xuhover.png'
+import MengHover from './menghover.png'
 //import axios from 'axios'
 //import {clientBanner} from './clientbanner.jpg'
 //const clientBanner = "../../src/pages/clientbanner.jpg";
@@ -17,11 +21,21 @@ import 'react-alice-carousel/lib/alice-carousel.css'
 class HomePage extends Component {
   state = {
     galleryItems: [
-    <img src="/image/ChaoWei.jpg" alt="chaowei"/>,
-    <img src="/image/Mengyan.jpg" alt="mengyan"/>,
-    <img src="/image/Mustafa.jpg" alt="mustafa"/>,
-    <img src="/image/Ron.jpg" alt="ron"/>,
-    <img src="/image/Xu.jpg" alt="xuhan"/>
+    <img src="/image/ChaoWei.jpg" alt="chaowei" 
+      onMouseOver={e => (e.currentTarget.src = ChaoHover)}
+      onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
+    <img src="/image/Mengyan.jpg" alt="mengyan"
+      onMouseOver={e => (e.currentTarget.src = MengHover)}
+      onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
+    <img src="/image/Mustafa.jpg" alt="mustafa"
+      onMouseOver={e => (e.currentTarget.src = MusHover)}
+      onMouseLeave={e => (e.currentTarget.src = "/image/Mustafa.jpg")}/>,
+    <img src="/image/Ron.jpg" alt="ron"
+    onMouseOver={e => (e.currentTarget.src = RonHover)}
+    onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
+    <img src="/image/Xu.jpg" alt="xuhan"
+    onMouseOver={e => (e.currentTarget.src = XuHover)}
+    onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
      ].map((i) => <h2 key={i}>{i}</h2>),
   }
 
@@ -57,9 +71,10 @@ render () {
         autoPlayDirection="ltr"
         autoPlay={true}
         fadeOutAnimation={true}
-        mouseTrackingEnabled={true}
+        /*mouseTrackingEnabled={true}*/
         playButtonEnabled={true}
-        disableAutoPlayOnAction={true}
+        /*disableAutoPlayOnAction={true}*/
+        stopAutoPlayOnHover={false}
         onSlideChange={this.onSlideChange}
         onSlideChanged={this.onSlideChanged}
         buttonsDisabled={true}
@@ -123,7 +138,7 @@ render () {
         </div>
 
         {/*second person*/}
-          <div className = "bgSecondary" >
+          <div className = "bgSecondary"  >
             <div style={{display: 'inline-block'}}>
               <div ><UserInfo clientname = "Ron" type = "description"/></div>
               <div><p>Email: ron's email</p></div>
@@ -131,7 +146,7 @@ render () {
             </div>
             <div style={{display: 'inline-block'}}>
 
-              <Profile img = "/image/Ron.jpg" clientname = "Ron Chui" />
+              <Profile img = "/image/Ron.jpg" clientname = "Ron Chiu" />
             </div>
           </div>
 
