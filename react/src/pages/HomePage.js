@@ -9,7 +9,6 @@ import ToggleProj from './ToggleProj.js'
 import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import { StickyContainer, Sticky } from 'react-sticky';
 import { Image } from 'react-native';
 //import axios from 'axios'
 //import {clientBanner} from './clientbanner.jpg'
@@ -59,6 +58,7 @@ render () {
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
           <p> really awesome people </p>
         </Jumbotron>
+
 
 
 
