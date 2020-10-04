@@ -13,7 +13,16 @@
     padding: 10em inherit;
   }
 
+  .punk {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 550px;
+    margin-left: 1100px;
+    z-index: 10;
+  }
+
   .title {
+    /*font-family: 'Great Vibes', cursive;*/
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     font-size: 40px;
