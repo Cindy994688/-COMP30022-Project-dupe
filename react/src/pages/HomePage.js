@@ -5,12 +5,8 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
-import ToggleProj from './ToggleProj.js'
-import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import { StickyContainer, Sticky } from 'react-sticky';
-import { Image } from 'react-native';
 //import axios from 'axios'
 //import {clientBanner} from './clientbanner.jpg'
 //const clientBanner = "../../src/pages/clientbanner.jpg";
@@ -19,11 +15,11 @@ import { Image } from 'react-native';
 class HomePage extends Component {
   state = {
     galleryItems: [
-    <img src="/image/ChaoWei.jpg" alt="chaowei"/>,
-    <img src="/image/Mengyan.jpg" alt="mengyan"/>,
-    <img src="/image/Mustafa.jpg" alt="mustafa"/>,
-    <img src="/image/Ron.jpg" alt="ron"/>,
-    <img src="/image/Xu.jpg" alt="xuhan"/>
+    <img src={require("./chaowei2.jpg")} alt="chaowei"/>,
+    <img src={require("./mengyan2.jpg")} alt="mengyan"/>,
+    <img src={require("./mustafa2.jpg")} alt="mustafa"/>,
+    <img src={require("./ron2.jpg")} alt="ron"/>,
+    <img src={require("./xuhan2.jpg")} alt="xuhan"/>
      ].map((i) => <h2 key={i}>{i}</h2>),
   }
 
@@ -37,32 +33,14 @@ class HomePage extends Component {
     paddingRight: 25
   }
 
-  style = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    zIndex: 10,
-    distanceFromBottom: 0,
-    marginLeft:1000,
-    fontFamily: 'Arial',
-    fontSize: 25,
-    align: 'right',
-    position: 'fixed',
-    color: '#8B008B'
-  }
-
-
 render () {
     return (
-      <div className = "fullPage">
+      <div>
 
         <Jumbotron className = "banner">
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
           <p> really awesome people </p>
         </Jumbotron>
-
-
-
-
 
         <div>
           <p>&nbsp;&nbsp;</p>
@@ -86,35 +64,21 @@ render () {
         />
         </div>
 
-        <div class="punk">
-          <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
-        </div>
-
         <div className="intro">
-        <p> <i>Hi, this is CRXMM, we are a team of
+        <p> Hi, this is CRXMM, we are a team of
            5 from the University of Melbourne.
           While we have different backgrounds,
           different passions, and are even in
           different timezones, we are in unity.
           We believe that as individuals we are
           strong, but together we are incredible.
-          </i>
         </p>
         </div>
 
-      <ToggleProj>
-        <div className = "intro">
-        <p>In this project, we help Beth, a local business owner of beauty care services
-          in Melbourne, build the e-commerce website for her business. It is expected
-          that the system can not just make the appointment procedure automation but also
-          help promote the business to different regions.</p>
-          <p><i>Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
-            Test Manager - Mustafa;
-            Developer - Chao-Wei and Zoe</i> </p>
-        </div>
-      </ToggleProj>
-
-      <div><p>&nbsp;&nbsp;</p></div>
+        <Jumbotron className = "divider">
+        <div className="dividerTitle"><h1>OUR PROJECT</h1></div>
+        </Jumbotron>
+        <p>here is where we will showcase your main project (the hair salon site)</p>
 
         <Jumbotron className = "divider">
         <div className="dividerTitle"><h1>WHO WE ARE</h1></div>
@@ -136,61 +100,47 @@ render () {
           <UserInfo clientname = "Medusa" type = "skills"/>
 
       </div>*/}
-
         {/*first person*/}
-        <div>
-          <div  style={{display: 'inline-block'}}>
-            <Profile className = "txtColor" img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
-            </div>
-          <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Chao-Wei" type = "description"/>
-            </div>
-        </div>
-
+        <div style={{display: 'inline-block'}}>
+          <Profile img = {require("./chaowei.jpg")} clientname = "Chao-Wei Chiang" />
+          </div>
+        <div style={{display: 'inline-block'}}>
+          <Biotext className = "descr" clientdescr = "He is interested in different kinds of programming languages and has created different projects. Upon working in the field of automation, he realized the power of information technologies and believed it will make the world better. Later he determined himself to acquire advanced knowledge. Currently he is a student in the master of IT degree."/>
+          </div>
 
         {/*second person*/}
-          <div className = "bgSecondary" >
-            <div style={{display: 'inline-block'}}>
-              <div ><UserInfo clientname = "Ron" type = "description"/></div>
-              <div><p>Email: ron's email</p></div>
+          <div style={{display: 'inline-block'}}>
+            <Biotext clientdescr = "Postgraduate student in cyber security. Interested in pentesting."/>
+          </div>
+          <div style={{display: 'inline-block'}}>
 
-            </div>
-            <div style={{display: 'inline-block'}}>
-
-              <Profile img = "/image/Ron.jpg" clientname = "Ron Chui" />
-            </div>
+            <Profile img = {require("./ron.jpg")} clientname = "Ron Chiu" />
           </div>
 
         {/*third person*/}
-        <div>
-          <div style={{display: 'inline-block'}}>
-            <Profile img = "/image/Mustafa.jpg" clientname = "Mustafa Awni" />
-          </div>
+        <div style={{display: 'inline-block'}}>
+          <Profile img = {require("./mustafa.jpg")} clientname = "Mustafa Awni" />
+        </div>
 
-          <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Mustafa" type = "description"/>
-          </div>
+        <div style={{display: 'inline-block'}}>
+          <Biotext clientdescr = "Postgraduate engineering student and avid tennis player. Passionate about all things STEM!"/>
         </div>
 
         {/*fourth person*/}
-        <div className = "bgSecondary">
-          <div style={{display: 'inline-block'}}>
-              <UserInfo clientname = "Xu" type = "description"/>
-          </div>
-          <div style={{display: 'inline-block'}}>
-              <Profile img = "/image/Xu.jpg" clientname = "Xu Han" />
-          </div>
+        <div style={{display: 'inline-block'}}>
+            <Biotext clientdescr = "Postgraduate student in IT. Have blockchain research experience."/>
+        </div>
+        <div style={{display: 'inline-block'}}>
+            <Profile img = {require("./xuhan.jpg")} clientname = "Xu Han" />
         </div>
 
         {/*fifth person*/}
-        <div>
-          <div style={{display: 'inline-block'}}>
-            <Profile img = "/image/Mengyan.jpg" clientname = "Mengyan Hou" />
-          </div>
+        <div style={{display: 'inline-block'}}>
+          <Profile img = {require("./mengyan.jpg")} clientname = "Mengyan Hou" />
+        </div>
 
-          <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Mengyan" type = "description"/>
-          </div>
+        <div style={{display: 'inline-block'}}>
+          <Biotext clientdescr = "A Penultimate year student majoring IT, specialized in Human-computer interaction."/>
         </div>
 
       </div>
