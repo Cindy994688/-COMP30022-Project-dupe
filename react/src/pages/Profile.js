@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Image, Text } from 'react-native';
-
+import './pages.css'
 
 
 
@@ -15,7 +15,7 @@ class Profile extends React.Component {
             source={this.props.img}  
             style={{width: 300, height: 300, borderRadius: 300/ 2}}
         />
-        <Text style={styles.text}>{this.props.clientname}</Text>
+        <Text style={styles.text} className = "txtColor">{this.props.clientname}</Text>
         </div>
       </View>
     )
@@ -33,6 +33,7 @@ class Profile extends React.Component {
       marginTop: 30,
       fontSize: 40,
       color: '#43203A',
+      fontFamily: ' "Kaushan", Times, serif',
       fontWeight: 'bold',
       alignItems: 'center',
       padding: "10px",

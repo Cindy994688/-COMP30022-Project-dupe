@@ -5,6 +5,7 @@ import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
 import ToggleProj from './ToggleProj.js'
+import ToggleB from './ToggleB.js'
 import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
@@ -13,6 +14,7 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
+import { ToggleButton } from 'react-bootstrap'
 //import axios from 'axios'
 //import {clientBanner} from './clientbanner.jpg'
 //const clientBanner = "../../src/pages/clientbanner.jpg";
@@ -55,7 +57,7 @@ render () {
 
         <Jumbotron className = "banner">
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
-          <p> really awesome people </p>
+          {/*<p> really awesome people </p>*/}
         </Jumbotron>
 
         <div>
@@ -81,6 +83,10 @@ render () {
         />
         </div>
 
+        <Jumbotron className = "divider">
+        <div className="dividerTitleSmall"><h1> - Harry - Ron - Mustafa - Kelly - Zoe -</h1></div>
+        </Jumbotron>
+
         <div className="intro">
         <p> <i>Hi, this is CRXMM, we are a team of
            5 from the University of Melbourne.
@@ -92,6 +98,8 @@ render () {
           </i>
         </p>
         </div>
+
+        {/*<ToggleB>hello</ToggleB>*/}
 
       <ToggleProj>
         <div className = "intro">
@@ -130,19 +138,26 @@ render () {
         {/*first person*/}
         <div className = "box">
           <div  style={{display: 'inline-block'}}>
-            <Profile className = "txtColor" img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
+            <Profile img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
             </div>
           <div style={{display: 'inline-block'}}>
-          <UserInfo clientname = "Chao-Wei" type = "description"/>
+          <div><UserInfo clientname = "Chao-Wei" type = "description"/></div>
+          <div className = "bioText">
+            <p>Field: IT (Distributed Computing)</p>
+            <p>Contact: chaoweic@student.unimelb.edu.au</p></div>
           </div>
         </div>
 
         {/*second person*/}
-          <div className = "bgSecondary box"  >
-            <div style={{display: 'inline-block'}}>
-              <div ><UserInfo clientname = "Ron" type = "description"/></div>
-              
-            </div>
+          <div className = "bgSecondary box" >
+          <div style={{display: 'inline-block'}}>
+            <div><UserInfo clientname = "Ron" type = "description"/></div>
+              <div className = "bioText">
+                <p>Field: IT (Cyber Security)</p>
+                <p>Contact: hsingjungc@student.unimelb.edu.au</p>
+              </div>
+          </div>
+
             <div style={{display: 'inline-block'}}>
 
               <Profile img = "/image/Ron.jpg" clientname = "     Ron Chiu" />
@@ -156,14 +171,22 @@ render () {
           </div>
 
           <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Mustafa" type = "description"/>
+            <div><UserInfo clientname = "Mustafa" type = "description"/></div>
+              <div className = "bioText">
+                <p>Field: Software Engineering</p>
+                <p>Contact: mawni@student.unimelb.edu.au</p>
+              </div>
           </div>
         </div>
 
         {/*fourth person*/}
         <div className = "bgSecondary box">
-          <div style={{display: 'inline-block'}}>
-              <UserInfo clientname = "Xu" type = "description"/>
+        <div style={{display: 'inline-block'}}>
+            <div><UserInfo clientname = "Xu" type = "description"/></div>
+              <div className = "bioText">
+                <p>Field: AI</p>
+                <p>Contact: xhha3@student.unimelb.edu.au</p>
+              </div>
           </div>
           <div style={{display: 'inline-block'}}>
               <Profile img = "/image/Xu.jpg" clientname = "      Xu Han" />
@@ -177,7 +200,11 @@ render () {
           </div>
 
           <div style={{display: 'inline-block'}}>
-            <UserInfo clientname = "Mengyan" type = "description"/>
+            <div><UserInfo clientname = "Mengyan" type = "description"/></div>
+              <div className = "bioText">
+                <p>Field: IT (UX Design)</p>
+                <p>Contact: houmengyan899877@gmail.com</p>
+              </div>
           </div>
         </div>
 
