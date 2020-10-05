@@ -5,6 +5,8 @@ import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
 import ToggleProj from './ToggleProj.js'
+import ToggleLeft from './ToggleLeft.js'
+import ToggleRight from './ToggleRight.js'
 import ToggleB from './ToggleB.js'
 import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
@@ -111,7 +113,7 @@ render () {
         <div className="dividerTitleSmall"><h1> - Harry - Ron - Mustafa - Kelly - Zoe -</h1></div>
         </Jumbotron>
 
-        <div class="punk">
+        <div className="punk">
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
@@ -165,79 +167,64 @@ render () {
 
       </div>*/}
 
+
         {/*first person*/}
-        <div className = "box">
-          <div  style={{display: 'inline-block'}}>
-            <Profile img = "/image/ChaoWei.jpg" clientname = "Chao-Wei Chiang" />
-            </div>
-          <div style={{display: 'inline-block'}}>
-          <div><UserInfo clientname = "Chao-Wei" type = "description"/></div>
-          <div className = "bioText">
-            <p>Field: IT (Distributed Computing)</p>
-            <p>Contact: chaoweic@student.unimelb.edu.au</p></div>
+        <ToggleLeft name = "ChaoWei">
+          <div className = "box">
+          <p>CV information</p>
+            <p><i>Chao-Wei actually studied with giant lizard men during one of his monthly visits to Narnia
+              He can confirm - the lizard people are taking over our Government</i> </p>
+            <p><i>On the other hand, is it really such a bad thing that we have smart, somewhat benevolent lizard people
+             taking over our society?</i> </p>
           </div>
-        </div>
+        </ToggleLeft>
 
 
         {/*second person*/}
-          <div className = "bgSecondary box" >
-          <div style={{display: 'inline-block'}}>
-            <div><UserInfo clientname = "Ron" type = "description"/></div>
-              <div className = "bioText">
-                <p>Field: IT (Cyber Security)</p>
-                <p>Contact: hsingjungc@student.unimelb.edu.au</p>
-              </div>
+        <ToggleRight name = "Ron">
+          <div className = "bgSecondary box">
+          <p>CV information</p>
+            <p><i>Ron actually studied with giant lizard men during one of his monthly visits to Narnia
+              He can confirm - the lizard people are taking over our Government</i> </p>
+            <p><i>On the other hand, is it really such a bad thing that we have smart, somewhat benevolent lizard people
+             taking over our society?</i> </p>
           </div>
+        </ToggleRight>
 
-            <div style={{display: 'inline-block'}}>
-
-              <Profile img = "/image/Ron.jpg" clientname = "     Ron Chiu" />
-            </div>
-          </div>
 
         {/*third person*/}
-        <div className = "box">
-          <div style={{display: 'inline-block'}}>
-            <Profile img = "/image/Mustafa.jpg" clientname = "Mustafa Awni" />
+        <ToggleLeft name = "Mustafa">
+          <div className = "box">
+          <p>CV information</p>
+            <p><i>Mustafa actually studied with giant lizard men during one of his monthly visits to Narnia
+              He can confirm - the lizard people are taking over our Government</i> </p>
+            <p><i>On the other hand, is it really such a bad thing that we have smart, somewhat benevolent lizard people
+             taking over our society?</i> </p>
           </div>
+        </ToggleLeft>
 
-          <div style={{display: 'inline-block'}}>
-            <div><UserInfo clientname = "Mustafa" type = "description"/></div>
-              <div className = "bioText">
-                <p>Field: Software Engineering</p>
-                <p>Contact: mawni@student.unimelb.edu.au</p>
-              </div>
-          </div>
-        </div>
 
         {/*fourth person*/}
-        <div className = "bgSecondary box">
-        <div style={{display: 'inline-block'}}>
-            <div><UserInfo clientname = "Xu" type = "description"/></div>
-              <div className = "bioText">
-                <p>Field: AI</p>
-                <p>Contact: xhha3@student.unimelb.edu.au</p>
-              </div>
+        <ToggleRight name = "Xu">
+          <div className = "bgSecondary box">
+          <p>CV information</p>
+            <p><i>Xu actually studied with giant lizard men during one of his monthly visits to Narnia
+              He can confirm - the lizard people are taking over our Government</i> </p>
+            <p><i>On the other hand, is it really such a bad thing that we have smart, somewhat benevolent lizard people
+             taking over our society?</i> </p>
           </div>
-          <div style={{display: 'inline-block'}}>
-              <Profile img = "/image/Xu.jpg" clientname = "      Xu Han" />
-          </div>
-        </div>
+        </ToggleRight>
 
         {/*fifth person*/}
-        <div className = "box">
-          <div style={{display: 'inline-block'}}>
-            <Profile img = "/image/Mengyan.jpg" clientname = "Mengyan Hou" />
+        <ToggleLeft name = "Mengyan">
+          <div className = "box">
+          <p>CV information</p>
+            <p><i>Mengyan actually studied with giant lizard men during one of his monthly visits to Narnia
+              He can confirm - the lizard people are taking over our Government</i> </p>
+            <p><i>On the other hand, is it really such a bad thing that we have smart, somewhat benevolent lizard people
+             taking over our society?</i> </p>
           </div>
-
-          <div style={{display: 'inline-block'}}>
-            <div><UserInfo clientname = "Mengyan" type = "description"/></div>
-              <div className = "bioText">
-                <p>Field: IT (UX Design)</p>
-                <p>Contact: houmengyan899877@gmail.com</p>
-              </div>
-          </div>
-        </div>
+        </ToggleLeft>
 
       </div>
     )
