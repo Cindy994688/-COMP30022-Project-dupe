@@ -5,6 +5,10 @@
   --txt-color: #43203A;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'Abel-Regular';
   src: local('Abel-Regular'), url(./fonts/Abel-Regular.ttf) format('truetype');
@@ -44,7 +48,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 550px;
-    margin-left: 1100px;
+    margin-left: 75%;
     z-index: 10;
   }
 
