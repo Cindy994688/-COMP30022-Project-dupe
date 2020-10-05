@@ -47,7 +47,7 @@
   .punk {
     position: -webkit-sticky;
     position: sticky;
-    top: 550px;
+    top: 75%;
     margin-left: 75%;
     z-index: 10;
   }
