@@ -40,7 +40,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 2px 2px white;
-    height: 600px;
+    height: 700px;
     padding: 10em inherit;
   }
 
@@ -92,14 +92,14 @@
   .divider {
     color: white;
     font-size: 25px;
-    border: 2px double black;
+    /*border: 2px double black;*/
     text-align: center;
-    background-color: slategrey;
+    background-color: var(--third-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 2px 2px black;
-    height: 100px;
+    height: 200px;
     padding: 10em inherit;
   }
 
@@ -193,7 +193,7 @@
   .bioText {
     font-family: "Abel-Regular", Helvetica, sans-serif;
     font-size: 25px;
-    width: 700px;
+    width: 800px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -203,7 +203,6 @@
     padding-left: 25px;
     padding-right: 100px;
   }
-
 
   .dividerTitleSmall {
     font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
