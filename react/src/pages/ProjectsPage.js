@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './clientbanner.jpg'
 
 class ProjectsPage extends React.Component {
 
@@ -64,6 +65,11 @@ class ProjectsPage extends React.Component {
                 }
                 <br /><br />
                 <p>And then some more things go here. :)</p>
+
+                <div class="imgcontainer">
+                    <img source={require('./clientbanner.jpg')} alt="clientbanner" class="clientbanner" />
+                </div>
+
             </div>
         )
     }

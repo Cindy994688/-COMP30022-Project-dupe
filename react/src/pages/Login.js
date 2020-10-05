@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class Login extends React.Component{
     constructor() {
         super();
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            redirect: false
         };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
 
@@ -21,12 +24,24 @@ class Login extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
+        if(this.state.password === "1234"){
+            this.setState({
+                redirect: true
+            })
+        }
 
-        
     }
 
 
     render() {
+        const { redirect } = this.state;
+
+        if(redirect){
+            return(
+                <Redirect to='/SecretProjectEdit' />
+            );
+        }
+
         return(
             <div>
             <h1>This is a login page! :)      <Link to="/">Home</Link></h1>
@@ -42,7 +57,7 @@ class Login extends React.Component{
             <br />
 
             <input
-                type="text"
+                type="password"
                 name="password"
                 value={this.state.password}
                 placeholder="Password"
@@ -51,6 +66,8 @@ class Login extends React.Component{
             <br />
 
             <button>Login</button>
+            <br /><br /><br /><br />
+            <p>or link to the <Link to='/SecretProjectEdit'>secret editing</Link> page!</p>
 
             </div>
         )
