@@ -16,13 +16,15 @@ class Login extends React.Component{
         this.setState({
             [name]: value
         })
+
+        console.log("Edit");
     }
 
 
     handleSubmit = (event) => {
         event.preventDefault();
 
-        
+        console.log("Submit");
     }
 
 
@@ -42,7 +44,7 @@ class Login extends React.Component{
             <br />
 
             <input
-                type="text"
+                type="password"
                 name="password"
                 value={this.state.password}
                 placeholder="Password"
@@ -50,7 +52,7 @@ class Login extends React.Component{
             />
             <br />
 
-            <button>Login</button>
+            <button onClick={this.handleSubmit} >Login</button>
 
             </div>
         )
