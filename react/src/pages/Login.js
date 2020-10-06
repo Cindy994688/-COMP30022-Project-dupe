@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'
 
 class Login extends React.Component{
     constructor() {
@@ -24,7 +25,14 @@ class Login extends React.Component{
         event.preventDefault();
         const description = axios.get('/password/'+ this.props.password)
           .then((res)=>{
-            if(res===true){}
+            if(res===true){
+              console.log("hi");
+            }
+            else{
+              console.log("hi");
+            }
+          });
+
         console.log("hi");
 
     }

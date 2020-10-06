@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './clientbanner.jpg'
 
 class ProjectsPage extends React.Component {
 
@@ -19,9 +20,6 @@ class ProjectsPage extends React.Component {
 
 
     render() {
-        const mouseHover = {
-            color: "blue"
-        }
         const clicked = {
             color: "#cdcdcd"
         }
@@ -61,12 +59,17 @@ class ProjectsPage extends React.Component {
                     onClick={this.handleChange}
                 >Project 3</button>
 
-                {this.state.project != "none" ?
+                {this.state.project !== "none" ?
                 <div><hr /><p>{project_desc}</p><hr /></div> :
                 <div></div>
                 }
                 <br /><br />
                 <p>And then some more things go here. :)</p>
+
+                <div class="imgcontainer">
+                    <img source={require('./clientbanner.jpg')} alt="clientbanner" class="clientbanner" />
+                </div>
+
             </div>
         )
     }
