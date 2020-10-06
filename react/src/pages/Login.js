@@ -22,6 +22,9 @@ class Login extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
+        const description = axios.get('/password/'+ this.props.password)
+          .then((res)=>{
+            if(res===true){}
         console.log("hi");
 
     }
