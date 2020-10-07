@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link, Redirect } from 'react-router-dom';
-=======
 import { Link } from 'react-router-dom';
 import axios from 'axios';
->>>>>>> dynamicwebsite
 
 class Login extends React.Component{
     constructor() {
@@ -31,14 +27,6 @@ class Login extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-<<<<<<< HEAD
-        if(this.state.password === "1234"){
-            this.setState({
-                redirect: true
-            })
-        }
-
-=======
         const description = axios.get('/password/'+ this.state.password)
             .then((res)=>{
                 if(res===true){
@@ -49,19 +37,10 @@ class Login extends React.Component{
             })
 
         console.log("Submit");
->>>>>>> dynamicwebsite
     }
 
 
     render() {
-        const { redirect } = this.state;
-
-        if(redirect){
-            return(
-                <Redirect to='/SecretProjectEdit' />
-            );
-        }
-
         return(
             <div>
             <h1>This is a login page! :)      <Link to="/">Home</Link></h1>
@@ -85,13 +64,9 @@ class Login extends React.Component{
             />
             <br />
 
-<<<<<<< HEAD
             <button>Login</button>
             <br /><br /><br /><br />
             <p>or link to the <Link to='/SecretProjectEdit'>secret editing</Link> page!</p>
-=======
-            <button onClick={this.handleSubmit} >Login</button>
->>>>>>> dynamicwebsite
 
             </div>
         )
