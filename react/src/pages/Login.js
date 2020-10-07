@@ -30,7 +30,7 @@ class Login extends React.Component{
                     console.log('1');
                 } else if (res===false){
                     console.log('2');
-                })
+                }
             })
 
         console.log("Submit");
