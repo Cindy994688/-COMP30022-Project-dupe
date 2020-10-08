@@ -14,8 +14,9 @@ class EditProjects extends React.Component {
                 xuhan: "4",
                 mengyan: "5"
             },
-            description: "Project description!",
-            colour: ""
+            title: "",
+            description: "",
+            position: 0
         };
     }
 
@@ -36,7 +37,7 @@ class EditProjects extends React.Component {
         projectTitle: this.projectTitle,
         linktogitrepo: this.linktogitrepo,
         description: this.description,
-        position: rhis.position});
+        position: this.position});
 
     }
 
@@ -61,6 +62,16 @@ class EditProjects extends React.Component {
             </select>
             <br /><br />
 
+            <label>Project title: </label>
+            <input
+                type="text"
+                name="title"
+                value={this.state.title}
+                onChange={this.handleChange}
+            />
+            <br /><br />
+
+            <p>Project Description: </p>
             <textarea
                 name="description"
                 value={this.state.description}
@@ -68,22 +79,21 @@ class EditProjects extends React.Component {
             />
             <br /><br />
 
-            <label>Select a colour: </label>
+            <label>Select position: </label>
             <select
-                value={this.state.person}
+                value={this.state.position}
                 onChange={this.handleChange}
-                name="colour"
+                name="position"
             >
                 <option value="">-</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-                <option value="green">Green</option>
-                <option value="yellow">Yellow</option>
-                <option value="black">Black</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
             <br /><br />
-
-            {/* if an image upload could go here as well, that'd be swell! */}
 
             <button onClick={this.handleSubmit}>Submit</button>
 
