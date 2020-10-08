@@ -1,14 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './clientbanner.jpg'
+import axios from 'axios'
 
 class ProjectsPage extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            project: "none"
+            projects: "none"
         };
+    }
+
+    componentDidMount() {
+        // Call our fetch function below once the component mounts
+        const description = axios.get('/projects')
+          .then((res)=>{
+            this.setState({projects:res});
+            console.log(this.state.projects);
+          });
     }
 
     handleChange = (event) => {

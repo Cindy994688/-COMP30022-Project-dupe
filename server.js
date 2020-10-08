@@ -25,6 +25,7 @@ const userInfo = require('./routes/users');
 const imageMd5 = require('./routes/image');
 const login = require('./routes/login');
 const personalProject = require('./routes/personalproject');
+const projects = require('./routes/projects');
 
 // Middleware setup
 app.set('views', path.join(__dirname, 'views'));
@@ -49,8 +50,7 @@ app.use(passport.session());
 app.use('/', tryConnect);
 app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
-
-
+app.use('/projects', projects);
 app.use('/project', personalProject);
 app.use('/login', login);
 

@@ -4,6 +4,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
+import ProjectsPage from './ProjectsPage.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleB from './ToggleB.js'
 import UserInfo from './userInfo.js'
@@ -240,8 +241,12 @@ render () {
               </div>
           </div>
         </div>
+
+        <div><ProjectsPage className = "bioText"/></div>
+
         <h1>Home page, or go to the <Link to="/Projects">Projects</Link> page, or <Link to="/Login">Login</Link> page. :)</h1>
       </div>
+
     )
   }
 }
