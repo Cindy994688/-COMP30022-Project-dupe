@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios'
 
 class EditProjects extends React.Component {
     constructor() {
@@ -31,6 +32,11 @@ class EditProjects extends React.Component {
         event.preventDefault();
         var person = this.state.projects[this.state.person];
         console.log(person + ": " + this.state.description);
+        axios.post('/project', {name: this.name,
+        projectTitle: this.projectTitle,
+        linktogitrepo: this.linktogitrepo,
+        description: this.description,
+        position: rhis.position});
 
     }
 
