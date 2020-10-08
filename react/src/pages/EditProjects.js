@@ -33,11 +33,11 @@ class EditProjects extends React.Component {
         event.preventDefault();
         var person = this.state.projects[this.state.person];
         console.log(person + ": " + this.state.description);
-        axios.post('/project', {name: this.name,
-        projectTitle: this.projectTitle,
-        linktogitrepo: this.linktogitrepo,
-        description: this.description,
-        position: this.position});
+        axios.post('/project', {name: this.state.person,
+        projectTitle: this.state.title,
+        linktogitrepo: 'www.hi',
+        description: this.state.description,
+        position: this.state.position});
 
     }
 
