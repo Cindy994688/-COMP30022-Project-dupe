@@ -25,11 +25,12 @@ class Login extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const description = axios.get('/password/'+ this.state.password)
+        const description = axios.post('/login', {username:this.state.username, password:this.state.password})
             .then((res)=>{
-                if(res===true){
+              console.log(res);
+                if(res.data===true){
                     console.log('1');
-                } else if (res===false){
+                } else if (res.data===false){
                     console.log('2');
                 }
             })
@@ -62,7 +63,7 @@ class Login extends React.Component{
             />
             <br />
 
-            <button>Login</button>
+            <button onClick={this.handleSubmit}>Login</button>
 
             </div>
         )

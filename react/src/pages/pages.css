@@ -1,25 +1,65 @@
+:root {
+  --bg-color: #F7F4F3;
+  --second-color: #82716e;
+  --third-color: #dfdfdf;
+  --txt-color: #43203A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Abel-Regular';
+  src: local('Abel-Regular'), url(./fonts/Abel-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto';
+  src: local('Noto'), url(./fonts/NotoSerif-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: local('Tinos'), url(./fonts/Tinos-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Kaushan';
+  src: local('Kaushan'), url(./fonts/KaushanScript-Regular.ttf) format('truetype');
+}
+
 .banner {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
+    font-family:"Noto", 'Times New Roman', Times, serif;
+    color: var(--second-color);
     font-size: 35px;
     border: 2px double white;
     text-align: center;
-    background-image: url('./clientbanner.jpg');
+    background-image: url('clientbannertint.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px black;
-    height: 500px;
+    text-shadow: 2px 2px white;
+    height: 700px;
     padding: 10em inherit;
   }
-  
+
+  .punk {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75%;
+    margin-left: 75%;
+    z-index: 10;
+  }
+
   .title {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-    font-size: 40px;
+    font-family: "Kaushan", 'Times New Roman', Times, serif;
+    color: #fffafa;
+    font-size: 55px;
     size: 150px;
     text-align: center;
-    text-shadow: 5px 5px black;
+    text-shadow: 7px 7px black;
+    transform: translateY(50px)
   }
 
   .space {
@@ -31,7 +71,9 @@
     text-align: center;
     margin-left: 100px;
     margin-right: 100px;
-    font-size: 30px;
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--txt-color);
   }
 
   .descr {
@@ -48,25 +90,155 @@
   }
 
   .divider {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 25px;
-    border: 2px double black;
+    /*border: 2px double black;*/
     text-align: center;
-    background-color: slategrey;
+    background-color: var(--third-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 2px 2px black;
-    height: 100px;
+    height: 200px;
     padding: 10em inherit;
   }
 
   .dividerTitle {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-    font-size: 20px;
-    size: 100px;
+    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--second-color);
+    font-size: 70px;
+    size: 200px;
+    text-align: center;
+    text-shadow: 5px 5px var(--bg-color);
+  }
+
+  .fullPage{
+    background-color: var(--bg-color);
+  }
+
+  .groupPr{
+    background-color: var(--txt-color);
+    font-size: 50px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px black;
+    height: 500px;
+    padding: 10em inherit;
+    /*border: 20px double var(--second-color);*/
+    /*border-radius: 25px;*/
+
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+  }
+
+  .groupPr:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /*margin: 8px 10px 12px;*/
+  }
+
+  .gradient-button-3 {background-image: linear-gradient(to right, var(--third-color) 0%, var(--third-color) 15%, var(--second-color) 100%)}
+  .gradient-button-3:hover { background-position: right center; }
+
+  .groupPrTitle{
+    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--bg-color);
+    font-size: 50px;
+    size: 500px;
     text-align: center;
     text-shadow: 5px 5px black;
+    transform: translateY(60px);
+  }
+
+  .bgSecondary{
+    background-color: var(--third-color);
+  }
+
+  .txtColor{
+    font-family: "Kaushan", 'Times New Roman', Times, serif;
+    color: var(--txt-color);
+  }
+
+  /*lets try a hover thingo*/
+
+
+  .content {
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #1c87c9;
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 300px;
+    height: 300px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+  }
+
+  .box {
+    position: relative;
+  }
+
+  .bioText {
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-size: 25px;
+    width: 800px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    transform: translate(50px,-100px);
+    color: var(--txt-color);
+    padding-left: 25px;
+    padding-right: 100px;
+  }
+
+  .dividerTitleSmall {
+    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--second-color);
+    font-size: 30px;
+    size: 200px;
+    text-align: center;
+    text-shadow: 5px 5px var(--bg-color);
+    transform: translateY(45px);
+  }
+
+
+  .groupPrButton{
+    background-color: var(--txt-color);
+    font-size: 20px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px black;
+    height: 200px;
+    width: 50px;
+    padding: 10em inherit;
+    /*border: 20px double var(--second-color);*/
+    border-radius: 25px;
+
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+  }
+
+  .groupPrButton:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /*margin: 8px 10px 12px;*/
   }

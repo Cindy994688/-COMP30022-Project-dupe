@@ -16,6 +16,7 @@ class EditProjects extends React.Component {
             },
             title: "",
             description: "",
+            giturl: "",
             position: 0
         };
     }
@@ -35,7 +36,7 @@ class EditProjects extends React.Component {
         console.log(person + ": " + this.state.description);
         axios.post('/project', {name: this.state.person,
         projectTitle: this.state.title,
-        linktogitrepo: 'www.hi',
+        linktogitrepo: this.state.giturl,
         description: this.state.description,
         position: this.state.position});
 
@@ -75,6 +76,15 @@ class EditProjects extends React.Component {
             <textarea
                 name="description"
                 value={this.state.description}
+                onChange={this.handleChange}
+            />
+            <br /><br />
+
+            <label>Github url: </label>
+            <input
+                type="text"
+                name="giturl"
+                value={this.state.giturl}
                 onChange={this.handleChange}
             />
             <br /><br />
