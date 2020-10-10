@@ -43,14 +43,14 @@ export default class ToggleProj extends Component {
                     <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
                   </div>
                   <div style={{display: 'inline-block'}}>
-                  <p><UserInfo clientname = {this.props.name} type = "description"/></p>
-                  <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
-                  <p><UserInfo clientname = {this.props.name} type = "email"/></p>
+                    <p><UserInfo clientname = {this.props.name} type = "description"/></p>
+                    <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
+                    <p><UserInfo clientname = {this.props.name} type = "email"/></p>
                   </div>
                 {/*<button onClick = {this.toggle}>clickme</button>*/}
+                </div>
 
                 {this.state.on && this.props.children}
-                </div>
             </div>
         )
     }

@@ -48,16 +48,16 @@ export default class ToggleProj extends Component {
     render() {
         return (
           <div>
-          <div className = "bgSecondary box" onClick = {this.toggle} style={{cursor:'pointer'}}>
-          <div style={{display: 'inline-block'}}>
-              <p><UserInfo clientname = {this.props.name} type = "description"/></p>
-              <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
-              <p><UserInfo clientname = {this.props.name} type = "email"/></p>
-          </div>
-          <div style={{display: 'inline-block'}}>
-              <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
-          </div>
-          </div>
+            <div className = "bgSecondary box" onClick = {this.toggle} style={{cursor:'pointer'}}>
+              <div style={{display: 'inline-block'}}>
+                <p><UserInfo clientname = {this.props.name} type = "description"/></p>
+                <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
+                <p><UserInfo clientname = {this.props.name} type = "email"/></p>
+              </div>
+              <div style={{display: 'inline-block'}}>
+                <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
+              </div>
+            </div>
 
           {this.state.on && this.props.children}
       </div>

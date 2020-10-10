@@ -2,6 +2,7 @@
   --bg-color: #F7F4F3;
   --second-color: #82716e;
   --third-color: #dfdfdf;
+  --fourth-color: #f9dcc4;
   --txt-color: #43203A;
 }
 
@@ -70,6 +71,16 @@
     padding: 25px;
     text-align: center;
     margin-left: 100px;
+    margin-right: 100px;
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--txt-color);
+  }
+
+  .getInTouchHeader {
+    padding: 25px;
+    text-align: left;
+    margin-left: 15%;
     margin-right: 100px;
     font-family: "Abel-Regular", Helvetica, sans-serif;
     font-size: 35px;
@@ -160,6 +171,50 @@
     background-color: var(--third-color);
   }
 
+  .contact{
+    background-color: var(--third-color);
+    padding-bottom: 15%;
+  }
+
+  .button{
+    margin-top:25px;
+    margin-left: 11%;
+  }
+
+  .contactForm{
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    color: black;
+    font-size: 20px;
+    border: 2px double black;
+    text-align: left;
+    background-color: var(--fourth-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    margin-left: 9%;
+    width: 500px;
+    padding: 10em inherit;
+
+  }
+
+  .messageForm{
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    color: black;
+    font-size: 20px;
+    border: 2px double black;
+    text-align: left;
+    background-color: var(--fourth-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-left: 9%;
+    width: 500px;
+    padding: 10em inherit;
+
+  }
+
   .txtColor{
     font-family: "Kaushan", 'Times New Roman', Times, serif;
     color: var(--txt-color);
@@ -188,6 +243,32 @@
 
   .box {
     position: relative;
+  }
+
+  .bioTextStable {
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-size: 25px;
+    width: 800px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    color: var(--txt-color);
+    padding-left: 5%;
+    padding-right: 100px;
+  }
+
+  .bioTextContact {
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-size: 25px;
+    width: 800px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    color: var(--txt-color);
+    padding-left: 9%;
+    padding-right: 100px;
   }
 
   .bioText {

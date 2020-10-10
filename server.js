@@ -15,6 +15,7 @@ var tryConnect = require('./routes/connected');
 var userInfo = require('./routes/users');
 var imageMd5 = require('./routes/image');
 var name = require('./routes/name');
+var contact= require('./routes/contact');
 
 const connectDB = require('./config/db');
 
@@ -32,6 +33,7 @@ app.use('/', tryConnect);
 app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
 app.use('/name/:name', name);
+app.use('/email', contact);
 
 if (IS_HEROKU){
   app.get('*', (req, res) => {
