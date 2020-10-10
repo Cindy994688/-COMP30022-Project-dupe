@@ -49,6 +49,7 @@ app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
 app.use('/login', login);
 
+
 // Passport configuration
 var Admin = require('./routes/models/admin');
 passport.use(Admin.createStrategy());
