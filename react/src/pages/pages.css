@@ -192,20 +192,27 @@
   .box {
     display:flex;
     flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .vertBox {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   .bioText {
     font-family: "Abel-Regular", Helvetica, sans-serif;
     font-size: 25px;
-    width: 800px;
-    display: inline-block;
+    max-width: 800px;
+    /*display: inline-block;*/
     vertical-align: middle;
-    position: relative;
-    top: 50%;
-    transform: translate(50px,-100px);
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translate(50px,-100px);*/
     color: var(--txt-color);
-    padding-left: 25px;
-    padding-right: 100px;
+    /*padding-left: 25px;*/
+    /*padding-right: 100px;*/
   }
 
   .dividerTitleSmall {
