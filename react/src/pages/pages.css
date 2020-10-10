@@ -108,7 +108,7 @@
   .dividerTitle {
     font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--second-color);
-    font-size: 70px;
+    font-size: 50px;
     size: 200px;
     text-align: center;
     text-shadow: 5px 5px var(--bg-color);
@@ -162,6 +162,7 @@
     background-color: var(--third-color);
   }
 
+
   .txtColor{
     font-family: "Kaushan", 'Times New Roman', Times, serif;
     color: var(--txt-color);
@@ -189,7 +190,8 @@
   }
 
   .box {
-    position: relative;
+    display:flex;
+    flex-direction: row;
   }
 
   .bioText {

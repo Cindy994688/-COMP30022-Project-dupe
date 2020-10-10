@@ -36,9 +36,9 @@ class HomePage extends Component {
     <img src="/image/Mengyan.jpg" alt="mengyan"
       onMouseOver={e => (e.currentTarget.src = MengHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
-    <img src="/image/Mustafa.jpg" alt="mustafa"
+    <img src="/image/MustafaFullBody.jpg" alt="mustafa"
       onMouseOver={e => (e.currentTarget.src = MusHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/Mustafa.jpg")}/>,
+      onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
     <img src="/image/Ron.jpg" alt="ron"
     onMouseOver={e => (e.currentTarget.src = RonHover)}
     onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
