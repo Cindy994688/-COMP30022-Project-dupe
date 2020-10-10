@@ -14,6 +14,7 @@ var app = express();
 var tryConnect = require('./routes/connected');
 var userInfo = require('./routes/users');
 var imageMd5 = require('./routes/image');
+var name = require('./routes/name');
 
 const connectDB = require('./config/db');
 
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, 'react/build')));
 app.use('/', tryConnect);
 app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
+app.use('/name/:name', name);
 
 if (IS_HEROKU){
   app.get('*', (req, res) => {
