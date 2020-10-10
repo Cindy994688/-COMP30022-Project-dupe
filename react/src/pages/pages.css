@@ -99,8 +99,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 2px 2px black;
-    height: 200px;
+    min-height: 200px;
     padding: 10em inherit;
+    display: flex;
+    flex-direction: column;
   }
 
   .dividerTitle {
@@ -209,9 +211,10 @@
     color: var(--second-color);
     font-size: 30px;
     size: 200px;
-    text-align: center;
     text-shadow: 5px 5px var(--bg-color);
-    transform: translateY(45px);
+    flex-shrink: 5;
+    align-self: center;
+    flex-basis: auto; 
   }
 
 

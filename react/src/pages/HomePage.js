@@ -109,9 +109,9 @@ render () {
         </div>
 
 
-        <Jumbotron className = "divider">
+        <div className = "divider">
         <div className="dividerTitleSmall"><h1> - Harry - Ron - Mustafa - Kelly - Zoe -</h1></div>
-        </Jumbotron>
+        </div>
 
         <div className="punk">
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
