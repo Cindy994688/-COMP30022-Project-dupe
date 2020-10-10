@@ -23,6 +23,7 @@ const tryConnect = require('./routes/connected');
 const userInfo = require('./routes/users');
 const imageMd5 = require('./routes/image');
 const login = require('./routes/login');
+const name = require('./routes/name');
 
 // Middleware setup
 app.set('views', path.join(__dirname, 'views'));
@@ -48,6 +49,7 @@ app.use('/', tryConnect);
 app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
 app.use('/login', login);
+app.use('/name/:name', name);
 
 
 // Passport configuration
