@@ -3,6 +3,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import Profile from './Profile.js'
 import UserInfo from './userInfo.js'
 import axios from 'axios'
+import './pages.css'
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 
 export default class ToggleProj extends Component {
@@ -48,16 +49,18 @@ export default class ToggleProj extends Component {
     render() {
         return (
           <div>
-            <div className = "bgSecondary box" onClick = {this.toggle} style={{cursor:'pointer'}}>
-              <div style={{display: 'inline-block'}}>
-                <p><UserInfo clientname = {this.props.name} type = "description"/></p>
-                <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
-                <p><UserInfo clientname = {this.props.name} type = "email"/></p>
+          <div className = "bgSecondary vertBox" onClick = {this.toggle} style={{cursor:'pointer'}}>
+            <div className = "bgSecondary box">
+              <div className = "vertBox">
+                  <p><UserInfo clientname = {this.props.name} type = "description"/></p>
+                  <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
+                  <p><UserInfo clientname = {this.props.name} type = "email"/></p>
               </div>
-              <div style={{display: 'inline-block'}}>
-                <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
+              <div>
+                  <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
               </div>
-            </div>
+             </div>
+          </div>
 
           {this.state.on && this.props.children}
       </div>

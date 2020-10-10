@@ -110,14 +110,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 2px 2px black;
-    height: 200px;
+    min-height: 200px;
     padding: 10em inherit;
+    display: flex;
+    flex-direction: column;
   }
 
   .dividerTitle {
     font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--second-color);
-    font-size: 70px;
+    font-size: 50px;
     size: 200px;
     text-align: center;
     text-shadow: 5px 5px var(--bg-color);
@@ -242,7 +244,15 @@
   }
 
   .box {
-    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .vertBox {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   .bioTextStable {
@@ -274,15 +284,15 @@
   .bioText {
     font-family: "Abel-Regular", Helvetica, sans-serif;
     font-size: 25px;
-    width: 800px;
-    display: inline-block;
+    max-width: 800px;
+    /*display: inline-block;*/
     vertical-align: middle;
-    position: relative;
-    top: 50%;
-    transform: translate(50px,-100px);
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translate(50px,-100px);*/
     color: var(--txt-color);
-    padding-left: 25px;
-    padding-right: 100px;
+    /*padding-left: 25px;*/
+    /*padding-right: 100px;*/
   }
 
   .dividerTitleSmall {
@@ -290,9 +300,10 @@
     color: var(--second-color);
     font-size: 30px;
     size: 200px;
-    text-align: center;
     text-shadow: 5px 5px var(--bg-color);
-    transform: translateY(45px);
+    flex-shrink: 5;
+    align-self: center;
+    flex-basis: auto;
   }
 
 
