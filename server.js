@@ -24,6 +24,7 @@ const userInfo = require('./routes/users');
 const imageMd5 = require('./routes/image');
 const login = require('./routes/login');
 const name = require('./routes/name');
+var contact= require('./routes/contact');
 
 // Middleware setup
 app.set('views', path.join(__dirname, 'views'));
@@ -50,6 +51,7 @@ app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
 app.use('/login', login);
 app.use('/name/:name', name);
+app.use('/email', contact);
 
 
 // Passport configuration
