@@ -1,6 +1,10 @@
 // app.js is the file that is actually executed on the server.
 // All of the servers functionality is linked to this file
 
+// Config local environment variables
+const dotenv = require('dotenv');
+dotenv.config();
+
 // Imports
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -16,6 +20,9 @@ const logger = require('morgan');
 const app = express();
 const connectDB = require('./config/db');
 const LocalStrategy = require('passport-local').Strategy;
+
+
+//  Detect heroku
 const IS_HEROKU = process.env.IS_HEROKU || 0;
 
 // Required routes
@@ -62,6 +69,7 @@ passport.deserializeUser(Admin.deserializeUser());
 
 // Runs mongoose config
 connectDB();
+
 
 // Configuration for online / offline functionality
 if (IS_HEROKU){

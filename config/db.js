@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const db = 'mongodb+srv://Snow:' + process.env.DB_PASSWORD + '@fire451.jxyew.mongodb.net/potato_powered?retryWrites=true&w=majority';
 
+console.log(process.env.DB_PASSWORD)
 
 const connectDB = async () => {
   try {
