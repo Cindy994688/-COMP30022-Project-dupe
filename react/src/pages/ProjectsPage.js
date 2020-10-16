@@ -5,19 +5,25 @@ import axios from 'axios'
 
 class ProjectsPage extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            projects: "none"
+            isLoading: false,
+            projects: "none",
+            project_data: ""
         };
+        this.componentDidMount = this.componentDidMount.bind(this);
     }
 
     componentDidMount() {
-        // Call our fetch function below once the component mounts
-        const description = axios.get('/projects')
-          .then((res)=>{
-            this.setState({projects:res});
-            console.log(this.state.projects);
+        this.setState({loading: true});
+        axios.get('/projects')
+          .then(result => {
+            this.setState({
+              isLoading: false,
+              project_data: result.data
+            })
+            console.log(this.state.project_data);
           });
     }
 
@@ -36,11 +42,11 @@ class ProjectsPage extends React.Component {
 
         var project_desc = null;
         if(this.state.project === "1"){
-            project_desc = "This is a description for project 1";
+            project_desc = this.state.project_data[0].description;
         } else if(this.state.project === "2"){
-            project_desc = "This is a description for project 2";
+            project_desc = this.state.project_data[1].description;
         } else if(this.state.project === "3"){
-            project_desc = "This is a description for project 3";
+            project_desc = this.state.project_data[2].description;
         }
 
         return(
