@@ -242,7 +242,7 @@ render () {
           </div>
         </div>
 
-        <div><ProjectsPage className = "bioText"/></div>
+        <div><ProjectsPage className = "bioText" author = "Crystal"/></div>
 
         <h1>Home page, or go to the <Link to="/Projects">Projects</Link> page, or <Link to="/Login">Login</Link> page. :)</h1>
       </div>

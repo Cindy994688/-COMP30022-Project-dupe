@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './clientbanner.jpg'
 import axios from 'axios'
+
+import Banner from './clientbanner.jpg';
+import Chao from './chaohover.png';
+
 
 class ProjectsPage extends React.Component {
 
@@ -9,14 +12,19 @@ class ProjectsPage extends React.Component {
         super(props);
         this.state = {
             isLoading: false,
+            author: "",
             projects: "none",
-            project_data: ""
+            project_data: "",
+            picture_hover: true,
+            style: ""
         };
-        this.componentDidMount = this.componentDidMount.bind(this);
     }
 
-    componentDidMount() {
-        this.setState({loading: true});
+    componentDidMount(props) {
+        this.setState({
+          loading: true,
+          author: this.props.author
+        });
         axios.get('/projects')
           .then(result => {
             this.setState({
@@ -35,7 +43,7 @@ class ProjectsPage extends React.Component {
     }
 
 
-    render() {
+    render(props) {
         const clicked = {
             color: "#cdcdcd"
         }
@@ -82,8 +90,40 @@ class ProjectsPage extends React.Component {
                 <br /><br />
                 <p>And then some more things go here. :)</p>
 
+                <p>DEBUG INFO:</p>
+                <p>{this.state.author}</p>
+
+                <br/>
+                <button
+                  name="style"
+                  value="thing1"
+                  onClick={this.handleChange}
+                >Thing 1</button><br/>
+                <button
+                  name="style"
+                  value="thing2"
+                  onClick={this.handleChange}
+                >Thing 2</button><br/>
+
+                <div className={this.state.style}>
+                <p>Some text???</p>
+                <h1>and  aheading </h1>
+                </div>
+
+                <button
+                  name="picture_hover"
+                  value={false}
+                  onClick={this.handleChange}
+                >Undo hover button</button>
+
                 <div class="imgcontainer">
-                    <img source={require('./clientbanner.jpg')} alt="clientbanner" class="clientbanner" />
+                    <img
+                      src= {this.state.picture_hover ? Banner : Chao}
+                      alt="clientbanner"
+                      name="picture_hover"
+                      value={this.state.picture_hover === true ? !this.state.picture_hover : !this.state.picture_hover}
+                      onMouseOver={this.handleChange}
+                    />
                 </div>
 
             </div>
