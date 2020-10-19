@@ -4,6 +4,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
+import Contact from './Contact.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
 import ToggleRight from './ToggleRight.js'
@@ -225,6 +226,11 @@ render () {
              taking over our society?</i> </p>
           </div>
         </ToggleLeft>
+
+        <Contact />
+
+        <div></div>
+
 
       </div>
     )

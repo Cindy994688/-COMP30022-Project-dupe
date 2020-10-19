@@ -53,9 +53,9 @@ export default class ToggleProj extends Component {
                     </div>
                   </div>
                 {/*<button onClick = {this.toggle}>clickme</button>*/}
+                </div>
 
                 {this.state.on && this.props.children}
-                </div>
             </div>
         )
     }
