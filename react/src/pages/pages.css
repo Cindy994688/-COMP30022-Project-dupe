@@ -3,6 +3,7 @@
   --second-color: #82716e;
   --third-color: #dfdfdf;
   --fourth-color: #f9dcc4;
+  --fifth-color: #a3a3a3;
   --txt-color: #43203A;
 }
 
@@ -180,8 +181,36 @@
 
   .button{
     margin-top:25px;
+    font-family: "Abel-Regular", Helvetica, sans-serif;
     margin-left: 11%;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
   }
+
+  .togglel{
+    margin-top:25px;
+    font-family: "Abel-Regular", Helvetica, sans-serif;
+    margin-left: 40%;
+    font-size: 20px;
+    width: 40%;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
+    color: var(--text-color);
+    background-color: var(--fourth-color);
+    border-color: var(--fourth-color); /*set the color you want here*/
+}
+
+  .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
+    color: var(--fifth-color);
+    background-color: var(--third-color);
+    border-color: var(--text-color); /*set the color you want here*/
+}
 
   .contactForm{
     font-family: "Abel-Regular", Helvetica, sans-serif;
@@ -216,6 +245,26 @@
     padding: 10em inherit;
 
   }
+
+
+/*
+.button{
+  font-family: "Abel-Regular", "Helvetica", "sans-serif";
+  color: black;
+  font-size: 20px;
+  border: 2px double black;
+  text-align: left;
+  background-color: var(--fourth-color)!important;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  margin-left: 9%;
+  width: 100px;
+  padding: 10em inherit;
+
+}*/
 
   .txtColor{
     font-family: "Kaushan", 'Times New Roman', Times, serif;
