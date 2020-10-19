@@ -1,9 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
-
-import Banner from './clientbanner.jpg';
-import Chao from './chaohover.png';
+import React from 'react';
+import axios from 'axios';
 
 
 class ProjectsPage extends React.Component {
@@ -11,28 +7,34 @@ class ProjectsPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoading: false,
+            isLoading: true,
             author: "",
-            projects: "none",
-            project_data: "",
-            picture_hover: true,
-            style: ""
+            project: "none",
+            projectData: "",
         };
     }
 
     componentDidMount(props) {
         this.setState({
-          loading: true,
-          author: this.props.author
+            loading: true,
+            author: this.props.author
         });
         axios.get('/projects')
-          .then(result => {
-            this.setState({
-              isLoading: false,
-              project_data: result.data
-            })
-            console.log(this.state.project_data);
-          });
+            .then(result => {
+                var authorProjects = [];
+                var i;
+                //Only adding in projects that belong to the shown client.
+                for(i=0;i<result.data.length;i++){
+                    if(result.data[i].name === this.state.author){
+                    authorProjects.push(result.data[i]);
+                    }
+                }
+                this.setState({
+                    isLoading: false,
+                    projectData: authorProjects
+                })
+                console.log(this.state.projectData);
+            });
     }
 
     handleChange = (event) => {
@@ -48,83 +50,138 @@ class ProjectsPage extends React.Component {
             color: "#cdcdcd"
         }
 
-        var project_desc = null;
+        var projectLength = null;
+        if(this.state.isLoading === false){
+          projectLength = this.state.projectData.length;
+        }
+
+        //Assigning the project description based on which project
+        //has been selected.
+        var projectDesc = null;
         if(this.state.project === "1"){
-            project_desc = this.state.project_data[0].description;
+            projectDesc = this.state.projectData[0].description;
         } else if(this.state.project === "2"){
-            project_desc = this.state.project_data[1].description;
+            projectDesc = this.state.projectData[1].description;
         } else if(this.state.project === "3"){
-            project_desc = this.state.project_data[2].description;
+            projectDesc = this.state.projectData[2].description;
+        } else if(this.state.project === "4"){
+            projectDesc = this.state.projectData[3].description;
+        } else if(this.state.project === "5"){
+            projectDesc = this.state.projectData[4].description;
+        } else if(this.state.project === "6"){
+            projectDesc = this.state.projectData[5].description;
+        }
+
+        //Assigning the git repository based on which project has
+        //been selected.
+        var gitRep = "";
+        if(this.state.project === "1"){
+            gitRep = this.state.projectData[0].linktogitrepo;
+        } else if(this.state.project === "2"){
+            gitRep = this.state.projectData[1].linktogitrepo;
+        } else if(this.state.project === "3"){
+            gitRep = this.state.projectData[2].linktogitrepo;
+        } else if(this.state.project === "4"){
+            gitRep = this.state.projectData[3].linktogitrepo;
+        } else if(this.state.project === "5"){
+            gitRep = this.state.projectData[4].linktogitrepo;
+        } else if(this.state.project === "6"){
+            gitRep = this.state.projectData[5].linktogitrepo;
+        }
+        if(gitRep.length === 0){
+          gitRep = null;
+        }
+
+        //Assigning project titles to the buttons.
+        if(this.state.isLoading === false && projectLength >= 1){
+            var button1 = this.state.projectData[0].projectTitle;
+        }
+        if(this.state.isLoading === false && projectLength >= 2){
+            var button2 = this.state.projectData[1].projectTitle;
+        }
+        if(this.state.isLoading === false && projectLength >= 3){
+            var button3 = this.state.projectData[2].projectTitle;
+        }
+        if(this.state.isLoading === false && projectLength >= 4){
+            var button4 = this.state.projectData[3].projectTitle;
+        }
+        if(this.state.isLoading === false && projectLength >= 5){
+            var button5 = this.state.projectData[4].projectTitle;
+        }
+        if(this.state.isLoading === false && projectLength >= 6){
+            var button6 = this.state.projectData[5].projectTitle;
         }
 
         return(
             <div className="container">
-                <h1>Projects Page, or go back to the <Link to="/">Home</Link> page.</h1>
-                <p>Here's the projects page.</p>
-
-                <br /><br />
-
-                <button
-                    style={this.state.project === "1" ? clicked : null}
-                    name="project"
-                    value={this.state.project === "1" ? "none" : "1"}
-                    onClick={this.handleChange}
-                >Project 1</button>
-                <button
-                    style={this.state.project === "2" ? clicked : null}
-                    name="project"
-                    value={this.state.project === "2" ? "none" : "2"}
-                    onClick={this.handleChange}
-                >Project 2</button>
-                <button
+            {/*Displays buttons based on the length of projects shown.
+            //Each button changes which project description is shown.*/}
+                {projectLength >= 1 ?
+                  <button
+                      style={this.state.project === "1" ? clicked : null}
+                      name="project"
+                      value={this.state.project === "1" ? "none" : "1"}
+                      onClick={this.handleChange}
+                  >{button1}</button>
+                : null}
+                {projectLength >= 2 ?
+                  <button
+                      style={this.state.project === "2" ? clicked : null}
+                      name="project"
+                      value={this.state.project === "2" ? "none" : "2"}
+                      onClick={this.handleChange}
+                  >{button2}</button>
+                : null}
+                {projectLength >= 3 ?
+                  <button
                     style={this.state.project === "3" ? clicked : null}
                     name="project"
                     value={this.state.project === "3" ? "none" : "3"}
                     onClick={this.handleChange}
-                >Project 3</button>
+                >{button3}</button>
+                : null}
+                {projectLength >= 4 ?
+                  <button
+                    style={this.state.project === "4" ? clicked : null}
+                    name="project"
+                    value={this.state.project === "4" ? "none" : "4"}
+                    onClick={this.handleChange}
+                >{button4}</button>
+                : null}
+                {projectLength >= 5 ?
+                  <button
+                    style={this.state.project === "5" ? clicked : null}
+                    name="project"
+                    value={this.state.project === "5" ? "none" : "5"}
+                    onClick={this.handleChange}
+                >{button5}</button>
+                : null}
+                {projectLength >= 6 ?
+                  <button
+                    style={this.state.project === "6" ? clicked : null}
+                    name="project"
+                    value={this.state.project === "6" ? "none" : "6"}
+                    onClick={this.handleChange}
+                >{button6}</button>
+                : null}
 
+                {/*Rendering the project description.*/}
                 {this.state.project !== "none" ?
-                <div><hr /><p>{project_desc}</p><hr /></div> :
-                <div></div>
+                <div><hr /><p>{projectDesc}</p>
+                {/*Only renders the git repo is it exists*/}
+                {gitRep !== null ?
+                <p>Link to the git repository: {gitRep}</p> :
+                null}
+                <hr /><br /><br /></div> :
+                <div><br /><br /></div>
                 }
-                <br /><br />
-                <p>And then some more things go here. :)</p>
 
-                <p>DEBUG INFO:</p>
+                {/*Debug info.*/}
+                {/*<p>DEBUG INFO:</p>
                 <p>{this.state.author}</p>
-
-                <br/>
-                <button
-                  name="style"
-                  value="thing1"
-                  onClick={this.handleChange}
-                >Thing 1</button><br/>
-                <button
-                  name="style"
-                  value="thing2"
-                  onClick={this.handleChange}
-                >Thing 2</button><br/>
-
-                <div className={this.state.style}>
-                <p>Some text???</p>
-                <h1>and  aheading </h1>
-                </div>
-
-                <button
-                  name="picture_hover"
-                  value={false}
-                  onClick={this.handleChange}
-                >Undo hover button</button>
-
-                <div class="imgcontainer">
-                    <img
-                      src= {this.state.picture_hover ? Banner : Chao}
-                      alt="clientbanner"
-                      name="picture_hover"
-                      value={this.state.picture_hover === true ? !this.state.picture_hover : !this.state.picture_hover}
-                      onMouseOver={this.handleChange}
-                    />
-                </div>
+                <p>{this.state.author === this.props.author ? "True" : "False"}</p>
+                <p>{console.log(this.state)}</p>
+                <p>{console.log(this.props)}</p>*/}
 
             </div>
         )

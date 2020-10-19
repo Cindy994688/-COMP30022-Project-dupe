@@ -179,6 +179,7 @@ render () {
             <p>Field: IT (Distributed Computing)</p>
             <p>Contact: chaoweic@student.unimelb.edu.au</p></div>
           </div>
+          <ProjectsPage author="chaowei"/>
         </div>
 
 
@@ -196,6 +197,7 @@ render () {
 
               <Profile img = "/image/Ron.jpg" clientname = "     Ron Chiu" />
             </div>
+            <ProjectsPage author="ronchiu"/>
           </div>
 
         {/*third person*/}
@@ -211,6 +213,7 @@ render () {
                 <p>Contact: mawni@student.unimelb.edu.au</p>
               </div>
           </div>
+          <ProjectsPage author="mustafa"/>
         </div>
 
         {/*fourth person*/}
@@ -225,6 +228,7 @@ render () {
           <div style={{display: 'inline-block'}}>
               <Profile img = "/image/Xu.jpg" clientname = "      Xu Han" />
           </div>
+          <ProjectsPage author="xuhan"/>
         </div>
 
         {/*fifth person*/}
@@ -241,10 +245,7 @@ render () {
               </div>
           </div>
         </div>
-
-        <div><ProjectsPage className = "bioText" author = "Crystal"/></div>
-
-        <h1>Home page, or go to the <Link to="/Projects">Projects</Link> page, or <Link to="/Login">Login</Link> page. :)</h1>
+        <ProjectsPage author="mengyan"/>
       </div>
 
     )
