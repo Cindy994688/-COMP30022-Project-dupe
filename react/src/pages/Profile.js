@@ -8,6 +8,7 @@ class Profile extends React.Component {
 
   render ( props ) {
     return (
+      <div className = "vertBox">
         <View style={styles.MainContainer}>
           <div>
         <Image 
@@ -18,16 +19,19 @@ class Profile extends React.Component {
         <Text style={styles.text} className = "txtColor">{this.props.clientname}</Text>
         </div>
       </View>
+
+      </div>
     )
   }
 }
 
   const styles = StyleSheet.create({
     MainContainer: {
+      flexDirection: 'column',
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      padding: "50px"
+      padding: "50px",
     },
     text: {
       marginTop: 30,
@@ -35,10 +39,8 @@ class Profile extends React.Component {
       color: '#43203A',
       fontFamily: ' "Kaushan", Times, serif',
       fontWeight: 'bold',
-      alignItems: 'center',
-      padding: "10px",
+      padding: "20px",
       display: 'inline-block',
-      textAlign: 'center'
     },
   });
 

@@ -24,6 +24,8 @@ const tryConnect = require('./routes/connected');
 const userInfo = require('./routes/users');
 const imageMd5 = require('./routes/image');
 const login = require('./routes/login');
+const name = require('./routes/name');
+//someone check these two lines, JL not sure if they're necessary
 const personalProject = require('./routes/personalproject');
 const projects = require('./routes/projects');
 
@@ -53,6 +55,8 @@ app.use('/image/:name', imageMd5);
 app.use('/projects', projects);
 app.use('/project', personalProject);
 app.use('/login', login);
+app.use('/name/:name', name);
+
 
 // Passport configuration
 var Admin = require('./routes/models/admin');
