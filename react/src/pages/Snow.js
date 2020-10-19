@@ -60,6 +60,10 @@ export default class Snow extends Component {
 
   }
 
+  showScroll = e => {
+    console.log(e.detail)
+  }
+
   updateLoc(e) {
     console.log('movin: ')
     this.setState({xMouse: e.clientX})
@@ -78,9 +82,8 @@ export default class Snow extends Component {
 
   render() {
     return (
-        <div className='fullScreenDiv' onMouseMove={this.updateLoc}>
+        <div className='fullScreenDiv' onMouseMove={this.updateLoc} onScroll={this.showScroll}>
             {this.state.snowFlakes}
-            <SnowFlake x={20} y={50}/>
         </div>
       );
     };

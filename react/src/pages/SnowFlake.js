@@ -4,13 +4,14 @@ export default function SnowFlake(props) {
 
   var styles = {
     dot: {
-      position: "absolute",
+      position: "fixed",
       left: props.x + "px",
       top: props.y + 'px',
       height: "10px",
       width: "10px",
       backgroundColor: "#bbb",
       borderRadius: "50%",
+      zIndex: 1,
     }
   };
 
