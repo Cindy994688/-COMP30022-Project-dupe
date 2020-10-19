@@ -64,6 +64,11 @@
     transform: translateY(50px)
   }
 
+  .cv {
+    width : 90%;
+    height : 90%; 
+  }
+
   .space {
     padding: 10em inherit;
   }

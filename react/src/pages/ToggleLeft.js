@@ -6,6 +6,7 @@ import axios from 'axios'
 import './pages.css'
 import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
+import { Image } from 'react-native';
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 
 export default class ToggleProj extends Component {
@@ -70,12 +71,11 @@ export default class ToggleProj extends Component {
                 <div>
                 {this.state.cv &&
                   <div className = "box">
-                  <p>CV information</p>
-                    <p><i>{this.state.fullname}actually studied with giant lizard men during one of his monthly visits to Narnia
-                      He can confirm - the lizard people are taking over our Government</i> </p>
-                    <p><i>On the other hand, is it really such a bad thing that we have smart, somewhat benevolent lizard people
-                     taking over our society?</i> </p>
-                  </div>}
+                  <Image source={"/image/MengyanResume.jpg"}
+                      style={{width:636, height:900}}/>
+                  </div>
+                }
+
                 </div>
 
                 <div>
