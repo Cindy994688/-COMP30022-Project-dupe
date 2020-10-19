@@ -75,13 +75,11 @@ class Contact extends React.Component {
    handleSubmit(event) {
      //console.log(this.state.email);
      event.preventDefault();
-     console.log("hi");
-     console.log(this.state);
      axios.post('/email', {
       name: this.state.name,
       email: this.state.email,
       message: this.state.message,
-    }).then(console.log("hi"));
+    });
     this.resetForm();
   }
 
