@@ -6,6 +6,7 @@ import Profile from './Profile.js'
 import Biotext from './Biotext.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
+import Snow from './Snow.js'
 import ToggleRight from './ToggleRight.js'
 import ToggleB from './ToggleB.js'
 import UserInfo from './userInfo.js'
@@ -75,6 +76,7 @@ class HomePage extends Component {
 render () {
     return (
       <div className = "fullPage">
+        <Snow density={3}></Snow>
 
         <Jumbotron className = "banner">
           <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
