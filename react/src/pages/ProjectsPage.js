@@ -22,13 +22,16 @@ class ProjectsPage extends React.Component {
         axios.get('/projects')
             .then(result => {
                 var authorProjects = [];
-                var i;
+                var i, j;
                 //Only adding in projects that belong to the shown client.
                 for(i=0;i<result.data.length;i++){
-                    if(result.data[i].name === this.state.author){
-                    authorProjects.push(result.data[i]);
+                    for(j=1;j<=6;j++){
+                        if(result.data[i].name === this.state.author && result.data[i].position === j){
+                            authorProjects.push(result.data[i]);
+                        }
                     }
                 }
+                //Add them in based on position (treat it like priority).
                 this.setState({
                     isLoading: false,
                     projectData: authorProjects
@@ -46,10 +49,12 @@ class ProjectsPage extends React.Component {
 
 
     render(props) {
+        //Styling for a clicked button.
         const clicked = {
             color: "#cdcdcd"
         }
 
+        //Storing project length.
         var projectLength = null;
         if(this.state.isLoading === false){
           projectLength = this.state.projectData.length;
@@ -166,18 +171,18 @@ class ProjectsPage extends React.Component {
                 : null}
 
                 {/*Rendering the project description.*/}
-                {this.state.project !== "none" ?
-                <div><hr /><p>{projectDesc}</p>
+                {this.state.project !== "none" ? <div>
                 {/*Only renders the git repo is it exists*/}
                 {gitRep !== null ?
-                <p>Link to the git repository: {gitRep}</p> :
-                null}
-                <hr /><br /><br /></div> :
-                <div><br /><br /></div>
+                  <p>Link to the git repository: {gitRep}</p> :
+                  null}
+                <p>{projectDesc}</p>
+                </div> :
+                <div><br /></div>
                 }
 
-                {/*Debug info.*/}
-                {/*<p>DEBUG INFO:</p>
+                {/*Debug info.
+                <p>DEBUG INFO:</p>
                 <p>{this.state.author}</p>
                 <p>{this.state.author === this.props.author ? "True" : "False"}</p>
                 <p>{console.log(this.state)}</p>

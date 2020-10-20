@@ -223,7 +223,7 @@
     text-shadow: 5px 5px var(--bg-color);
     flex-shrink: 5;
     align-self: center;
-    flex-basis: auto; 
+    flex-basis: auto;
   }
 
 
@@ -253,12 +253,4 @@
   .groupPrButton:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     /*margin: 8px 10px 12px;*/
-  }
-
-  .thing1{
-    color: black;
-  }
-
-  .thing2{
-    color: white;
   }

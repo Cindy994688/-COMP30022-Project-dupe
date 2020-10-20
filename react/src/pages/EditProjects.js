@@ -89,7 +89,7 @@ class EditProjects extends React.Component {
             />
             <br /><br />
 
-            <label>Select position: </label>
+            <label>Select priority: </label>
             <select
                 value={this.state.position}
                 onChange={this.handleChange}
