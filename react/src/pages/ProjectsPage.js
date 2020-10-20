@@ -16,7 +16,6 @@ class ProjectsPage extends React.Component {
 
     componentDidMount(props) {
         this.setState({
-            loading: true,
             author: this.props.author
         });
         axios.get('/projects')
@@ -24,6 +23,7 @@ class ProjectsPage extends React.Component {
                 var authorProjects = [];
                 var i, j;
                 //Only adding in projects that belong to the shown client.
+                //Sorting them based on position, with position 1 shown before 6.
                 for(i=0;i<result.data.length;i++){
                     for(j=1;j<=6;j++){
                         if(result.data[i].name === this.state.author && result.data[i].position === j){
@@ -31,7 +31,6 @@ class ProjectsPage extends React.Component {
                         }
                     }
                 }
-                //Add them in based on position (treat it like priority).
                 this.setState({
                     isLoading: false,
                     projectData: authorProjects
@@ -94,7 +93,7 @@ class ProjectsPage extends React.Component {
             gitRep = this.state.projectData[5].linktogitrepo;
         }
         if(gitRep.length === 0){
-          gitRep = null;
+            gitRep = null;
         }
 
         //Assigning project titles to the buttons.
