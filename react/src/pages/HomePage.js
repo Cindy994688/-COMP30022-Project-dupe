@@ -175,7 +175,9 @@ render () {
         {/*fifth person*/}
         <ToggleLeft name = "Mengyan"/>
 
+        <div className="getInTouchHeader">Contact Us</div>
         <Contact />
+
 
         <div><p>last edited: 21/10/2020</p></div>
 

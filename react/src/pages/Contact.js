@@ -21,10 +21,6 @@ class Contact extends React.Component {
         <div>
         <div className="contact">
 
-          <div className = "getInTouchHeader">
-            Get in Touch
-          </div>
-
 
           <div className = "bioTextStable">If you are interested in any of the
           projects or information you see on this page, please contact us
@@ -56,7 +52,7 @@ class Contact extends React.Component {
                 value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
                 </div>
               </div>
-            <button type="submit" className="btn btn-primary button">Submit</button>
+            <button type="submit" className="btn btn-primary buttonsubmit">Submit</button>
           </form>
         </div>
         </div>
