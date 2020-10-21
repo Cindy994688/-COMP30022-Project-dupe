@@ -61,8 +61,10 @@ export default class ToggleProj extends Component {
                   <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
               </div>
              </div>
-             <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
-             <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+             <div className="buttondiv">
+             <button type="submit" className=" btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
+             <button type="submit" className=" btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+             </div>
           </div>
 
           <div>

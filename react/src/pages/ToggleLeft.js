@@ -64,8 +64,10 @@ export default class ToggleProj extends Component {
                     <p><UserInfo clientname = {this.props.name} type = "email"/></p>
                     </div>
                   </div>
-                  <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
-                  <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+                  <div className="buttondiv">
+                  <button type="submit" className="btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
+                  <button type="submit" className="btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+                  </div>
                 </div>
 
                 <div>

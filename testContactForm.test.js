@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-(async function main() {
+test('E2E: Contact form can send messages', (async() => {
    const browser = await puppeteer.launch({headless: false,});
    const page = await browser.newPage();
    await page.setViewport({width:1535, height:756});
@@ -17,4 +17,4 @@ const puppeteer = require('puppeteer');
    await button.click();
    await page.waitFor(2000);
    await browser.close();
- })()
+ }, 100000);
