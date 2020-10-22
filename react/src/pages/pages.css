@@ -1,16 +1,34 @@
 :root {
-  --bg-color: #F7F4F3;
-  --second-color: #82716e;
-  --third-color: #dfdfdf;
-  --fourth-color: #f9dcc4;
-  --fifth-color: #a3a3a3;
-  --txt-color: #43203A;
-  --main-color:#410b0b;
+  --bg-color: #f7ede2;
+  --second-color: #277da1;
+  --third-color: #caf0f8; /*#91C4F2 ;*/
+  --fourth-color: #277da1;  /*buttons  */
+  --fifth-color: #f7ede2;  /*buttons on hover */
+  --txt-color: #1B2845; /*most text */
+
+  --title-font: 'Montserrat-Bold';
+  --subtitle-font: 'Lora';
+  --body-font: 'HindMadurai-Light';
 }
 
 /** {
   box-sizing: border-box;
 }*/
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat-Bold'), url(./fonts/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'), url(./fonts/Lora.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HindMadurai-Light';
+  src: local('HindMadurai-Light'), url(./fonts/HindMadurai-Light.ttf) format('truetype');
+}
+
 @font-face {
   font-family: 'Lato-Bold';
   src: local('Lato-Bold'), url(./fonts/Lato-Bold.ttf) format('truetype');
@@ -49,8 +67,8 @@
 }
 
 .banner {
-    font-family:"Noto", 'Times New Roman', Times, serif;
-    color: var(--second-color);
+    font-family:var(--title-font), 'Times New Roman', Times, serif;
+    color: var(--fifth-color);
     font-size: 35px;
     border: 2px double white;
     text-align: center;
@@ -58,9 +76,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    z-index: 200;
 
     height: 12em;
-    padding-bottom: 1.5em;
+    padding-bottom: 10%;
 
   }
 #subheading{
@@ -70,16 +90,29 @@
     position: -webkit-sticky;
     position: sticky;
     top: 75%;
-    margin-left: 80%;
+    margin-left: 75%;
     z-index: 10;
   }
+
+  .footer{
+    font-family: var(--main-font);
+    color: var(--txt-color);
+    font-size: 15px;
+    text-align: right;
+    background-color: var(--third-color);
+    margin-top: -20px;
+  }
+
   .maintitle{
-    font-family: "Lobster-Regular", 'Times New Roman';
-    color: var(--main-color);
+    font-family: var(--title-font), 'Times New Roman';
+    color: var(--second-color);
     vertical-align: middle;
     text-align: center;
     font-size: 60px;
-    background-color:var(--bg-color);
+    background-color:var(--fifth-color);
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
 
   }
 
@@ -91,24 +124,28 @@
     width : 90%;
     height : 90%;
   }
-
+.userskills{
+  margin-top: -5%;
+}
   .space {
     padding: 10em inherit;
   }
 
   .intro {
     text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    font-family: "Junge-Regular", Helvetica, sans-serif;
+    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
     color: var(--txt-color);
-    margin-top:3%;
+    margin-top: -20%;
+    padding-top:25%;
     padding-bottom:1%;
+    background-color: var(--third-color);
   }
+
+
 .sub{
-  font-family: "Junge-Regular", Helvetica, sans-serif;
-  text-shadow: none;
+  font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+  /*text-shadow: none;*/
   text-transform: none;
   padding-top:2em;
   font-size: 35px;
@@ -120,12 +157,15 @@
 }
   .getInTouchHeader {
     padding: 40px;
-    text-align: left;
-    padding-left: 15%;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
     background-color: var(--third-color);
-    font-family: "Junge-Regular", Helvetica, sans-serif;
+    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
     color: var(--txt-color);
+    padding-top: 10%;
+    clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
   .descr {
@@ -138,6 +178,20 @@
   .alice {
     margin-left: 30px;
     margin-right: auto;
+    margin-top:9%;
+    z-index: 100;
+    position: relative;
+
+  }
+
+  .bottomTriangle{
+    clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 100%);
+    padding-top: 10%;
+    margin-top: -3%;
+  }
+
+  .topTriangle{
+    margin-top: 2%;
   }
 
   .divider {
@@ -145,24 +199,29 @@
     font-size: 25px;
     /*border: 2px double black;*/
     text-align: center;
-    background-color: var(--third-color);
+    background-color: var(--bg-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px black;
-    min-height: 200px;
+    /*text-shadow: 2px 2px black;*/
+
     padding: 10em inherit;
     display: flex;
     flex-direction: column;
+    margin-top: -52%;
+    padding-top: 50%;
+    padding-bottom: 7%;
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 85%);
+    z-index: 100;
   }
 
   .dividerTitle {
-    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--body-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--second-color);
     font-size: 50px;
     size: 200px;
     text-align: center;
-    text-shadow: 5px 5px var(--bg-color);
+    /*text-shadow: 5px 5px var(--bg-color);*/
   }
 
   .fullPage{
@@ -197,7 +256,7 @@
   .gradient-button-3 {background-image: linear-gradient(to right, var(--third-color) 0%, var(--third-color) 15%, var(--second-color) 100%)}
   .gradient-button-3:hover { background-position: right center; }
   .title{
-    font-family: 'Trirong-ExtraLightItalic';
+    font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
     font-size: 50px;
     size: 500px;
     text-align: center;
@@ -205,7 +264,7 @@
 
   }
   .groupPrTitle{
-    font-family: 'Trirong-ExtraLightItalic';
+    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
     color: var(--bg-color);
     font-size: 0.5em;
     size: 500px;
@@ -220,7 +279,7 @@
 
   .contact{
     background-color: var(--third-color);
-    padding-bottom: 7%;
+    padding-bottom: 3%;
   }
 
   .buttonsubmit{
@@ -229,7 +288,7 @@
     border-radius: 3px;
     text-align: center;
     display: inline-block;
-    margin-left:9%;
+    margin-left:35%;
   }
 
   .button{
@@ -240,6 +299,7 @@
     display: inline-block;
     margin:1em;
     padding:0.5em;
+    color:var(--second-color);
   }
 
   .togglel{
@@ -253,53 +313,55 @@
     display: inline-block;
   }
   .buttondiv{
-    margin-right:auto;
-    margin-left:auto;
-
+    width:30%;
+    margin: auto;
   }
 
+
+
   .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
-    color: var(--text-color);
+    color: var(--bg-color);
     background-color: var(--fourth-color);
     border-color: var(--fourth-color); /*set the color you want here*/
 }
 
   .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
-    color: var(--fifth-color);
+    color: var(--second-color);
     background-color: var(--third-color);
     border-color: var(--text-color); /*set the color you want here*/
 }
+#introtext{margin-top:1em}
 
   .contactForm{
-    font-family: "Abel-Regular", Helvetica, sans-serif;
-    color: black;
+    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--bg-color);
     font-size: 20px;
     border: 2px double black;
     text-align: left;
-    background-color: var(--fourth-color);
+    background-color: var(--bg-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 20px;
-    margin-left: 9%;
-    width: 500px;
+    margin-left: 32.5%;
+    width: 35%;
     padding: 10em inherit;
 
   }
 
   .messageForm{
-    font-family: "Abel-Regular", Helvetica, sans-serif;
-    color: black;
+    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--bg-color);
     font-size: 20px;
     border: 2px double black;
     text-align: left;
-    background-color: var(--fourth-color);
+    background-color: var(--bg-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
-    margin-left: 9%;
-    width: 500px;
+    margin-left: 32.5%;
+    width: 35%;
     padding: 10em inherit;
 
   }
@@ -324,9 +386,18 @@
 
 }*/
 
-  .txtColor{
-    font-family: "Kaushan", 'Times New Roman', Times, serif;
+  .profileName{
+    font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
     color: var(--txt-color);
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .profileImage{
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /*lets try a hover thingo*/
@@ -338,7 +409,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: #1c87c9;
+    color: var(--text-color);
     background-color: rgba(200, 200, 200, 0.5);
     width: 300px;
     height: 300px;
@@ -359,42 +430,46 @@
   .vertBox {
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    max-height:5%;
 
   }
 
   .bioTextStable {
-    font-family: "Junge-Regular", Helvetica, sans-serif;
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
-    width: 800px;
+    width: 35%;
+    text-align: center;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    top: 50%;
     color: var(--txt-color);
-    padding-left: 9%;
-    padding-right: 100px;
+    padding-left: 32.5%;
   }
 
+
   .bioTextContact {
-    font-family: "Junge-Regular", Helvetica, sans-serif;
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
     width: 800px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    top: 50%;
     color: var(--txt-color);
-    padding-left: 9%;
+    padding-left: 35%;
     padding-right: 100px;
   }
 
   .bioText {
-    font-family: "Junge-Regular", Helvetica, sans-serif;
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
     max-width: 800px;
     /*display: inline-block;*/
     vertical-align: middle;
+    text-align:center;
+    margin-left: 25%;
+    width:50%;
+
     /*position: relative;*/
     /*top: 50%;*/
     /*transform: translate(50px,-100px);*/
@@ -404,19 +479,20 @@
   }
 
   .dividerTitleSmall {
-    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--second-color);
     font-size: 30px;
     size: 200px;
-    text-shadow: 5px 5px var(--bg-color);
+    /*text-shadow: 5px 5px var(--bg-color);*/
     flex-shrink: 5;
     align-self: center;
     flex-basis: auto;
   }
 
 
+
   .groupPrButton{
-    background-color: var(--txt-color);
+    background-color: var(--third-color);
     font-size: 20px;
     text-align: center;
     background-position: center center;

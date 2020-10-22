@@ -106,7 +106,9 @@ render () {
 
 
         <div className = "divider">
-        <div className="dividerTitleSmall"><h1> Harry - Ron - Mustafa - Kelly - Zoe -</h1></div>
+        <div className="dividerTitleSmall">
+        <h1> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
+        </div>
         </div>
 
         <div className="punk">
@@ -129,16 +131,15 @@ render () {
         {/*<ToggleB>hello</ToggleB>*/}
 
       <ToggleProj>
-        <div className = "intro">
+        <div className = "drop-down intro">
           In this project, we help Beth, a local business owner of beauty care services
           in Melbourne, build the e-commerce website for her business. It is expected
           that the system can not just make the appointment procedure automation but also
           help promote the business to different regions.
-          <div>
-          <i>Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
+          <div id="drop-down introtext">
+          Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
             Test Manager - Mustafa;
             Developer - Chao-Wei and Zoe
-          </i>
           </div>
         </div>
       </ToggleProj>
@@ -162,7 +163,7 @@ render () {
 
         <div className="title" id="whoweare">Who we are</div>
         {/*first person*/}
-      <ToggleLeft name = "ChaoWei"/>
+        <ToggleLeft name = "ChaoWei"/>
 
         {/*second person*/}
         <ToggleRight name = "Ron"/>
@@ -179,7 +180,7 @@ render () {
         <Contact />
 
 
-        <div><p>last edited: 21/10/2020</p></div>
+        <div className= "footer"><p>last edited: 21/10/2020</p></div>
 
 
       </div>
