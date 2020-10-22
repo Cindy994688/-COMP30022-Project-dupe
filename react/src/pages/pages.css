@@ -1,20 +1,55 @@
 :root {
-  --bg-color: #F7F4F3;
-  --second-color: #82716e;
-  --third-color: #dfdfdf;
-  --fourth-color: #f9dcc4;
-  --fifth-color: #a3a3a3;
-  --txt-color: #43203A;
+  --bg-color: #f7ede2;
+  --second-color: #277da1;
+  --third-color: #caf0f8; /*#91C4F2 ;*/
+  --fourth-color: #277da1;  /*buttons  */
+  --fifth-color: #f7ede2;  /*buttons on hover */
+  --txt-color: #1B2845; /*most text */
+
+  --title-font: 'Montserrat-Bold';
+  --subtitle-font: 'Lora';
+  --body-font: 'HindMadurai-Light';
 }
 
 /** {
   box-sizing: border-box;
 }*/
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat-Bold'), url(./fonts/Montserrat-Bold.ttf) format('truetype');
+}
 
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'), url(./fonts/Lora.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HindMadurai-Light';
+  src: local('HindMadurai-Light'), url(./fonts/HindMadurai-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: local('Lato-Bold'), url(./fonts/Lato-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Junge-Regular';
+  src: local('Junge-Regular'), url(./fonts/Junge-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Trirong-ExtraLightItalic';
+  src: local('Trirong-ExtraLightItalic'), url(./fonts/Trirong-ExtraLightItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lobster-Regular';
+  src: local('Lobster-Regular'), url(./fonts/Lobster-Regular.ttf) format('truetype');
+}
 @font-face {
   font-family: 'Abel-Regular';
   src: local('Abel-Regular'), url(./fonts/Abel-Regular.ttf) format('truetype');
 }
+
 
 @font-face {
   font-family: 'Noto';
@@ -32,8 +67,8 @@
 }
 
 .banner {
-    font-family:"Noto", 'Times New Roman', Times, serif;
-    color: var(--second-color);
+    font-family:var(--title-font), 'Times New Roman', Times, serif;
+    color: var(--fifth-color);
     font-size: 35px;
     border: 2px double white;
     text-align: center;
@@ -41,11 +76,16 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px white;
-    height: 700px;
-    padding: 10em inherit;
-  }
+    position: relative;
+    z-index: 200;
 
+    height: 12em;
+    padding-bottom: 10%;
+
+  }
+#subheading{
+  margin-top:-5%;
+}
   .punk {
     position: -webkit-sticky;
     position: sticky;
@@ -54,43 +94,78 @@
     z-index: 10;
   }
 
-  .title {
-    font-family: "Kaushan", 'Times New Roman', Times, serif;
-    color: #fffafa;
-    font-size: 55px;
-    size: 150px;
-    text-align: center;
-    text-shadow: 7px 7px black;
-    transform: translateY(50px)
+  .footer{
+    font-family: var(--main-font);
+    color: var(--txt-color);
+    font-size: 15px;
+    text-align: right;
+    background-color: var(--third-color);
+    margin-top: -20px;
   }
 
+  .maintitle{
+    font-family: var(--title-font), 'Times New Roman';
+    color: var(--second-color);
+    vertical-align: middle;
+    text-align: center;
+    font-size: 60px;
+    background-color:var(--fifth-color);
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+
+  }
+
+  #intro{
+    margin-top:-10%;
+  }
+  #whoweare{}
   .cv {
     width : 90%;
-    height : 90%; 
+    height : 90%;
   }
-
+.userskills{
+  margin-top: -5%;
+}
   .space {
     padding: 10em inherit;
   }
 
   .intro {
-    padding: 25px;
     text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
     color: var(--txt-color);
+    margin-top: -20%;
+    padding-top:25%;
+    padding-bottom:1%;
+    background-color: var(--third-color);
   }
 
+
+.sub{
+  font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+  /*text-shadow: none;*/
+  text-transform: none;
+  padding-top:2em;
+  font-size: 35px;
+  margin-top:-1%;
+  color:var(--bg-color);
+}
+#ourproject{
+  color:var(--bg-color);
+}
   .getInTouchHeader {
-    padding: 25px;
-    text-align: left;
-    margin-left: 15%;
-    margin-right: 100px;
-    font-family: "Abel-Regular", Helvetica, sans-serif;
+    padding: 40px;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: var(--third-color);
+    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
     color: var(--txt-color);
+    padding-top: 10%;
+    clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
   .descr {
@@ -101,9 +176,22 @@
   }
 
   .alice {
-    padding: 20px;
     margin-left: 30px;
     margin-right: auto;
+    margin-top:9%;
+    z-index: 100;
+    position: relative;
+
+  }
+
+  .bottomTriangle{
+    clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 100%);
+    padding-top: 10%;
+    margin-top: -3%;
+  }
+
+  .topTriangle{
+    margin-top: 2%;
   }
 
   .divider {
@@ -111,24 +199,29 @@
     font-size: 25px;
     /*border: 2px double black;*/
     text-align: center;
-    background-color: var(--third-color);
+    background-color: var(--bg-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px black;
-    min-height: 200px;
+    /*text-shadow: 2px 2px black;*/
+
     padding: 10em inherit;
     display: flex;
     flex-direction: column;
+    margin-top: -52%;
+    padding-top: 50%;
+    padding-bottom: 7%;
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 85%);
+    z-index: 100;
   }
 
   .dividerTitle {
-    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--body-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--second-color);
     font-size: 50px;
     size: 200px;
     text-align: center;
-    text-shadow: 5px 5px var(--bg-color);
+    /*text-shadow: 5px 5px var(--bg-color);*/
   }
 
   .fullPage{
@@ -142,13 +235,11 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px black;
-    height: 500px;
+    height: 5em;
     padding: 10em inherit;
     /*border: 20px double var(--second-color);*/
     /*border-radius: 25px;*/
 
-    text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     box-shadow: 0 0 20px #eee;
@@ -164,15 +255,22 @@
 
   .gradient-button-3 {background-image: linear-gradient(to right, var(--third-color) 0%, var(--third-color) 15%, var(--second-color) 100%)}
   .gradient-button-3:hover { background-position: right center; }
-
-  .groupPrTitle{
-    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--bg-color);
+  .title{
+    font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
     font-size: 50px;
     size: 500px;
     text-align: center;
-    text-shadow: 5px 5px black;
-    transform: translateY(60px);
+    color:var(--second-color);
+
+  }
+  .groupPrTitle{
+    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
+    color: var(--bg-color);
+    font-size: 0.5em;
+    size: 500px;
+    text-align: center;
+    transform: translateY(30px);
+
   }
 
   .bgSecondary{
@@ -181,22 +279,32 @@
 
   .contact{
     background-color: var(--third-color);
-    padding-bottom: 7%;
+    padding-bottom: 3%;
   }
 
-  .button{
+  .buttonsubmit{
     margin-top:25px;
-    font-family: "Abel-Regular", Helvetica, sans-serif;
-    margin-left: 11%;
     font-size: 20px;
     border-radius: 3px;
     text-align: center;
     display: inline-block;
+    margin-left:35%;
+  }
+
+  .button{
+    margin-top:25px;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+    margin:1em;
+    padding:0.5em;
+    color:var(--second-color);
   }
 
   .togglel{
     margin-top:25px;
-    font-family: "Abel-Regular", Helvetica, sans-serif;
+
     margin-left: 40%;
     font-size: 20px;
     width: 40%;
@@ -204,49 +312,56 @@
     text-align: center;
     display: inline-block;
   }
+  .buttondiv{
+    width:30%;
+    margin: auto;
+  }
+
+
 
   .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
-    color: var(--text-color);
+    color: var(--bg-color);
     background-color: var(--fourth-color);
     border-color: var(--fourth-color); /*set the color you want here*/
 }
 
   .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
-    color: var(--fifth-color);
+    color: var(--second-color);
     background-color: var(--third-color);
     border-color: var(--text-color); /*set the color you want here*/
 }
+#introtext{margin-top:1em}
 
   .contactForm{
-    font-family: "Abel-Regular", Helvetica, sans-serif;
-    color: black;
+    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--bg-color);
     font-size: 20px;
     border: 2px double black;
     text-align: left;
-    background-color: var(--fourth-color);
+    background-color: var(--bg-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 20px;
-    margin-left: 9%;
-    width: 500px;
+    margin-left: 32.5%;
+    width: 35%;
     padding: 10em inherit;
 
   }
 
   .messageForm{
-    font-family: "Abel-Regular", Helvetica, sans-serif;
-    color: black;
+    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--bg-color);
     font-size: 20px;
     border: 2px double black;
     text-align: left;
-    background-color: var(--fourth-color);
+    background-color: var(--bg-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
-    margin-left: 9%;
-    width: 500px;
+    margin-left: 32.5%;
+    width: 35%;
     padding: 10em inherit;
 
   }
@@ -271,9 +386,18 @@
 
 }*/
 
-  .txtColor{
-    font-family: "Kaushan", 'Times New Roman', Times, serif;
+  .profileName{
+    font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
     color: var(--txt-color);
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .profileImage{
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /*lets try a hover thingo*/
@@ -285,7 +409,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: #1c87c9;
+    color: var(--text-color);
     background-color: rgba(200, 200, 200, 0.5);
     width: 300px;
     height: 300px;
@@ -306,41 +430,46 @@
   .vertBox {
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    max-height:5%;
+
   }
 
   .bioTextStable {
-    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
-    width: 800px;
+    width: 35%;
+    text-align: center;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    top: 50%;
     color: var(--txt-color);
-    padding-left: 5%;
-    padding-right: 100px;
+    padding-left: 32.5%;
   }
 
+
   .bioTextContact {
-    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
     width: 800px;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    top: 50%;
     color: var(--txt-color);
-    padding-left: 9%;
+    padding-left: 35%;
     padding-right: 100px;
   }
 
   .bioText {
-    font-family: "Abel-Regular", Helvetica, sans-serif;
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
     max-width: 800px;
     /*display: inline-block;*/
     vertical-align: middle;
+    text-align:center;
+    margin-left: 25%;
+    width:50%;
+
     /*position: relative;*/
     /*top: 50%;*/
     /*transform: translate(50px,-100px);*/
@@ -350,19 +479,20 @@
   }
 
   .dividerTitleSmall {
-    font-family: 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--second-color);
     font-size: 30px;
     size: 200px;
-    text-shadow: 5px 5px var(--bg-color);
+    /*text-shadow: 5px 5px var(--bg-color);*/
     flex-shrink: 5;
     align-self: center;
     flex-basis: auto;
   }
 
 
+
   .groupPrButton{
-    background-color: var(--txt-color);
+    background-color: var(--third-color);
     font-size: 20px;
     text-align: center;
     background-position: center center;

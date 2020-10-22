@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 //import {View} from 'react-native'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import {Jumbotron,Col,Row, ToggleButton, Card} from 'reactstrap'
 import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
@@ -18,7 +18,6 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-import { ToggleButton } from 'react-bootstrap'
 
 import { Image } from 'react-native';
 
@@ -78,17 +77,13 @@ render () {
       <div className = "fullPage">
 
         <Jumbotron className = "banner">
-          <div className="title"><h1>SWEN90016 Group CRXMM</h1></div>
+          <div className="maintitle">
+          <h1>SWEN90016 </h1>
+          <div id="subheading">Group CRXMM</div>
+          </div>
           {/*<p> really awesome people </p>*/}
         </Jumbotron>
 
-
-
-
-
-        <div>
-          <p>&nbsp;&nbsp;</p>
-        </div>
 
         <div className = "alice">
         <AliceCarousel className = "alice"
@@ -111,7 +106,9 @@ render () {
 
 
         <div className = "divider">
-        <div className="dividerTitleSmall"><h1> - Harry - Ron - Mustafa - Kelly - Zoe -</h1></div>
+        <div className="dividerTitleSmall">
+        <h1> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
+        </div>
         </div>
 
         <div className="punk">
@@ -120,36 +117,32 @@ render () {
 
 
         <div className="intro">
-        <p> <i>Hi, this is CRXMM, we are a team of
+        <div className="title" id="intro">Intro</div>
+        <p>Hi, this is CRXMM, we are a team of
            5 from the University of Melbourne.
           While we have different backgrounds,
           different passions, and are even in
           different timezones, we are in unity.
           We believe that as individuals we are
           strong, but together we are incredible.
-          </i>
         </p>
         </div>
 
         {/*<ToggleB>hello</ToggleB>*/}
 
       <ToggleProj>
-        <div className = "intro">
-        <p>In this project, we help Beth, a local business owner of beauty care services
+        <div className = "drop-down intro">
+          In this project, we help Beth, a local business owner of beauty care services
           in Melbourne, build the e-commerce website for her business. It is expected
           that the system can not just make the appointment procedure automation but also
-          help promote the business to different regions.</p>
-          <p><i>Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
+          help promote the business to different regions.
+          <div id="drop-down introtext">
+          Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
             Test Manager - Mustafa;
-            Developer - Chao-Wei and Zoe</i> </p>
+            Developer - Chao-Wei and Zoe
+          </div>
         </div>
       </ToggleProj>
-
-      <div><p>&nbsp;&nbsp;</p></div>
-
-        <Jumbotron className = "divider">
-        <div className="dividerTitle"><h1>WHO WE ARE</h1></div>
-        </Jumbotron>
 
         {/*<div className="container">
           <p>
@@ -168,29 +161,26 @@ render () {
 
       </div>*/}
 
-
+        <div className="title" id="whoweare">Who we are</div>
         {/*first person*/}
         <ToggleLeft name = "ChaoWei"/>
-
 
         {/*second person*/}
         <ToggleRight name = "Ron"/>
 
-
         {/*third person*/}
         <ToggleLeft name = "Mustafa"/>
 
-
         {/*fourth person*/}
         <ToggleRight name = "Xu"/>
-
         {/*fifth person*/}
         <ToggleLeft name = "Mengyan"/>
 
-
+        <div className="getInTouchHeader">Contact Us</div>
         <Contact />
 
-        <div></div>
+
+        <div className= "footer"><p>last edited: 21/10/2020</p></div>
 
 
       </div>

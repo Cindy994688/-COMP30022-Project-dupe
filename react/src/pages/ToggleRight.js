@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import {Jumbotron,Col,Row, ToggleButton, Card, Container} from 'reactstrap'
 import Profile from './Profile.js'
 import UserInfo from './userInfo.js'
 import axios from 'axios'
 import './pages.css'
+import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
+import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import { Image } from 'react-native';
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 
@@ -49,41 +51,40 @@ export default class ToggleProj extends Component {
 
     render() {
         return (
-          <div>
-          <div className = "bgSecondary vertBox" onClick = {this.toggle} style={{cursor:'pointer'}}>
-            <div className = "bgSecondary box">
-              <div className = "vertBox">
-                  <p><UserInfo clientname = {this.props.name} type = "description"/></p>
-                  <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
-                  <p><UserInfo clientname = {this.props.name} type = "email"/></p>
+          <>
+            <Container className="bottomTriangle bgSecondary">
+              <Row>
+                {/*<div  style={{display: 'inline-block'}}>*/}
+                  <Col md="6">
+                    <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
+                  </Col>
+                  {/*<div style={{display: 'inline-block'}}>*/}
+                  <Col md="6">
+                    <UserInfo clientname = {this.props.name} type = "description"/>
+                    <UserInfo clientname = {this.props.name} type = "skills"/>
+                    <UserInfo clientname = {this.props.name} type = "email"/>
+                  </Col>
+                  <Row>
+                  <div className="buttondiv">
+                    <button type="submit" className="btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
+                    <button type="submit" className="btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+                  </div>
+                  </Row>
+              </Row>
+            </Container>
+            {this.state.cv &&
+              <div className = "box">
+              <Image source={"/image/MengyanResume.jpg"}
+                  style={{width:636, height:900}}/>
               </div>
-              <div>
-                  <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
-              </div>
-             </div>
-             <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
-             <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
-          </div>
+            }
 
-          <div>
-          {this.state.cv &&
-            <div className = "bgSecondary box">
-            <Image source={"/image/MengyanResume.jpg"}
-                style={{width:636, height:900}}/>
-            </div>
-          }
-
-          </div>
-
-          <div>
           {this.state.personalproj &&
-              <div className = "bgSecondary box">
-              <p>This is a 100% verified personal project</p>
+              <div className = "box">
+              <p>This is a 100% verified real personal project</p>
               </div>}
-          </div>
 
-      </div>
-
+      </>
 
         )
     }

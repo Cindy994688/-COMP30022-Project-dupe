@@ -8,7 +8,7 @@ test('E2E: CV expands when "show cv" button is clicked', (async() => {
   await page.goto(
     'http://localhost:3000'
   );
-  const button = page.waitForXPath("//buttom[@className='togglel']");
+  const button = page.waitForXPath("//button[@className='togglel']");
   await page.click(button);
   var response = await page.$('#CV');
   response = response ==null;
