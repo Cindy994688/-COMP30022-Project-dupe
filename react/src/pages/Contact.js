@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Image, Text } from 'react-native';
 import './pages.css'
 import axios from 'axios'
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 
 
 class Contact extends React.Component {
@@ -49,8 +51,10 @@ class Contact extends React.Component {
                 <div className = "bioTextContact">
                 <label htmlFor="message">Message</label>
                 </div>
+                <div>
                 <textarea className="form-control" rows="5" className="messageForm" placeholder = "Enter Message"
                 value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
+                </div>
               </div>
             <button type="submit" className="btn btn-primary button">Submit</button>
           </form>
@@ -61,7 +65,6 @@ class Contact extends React.Component {
 
     onNameChange(event) {
      this.setState({name: event.target.value});
-     console.log("biiiiii");
    }
 
    onEmailChange(event) {

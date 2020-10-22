@@ -4,11 +4,15 @@ import Profile from './Profile.js'
 import UserInfo from './userInfo.js'
 import axios from 'axios'
 import './pages.css'
+import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
+import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
+import { Image } from 'react-native';
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 
 export default class ToggleProj extends Component {
     state = {
-        on: false,
+        cv: false,
+        personalproj: false,
     }
 
     constructor(props) {
@@ -29,9 +33,17 @@ export default class ToggleProj extends Component {
     }
 
 
-    toggle = () => {
+    togglecv = () => {
         this.setState({
-            on: !this.state.on
+            cv: !this.state.cv,
+            personalproj: false,
+        })
+    }
+
+    togglepersonalproj = () => {
+        this.setState({
+            cv: false,
+            personalproj: !this.state.personalproj
         })
     }
 
@@ -39,7 +51,7 @@ export default class ToggleProj extends Component {
     render() {
         return (
             <div className = "vertBox">
-                <div className = "vertBox" onClick = {this.toggle} style={{cursor:'pointer'}}>
+                <div className = "vertBox">
                   {/*<div  style={{display: 'inline-block'}}>*/}
                   <div className = "box">
                     <div>
@@ -52,10 +64,27 @@ export default class ToggleProj extends Component {
                     <p><UserInfo clientname = {this.props.name} type = "email"/></p>
                     </div>
                   </div>
-                {/*<button onClick = {this.toggle}>clickme</button>*/}
+                  <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
+                  <button type="submit" className="togglel btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
                 </div>
 
-                {this.state.on && this.props.children}
+                <div>
+                {this.state.cv &&
+                  <div className = "box">
+                  <Image source={"/image/MengyanResume.jpg"}
+                      style={{width:636, height:900}}/>
+                  </div>
+                }
+
+                </div>
+
+                <div>
+                {this.state.personalproj &&
+                    <div className = "box">
+                    <p>This is a 100% verified real personal project</p>
+                    </div>}
+                </div>
+
             </div>
         )
     }
