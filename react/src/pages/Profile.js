@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Image, Text } from 'react-native';
 import './pages.css'
+import './darkmode.css'
 
 
 
@@ -15,7 +16,7 @@ class Profile extends React.Component {
             //source={require('./imgbanner.jpg')}
             source={this.props.img}
             style={{width: 300, height: 300, borderRadius: 300/ 2}}/>
-          <div className = "profileName">{this.props.clientname}</div>
+          <div className = {"profileName"+this.props.colourMode}>{this.props.clientname}</div>
         </div>
 
 

@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 //import {View} from 'react-native'
-import {Jumbotron,Col,Row, ToggleButton, Card} from 'reactstrap'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import './darkmode.css'
 import './pages.css'
+
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
 import Contact from './Contact.js'
@@ -12,13 +14,12 @@ import ToggleB from './ToggleB.js'
 import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-
 import ChaoHover from './chaohover.png'
 import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-
+import { ToggleButton } from 'react-bootstrap'
 import { Image } from 'react-native';
 
 
@@ -46,7 +47,32 @@ class HomePage extends Component {
     onMouseOver={e => (e.currentTarget.src = XuHover)}
     onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
      ].map((i) => <h2 key={i}>{i}</h2>),
+     colourMode: "",
   }
+
+    // Keep the below definition, and always remember to provide a return to default option in the colour buttons
+  // Make a new function for each colourscheme like the one below
+  //
+  //  setDarkMode= () => {
+  //    this.setState({colourMode: 'Dark'});
+  //  };
+  //
+  // And don't forget to add a button like below referencing your new switch function
+  //
+  // <button onClick={this.setDarkMode}>Set Dark Mode</button>
+  //
+  // And remember your default button!
+  //
+  // <button onClick={this.setDefaultMode}>Set default Mode</button>
+
+
+  setDefaultMode = () => {
+    this.setState({colourMode: ""})
+  };
+
+  setDarkMode= () => {
+    this.setState({colourMode: "Dark"})
+  };
 
   responsive = {
     0: { items: 1 },
@@ -74,10 +100,15 @@ class HomePage extends Component {
 
 render () {
     return (
-      <div className = "fullPage">
+      <div className = {"fullPage" + this.state.colourMode}>
 
-        <Jumbotron className = "banner">
-          <div className="maintitle">
+        <div className = "buttonBox">
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set default Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
+        </div>
+
+        <Jumbotron className = {"banner" + this.state.colourMode}>
+          <div className = {"maintitle" + this.state.colourMode}>
           <h1>SWEN90016 </h1>
           <div id="subheading">Group CRXMM</div>
           </div>
@@ -85,8 +116,8 @@ render () {
         </Jumbotron>
 
 
-        <div className = "alice">
-        <AliceCarousel className = "alice"
+        <div className = {"alice" + this.state.colourMode}>
+        <AliceCarousel className = {"alice" + this.state.colourMode}
         items={this.state.galleryItems}
         responsive={this.responsive}
         controlsStrategy="responsive"
@@ -105,19 +136,19 @@ render () {
         </div>
 
 
-        <div className = "divider">
-        <div className="dividerTitleSmall">
+        <div className = {"divider" + this.state.colourMode}>
+        <div className= {"dividerTitleSmall" + this.state.colourMode}>
         <h1> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
         </div>
         </div>
 
-        <div className="punk">
+        <div className={"punk" + this.state.colourMode}>
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
 
-        <div className="intro">
-        <div className="title" id="intro">Intro</div>
+        <div className={"intro" + this.state.colourMode}>
+        <div className={"title" + this.state.colourMode} id="intro">Intro</div>
         <p>Hi, this is CRXMM, we are a team of
            5 from the University of Melbourne.
           While we have different backgrounds,
@@ -130,8 +161,8 @@ render () {
 
         {/*<ToggleB>hello</ToggleB>*/}
 
-      <ToggleProj>
-        <div className = "drop-down intro">
+        <ToggleProj colourMode = {this.state.colourMode}>
+        <div className = {"drop-down" + this.state.colourMode + " intro" + this.state.colourMode}>
           In this project, we help Beth, a local business owner of beauty care services
           in Melbourne, build the e-commerce website for her business. It is expected
           that the system can not just make the appointment procedure automation but also
@@ -144,43 +175,28 @@ render () {
         </div>
       </ToggleProj>
 
-        {/*<div className="container">
-          <p>
-          <Link to="/users">users</Link> is a link i guess \o/ yay
-          </p>
-        </div>*/}
 
-        {/*medusa*/}
-        {/*<div style={{display: 'inline-block'}}>
 
-          <UserInfo clientname = "Medusa" type = "name"/>
-          <Profile img = "/image/robot.jpg" clientname = "Robot" />
-          <UserInfo clientname = "Medusa" type = "description"/>
-          <UserInfo clientname = "Medusa" type = "email"/>
-          <UserInfo clientname = "Medusa" type = "skills"/>
-
-      </div>*/}
-
-        <div className="title" id="whoweare">Who we are</div>
+      <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
         {/*first person*/}
-        <ToggleLeft name = "ChaoWei"/>
+        <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
 
         {/*second person*/}
-        <ToggleRight name = "Ron"/>
+        <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
 
         {/*third person*/}
-        <ToggleLeft name = "Mustafa"/>
+        <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa"/>
 
         {/*fourth person*/}
-        <ToggleRight name = "Xu"/>
+        <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
         {/*fifth person*/}
-        <ToggleLeft name = "Mengyan"/>
+        <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
 
-        <div className="getInTouchHeader">Contact Us</div>
-        <Contact />
+        <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
+        <Contact colourMode = {this.state.colourMode} />
 
 
-        <div className= "footer"><p>last edited: 21/10/2020</p></div>
+        <div className= {"footer" + this.state.colourMode}><p>last edited: 21/10/2020</p></div>
 
 
       </div>

@@ -19,10 +19,10 @@ class Contact extends React.Component {
   render (props) {
       return (
         <div>
-        <div className="contact">
+        <div className={"contact"+this.props.colourMode}>
 
 
-          <div className = "bioTextStable">If you are interested in any of the
+          <div className = {"bioTextStable"+this.props.colourMode}>If you are interested in any of the
           projects or information you see on this page, please contact us
           below, or email us directly through one of the email addresses listed in our
           profiles. We look forward to hearing from you!  <p></p> </div>
@@ -30,29 +30,29 @@ class Contact extends React.Component {
 
           <form action="/email" id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
               <div>
-                  <div className = "bioTextContact">
+                  <div className = {"bioTextContact"+this.props.colourMode}>
                   <label htmlFor="name">Name</label>
                   </div>
-                  <input type="text" className="form-control contactForm" placeholder = "Enter Name"
+                  <input type="text" className={"form-control"+this.props.colourMode+ " contactForm"+this.props.colourMode} placeholder = "Enter Name"
                   value={this.state.name} onChange={this.onNameChange.bind(this)}/>
               </div>
               <div>
-                <div className = "bioTextContact">
+                <div className = {"bioTextContact"+this.props.colourMode}>
                 <label htmlFor="exampleInputEmail1">Email address</label>
                 </div>
-                <input type="email" className="form-control" className="contactForm" aria-describedby="emailHelp" placeholder = "Enter Email"
+                <input type="email" className={"form-control"+this.props.colourMode} className={"contactForm"+this.props.colourMode} aria-describedby="emailHelp" placeholder = "Enter Email"
                 value={this.state.email} onChange={this.onEmailChange.bind(this)}/>
               </div>
               <div>
-                <div className = "bioTextContact">
+                <div className = {"bioTextContact"+this.props.colourMode}>
                 <label htmlFor="message">Message</label>
                 </div>
                 <div>
-                <textarea className="form-control" rows="5" className="messageForm" placeholder = "Enter Message"
+                <textarea className={"form-control"+this.props.colourMode} rows="5" className={"messageForm"+this.props.colourMode} placeholder = "Enter Message"
                 value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
                 </div>
               </div>
-            <button type="submit" className="btn btn-primary buttonsubmit">Submit</button>
+            <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " buttonsubmit"+this.props.colourMode}>Submit</button>
           </form>
         </div>
         </div>
