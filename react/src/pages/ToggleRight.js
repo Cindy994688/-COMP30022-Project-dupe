@@ -4,6 +4,7 @@ import Profile from './Profile.js'
 import UserInfo from './userInfo.js'
 import axios from 'axios'
 import './pages.css'
+import './darkmode.css'
 import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import { Image } from 'react-native';
@@ -52,35 +53,35 @@ export default class ToggleProj extends Component {
     render() {
         return (
           <>
-            <Container className="bottomTriangle bgSecondary">
+            <Container className={"bottomTriangle"+this.props.colourMode+ " bgSecondary"+this.props.colourMode}>
               <Row>
                 {/*<div  style={{display: 'inline-block'}}>*/}
                   <Col md="6">
-                    <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
+                    <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname} colourMode = {this.props.colourMode}/>
                   </Col>
                   {/*<div style={{display: 'inline-block'}}>*/}
                   <Col md="6">
-                    <UserInfo clientname = {this.props.name} type = "description"/>
-                    <UserInfo clientname = {this.props.name} type = "skills"/>
-                    <UserInfo clientname = {this.props.name} type = "email"/>
+                    <UserInfo clientname = {this.props.name} type = "description" colourMode = {this.props.colourMode}/>
+                    <UserInfo clientname = {this.props.name} type = "skills" colourMode = {this.props.colourMode}/>
+                    <UserInfo clientname = {this.props.name} type = "email" colourMode = {this.props.colourMode}/>
                   </Col>
                   <Row>
-                  <div className="buttondiv">
-                    <button type="submit" className="btn btn-primary button" onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
-                    <button type="submit" className="btn btn-primary button" onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+                  <div className={"buttondiv"+this.props.colourMode}>
+                    <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
+                    <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
                   </div>
                   </Row>
               </Row>
             </Container>
             {this.state.cv &&
-              <div className = "box">
+              <div className = {"box"+this.props.colourMode}>
               <Image source={"/image/MengyanResume.jpg"}
                   style={{width:636, height:900}}/>
               </div>
             }
 
           {this.state.personalproj &&
-              <div className = "box">
+              <div className = {"box"+this.props.colourMode}>
               <p>This is a 100% verified real personal project</p>
               </div>}
 
