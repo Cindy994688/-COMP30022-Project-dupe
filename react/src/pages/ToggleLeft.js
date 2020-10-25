@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import {Jumbotron,Col,Row, ToggleButton, Card, Container} from 'reactstrap'
 import Profile from './Profile.js'
 import UserInfo from './userInfo.js'
 import axios from 'axios'
 import './pages.css'
+import './darkmode.css'
+import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
+import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
+import { Image } from 'react-native';
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 
 export default class ToggleProj extends Component {
     state = {
-        on: false,
+        cv: false,
+        personalproj: false,
     }
 
     constructor(props) {
@@ -29,34 +34,57 @@ export default class ToggleProj extends Component {
     }
 
 
-    toggle = () => {
+    togglecv = () => {
         this.setState({
-            on: !this.state.on
+            cv: !this.state.cv,
+            personalproj: false,
+        })
+    }
+
+    togglepersonalproj = () => {
+        this.setState({
+            cv: false,
+            personalproj: !this.state.personalproj
         })
     }
 
 
     render() {
         return (
-            <div className = "vertBox">
-                <div className = "vertBox" onClick = {this.toggle} style={{cursor:'pointer'}}>
-                  {/*<div  style={{display: 'inline-block'}}>*/}
-                  <div className = "box">
-                    <div>
-                      <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname}/>
+                <>
+                  <Container className ={"topTriangle"+this.props.colourMode}>
+                    <Row>
+                      {/*<div  style={{display: 'inline-block'}}>*/}
+                        <Col md="6">
+                          <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname} colourMode = {this.props.colourMode}/>
+                        </Col>
+                        {/*<div style={{display: 'inline-block'}}>*/}
+                        <Col md="6">
+                          <UserInfo clientname = {this.props.name} type = "description" colourMode = {this.props.colourMode}/>
+                          <UserInfo clientname = {this.props.name} type = "skills" colourMode = {this.props.colourMode}/>
+                          <UserInfo clientname = {this.props.name} type = "email" colourMode = {this.props.colourMode}/>
+                        </Col>
+                        <Row>
+                        <div className={"buttondiv"+this.props.colourMode}>
+                          <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
+                          <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+                        </div>
+                        </Row>
+                    </Row>
+                  </Container>
+                  {this.state.cv &&
+                    <div className = {"box"+this.props.colourMode}>
+                    <Image source={"/image/MengyanResume.jpg"}
+                        style={{width:636, height:900}}/>
                     </div>
-                    {/*<div style={{display: 'inline-block'}}>*/}
-                    <div className = "vertBox">
-                    <p><UserInfo clientname = {this.props.name} type = "description"/></p>
-                    <p><UserInfo clientname = {this.props.name} type = "skills"/></p>
-                    <p><UserInfo clientname = {this.props.name} type = "email"/></p>
-                    </div>
-                  </div>
-                {/*<button onClick = {this.toggle}>clickme</button>*/}
+                  }
 
-                {this.state.on && this.props.children}
-                </div>
-            </div>
+                {this.state.personalproj &&
+                    <div className = {"box"+this.props.colourMode}>
+                    <p>This is a 100% verified real personal project</p>
+                    </div>}
+
+            </>
         )
     }
 }

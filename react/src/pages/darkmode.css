@@ -1,10 +1,10 @@
 :root {
-  --bg-color: #f7ede2;
-  --second-color: #277da1;
-  --third-color: #caf0f8; /*#91C4F2 ;*/
-  --fourth-color: #277da1;  /*buttons  */
-  --fifth-color: #f7ede2;  /*buttons on hover */
-  --txt-color: #1B2845; /*most text */
+  --bg-color-dark: #132743;
+  --second-color-dark: #dbedf3;
+  --third-color-dark: #686d76; /*#91C4F2 ;*/
+  --fourth-color-dark: #9ba4b4;  /*buttons  */
+  --fifth-color-dark: #394867;  /*buttons on hover */
+  --txt-color-dark: #f1f6f9; /*most text */
 
   --title-font: 'Montserrat-Bold';
   --subtitle-font: 'Lora';
@@ -66,9 +66,9 @@
   src: local('Kaushan'), url(./fonts/KaushanScript-Regular.ttf) format('truetype');
 }
 
-.banner {
+.bannerDark {
     font-family:var(--title-font), 'Times New Roman', Times, serif;
-    color: var(--fifth-color);
+    color: var(--fifth-color-dark);
     font-size: 35px;
     border: 2px double white;
     text-align: center;
@@ -83,10 +83,10 @@
     padding-bottom: 10%;
 
   }
-#subheading{
+#subheadingDark{
   margin-top:-5%;
 }
-  .punk {
+  .punkDark {
     position: -webkit-sticky;
     position: sticky;
     top: 75%;
@@ -94,56 +94,56 @@
     z-index: 10;
   }
 
-  .footer{
+  .footerDark{
     font-family: var(--main-font);
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     font-size: 15px;
     text-align: center;
-    background-color: var(--third-color);
+    background-color: var(--third-color-dark);
     margin-top: -20px;
   }
 
-  .maintitle{
+  .maintitleDark{
     font-family: var(--title-font), 'Times New Roman';
-    color: var(--second-color);
+    color: var(--second-color-dark);
     vertical-align: middle;
     text-align: center;
     font-size: 60px;
-    background-color:var(--fifth-color);
+    background-color:var(--fifth-color-dark);
     width:80%;
     margin-left:auto;
     margin-right:auto;
 
   }
 
-  #intro{
+  #introDark{
     margin-top:-10%;
   }
-  #whoweare{}
-  .cv {
+  #whoweareDark{}
+  .cvDark {
     width : 90%;
     height : 90%;
   }
-.userskills{
+.userskillsDark{
   margin-top: -5%;
 }
-  .space {
+  .spaceDark {
     padding: 10em inherit;
   }
 
-  .intro {
+  .introDark {
     text-align: center;
     font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     margin-top: -20%;
     padding-top:25%;
     padding-bottom:1%;
-    background-color: var(--third-color);
+    background-color: var(--third-color-dark);
   }
 
 
-.sub{
+.subDark{
   font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
   /*text-shadow: none;*/
   text-transform: none;
@@ -151,32 +151,32 @@
   padding-top:2em;
   font-size: 35px;
   margin-top:-1%;
-  color:var(--second-color);
+  color:var(--second-color-dark);
 }
-#ourproject{
-  color:var(--bg-color);
+#ourprojectDark{
+  color:var(--bg-color-dark);
 }
-  .getInTouchHeader {
+  .getInTouchHeaderDark {
     padding: 40px;
     text-align: center;
     padding-left: auto;
     padding-right: auto;
-    background-color: var(--third-color);
+    background-color: var(--third-color-dark);
     font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     padding-top: 10%;
     clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
-  .descr {
+  .descrDark {
     width: 800px;
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .alice {
+  .aliceDark {
     margin-left: 30px;
     margin-right: auto;
     margin-top:9%;
@@ -185,26 +185,26 @@
 
   }
 
-  .bottomTriangle{
+  .bottomTriangleDark{
     clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 100%);
     padding-top: 10%;
     margin-top: -3%;
   }
 
-  .topTriangle{
+  .topTriangleDark{
     margin-top: 2%;
   }
 
-  .thirdColor{
-    background-color: var(--third-color);
+  .thirdColorDark{
+    background-color: var(--third-color-dark);
   }
 
-  .divider {
+  .dividerDark {
     color: white;
     font-size: 25px;
     /*border: 2px double black;*/
     text-align: center;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-dark);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,21 +220,21 @@
     z-index: 100;
   }
 
-  .dividerTitle {
+  .dividerTitleDark {
     font-family: var(--body-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--second-color);
+    color: var(--second-color-dark);
     font-size: 50px;
     size: 200px;
     text-align: center;
-    /*text-shadow: 5px 5px var(--bg-color);*/
+    /*text-shadow: 5px 5px var(--bg-color-dark);*/
   }
 
-  .fullPage{
-    background-color: var(--bg-color);
+  .fullPageDark{
+    background-color: var(--bg-color-dark);
   }
 
-  .groupPr{
-    background-color: var(--txt-color);
+  .groupPrDark{
+    background-color: var(--txt-color-dark);
     font-size: 50px;
     text-align: center;
     background-position: center center;
@@ -242,7 +242,7 @@
     background-size: cover;
     height: 5em;
     padding: 10em inherit;
-    /*border: 20px double var(--second-color);*/
+    /*border: 20px double var(--second-color-dark);*/
     /*border-radius: 25px;*/
 
     transition: 0.5s;
@@ -253,24 +253,24 @@
     cursor: pointer;
   }
 
-  .groupPr:hover{
+  .groupPrDark:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     /*margin: 8px 10px 12px;*/
   }
 
-  .gradient-button-3 {background-image: linear-gradient(to right, var(--third-color) 0%, var(--third-color) 15%, var(--second-color) 100%)}
-  .gradient-button-3:hover { background-position: right center; }
-  .title{
+  .gradient-button-3Dark {background-image: linear-gradient(to right, var(--third-color-dark) 0%, var(--third-color-dark) 15%, var(--second-color-dark) 100%)}
+  .gradient-button-3Dark:hover { background-position: right center; }
+  .titleDark{
     font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
     font-size: 50px;
     size: 500px;
     text-align: center;
-    color:var(--second-color);
+    color:var(--second-color-dark);
 
   }
-  .groupPrTitle{
+  .groupPrTitleDark{
     font-family: var(--body-font), 'Trirong-ExtraLightItalic';
-    color: var(--bg-color);
+    color: var(--bg-color-dark);
     font-size: 0.5em;
     size: 500px;
     text-align: center;
@@ -278,16 +278,16 @@
 
   }
 
-  .bgSecondary{
-    background-color: var(--third-color);
+  .bgSecondaryDark{
+    background-color: var(--third-color-dark);
   }
 
-  .contact{
-    background-color: var(--third-color);
+  .contactDark{
+    background-color: var(--third-color-dark);
     padding-bottom: 3%;
   }
 
-  .buttonsubmit{
+  .buttonsubmitDark{
     margin-top:25px;
     font-size: 20px;
     border-radius: 3px;
@@ -296,7 +296,7 @@
     margin-left:35%;
   }
 
-  .button{
+  .buttonDark{
     margin-top:25px;
     font-size: 20px;
     border-radius: 3px;
@@ -304,10 +304,10 @@
     display: inline-block;
     margin:1em;
     padding:0.5em;
-    color:var(--second-color);
+    color:var(--second-color-dark);
   }
 
-  .togglel{
+  .togglelDark{
     margin-top:25px;
 
     margin-left: 40%;
@@ -317,33 +317,33 @@
     text-align: center;
     display: inline-block;
   }
-  .buttondiv{
+  .buttondivDark{
     width:30%;
     margin: auto;
   }
 
 
 
-  .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
-    color: var(--bg-color);
-    background-color: var(--fourth-color);
-    border-color: var(--fourth-color); /*set the color you want here*/
+  .btn-primaryDark, .btn-primaryDark:active, .btn-primaryDark.active, .btn-primaryDark:focus {
+    color: var(--bg-color-dark);
+    background-color: var(--fourth-color-dark);
+    border-color: var(--fourth-color-dark); /*set the color you want here*/
 }
 
-  .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
-    color: var(--second-color);
-    background-color: var(--third-color);
+  .btn-primaryDark:hover, .open>.dropdown-toggle.btn-primary{
+    color: var(--second-color-dark);
+    background-color: var(--third-color-dark);
     border-color: var(--text-color); /*set the color you want here*/
 }
-#introtext{margin-top:1em}
+#introtextDark{margin-top:1em}
 
-  .contactForm{
+  .contactFormDark{
     font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     font-size: 20px;
     border: 2px double black;
     text-align: left;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-dark);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -354,13 +354,13 @@
 
   }
 
-  .messageForm{
+  .messageFormDark{
     font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     font-size: 20px;
     border: 2px double black;
     text-align: left;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-dark);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -379,7 +379,7 @@
   font-size: 20px;
   border: 2px double black;
   text-align: left;
-  background-color: var(--fourth-color)!important;
+  background-color: var(--fourth-color-dark)!important;
 
   background-position: center center;
   background-repeat: no-repeat;
@@ -391,14 +391,14 @@
 
 }*/
 
-  .profileName{
+  .profileNameDark{
     font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     font-size: 2em;
     text-align: center;
   }
 
-  .profileImage{
+  .profileImageDark{
     width: 20%;
     display: block;
     margin-left: auto;
@@ -409,7 +409,7 @@
   /*lets try a hover thingo*/
 
 
-  .content {
+  .contentDark {
     opacity: 0;
     font-size: 40px;
     position: absolute;
@@ -427,13 +427,13 @@
     text-align: center;
   }
 
-  .box {
+  .boxDark {
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .vertBox {
+  .vertBoxDark {
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -441,7 +441,7 @@
 
   }
 
-  .bioTextStable {
+  .bioTextStableDark {
     font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
     width: 35%;
@@ -449,24 +449,24 @@
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     padding-left: 32.5%;
   }
 
 
-  .bioTextContact {
+  .bioTextContactDark {
     font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
     /*width: 800px;*/
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     padding-left: 35%;
     padding-right: 100px;
   }
 
-  .bioText {
+  .bioTextDark {
     font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
     max-width: 800px;
@@ -479,17 +479,17 @@
     /*position: relative;*/
     /*top: 50%;*/
     /*transform: translate(50px,-100px);*/
-    color: var(--txt-color);
+    color: var(--txt-color-dark);
     /*padding-left: 25px;*/
     /*padding-right: 100px;*/
   }
 
-  .dividerTitleSmall {
+  .dividerTitleSmallDark {
     font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--second-color);
+    color: var(--second-color-dark);
     font-size: 30px;
     size: 200px;
-    /*text-shadow: 5px 5px var(--bg-color);*/
+    /*text-shadow: 5px 5px var(--bg-color-dark);*/
     flex-shrink: 5;
     align-self: center;
     flex-basis: auto;
@@ -497,8 +497,8 @@
 
 
 
-  .groupPrButton{
-    background-color: var(--third-color);
+  .groupPrButtonDark{
+    background-color: var(--third-color-dark);
     font-size: 20px;
     text-align: center;
     background-position: center center;
@@ -508,7 +508,7 @@
     height: 200px;
     width: 50px;
     padding: 10em inherit;
-    /*border: 20px double var(--second-color);*/
+    /*border: 20px double var(--second-color-dark);*/
     border-radius: 25px;
 
     text-transform: uppercase;
@@ -520,44 +520,41 @@
     cursor: pointer;
   }
 
-  .groupPrButton:hover{
+  .groupPrButtonDark:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     /*margin: 8px 10px 12px;*/
   }
 
-  .flexHoriz {
+  .flexHorizDark {
     display: flex;
     justify-content: space-evenly;
   }
 
-  .buttonBox {
+  .buttonBoxDark {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .modeButton {
-    box-shadow:inset 0px -3px 7px 0px var(--second-color);
-	  background:linear-gradient(to bottom, var(--third-color) 5%, var(--fifth-color) 100%);
+  .modeButtonDark {
+    box-shadow:inset 0px -3px 7px 0px var(--second-color-dark);
+	  background:linear-gradient(to bottom, var(--third-color-dark) 5%, var(--fifth-color-dark) 100%);
 	  background-color:white;
 	  border-radius:3px;
 	  display:inline-block;
 	  cursor:pointer;
-	  color:var(--txt-color);
+	  color:var(--txt-color-dark);
 	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
 	  font-size:20px;
     padding: 10px;
     font-weight: bold;
   }
 
-  .modeButton:hover {
-    background:linear-gradient(to bottom, var(--bg-color) 5%, var(--txt-color) 100%);
+  .modeButtonDark:hover {
+    background:linear-gradient(to bottom, var(--bg-color-dark) 5%, var(--txt-color-dark) 100%);
     background-color:white;
   }
-  .modeButton:active {
+  .modeButtonDark:active {
     position:relative;
     top:1px;
   }
-
-
-  
