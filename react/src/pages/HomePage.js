@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import './darkmode.css'
 import './pages.css'
+import './access.css'
 
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
@@ -74,6 +75,10 @@ class HomePage extends Component {
     this.setState({colourMode: "Dark"})
   };
 
+  setAccessMode= () => {
+    this.setState({colourMode: "AC"})
+  };
+
   responsive = {
     0: { items: 1 },
     1024: { items: 3 },
@@ -102,11 +107,6 @@ render () {
     return (
       <div className = {"fullPage" + this.state.colourMode}>
 
-        <div className = "buttonBox">
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set default Mode</button>
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
-        </div>
-
         <Jumbotron className = {"banner" + this.state.colourMode}>
           <div className = {"maintitle" + this.state.colourMode}>
           <h1>SWEN90016 </h1>
@@ -115,6 +115,13 @@ render () {
           {/*<p> really awesome people </p>*/}
         </Jumbotron>
 
+      <div className = "buttonBox">
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set Default Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setAccessMode}>Set Accesibility Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
+      </div>
+
+      <p>&nbsp;&nbsp;</p>
 
         <div className = {"alice" + this.state.colourMode}>
         <AliceCarousel className = {"alice" + this.state.colourMode}
@@ -138,7 +145,7 @@ render () {
 
         <div className = {"divider" + this.state.colourMode}>
         <div className= {"dividerTitleSmall" + this.state.colourMode}>
-        <h1> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
+        <h1> - Harry - Ron - Mustafa - Kelly - Zoe -</h1>
         </div>
         </div>
 
