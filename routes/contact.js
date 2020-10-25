@@ -8,7 +8,7 @@ var transport = {
     port: 587,
     auth: {
     user: 'potatopoweredportfolios@gmail.com',
-    pass: '!p0t8t0?'
+    pass: process.env.EMAIL_PASSWORD
   }
 }
 
