@@ -494,6 +494,7 @@
     flex-shrink: 5;
     align-self: center;
     flex-basis: auto;
+    z-index: 1;
   }
 
 
@@ -537,6 +538,8 @@
     justify-content: space-evenly;
     padding-top:0.4em;
     padding-bottom: 0.2em;
+    position: relative;
+    z-index: 1000;
   }
 
   .modeButton {

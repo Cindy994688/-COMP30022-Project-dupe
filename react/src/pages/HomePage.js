@@ -32,19 +32,19 @@ import { Image } from 'react-native';
 class HomePage extends Component {
   state = {
     galleryItems: [
-    <img src="/image/ChaoWei.jpg" alt="chaowei"
+    <img src="/image/ChaoWei.jpg" alt="Image of Chao-Wei Chiang on an image carousel"
       onMouseOver={e => (e.currentTarget.src = ChaoHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
-    <img src="/image/Mengyan.jpg" alt="mengyan"
+    <img src="/image/Mengyan.jpg" alt="Image of Meng-Yan Hou on an image carousel"
       onMouseOver={e => (e.currentTarget.src = MengHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
-    <img src="/image/MustafaFullBody.jpg" alt="mustafa"
+    <img src="/image/MustafaFullBody.jpg" alt="Image of Mustafa Awni on an image carousel"
       onMouseOver={e => (e.currentTarget.src = MusHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
-    <img src="/image/Ron.jpg" alt="ron"
+    <img src="/image/Ron.jpg" alt="Image of Ron Chiu on an image carousel"
     onMouseOver={e => (e.currentTarget.src = RonHover)}
     onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
-    <img src="/image/Xu.jpg" alt="xuhan"
+    <img src="/image/Xu.jpg" alt="Image of Xu Han on an image carousel"
     onMouseOver={e => (e.currentTarget.src = XuHover)}
     onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
      ].map((i) => <h2 key={i}>{i}</h2>),
