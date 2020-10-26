@@ -1,22 +1,23 @@
 :root {
-  --bg-color: #f7ede2;
-  --second-color: #277da1;
-  --third-color: #caf0f8; /*#91C4F2 ;*/
+  --bg-color: #f4f4f4;
+  --second-color: #277da1; /*277da1 */
+  --third-color: #b8dae1 ; /* #91C4F2 ; caf0f8*/
   --fourth-color: #277da1;  /*buttons  */
   --fifth-color: #f7ede2;  /*buttons on hover */
   --txt-color: #1B2845; /*most text */
 
-  --title-font: 'Montserrat-Bold';
+  --title-font: 'Montserrat-Thin';
   --subtitle-font: 'Lora';
   --body-font: 'HindMadurai-Light';
+  --quote-font: 'PassionOne-Regular';
 }
 
 /** {
   box-sizing: border-box;
 }*/
 @font-face {
-  font-family: 'Montserrat-Bold';
-  src: local('Montserrat-Bold'), url(./fonts/Montserrat-Bold.ttf) format('truetype');
+  font-family: 'Montserrat-Thin';
+  src: local('Montserrat-Thin'), url(./fonts/Montserrat-Thin.ttf) format('truetype');
 }
 
 @font-face {
@@ -27,6 +28,11 @@
 @font-face {
   font-family: 'HindMadurai-Light';
   src: local('HindMadurai-Light'), url(./fonts/HindMadurai-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PassionOne-Regular';
+  src: local('PassionOne-Regular'), url(./fonts/PassionOne-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -70,9 +76,9 @@
     font-family:var(--title-font), 'Times New Roman', Times, serif;
     color: var(--fifth-color);
     font-size: 35px;
-    border: 2px double white;
+    border: 1px double white;
     text-align: center;
-    background-image: url('clientbannertint.png');
+    background-image: url('clientbansundark.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,15 +111,24 @@
 
   .maintitle{
     font-family: var(--title-font), 'Times New Roman';
-    color: var(--second-color);
-    vertical-align: middle;
-    text-align: center;
-    font-size: 60px;
-    background-color:var(--fifth-color);
-    width:80%;
+    color: var(--background-color);
+
+    margin-top: -7%;
+    font-size: 200%;
+
     margin-left:auto;
     margin-right:auto;
 
+  }
+
+  .borderTitle{
+    height: 40%;
+    /*background-color:var(--fifth-color);*/
+    border: 6px solid white;
+    width:60%;
+    position: absolute;
+    left: 20%;
+    top:25%;
   }
 
   #intro{
@@ -136,11 +151,12 @@
     font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
     color: var(--txt-color);
-    margin-top: -20%;
-    padding-top:25%;
+    margin-top: -25%;
+    padding-top:15%;
     padding-bottom:1%;
     background-color: var(--third-color);
   }
+
 
 
 .sub{
@@ -169,6 +185,39 @@
     clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
+  .quote{
+    width: 35%;
+    text-align: justify;
+    margin-left: 32.5%;
+    margin-right: auto;
+    margin-top: 7%;
+    position:absolute;
+    z-index: 3;
+    text-align: center;
+    font-family: var(--subtitle-font);
+    color: var(--bg-color);
+  }
+
+  .quote1{
+    margin-top: -10%;
+    margin-left: 15%;
+    position:absolute;
+    z-index: 1;
+    color: var(--bg-color);
+    font-size: 2000%;
+    font-family: var(--quote-font);
+  }
+
+  .quote2{
+    margin-top: 17%;
+    margin-left: 65%;
+    position:absolute;
+    z-index: 1;
+    color: var(--bg-color);
+    font-size: 2000%;
+    font-family: var(--quote-font);
+  }
+
   .descr {
     width: 800px;
     padding: 50px;
@@ -177,8 +226,9 @@
   }
 
   .alice {
-    margin-left: 30px;
+    margin-left: auto;
     margin-right: auto;
+    width: 83%;
     margin-top:9%;
     z-index: 100;
     position: relative;
@@ -192,12 +242,91 @@
   }
 
   .topTriangle{
-    margin-top: 2%;
+    margin-top: 4%;
+
+  }
+
+  .aboutTriangle{
+    margin-top: 4%;
+    height: 900px;
+
+  }
+
+  .ourProject{
+    margin-top: 6%;
   }
 
   .thirdColor{
     background-color: var(--third-color);
   }
+
+  .pictureform1{
+    width: 100%;
+    height: 100%;
+    background-color: var(--txt-color);
+  }
+
+  .pictureform4{
+    width: 691.6px;
+    height: 400px;
+    flex-grow: 5;
+    background-color: var(--txt-color);
+  }
+
+  .pictureform2{
+    width: 470.5px;
+    height: 200px;
+    background-color: var(--second-color);
+    clip-path: inset(0px 0px 30px 0px);
+    margin-left: 7%;
+    margin-top:1%;
+  }
+
+  .pictureform3{
+    width: 80%;
+    height: 80%;
+    background-color: var(--second-color);
+  }
+
+.textExp{
+  text-align: center;
+  width:50%;
+  padding-top: 10%;
+  padding-left: 0%;
+  padding-right: 8%;
+  border: 0px double white;
+  color: var(--txt-color);
+  font-family: var(--body-font);
+}
+
+.textEnd{
+  text-align: center;
+  width:60%;
+  margin-top: -2%;
+  padding-left: 0%;
+  padding-right: 6%;
+  border: 0px double white;
+  color: var(--txt-color);
+  font-family: var(--body-font);
+}
+
+  .row{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 7%;
+    margin-right: 7%;
+    border: 0px double white;
+  }
+
+  .col{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
 
   .divider {
     color: white;
@@ -287,6 +416,7 @@
     padding-bottom: 3%;
   }
 
+
   .buttonsubmit{
     margin-top:25px;
     font-size: 20px;
@@ -333,7 +463,7 @@
   .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
     color: var(--second-color);
     background-color: var(--third-color);
-    border-color: var(--text-color); /*set the color you want here*/
+    border-color: var(--txt-color); /*set the color you want here*/
 }
 #introtext{margin-top:1em}
 
@@ -415,7 +545,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    color: var(--text-color);
+    color: var(--txt-color);
     background-color: rgba(200, 200, 200, 0.5);
     width: 300px;
     height: 300px;
@@ -486,7 +616,7 @@
 
   .dividerTitleSmall {
     font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--second-color);
+    color:var(--third-color);
     font-size: 30px;
     size: 200px;
     /*text-shadow: 5px 5px var(--bg-color);*/
@@ -558,6 +688,3 @@
     position:relative;
     top:1px;
   }
-
-
-  

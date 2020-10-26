@@ -7,6 +7,8 @@ import './pages.css'
 import Profile from './Profile.js'
 import Biotext from './Biotext.js'
 import Contact from './Contact.js'
+import ProjectsPage from './ProjectsPage.js'
+import Login from './Login.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
 import Snow from './Snow.js'
@@ -15,6 +17,8 @@ import ToggleB from './ToggleB.js'
 import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
+import { Link } from 'react-router-dom'
+
 import ChaoHover from './chaohover.png'
 import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
@@ -110,12 +114,14 @@ render () {
         </div>
 
         <Jumbotron className = {"banner" + this.state.colourMode}>
+        <div className = "borderTitle">
           <div className = {"maintitle" + this.state.colourMode}>
-          <h1>SWEN90016 </h1>
-          <div id="subheading">Group CRXMM</div>
+          <h1>CRXMM </h1>
+          </div>
           </div>
           {/*<p> really awesome people </p>*/}
         </Jumbotron>
+
 
 
         <div className = {"alice" + this.state.colourMode}>
@@ -148,33 +154,26 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
-
-        <div className={"intro" + this.state.colourMode}>
-        <div className={"title" + this.state.colourMode} id="intro">Intro</div>
-        <p>Hi, this is CRXMM, we are a team of
-           5 from the University of Melbourne.
-          While we have different backgrounds,
-          different passions, and are even in
-          different timezones, we are in unity.
-          We believe that as individuals we are
-          strong, but together we are incredible.
-        </p>
+        <div className = {"aboutTriangle thirdColor"+this.state.colourMode}>
+            <div className={"intro" + this.state.colourMode}>
+            <div className = {"quote1"+ this.state.colourMode}>“</div>
+            <div className = "quote">Hi, this is
+            CRXMM. We are a team of
+            5 from the University of Melbourne.
+            While we have different backgrounds,
+            different passions, and are even in
+            different timezones, we are in unity.
+            As individuals we are
+            strong, but together we are incredible.
+          </div>
+          <div className = {"quote2"+ this.state.colourMode}>”</div>
+          </div>
         </div>
 
         {/*<ToggleB>hello</ToggleB>*/}
 
         <ToggleProj colourMode = {this.state.colourMode}>
-        <div className = {"drop-down" + this.state.colourMode + " intro" + this.state.colourMode}>
-          In this project, we help Beth, a local business owner of beauty care services
-          in Melbourne, build the e-commerce website for her business. It is expected
-          that the system can not just make the appointment procedure automation but also
-          help promote the business to different regions.
-          <div id="drop-down introtext">
-          Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
-            Test Manager - Mustafa;
-            Developer - Chao-Wei and Zoe
-          </div>
-        </div>
+
       </ToggleProj>
 
 
@@ -197,11 +196,12 @@ render () {
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
         <Contact colourMode = {this.state.colourMode} />
 
-
+        <h1>This is a login page! :)      <Link to="/">Login</Link></h1>
         <div className= {"footer" + this.state.colourMode}><p>last edited: 21/10/2020</p></div>
 
 
       </div>
+
     )
   }
 }
