@@ -51,8 +51,8 @@
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-slideshow-image": "^3.2.0",
-    "reactstrap": "^8.6.0",
     "react-sticky": "^6.0.3",
+    "reactstrap": "^8.6.0",
     "styled-components": "^5.2.0"
   },
   "eslintConfig": {
