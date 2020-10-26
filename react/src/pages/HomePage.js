@@ -4,14 +4,10 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import './darkmode.css'
 import './pages.css'
 
-import Profile from './Profile.js'
-import Biotext from './Biotext.js'
 import Contact from './Contact.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
 import ToggleRight from './ToggleRight.js'
-import ToggleB from './ToggleB.js'
-import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import ChaoHover from './chaohover.png'
@@ -19,7 +15,6 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-import { ToggleButton } from 'react-bootstrap'
 import { Image } from 'react-native';
 
 
