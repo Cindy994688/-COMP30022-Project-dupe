@@ -109,7 +109,7 @@ render () {
         <div className = "buttonBox">
         <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set default Mode</button>
         <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
-        <button className = {"loginButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
         </div>
 
         <Jumbotron className = {"banner" + this.state.colourMode}>

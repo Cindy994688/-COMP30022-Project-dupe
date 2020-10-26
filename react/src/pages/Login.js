@@ -5,6 +5,7 @@ import './darkmode.css'
 import './pages.css'
 
 import EditProjects from './EditProjects';
+import DeleteProjects from './DeleteProjects';
 
 class Login extends React.Component{
     constructor() {
@@ -13,7 +14,8 @@ class Login extends React.Component{
             username: "",
             password: "",
             login: false,
-            title: "Login to add projects."
+            title: "Login to add and delete projects.",
+            mode: ""
         };
         this.onKeyDown = this.onKeyDown.bind(this);
     }
@@ -81,6 +83,19 @@ class Login extends React.Component{
     }
 
 
+    toEdit = () => {
+      this.setState({
+          mode: "edit"
+      })
+    }
+
+    toDelete = () => {
+      this.setState({
+          mode: "delete"
+      })
+    }
+
+
     render() {
       if(!this.state.login){
         return(
@@ -120,6 +135,15 @@ class Login extends React.Component{
             </div>
         )
       } else {
+
+        if(this.state.mode === "edit"){
+          var editDelete = <EditProjects />
+          var status = "Adding Projects."
+        } else if(this.state.mode === "delete"){
+          var editDelete = <DeleteProjects />
+          var status = "Deleting Projects."
+        }
+
         return(
           <div className = {"fullPageDark"}>
             <button
@@ -127,10 +151,28 @@ class Login extends React.Component{
               onClick={this.toHome}
             >Home</button>
 
-            <h1 className={"title"}>{this.state.title}</h1>
+            <h1 className="title">{this.state.title}</h1>
             <br />
 
-            <EditProjects colourMode = "Dark" />
+
+            <div className = "buttonBox">
+              <button
+              className = {"modeButtonDark"}
+              onClick={this.toEdit}
+              >Add Projects</button>
+
+              <button
+              className = {"modeButtonDark"}
+              onClick={this.toDelete}
+              >Delete Projects</button>
+            </div>
+
+
+            <h1 className="title">{status}</h1>
+            <br />
+
+
+            {editDelete}
 
           </div>
         )

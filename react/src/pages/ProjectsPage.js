@@ -117,8 +117,7 @@ class ProjectsPage extends React.Component {
             //Each button changes which project description is shown.*/}
 
 
-            {/*KNOWN BUG: buttons are initially centered, but upon being selected
-            they align to the left of the text below them*/}
+              <div className="buttonBox">
 
                 {(projectLength >= 1) &&
                     <button type="submit"
@@ -180,12 +179,14 @@ class ProjectsPage extends React.Component {
                     >{button6}</button>
                 }
 
-                {/*Rendering the project description. Only renders the git repo if it exists*/}
-                {(this.state.project !== "none") &&
-                <div className = {"bioText"+this.props.colourMode}>
-                {gitRep && <p>Link to the git repository: {gitRep}</p>}
-                <p>{projectDesc}</p>
-                </div>}
+              </div>
+
+              {/*Rendering the project description. Only renders the git repo if it exists*/}
+              {(this.state.project !== "none") &&
+              <div className = {"bioText"+this.props.colourMode}>
+              {gitRep && <p>Link to the git repository: {gitRep}</p>}
+              <p>{projectDesc}</p>
+              </div>}
 
             </div>
         )

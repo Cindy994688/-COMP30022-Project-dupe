@@ -1,10 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import axios from 'axios'
+import React from 'react';
+import axios from 'axios';
+
+import './darkmode.css';
 
 class EditProjects extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             person: "",
             title: "",
@@ -46,9 +47,9 @@ class EditProjects extends React.Component {
     }
 
 
-    render(){
+    render(props){
         return(
-            <div className = {"bioText"+this.props.colourMode}>
+            <div className = "bioTextDark">
 
             <label>Select Person: </label>
             <select
@@ -110,7 +111,12 @@ class EditProjects extends React.Component {
             </select>
             <br />
 
-            <button onClick={this.handleSubmit}>Submit</button>
+            <button
+              type="submit"
+              className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+              style={{cursor:'pointer'}}
+              onClick={this.handleSubmit}
+            >Submit</button>
 
             <p>{this.state.display}</p>
 
