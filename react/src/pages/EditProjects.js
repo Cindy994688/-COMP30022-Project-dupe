@@ -7,17 +7,11 @@ class EditProjects extends React.Component {
         super();
         this.state = {
             person: "",
-            projects: {
-                chaowei: "1",
-                ronchiu: "2",
-                mustafa: "3",
-                xuhan: "4",
-                mengyan: "5"
-            },
             title: "",
             description: "",
             giturl: "",
-            position: 0
+            position: 0,
+            display: ""
         };
     }
 
@@ -25,20 +19,29 @@ class EditProjects extends React.Component {
     handleChange = (event) => {
         const {name, value} = event.target;
         this.setState({
-            [name]: value
+            [name]: value,
+            display: ""
         })
     }
 
 
     handleSubmit = (event) => {
         event.preventDefault();
-        var person = this.state.projects[this.state.person];
-        console.log(person + ": " + this.state.description);
-        axios.post('/project', {name: this.state.person,
+        if(this.state.person && this.state.title && this.state.description && (this.state.position !== 0)){
+          axios.post('/project', {name: this.state.person,
             projectTitle: this.state.title,
             linktogitrepo: this.state.giturl,
             description: this.state.description,
             position: this.state.position});
+          this.setState({person: "",
+                        title: "",
+                        description: "",
+                        giturl: "",
+                        position: 0,
+                        display: "Project successfully sent."})
+        } else {
+          this.setState({display: "Project could not be sent. Please ensure all required fields have been given a value."});
+        }
 
     }
 
@@ -82,7 +85,7 @@ class EditProjects extends React.Component {
             />
             <br />
 
-            <label>Github URL: </label>
+            <label>(Optional) Github URL: </label>
             <input
                 type="text"
                 name="giturl"
@@ -108,6 +111,8 @@ class EditProjects extends React.Component {
             <br />
 
             <button onClick={this.handleSubmit}>Submit</button>
+
+            <p>{this.state.display}</p>
 
             </div>
         )
