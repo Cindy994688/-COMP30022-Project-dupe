@@ -510,7 +510,7 @@
     border-radius: 3px;
     text-align: center;
     display: inline-block;
-    margin-left:35%;
+    margin-left:46%;
   }
 
   .button{
@@ -565,7 +565,7 @@
     font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
     color: var(--txt-color);
     font-size: 20px;
-    border: 2px double black;
+    border: 2px double var(--bg-color);
     text-align: left;
     background-color: var(--bg-color);
     background-position: center center;
@@ -574,15 +574,15 @@
     height: 20px;
     margin-left: 32.5%;
     width: 35%;
-    padding: 10em inherit;
-
+    padding: 6px;
+    border-radius: 8px;
   }
 
   .messageForm{
     font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
     color: var(--txt-color);
     font-size: 20px;
-    border: 2px double black;
+    border: 2px double var(--bg-color);
     text-align: left;
     background-color: var(--bg-color);
     background-position: center center;
@@ -591,8 +591,8 @@
     height: 200px;
     margin-left: 32.5%;
     width: 35%;
-    padding: 10em inherit;
-
+    padding: 6px;
+    border-radius: 8px;
   }
 
 
