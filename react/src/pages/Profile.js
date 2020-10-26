@@ -10,8 +10,6 @@ class Profile extends React.Component {
 
   render ( props ) {
     return (
-
-
           <div className="profileImage">
           <Image
             //source={require('./imgbanner.jpg')}
@@ -24,7 +22,5 @@ class Profile extends React.Component {
     )
   }
 }
-
-
 
   export default Profile;

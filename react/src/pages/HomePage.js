@@ -5,14 +5,10 @@ import './darkmode.css'
 import './pages.css'
 import './access.css'
 
-import Profile from './Profile.js'
-import Biotext from './Biotext.js'
 import Contact from './Contact.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
 import ToggleRight from './ToggleRight.js'
-import ToggleB from './ToggleB.js'
-import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import ChaoHover from './chaohover.png'
@@ -20,7 +16,6 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-import { ToggleButton } from 'react-bootstrap'
 import { Image } from 'react-native';
 
 
@@ -42,12 +37,12 @@ class HomePage extends Component {
       onMouseOver={e => (e.currentTarget.src = MusHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
     <img src="/image/Ron.jpg" alt="Image of Ron Chiu on an image carousel"
-    onMouseOver={e => (e.currentTarget.src = RonHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
+      onMouseOver={e => (e.currentTarget.src = RonHover)}
+      onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
     <img src="/image/Xu.jpg" alt="Image of Xu Han on an image carousel"
-    onMouseOver={e => (e.currentTarget.src = XuHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
-     ].map((i) => <h2 key={i}>{i}</h2>),
+      onMouseOver={e => (e.currentTarget.src = XuHover)}
+      onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
+     ].map((i) => <div key={i}>{i}</div>),
      colourMode: "",
   }
 
@@ -123,7 +118,7 @@ render () {
 
       <p>&nbsp;&nbsp;</p>
         <div className = {"alice" + this.state.colourMode}>
-        <AliceCarousel 
+        <AliceCarousel
         items={this.state.galleryItems}
         responsive={this.responsive}
         controlsStrategy="responsive"
