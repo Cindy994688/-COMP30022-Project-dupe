@@ -153,7 +153,7 @@ render () {
         </div>
 
         <div className = {"aboutTriangle thirdColor"+this.state.colourMode}>
-            <div className={"intro" + this.state.colourMode}>
+            <div className={"intro" + this.state.colourMode + " quotebox"}>
             <div className = {"quote1"+ this.state.colourMode}>“</div>
             <div className = "quote">Hi, this is
             CRXMM. We are a team of

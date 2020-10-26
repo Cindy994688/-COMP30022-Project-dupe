@@ -185,37 +185,47 @@
     clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
+  .quotebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .quote{
     width: 35%;
     text-align: justify;
-    margin-left: 32.5%;
-    margin-right: auto;
+    /*margin-left: 32.5%;*/
+    /*margin-right: auto;*/
     margin-top: 7%;
-    position:absolute;
+    /*position:absolute;*/
     z-index: 3;
     text-align: center;
     font-family: var(--subtitle-font);
     color: var(--bg-color);
+    flex-shrink: 2;
   }
 
   .quote1{
     margin-top: -10%;
-    margin-left: 15%;
-    position:absolute;
+    /*margin-left: 15%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color);
     font-size: 2000%;
     font-family: var(--quote-font);
+    flex-shrink: 1;
   }
 
   .quote2{
     margin-top: 17%;
-    margin-left: 65%;
-    position:absolute;
+    /*margin-left: 65%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color);
     font-size: 2000%;
     font-family: var(--quote-font);
+    flex-shrink: 1;
+    max-height: 0.5em;
   }
 
   .descr {
