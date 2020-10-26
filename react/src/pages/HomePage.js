@@ -46,7 +46,7 @@ class HomePage extends Component {
     <img src="/image/Xu.jpg" alt="xuhan"
     onMouseOver={e => (e.currentTarget.src = XuHover)}
     onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
-     ].map((i) => <h2 key={i}>{i}</h2>),
+     ].map((i) => <div key={i}>{i}</div>),
      colourMode: "",
   }
 
