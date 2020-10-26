@@ -181,7 +181,7 @@
     font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
     color: var(--txt-color);
-    padding-top: 10%;
+    padding-top: 80px;
     clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
