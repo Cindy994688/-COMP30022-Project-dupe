@@ -114,7 +114,7 @@ class DeleteProjects extends React.Component {
 
               {(projectLength >= 1) &&
                   <button type="submit"
-                      className="btnDark btn-primaryDark buttonDark"
+                      className="modeButtonDark"
                       style={{cursor:'pointer'}}
                       name="selectedProject"
                       value={this.state.selectedProject === "1" ? "none" : "1"}
@@ -124,7 +124,7 @@ class DeleteProjects extends React.Component {
 
               {(projectLength >= 2) &&
                   <button type="submit"
-                      className="btnDark btn-primaryDark buttonDark"
+                      className="modeButtonDark"
                       style={{cursor:'pointer'}}
                       name="selectedProject"
                       value={this.state.selectedProject === "2" ? "none" : "2"}
@@ -134,7 +134,7 @@ class DeleteProjects extends React.Component {
 
               {(projectLength >= 3) &&
                   <button type="submit"
-                      className="btnDark btn-primaryDark buttonDark"
+                      className="modeButtonDark"
                       style={{cursor:'pointer'}}
                       name="selectedProject"
                       value={this.state.selectedProject === "3" ? "none" : "3"}
@@ -144,7 +144,7 @@ class DeleteProjects extends React.Component {
 
               {(projectLength >= 4) &&
                   <button type="submit"
-                      className="btnDark btn-primaryDark buttonDark"
+                      className="modeButtonDark"
                       style={{cursor:'pointer'}}
                       name="selectedProject"
                       value={this.state.selectedProject === "4" ? "none" : "4"}
@@ -154,7 +154,7 @@ class DeleteProjects extends React.Component {
 
               {(projectLength >= 5) &&
                   <button type="submit"
-                      className="btnDark btn-primaryDark buttonDark"
+                      className="modeButtonDark"
                       style={{cursor:'pointer'}}
                       name="selectedProject"
                       value={this.state.selectedProject === "5" ? "none" : "5"}
@@ -164,7 +164,7 @@ class DeleteProjects extends React.Component {
 
               {(projectLength >= 6) &&
                   <button type="submit"
-                      className="btnDark btn-primaryDark buttonDark"
+                      className="modeButtonDark"
                       style={{cursor:'pointer'}}
                       name="selectedProject"
                       value={this.state.selectedProject === "6" ? "none" : "6"}
@@ -174,10 +174,12 @@ class DeleteProjects extends React.Component {
 
             </div>
 
+            <br />
             <div className="bioTextDark">{projectDesc}</div>
-
+            <br />
+            
             <button type="submit"
-                className="btnDark btn-primaryDark buttonDark"
+                className="modeButtonDark"
                 style={{cursor:'pointer'}}
                 value={projectNum}
                 onClick = {this.deleteProject}
