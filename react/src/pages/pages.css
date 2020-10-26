@@ -264,13 +264,19 @@
     width: 100%;
     height: 100%;
     background-color: var(--txt-color);
+    cursor: pointer;
+    transition: transform .2s;
+  }
+
+  .pictureform4:hover, .pictureform1:hover, .pictureform2:hover, .pictureform3:hover {
+    transform:  scale(1.25);
   }
 
   .pictureform4{
     width: 691.6px;
     height: 400px;
-    flex-grow: 5;
     background-color: var(--txt-color);
+    cursor: pointer;
   }
 
   .pictureform2{
@@ -280,12 +286,14 @@
     clip-path: inset(0px 0px 30px 0px);
     margin-left: 7%;
     margin-top:1%;
+    cursor: pointer;
   }
 
   .pictureform3{
     width: 80%;
     height: 80%;
     background-color: var(--second-color);
+    cursor: pointer;
   }
 
 .textExp{

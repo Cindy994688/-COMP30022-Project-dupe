@@ -5,19 +5,26 @@ import './pages.css'
 import './darkmode.css'
 import { View, Image } from 'react-native';
 import { Container, Row, Col } from 'reactstrap';
+import { render } from "react-dom";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 
 export default class ToggleProj extends Component {
-    state = {
-        on: false,
-    }
+  constructor(props) {
+   super(props);
 
-    toggle = () => {
-        this.setState({
-            on: !this.state.on
-        })
-    }
+   this.state = {
+     photoIndex: 0,
+     isOpen: false,
+     length: 7
+   };
+  }
+
     render() {
+       const { photoIndex, isOpen } = this.state;
+
         return (
+
             <div className = "ourProject">
                     <div className={ " title"+this.props.colourMode}> Our Project </div>
                     {/*<div className="title" id="ourproject">*/}
@@ -29,8 +36,25 @@ export default class ToggleProj extends Component {
 
 
 
+                    {isOpen && (
+                      <Lightbox
+                        nextSrc={"/image/page"+this.state.photoIndex+".png" }
+                        mainSrc={"/image/page"+this.state.photoIndex+".png" }
+                        prevSrc={"/image/page"+this.state.photoIndex+".png" }
 
-
+                        onCloseRequest={() => this.setState({ isOpen: false })}
+                        onMovePrevRequest={() =>
+                          this.setState({
+                            photoIndex: (photoIndex + this.state.length - 1) % this.state.length
+                          })
+                        }
+                        onMoveNextRequest={() =>
+                          this.setState({
+                            photoIndex: (photoIndex + 1) % this.state.length
+                          })
+                        }
+                        />
+                      )}
 
                   <div className="row">
                       <div className="col textExp">
@@ -40,28 +64,38 @@ export default class ToggleProj extends Component {
                         help promote the business to different regions.
 
                       </div>
-                      <div className="col"> <img className="pictureform1" src="/image/page0.png" alt="first page" /> </div>
+                      <div className="col"> <img className="pictureform1" src="/image/page0.png" alt="first page"
+                                        onClick={() => this.setState({ isOpen: true, photoIndex:0, })}/> </div>
                   </div>
 
                   <div className="row">
-                  <img className="pictureform4" src="/image/page4.png" alt="second page" /> 
+                  <img className="pictureform4" src="/image/page1.png" alt="second page"
+                      onClick={() => this.setState({ isOpen: true, photoIndex:1 })}/>
                       <div className="col">
-                         <img className="pictureform2" src="/image/page1.png" alt="second page" />
-                         <img className="pictureform2" src="/image/page3.png" alt="fourth page" />
+                         <img className="pictureform2" src="/image/page2.png" alt="second page"
+                            onClick={() => this.setState({ isOpen: true, photoIndex:2 })}/>
+                         <img className="pictureform2" src="/image/page3.png" alt="fourth page"
+                              onClick={() => this.setState({ isOpen: true, photoIndex:3, })}/>
                       </div>
 
                   </div>
 
+
                   <div className="row">
-                      <div className="col"> <img className="pictureform3" src="/image/page5.png" alt="third page" /> </div>
-                      <div className="col"> <img className="pictureform3" src="/image/page2.png" alt="third page" /> </div>
-                      <div className="col"> <img className="pictureform3" src="/image/page7.png" alt="fourth page" /> </div>
+                      <div className="col"> <img className="pictureform3" src="/image/page4.png" alt="third page"
+                          onClick={() => this.setState({ isOpen: true, photoIndex:4, })}/> </div>
+                      <div className="col"> <img className="pictureform3" src="/image/page5.png" alt="third page"
+                          onClick={() => this.setState({ isOpen: true, photoIndex:5, })}/> </div>
+                      <div className="col"> <img className="pictureform3" src="/image/page6.png" alt="fourth page"
+                            onClick={() => this.setState({ isOpen: true, photoIndex:6 })}/> </div>
                       <div className="col textEnd">
                       <p>Team roles:</p><p> Project Manager - Kelly</p><p> Risk Manager - Hsin-Jung</p>
                         <p>Test Manager - Mustafa</p>
                         <p>Developer - Chao-Wei and Zoe</p>
                       </div>
                   </div>
+
+
 
 
 
