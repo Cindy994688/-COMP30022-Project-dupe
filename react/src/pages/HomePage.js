@@ -117,14 +117,13 @@ render () {
 
       <div className = "buttonBox">
         <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set Default Mode</button>
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setAccessMode}>Set Accesibility Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setAccessMode}>Set Accessibility Mode</button>
         <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
       </div>
 
       <p>&nbsp;&nbsp;</p>
-
         <div className = {"alice" + this.state.colourMode}>
-        <AliceCarousel className = {"alice" + this.state.colourMode}
+        <AliceCarousel 
         items={this.state.galleryItems}
         responsive={this.responsive}
         controlsStrategy="responsive"
@@ -141,7 +140,6 @@ render () {
         buttonsDisabled={true}
         />
         </div>
-
 
         <div className = {"divider" + this.state.colourMode}>
         <div className= {"dividerTitleSmall" + this.state.colourMode}>
