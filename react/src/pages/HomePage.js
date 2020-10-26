@@ -150,7 +150,7 @@ render () {
 
 
         <div className = {"divider" + this.state.colourMode + " inFront"}>
-        <div className= {"dividerTitleSmall" + this.state.colourMode}>
+        <div className= {"dividerTitleSmall" + this.state.colourMode + " inFront"}>
         <h1 className = "inFront"> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
         </div>
         </div>

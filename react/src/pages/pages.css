@@ -239,7 +239,7 @@
     margin-right: auto;
     width: 83%;
     margin-top:9%;
-    z-index: 100;
+    z-index: 1000;
     position: relative;
 
   }
@@ -260,6 +260,11 @@
     height: 900px;
 
   }
+
+.inFront{
+  position: relative;
+  z-index: 100;
+}
 
   .ourProject{
     margin-top: 6%;
