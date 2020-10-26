@@ -113,8 +113,8 @@ render () {
     return (
       <div className = {"fullPage" + this.state.colourMode}>
 
-        <Jumbotron className = {"banner" + this.state.colourMode}>
-        <div className = "borderTitle">
+        <Jumbotron className = {"banner"}>
+        <div className = {"borderTitle" + this.state.colourMode}>
           <div className = {"maintitle" + this.state.colourMode}>
           <h1>CRXMM </h1>
           </div>
@@ -129,7 +129,7 @@ render () {
       </div>
 
       <p>&nbsp;&nbsp;</p>
-        <div className = {"alice" + this.state.colourMode}>
+        <div className = {"alice"}>
         <AliceCarousel
         items={this.state.galleryItems}
         responsive={this.responsive}
@@ -159,14 +159,14 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
-        <div id="snowHolder" className = {"aboutTriangle thirdColor"+this.state.colourMode}>
+        <div id="snowHolder" className = {"aboutTriangle"+this.state.colourMode}>
           <div className = "snowHolder">
             {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
           </div>
           
           <div className={"intro" + this.state.colourMode}>
           <div className = {"quote1"+ this.state.colourMode}>“</div>
-          <div className = "quote">Hi, this is
+          <div className = {"quote"+this.state.colourMode}>Hi, this is
             CRXMM. We are a team of
             5 from the University of Melbourne.
             While we have different backgrounds,
@@ -186,11 +186,11 @@ render () {
 
       </ToggleProj>
 
-      <div className="solid"><br/></div>
+      <div className={"solid"+this.state.colourMode}><br/></div>
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
 
-      <div className="solid2"><br/></div>
+      <div className={"solid2"+this.state.colourMode}><br/></div>
         {/*first person*/}
         <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
         {/*second person*/}
