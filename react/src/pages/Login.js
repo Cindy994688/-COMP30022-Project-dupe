@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import './darkmode.css'
-import './pages.css'
+import './darkmode.css';
+import './pages.css';
+import './login.css';
 
 import EditProjects from './EditProjects';
 import DeleteProjects from './DeleteProjects';
@@ -95,13 +96,13 @@ class Login extends React.Component{
     render() {
       if(!this.state.login){
         return(
-            <div className = {"fullPageDark"}>
+            <div className = "fullPageDark">
 
               <button
                 className = {"modeButtonDark"}
                 onClick={this.toHome}
               >Home</button>
-
+              <div className = "bioTextDark">
               <h1 className={"title"}>{this.state.title}</h1>
 
               <br />
@@ -124,14 +125,16 @@ class Login extends React.Component{
                   onChange={this.handleChange}
                   onKeyDown={this.onKeyDown}
               />
-              <br />
+              <br /><br />
 
-              <button onClick={this.handleSubmit}>Login</button>
+              <button className = "modeButtonDark" onClick={this.handleSubmit}>Login</button>
+
+              </div>
 
             </div>
         )
-      } else {
 
+      } else {
 
         var editDelete, status;
         if(this.state.mode === "edit"){
