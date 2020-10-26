@@ -53,6 +53,7 @@ class HomePage extends Component {
     onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
      ].map((i) => <h2 key={i}>{i}</h2>),
      colourMode: "",
+     snowHeight: 0,
   }
 
     // Keep the below definition, and always remember to provide a return to default option in the colour buttons
@@ -78,6 +79,12 @@ class HomePage extends Component {
   setDarkMode= () => {
     this.setState({colourMode: "Dark"})
   };
+
+  componentDidMount = () => {
+    let height = document.getElementById('snowHolder').offsetHeight
+    console.log("The height I be readin: " + height)
+    this.setState({snowHeight: height})
+  }
 
   responsive = {
     0: { items: 1 },
@@ -106,7 +113,6 @@ class HomePage extends Component {
 render () {
     return (
       <div className = {"fullPage" + this.state.colourMode}>
-        <Snow density={3}></Snow>
 
         <div className = "buttonBox">
         <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set default Mode</button>
@@ -144,9 +150,9 @@ render () {
         </div>
 
 
-        <div className = {"divider" + this.state.colourMode}>
+        <div className = {"divider" + this.state.colourMode + " inFront"}>
         <div className= {"dividerTitleSmall" + this.state.colourMode}>
-        <h1> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
+        <h1 className = "inFront"> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
         </div>
         </div>
 
@@ -154,10 +160,14 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
-        <div className = {"aboutTriangle thirdColor"+this.state.colourMode}>
-            <div className={"intro" + this.state.colourMode}>
-            <div className = {"quote1"+ this.state.colourMode}>“</div>
-            <div className = "quote">Hi, this is
+        <div id="snowHolder" className = {"aboutTriangle thirdColor"+this.state.colourMode}>
+          <div className = "snowHolder">
+            {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
+          </div>
+          
+          <div className={"intro" + this.state.colourMode}>
+          <div className = {"quote1"+ this.state.colourMode}>“</div>
+          <div className = "quote">Hi, this is
             CRXMM. We are a team of
             5 from the University of Melbourne.
             While we have different backgrounds,

@@ -239,6 +239,7 @@
     clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 100%);
     padding-top: 10%;
     margin-top: -3%;
+    z-index: 2;
   }
 
   .topTriangle{
@@ -249,11 +250,11 @@
   .aboutTriangle{
     margin-top: 4%;
     height: 900px;
-
   }
 
   .ourProject{
     margin-top: 6%;
+    z-index: 1;
   }
 
   .thirdColor{
@@ -434,6 +435,7 @@
     display: inline-block;
     margin:1em;
     padding:0.5em;
+    z-index: 10;
     color:var(--second-color);
   }
 
@@ -538,11 +540,22 @@
 
   /*lets try a hover thingo*/
 
+.snowHolder{
+  position: relative;
+}
+
+.snowflake{
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  z-index: 0;
+}
 
   .content {
     opacity: 0;
     font-size: 40px;
-    position: absolute;
     top: 0;
     left: 0;
     color: var(--txt-color);
@@ -605,6 +618,7 @@
     text-align:center;
     margin-left: 25%;
     width:50%;
+    z-index: 1;
 
     /*position: relative;*/
     /*top: 50%;*/
@@ -625,7 +639,10 @@
     flex-basis: auto;
   }
 
-
+.inFront{
+  position: relative;
+  z-index: 100;
+}
 
   .groupPrButton{
     background-color: var(--third-color);
