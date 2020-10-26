@@ -154,7 +154,7 @@
     margin-top: -25%;
     padding-top:15%;
     padding-bottom:1%;
-    background-color: var(--third-color);
+    background-color: var(--second-color);
   }
 
 
@@ -185,37 +185,47 @@
     clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
+  .quotebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .quote{
     width: 35%;
     text-align: justify;
-    margin-left: 32.5%;
-    margin-right: auto;
+    /*margin-left: 32.5%;*/
+    /*margin-right: auto;*/
     margin-top: 7%;
-    position:absolute;
+    /*position:absolute;*/
     z-index: 3;
     text-align: center;
     font-family: var(--subtitle-font);
     color: var(--bg-color);
+    flex-shrink: 2;
   }
 
   .quote1{
     margin-top: -10%;
-    margin-left: 15%;
-    position:absolute;
+    /*margin-left: 15%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color);
     font-size: 2000%;
     font-family: var(--quote-font);
+    flex-shrink: 1;
   }
 
   .quote2{
     margin-top: 17%;
-    margin-left: 65%;
-    position:absolute;
+    /*margin-left: 65%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color);
     font-size: 2000%;
     font-family: var(--quote-font);
+    flex-shrink: 1;
+    max-height: 0.5em;
   }
 
   .descr {
@@ -257,21 +267,27 @@
     z-index: 1;
   }
 
-  .thirdColor{
-    background-color: var(--third-color);
+  .secondColor{
+    background-color: var(--second-color);
   }
 
   .pictureform1{
     width: 100%;
     height: 100%;
     background-color: var(--txt-color);
+    cursor: pointer;
+    transition: transform .2s;
+  }
+
+  .pictureform4:hover, .pictureform1:hover, .pictureform2:hover, .pictureform3:hover {
+    transform:  scale(1.25);
   }
 
   .pictureform4{
     width: 691.6px;
     height: 400px;
-    flex-grow: 5;
     background-color: var(--txt-color);
+    cursor: pointer;
   }
 
   .pictureform2{
@@ -281,12 +297,14 @@
     clip-path: inset(0px 0px 30px 0px);
     margin-left: 7%;
     margin-top:1%;
+    cursor: pointer;
   }
 
   .pictureform3{
     width: 80%;
     height: 80%;
     background-color: var(--second-color);
+    cursor: pointer;
   }
 
 .textExp{
@@ -311,6 +329,27 @@
   font-family: var(--body-font);
 }
 
+
+.profileRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-top: 2px double var(--third-color);
+  border-bottom: 2px double var(--third-color);
+}
+
+.profileColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 60%;
+  border: 0px double black;
+}
+
   .row{
     margin-top: 3%;
     margin-bottom: 3%;
@@ -327,10 +366,16 @@
     justify-content: center;
   }
 
+  .profile{
+    margin-top: 5%;
+    color: var(--txt-color);
+    font-family: var(--title-font);
+  }
+
 
 
   .divider {
-    color: white;
+    color: var(--bg-color);
     font-size: 25px;
     /*border: 2px double black;*/
     text-align: center;
@@ -377,8 +422,8 @@
 
     transition: 0.5s;
     background-size: 200% auto;
-    box-shadow: 0 0 20px #eee;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    /*box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     cursor: pointer;
   }
@@ -394,10 +439,48 @@
     font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
     font-size: 50px;
     size: 500px;
+    margin-top: 3%;
+    margin-bottom: 5%;
     text-align: center;
     color:var(--second-color);
 
   }
+
+  .solid {
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background:var(--second-color);
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%;
+    border-radius: 10%;
+  }
+
+  .solid1 {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background:var(--second-color);
+    margin-top: 4%;
+    margin-top: 0%;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-radius: 10%;
+    transform: rotate(90deg);
+  }
+
+  .solid2 {
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background:var(--second-color);
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 0%;
+    border-radius: 10%;
+  }
+
   .groupPrTitle{
     font-family: var(--body-font), 'Trirong-ExtraLightItalic';
     color: var(--bg-color);
@@ -450,22 +533,29 @@
     display: inline-block;
   }
   .buttondiv{
-    width:30%;
+    width:60%;
     margin: auto;
+
+  }
+
+  .cvPhoto{
+    width:40%;
+    height:40%;
   }
 
 
 
   .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
-    color: var(--bg-color);
-    background-color: var(--fourth-color);
-    border-color: var(--fourth-color); /*set the color you want here*/
+    color: var(--fourth-color);
+    background-color: var(--third-color);
+    border-color: var(--bg-color);
+    border-radius: 7px;/*set the color you want here*/
 }
 
   .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
-    color: var(--second-color);
-    background-color: var(--third-color);
-    border-color: var(--txt-color); /*set the color you want here*/
+    color: var(--bg-color);
+    background-color: var(--fourth-color);
+    border-color: var(--fourth-color);  /*set the color you want here*/
 }
 #introtext{margin-top:1em}
 
@@ -525,9 +615,16 @@
 
   .profileName{
     font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
-    color: var(--txt-color);
-    font-size: 2em;
+    color: var(--second-color);
+    font-size: 3em;
     text-align: center;
+    margin-top: 12%;
+    padding-top: 8%;
+  }
+
+  .profileInfo{
+    margin-top: 2%;
+    text-align: justify;
   }
 
   .profileImage{
@@ -592,7 +689,7 @@
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: var(--txt-color);
+    color: var(--second-color);
     padding-left: 32.5%;
   }
 
@@ -611,7 +708,7 @@
 
   .bioText {
     font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     max-width: 800px;
     /*display: inline-block;*/
     vertical-align: middle;
@@ -623,14 +720,14 @@
     /*position: relative;*/
     /*top: 50%;*/
     /*transform: translate(50px,-100px);*/
-    color: var(--txt-color);
+    color: var(--second-color);
     /*padding-left: 25px;*/
     /*padding-right: 100px;*/
   }
 
   .dividerTitleSmall {
     font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:var(--third-color);
+    color:var(--second-color);
     font-size: 30px;
     size: 200px;
     /*text-shadow: 5px 5px var(--bg-color);*/
@@ -652,18 +749,18 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px black;
+    /*text-shadow: 2px 2px black;*/
     height: 200px;
     width: 50px;
     padding: 10em inherit;
     /*border: 20px double var(--second-color);*/
-    border-radius: 25px;
+    border-radius: 40px;
 
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    box-shadow: 0 0 20px #eee;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  /*  box-shadow: 0 0 20px #eee;*/
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     cursor: pointer;
   }
@@ -689,7 +786,7 @@
   }
 
   .modeButton {
-    box-shadow:inset 0px -3px 7px 0px var(--second-color);
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
 	  background:linear-gradient(to bottom, var(--third-color) 5%, var(--fifth-color) 100%);
 	  background-color:white;
 	  border-radius:3px;

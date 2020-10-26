@@ -181,16 +181,18 @@ render () {
 
         {/*<ToggleB>hello</ToggleB>*/}
 
+
         <ToggleProj colourMode = {this.state.colourMode}>
 
       </ToggleProj>
 
-
+      <div className="solid"><br/></div>
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
+
+      <div className="solid2"><br/></div>
         {/*first person*/}
         <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
-
         {/*second person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
 
@@ -200,13 +202,14 @@ render () {
         {/*fourth person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
         {/*fifth person*/}
+
         <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
 
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
         <Contact colourMode = {this.state.colourMode} />
 
-        <h1>This is a login page! :)      <Link to="/">Login</Link></h1>
-        <div className= {"footer" + this.state.colourMode}><p>last edited: 21/10/2020</p></div>
+        <div className= {"footer" + this.state.colourMode}><p>last edited: 26/10/2020</p></div>
+
 
 
       </div>
