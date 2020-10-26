@@ -189,6 +189,7 @@ render () {
 
         {/*fourth person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Xu" author = "xuhan"/>
+        
         {/*fifth person*/}
         <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
 
