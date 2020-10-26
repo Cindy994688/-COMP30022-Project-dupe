@@ -125,6 +125,7 @@ render () {
         <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
         <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
         <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
       </div>
 
       {/*NAVBAR HERE*/}
@@ -206,27 +207,27 @@ render () {
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
         {/*first person*/}
         <Element name="ChaoWei">
-          <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
+          <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei" author = "chaowei"/>
         </Element>
 
         {/*second person*/}
         <Element name="Ron">
-          <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
+          <ToggleRight colourMode = {this.state.colourMode} name = "Ron" author = "ronchiu"/>
         </Element>
 
         {/*third person*/}
         <Element name="Mustafa">
-          <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa"/>
+          <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa" author = "mustafa"/>
         </Element>
 
         {/*fourth person*/}
         <Element name="Xu">
-          <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
+          <ToggleRight colourMode = {this.state.colourMode} name = "Xu" author = "xuhan"/>
         </Element>
 
         {/*fifth person*/}
         <Element name="Mengyan">
-          <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
+          <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
         </Element>
 
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
@@ -236,7 +237,7 @@ render () {
         </Element>
 
 
-        <div className= {"footer" + this.state.colourMode}><p>last edited: 21/10/2020</p></div>
+        <div className= {"footer" + this.state.colourMode}><p>last edited: 27/10/2020</p></div>
 
 
       </div>

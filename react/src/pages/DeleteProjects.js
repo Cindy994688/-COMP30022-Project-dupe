@@ -1,8 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import { ToggleButton } from 'react-bootstrap';
-
 import './darkmode.css';
 
 class DeleteProjects extends React.Component {

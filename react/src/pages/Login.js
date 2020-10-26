@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import { ToggleButton } from 'react-bootstrap';
 import './darkmode.css'
 import './pages.css'
 
@@ -34,7 +33,7 @@ class Login extends React.Component{
     }
 
     onKeyDown(e){
-      if(e.keyCode == 13){
+      if(e.keyCode === 13){
         axios.post('/login', {username:this.state.username, password:this.state.password})
             .then((res)=>{
               console.log(res);
@@ -58,7 +57,7 @@ class Login extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const description = axios.post('/login', {username:this.state.username, password:this.state.password})
+        axios.post('/login', {username:this.state.username, password:this.state.password})
             .then((res)=>{
               console.log(res);
                 if(res.data===true){
@@ -133,12 +132,14 @@ class Login extends React.Component{
         )
       } else {
 
+
+        var editDelete, status;
         if(this.state.mode === "edit"){
-          var editDelete = <EditProjects />
-          var status = "Adding Projects."
+          editDelete = <EditProjects />
+          status = "Adding Projects."
         } else if(this.state.mode === "delete"){
-          var editDelete = <DeleteProjects />
-          var status = "Deleting Projects."
+          editDelete = <DeleteProjects />
+          status = "Deleting Projects."
         }
 
         return(
