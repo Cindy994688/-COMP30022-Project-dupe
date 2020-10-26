@@ -47,7 +47,7 @@ class UserInfo extends React.Component {
     const data = this.state.output;
 
     return (
-      <div className = "bioText">{data}</div>
+      <div className = {"bioText"+this.props.colourMode}>{data}</div>
     )
   }
 }
