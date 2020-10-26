@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Image, Text } from 'react-native';
 import './pages.css'
 import './darkmode.css'
+import './access.css'
 
 
 
@@ -9,8 +10,6 @@ class Profile extends React.Component {
 
   render ( props ) {
     return (
-
-
           <div className="profileImage">
           <Image
             //source={require('./imgbanner.jpg')}
@@ -23,7 +22,5 @@ class Profile extends React.Component {
     )
   }
 }
-
-
 
   export default Profile;

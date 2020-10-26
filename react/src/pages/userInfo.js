@@ -2,6 +2,8 @@ import React from 'react';
 import Biotext from './Biotext.js'
 import axios from 'axios'
 import './pages.css'
+import './darkmode.css'
+import './access.css'
 
 
 class UserInfo extends React.Component {

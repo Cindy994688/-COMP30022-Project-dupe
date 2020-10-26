@@ -3,9 +3,8 @@ import React, {Component} from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import './darkmode.css'
 import './pages.css'
+import './access.css'
 
-import Profile from './Profile.js'
-import Biotext from './Biotext.js'
 import Contact from './Contact.js'
 import ProjectsPage from './ProjectsPage.js'
 import Login from './Login.js'
@@ -13,8 +12,6 @@ import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
 import Snow from './Snow.js'
 import ToggleRight from './ToggleRight.js'
-import ToggleB from './ToggleB.js'
-import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import { Link } from 'react-router-dom'
@@ -24,7 +21,6 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-import { ToggleButton } from 'react-bootstrap'
 import { Image } from 'react-native';
 
 
@@ -36,22 +32,22 @@ import { Image } from 'react-native';
 class HomePage extends Component {
   state = {
     galleryItems: [
-    <img src="/image/ChaoWei.jpg" alt="chaowei"
+    <img src="/image/ChaoWei.jpg" alt="Image of Chao-Wei Chiang on an image carousel"
       onMouseOver={e => (e.currentTarget.src = ChaoHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
-    <img src="/image/Mengyan.jpg" alt="mengyan"
+    <img src="/image/Mengyan.jpg" alt="Image of Meng-Yan Hou on an image carousel"
       onMouseOver={e => (e.currentTarget.src = MengHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
-    <img src="/image/MustafaFullBody.jpg" alt="mustafa"
+    <img src="/image/MustafaFullBody.jpg" alt="Image of Mustafa Awni on an image carousel"
       onMouseOver={e => (e.currentTarget.src = MusHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
-    <img src="/image/Ron.jpg" alt="ron"
-    onMouseOver={e => (e.currentTarget.src = RonHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
-    <img src="/image/Xu.jpg" alt="xuhan"
-    onMouseOver={e => (e.currentTarget.src = XuHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
-     ].map((i) => <h2 key={i}>{i}</h2>),
+    <img src="/image/Ron.jpg" alt="Image of Ron Chiu on an image carousel"
+      onMouseOver={e => (e.currentTarget.src = RonHover)}
+      onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
+    <img src="/image/Xu.jpg" alt="Image of Xu Han on an image carousel"
+      onMouseOver={e => (e.currentTarget.src = XuHover)}
+      onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
+     ].map((i) => <div key={i}>{i}</div>),
      colourMode: "",
      snowHeight: 0,
   }
@@ -79,7 +75,10 @@ class HomePage extends Component {
   setDarkMode= () => {
     this.setState({colourMode: "Dark"})
   };
-
+  
+  setAccessMode= () => {
+    this.setState({colourMode: "AC"})
+  };
   componentDidMount = () => {
     let height = document.getElementById('snowHolder').offsetHeight
     console.log("The height I be readin: " + height)
@@ -114,11 +113,6 @@ render () {
     return (
       <div className = {"fullPage" + this.state.colourMode}>
 
-        <div className = "buttonBox">
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set default Mode</button>
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
-        </div>
-
         <Jumbotron className = {"banner" + this.state.colourMode}>
         <div className = "borderTitle">
           <div className = {"maintitle" + this.state.colourMode}>
@@ -128,10 +122,15 @@ render () {
           {/*<p> really awesome people </p>*/}
         </Jumbotron>
 
+      <div className = "buttonBox">
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set Default Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setAccessMode}>Set Accessibility Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
+      </div>
 
-
+      <p>&nbsp;&nbsp;</p>
         <div className = {"alice" + this.state.colourMode}>
-        <AliceCarousel className = {"alice" + this.state.colourMode}
+        <AliceCarousel
         items={this.state.galleryItems}
         responsive={this.responsive}
         controlsStrategy="responsive"
