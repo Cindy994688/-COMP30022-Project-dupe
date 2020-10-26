@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, View, Image, Text } from 'react-native';
 import './pages.css'
+import './darkmode.css'
+import './access.css'
 import axios from 'axios'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
