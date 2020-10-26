@@ -1,14 +1,14 @@
 :root {
-  --bg-color: #f7ede2;
-  --second-color: #277da1;
-  --third-color: #caf0f8; /*#91C4F2 ;*/
-  --fourth-color: #277da1;  /*buttons  */
-  --fifth-color: #f7ede2;  /*buttons on hover */
-  --txt-color: #1B2845; /*most text */
+  --bg-color-ac: #ffeeda;
+  --second-color-ac: #ffeeda;
+  --third-color-ac: #ffeeda; /*#91C4F2 ;*/
+  --fourth-color-ac: #277da1;  /*buttons  */
+  --fifth-color-ac: #ffeeda;  /*buttons on hover */
+  --txt-color-ac: #071941; /*most text */
 
-  --title-font: 'Montserrat-Bold';
-  --subtitle-font: 'Lora';
-  --body-font: 'HindMadurai-Light';
+  --title-font-ac: 'Helvetica';
+  --subtitle-font-ac: 'Calibri';
+  --body-font-ac: 'Arial';
 }
 
 /** {
@@ -51,6 +51,8 @@
 }
 
 
+
+
 @font-face {
   font-family: 'Noto';
   src: local('Noto'), url(./fonts/NotoSerif-Bold.ttf) format('truetype');
@@ -66,9 +68,9 @@
   src: local('Kaushan'), url(./fonts/KaushanScript-Regular.ttf) format('truetype');
 }
 
-.banner {
-    font-family:var(--title-font), 'Times New Roman', Times, serif;
-    color: var(--fifth-color);
+.bannerAC {
+    font-family:var(--title-font-ac), 'Times New Roman', Times, serif;
+    color: var(--fifth-color-ac);
     font-size: 35px;
     border: 2px double white;
     text-align: center;
@@ -83,10 +85,10 @@
     padding-bottom: 10%;
 
   }
-#subheading{
+#subheadingAC{
   margin-top:-5%;
 }
-  .punk {
+  .punkAC {
     position: -webkit-sticky;
     position: sticky;
     top: 75%;
@@ -94,89 +96,96 @@
     z-index: 10;
   }
 
-  .footer{
+  .footerAC{
     font-family: var(--main-font);
-    color: var(--txt-color);
+    color: var(--txt-color-ac);
     font-size: 15px;
     text-align: center;
-    background-color: var(--third-color);
+    background-color: var(--third-color-ac);
     margin-top: -20px;
+    font-weight: bold;
   }
 
-  .maintitle{
-    font-family: var(--title-font), 'Times New Roman';
-    color: var(--second-color);
+  .maintitleAC{
+    font-family: var(--title-font-ac), 'Arial';
+    color: var(--txt-color-ac);
     vertical-align: middle;
     text-align: center;
-    font-size: 60px;
-    background-color:var(--fifth-color);
+    font-size: 80px;
+    background-color:var(--fifth-color-ac);
     width:80%;
     margin-left:auto;
     margin-right:auto;
+    letter-spacing: 5px;
 
   }
 
-  #intro{
+  #introAC{
     margin-top:-10%;
   }
-  #whoweare{}
-  .cv {
+  #whoweareAC{}
+  .cvAC {
     width : 90%;
     height : 90%;
   }
-.userskills{
+.userskillsAC{
   margin-top: -5%;
 }
-  .space {
+  .spaceAC {
     padding: 10em inherit;
   }
 
-  .intro {
+  .introAC {
     text-align: center;
-    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+    font-family: var(--subtitle-font-ac), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
-    color: var(--txt-color);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    color: var(--txt-color-ac);
     margin-top: -20%;
     padding-top:25%;
     padding-bottom:1%;
-    background-color: var(--third-color);
+    background-color: var(--third-color-ac);
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
 
-.sub{
-  font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+.subAC{
+  font-family: var(--subtitle-font-ac), "Junge-Regular", Helvetica, sans-serif;
   /*text-shadow: none;*/
   text-transform: none;
   text-align: center;
   padding-top:2em;
   font-size: 35px;
   margin-top:-1%;
-  color:var(--second-color);
+  color:var(--txt-color-ac);
 }
-#ourproject{
-  color:var(--bg-color);
+#ourprojectAC{
+  color:var(--bg-color-ac);
 }
-  .getInTouchHeader {
+  .getInTouchHeaderAC {
     padding: 40px;
     text-align: center;
     padding-left: auto;
     padding-right: auto;
-    background-color: var(--third-color);
-    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 35px;
-    color: var(--txt-color);
+    background-color: var(--third-color-ac);
+    font-family: var(--subtitle-font-ac), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 55px;
+    letter-spacing: 0.05em;
+    color: var(--txt-color-ac);
     padding-top: 10%;
     clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
-  .descr {
+  .descrAC {
     width: 800px;
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .alice {
+  .aliceAC {
     margin-left: 30px;
     margin-right: auto;
     margin-top:15%;
@@ -186,26 +195,26 @@
 
   }
 
-  .bottomTriangle{
+  .bottomTriangleAC{
     clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 100%);
     padding-top: 10%;
     margin-top: -3%;
   }
 
-  .topTriangle{
+  .topTriangleAC{
     margin-top: 2%;
   }
 
-  .thirdColor{
-    background-color: var(--third-color);
+  .thirdColorAC{
+    background-color: var(--third-color-ac);
   }
 
-  .divider {
+  .dividerAC {
     color: white;
     font-size: 25px;
     /*border: 2px double black;*/
     text-align: center;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-ac);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -221,21 +230,22 @@
     z-index: 100;
   }
 
-  .dividerTitle {
-    font-family: var(--body-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--second-color);
+  .dividerTitleAC {
+    font-family: var(--body-font-ac), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--second-color-ac);
     font-size: 50px;
     size: 200px;
     text-align: center;
-    /*text-shadow: 5px 5px var(--bg-color);*/
+    z-index: 1;
+    /*text-shadow: 5px 5px var(--bg-color-ac);*/
   }
 
-  .fullPage{
-    background-color: var(--bg-color);
+  .fullPageAC{
+    background-color: var(--bg-color-ac);
   }
 
-  .groupPr{
-    background-color: var(--txt-color);
+  .groupPrAC{
+    background-color: var(--txt-color-ac);
     font-size: 50px;
     text-align: center;
     background-position: center center;
@@ -243,7 +253,7 @@
     background-size: cover;
     height: 5em;
     padding: 10em inherit;
-    /*border: 20px double var(--second-color);*/
+    /*border: 20px double var(--second-color-ac);*/
     /*border-radius: 25px;*/
 
     transition: 0.5s;
@@ -254,24 +264,26 @@
     cursor: pointer;
   }
 
-  .groupPr:hover{
+  .groupPrAC:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     /*margin: 8px 10px 12px;*/
   }
 
-  .gradient-button-3 {background-image: linear-gradient(to right, var(--third-color) 0%, var(--third-color) 15%, var(--second-color) 100%)}
-  .gradient-button-3:hover { background-position: right center; }
-  .title{
-    font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
-    font-size: 50px;
+  .gradient-button-3AC {background-image: linear-gradient(to right, var(--third-color-ac) 0%, var(--third-color-ac) 15%, var(--second-color-ac) 100%)}
+  .gradient-button-3AC:hover { background-position: right center; }
+  
+  .titleAC{
+    font-family: var(--subtitle-font-ac),'Trirong-ExtraLightItalic';
+    font-size: 90px;
+    letter-spacing: 0.1em;
     size: 500px;
     text-align: center;
-    color:var(--second-color);
+    color:var(--txt-color-ac);
 
   }
-  .groupPrTitle{
-    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
-    color: var(--bg-color);
+  .groupPrTitleAC{
+    font-family: var(--body-font-ac), 'Trirong-ExtraLightItalic';
+    color: var(--bg-color-ac);
     font-size: 0.5em;
     size: 500px;
     text-align: center;
@@ -279,16 +291,16 @@
 
   }
 
-  .bgSecondary{
-    background-color: var(--third-color);
+  .bgSecondaryAC{
+    background-color: var(--third-color-ac);
   }
 
-  .contact{
-    background-color: var(--third-color);
+  .contactAC{
+    background-color: var(--third-color-ac);
     padding-bottom: 3%;
   }
 
-  .buttonsubmit{
+  .buttonsubmitAC{
     margin-top:25px;
     font-size: 20px;
     border-radius: 3px;
@@ -297,7 +309,7 @@
     margin-left:35%;
   }
 
-  .button{
+  .buttonAC{
     margin-top:25px;
     font-size: 20px;
     border-radius: 3px;
@@ -305,10 +317,10 @@
     display: inline-block;
     margin:1em;
     padding:0.5em;
-    color:var(--second-color);
+    color:var(--second-color-ac);
   }
 
-  .togglel{
+  .togglelAC{
     margin-top:25px;
 
     margin-left: 40%;
@@ -318,33 +330,34 @@
     text-align: center;
     display: inline-block;
   }
-  .buttondiv{
+  .buttondivAC{
     width:30%;
     margin: auto;
   }
 
 
 
-  .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
-    color: var(--bg-color);
-    background-color: var(--fourth-color);
-    border-color: var(--fourth-color); /*set the color you want here*/
+  .btn-primaryAC, .btn-primaryAC:active, .btn-primary.activeAC, .btn-primaryAC:focus {
+    color: var(--bg-color-ac);
+    background-color: var(--fourth-color-ac);
+    border-color: var(--fourth-color-ac); /*set the color you want here*/
 }
 
-  .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
-    color: var(--second-color);
-    background-color: var(--third-color);
-    border-color: var(--text-color); /*set the color you want here*/
+  .btn-primaryAC:hover, .open>.dropdown-toggle.btn-primaryAC{
+    color: var(--second-color-ac);
+    background-color: var(--txt-color-ac);
+    border-color: var(--txt-color); /*set the color you want here*/
 }
-#introtext{margin-top:1em}
+#introtextAC{margin-top:1em}
 
-  .contactForm{
-    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
-    color: var(--txt-color);
+  .contactFormAC{
+    font-family: var(--body-font-ac),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--txt-color-ac);
     font-size: 20px;
+    letter-spacing: 0.05em;
     border: 2px double black;
     text-align: left;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-ac);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -355,13 +368,14 @@
 
   }
 
-  .messageForm{
-    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
-    color: var(--txt-color);
+  .messageFormAC{
+    font-family: var(--body-font-ac),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--txt-color-ac);
     font-size: 20px;
+    letter-spacing: 0.05em;
     border: 2px double black;
     text-align: left;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-ac);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -380,7 +394,7 @@
   font-size: 20px;
   border: 2px double black;
   text-align: left;
-  background-color: var(--fourth-color)!important;
+  background-color: var(--fourth-color-ac)!important;
 
   background-position: center center;
   background-repeat: no-repeat;
@@ -392,14 +406,17 @@
 
 }*/
 
-  .profileName{
-    font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
-    color: var(--txt-color);
-    font-size: 2em;
+  .profileNameAC{
+    font-family: var(--body-font-ac),"Kaushan", 'Times New Roman', Times, serif;
+    color: var(--txt-color-ac);
+    font-size: 3.5em;
+    letter-spacing: 0.05em;
     text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 
-  .profileImage{
+  .profileImageAC{
     width: 20%;
     display: block;
     margin-left: auto;
@@ -410,7 +427,7 @@
   /*lets try a hover thingo*/
 
 
-  .content {
+  .contentAC {
     opacity: 0;
     font-size: 40px;
     position: absolute;
@@ -428,13 +445,13 @@
     text-align: center;
   }
 
-  .box {
+  .boxAC {
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .vertBox {
+  .vertBoxAC {
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -442,65 +459,71 @@
 
   }
 
-  .bioTextStable {
-    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 25px;
-    width: 35%;
+  .bioTextStableAC {
+    font-family: var(--body-font-ac), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 35px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    width: 55%;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: var(--txt-color);
-    padding-left: 32.5%;
+    color: var(--txt-color-ac);
+    padding-left: 25.5%;
   }
 
 
-  .bioTextContact {
-    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
+  .bioTextContactAC {
+    font-family: var(--body-font-ac), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
+    letter-spacing: 0.05em;
     /*width: 800px;*/
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: var(--txt-color);
+    color: var(--txt-color-ac);
     padding-left: 35%;
     padding-right: 100px;
   }
 
-  .bioText {
-    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 25px;
+  .bioTextAC {
+    font-family: var(--body-font-ac), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 30px;
     max-width: 800px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
     /*display: inline-block;*/
     vertical-align: middle;
     text-align:center;
-    margin-left: 25%;
-    width:50%;
+    padding-left: 20%;
+    padding-right: 5%;
+    width:80%;
 
     /*position: relative;*/
     /*top: 50%;*/
     /*transform: translate(50px,-100px);*/
-    color: var(--txt-color);
+    color: var(--txt-color-ac);
     /*padding-left: 25px;*/
     /*padding-right: 100px;*/
   }
 
-  .dividerTitleSmall {
-    font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--second-color);
-    font-size: 30px;
+  .dividerTitleSmallAC {
+    font-family: var(--subtitle-font-ac), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--txt-color-ac);
+    font-size: 25px;
+    letter-spacing: 5px;
     size: 200px;
-    /*text-shadow: 5px 5px var(--bg-color);*/
+    /*text-shadow: 5px 5px var(--bg-color-ac);*/
     flex-shrink: 5;
     align-self: center;
     flex-basis: auto;
-    z-index: 1;
   }
 
 
 
-  .groupPrButton{
-    background-color: var(--third-color);
+  .groupPrButtonAC{
+    background-color: var(--third-color-ac);
     font-size: 20px;
     text-align: center;
     background-position: center center;
@@ -510,7 +533,7 @@
     height: 200px;
     width: 50px;
     padding: 10em inherit;
-    /*border: 20px double var(--second-color);*/
+    /*border: 20px double var(--second-color-ac);*/
     border-radius: 25px;
 
     text-transform: uppercase;
@@ -522,48 +545,41 @@
     cursor: pointer;
   }
 
-  .groupPrButton:hover{
+  .groupPrButtonAC:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     /*margin: 8px 10px 12px;*/
   }
 
-  .flexHoriz {
+  .flexHorizAC {
     display: flex;
     justify-content: space-evenly;
   }
 
-  .buttonBox {
+  .buttonBoxAC {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top:0.4em;
-    padding-bottom: 0.2em;
-    position: relative;
-    z-index: 1000;
   }
 
-  .modeButton {
-    box-shadow:inset 0px -3px 7px 0px var(--second-color);
-	  background:linear-gradient(to bottom, var(--third-color) 5%, var(--fifth-color) 100%);
+  .modeButtonAC {
+    box-shadow:inset 0px -3px 7px 0px var(--second-color-ac);
+	  background:linear-gradient(to bottom, var(--third-color-ac) 5%, var(--fifth-color-ac) 100%);
 	  background-color:white;
 	  border-radius:3px;
 	  display:inline-block;
 	  cursor:pointer;
-	  color:var(--txt-color);
-	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  color:var(--txt-color-ac);
+	  font-family:var(--title-font-ac), Arial, Helvetica, sans-serif;
 	  font-size:20px;
     padding: 10px;
     font-weight: bold;
   }
 
-  .modeButton:hover {
-    background:linear-gradient(to bottom, var(--bg-color) 5%, var(--txt-color) 100%);
+  .modeButtonAC:hover {
+    background:linear-gradient(to bottom, var(--bg-color-ac) 5%, var(--txt-color-ac) 100%);
     background-color:white;
   }
-  .modeButton:active {
+  .modeButtonAC:active {
     position:relative;
     top:1px;
   }
-
-
-  
