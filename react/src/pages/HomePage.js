@@ -84,6 +84,10 @@ class HomePage extends Component {
     this.props.history.push('/Login');
   }
 
+  setAccessMode= () => {
+    this.setState({colourMode: "AC"})
+  };
+
   responsive = {
     0: { items: 1 },
     1024: { items: 3 },
