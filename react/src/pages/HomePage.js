@@ -133,8 +133,7 @@ render () {
         <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
         <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
       </div>
-
-      {/*NAVBAR HERE*/}
+      {/*
       <div className = "buttonBox">
         <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="top" spy={true} smooth={true} duration={500} offset={0}>Top</Link>
         <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="intro" spy={true} smooth={true} duration={500} offset={270}>Intro</Link>
@@ -146,6 +145,7 @@ render () {
         <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mengyan" spy={true} smooth={true} duration={500} offset={-25}>Kelly</Link>
         <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="contactUs" spy={true} smooth={true} duration={500} offset={0}>Contact Us</Link>
       </div>
+      */}     
 
       <p>&nbsp;&nbsp;</p>
         <div className = {"alice" + this.state.colourMode}>
