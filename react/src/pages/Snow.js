@@ -54,7 +54,7 @@ export default class Snow extends Component {
       var coordinate;
       var flakes = [];
       for (coordinate of this.state.snowFlakeCoords) {
-        flakes.push(<SnowFlake key={Math.random() * 100} x={(coordinate.x + this.state.xDelta)} y={(coordinate.y + this.state.yDelta) % this.props.height}/>)
+        flakes.push(<SnowFlake key={Math.random() * 100} x={(coordinate.x + this.state.xDelta)} y={(coordinate.y + this.state.yDelta) % (this.props.height + 80)}/>)
       }
       this.setState({snowFlakes: flakes})
     }
