@@ -23,12 +23,9 @@ class Login extends React.Component{
 
     handleChange = (event) => {
         const {name, value} = event.target;
-        //console.log("bye");
         this.setState({
             [name]: value
         })
-
-        //console.log("Edit");
     }
 
 
@@ -42,13 +39,13 @@ class Login extends React.Component{
             .then((res)=>{
               console.log(res);
                 if(res.data===true){
-                    console.log('1');
+                    console.log('Login success.');
                     this.setState({login: true,
                                    username: "",
                                    password: "",
                                    title: "Logged in."});
                 } else if (res.data===false){
-                    console.log('2');
+                    console.log('Login failure.');
                     this.setState({login: false,
                                    username: "",
                                    password: "",

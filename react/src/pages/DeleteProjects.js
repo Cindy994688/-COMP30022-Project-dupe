@@ -56,6 +56,8 @@ class DeleteProjects extends React.Component {
       }
       //Outgoing call to server to delete project at the 'value' position.
       console.log(value);
+      this.setState({selectedProject: "none",
+                    person: ""})
     }
 
 
