@@ -74,6 +74,10 @@ class HomePage extends Component {
     this.setState({colourMode: "Dark"})
   };
 
+  toLogin = () => {
+    this.props.history.push('/Login');
+  }
+
   responsive = {
     0: { items: 1 },
     1024: { items: 3 },
@@ -105,6 +109,7 @@ render () {
         <div className = "buttonBox">
         <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set default Mode</button>
         <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
+        <button className = {"loginButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
         </div>
 
         <Jumbotron className = {"banner" + this.state.colourMode}>
@@ -189,7 +194,7 @@ render () {
 
         {/*fourth person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Xu" author = "xuhan"/>
-        
+
         {/*fifth person*/}
         <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
 

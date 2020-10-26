@@ -558,3 +558,19 @@
     position:relative;
     top:1px;
   }
+
+  /* James nonsense that will be dealt with later today :) */
+  .loginButtonDark {
+
+  }
+
+  .loginButtonDark:hover {
+
+  }
+  .loginButtonDark:active {
+
+  }
+
+  .textAreaDark {
+    resize: none;
+  }

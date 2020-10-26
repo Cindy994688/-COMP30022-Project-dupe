@@ -45,10 +45,9 @@ class EditProjects extends React.Component {
 
     render(){
         return(
-            <div>
-            <h1>Enter any changes to your personal projects here! <Link to="/">Home</Link></h1>
+            <div className = {"bioText"+this.props.colourMode}>
 
-            <label>Select person: </label>
+            <label>Select Person: </label>
             <select
                 value={this.state.person}
                 onChange={this.handleChange}
@@ -61,35 +60,38 @@ class EditProjects extends React.Component {
                 <option value="xuhan">Xu Han</option>
                 <option value="mengyan">Mengyan Hou</option>
             </select>
-            <br /><br />
+            <br />
 
-            <label>Project title: </label>
+            <label>Project Title: </label>
             <input
                 type="text"
                 name="title"
                 value={this.state.title}
                 onChange={this.handleChange}
             />
-            <br /><br />
+            <br />
 
-            <p>Project Description: </p>
+            <label>Project Description: </label>
             <textarea
+                className = "textAreaDark"
                 name="description"
+                cols="120"
+                rows="8"
                 value={this.state.description}
                 onChange={this.handleChange}
             />
-            <br /><br />
+            <br />
 
-            <label>Github url: </label>
+            <label>Github URL: </label>
             <input
                 type="text"
                 name="giturl"
                 value={this.state.giturl}
                 onChange={this.handleChange}
             />
-            <br /><br />
+            <br />
 
-            <label>Select priority: </label>
+            <label>Select Priority: </label>
             <select
                 value={this.state.position}
                 onChange={this.handleChange}
@@ -103,7 +105,7 @@ class EditProjects extends React.Component {
                 <option value="5">5</option>
                 <option value="6">6</option>
             </select>
-            <br /><br />
+            <br />
 
             <button onClick={this.handleSubmit}>Submit</button>
 

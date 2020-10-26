@@ -31,9 +31,7 @@ class App extends Component {
       <BrowserRouter>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/Projects" component={ProjectsPage} />
         <Route path="/Login" component={Login} />
-        <Route exact path="/SecretProjectEdit" component={EditProjects} />
         <p>this.state.data</p>
       </Switch>
       </BrowserRouter>
