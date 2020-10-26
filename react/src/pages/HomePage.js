@@ -179,18 +179,18 @@ render () {
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
         {/*first person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
+        <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei" author = "chaowei"/>
 
         {/*second person*/}
-        <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
+        <ToggleRight colourMode = {this.state.colourMode} name = "Ron" author = "ronchiu"/>
 
         {/*third person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa"/>
+        <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa" author = "mustafa"/>
 
         {/*fourth person*/}
-        <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
+        <ToggleRight colourMode = {this.state.colourMode} name = "Xu" author = "xuhan"/>
         {/*fifth person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
+        <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
 
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
         <Contact colourMode = {this.state.colourMode} />

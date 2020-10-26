@@ -48,15 +48,10 @@ class ProjectsPage extends React.Component {
 
 
     render(props) {
-        //Styling for a clicked button.
-        const clicked = {
-            color: "#cdcdcd"
-        }
-
         //Storing project length.
         var projectLength = null;
         if(this.state.isLoading === false){
-          projectLength = this.state.projectData.length;
+            projectLength = this.state.projectData.length;
         }
 
         //Assigning the project description based on which project
@@ -120,72 +115,77 @@ class ProjectsPage extends React.Component {
             <div className="container">
             {/*Displays buttons based on the length of projects shown.
             //Each button changes which project description is shown.*/}
-                {projectLength >= 1 ?
-                  <button
-                      style={this.state.project === "1" ? clicked : null}
-                      name="project"
-                      value={this.state.project === "1" ? "none" : "1"}
-                      onClick={this.handleChange}
-                  >{button1}</button>
-                : null}
-                {projectLength >= 2 ?
-                  <button
-                      style={this.state.project === "2" ? clicked : null}
-                      name="project"
-                      value={this.state.project === "2" ? "none" : "2"}
-                      onClick={this.handleChange}
-                  >{button2}</button>
-                : null}
-                {projectLength >= 3 ?
-                  <button
-                    style={this.state.project === "3" ? clicked : null}
-                    name="project"
-                    value={this.state.project === "3" ? "none" : "3"}
-                    onClick={this.handleChange}
-                >{button3}</button>
-                : null}
-                {projectLength >= 4 ?
-                  <button
-                    style={this.state.project === "4" ? clicked : null}
-                    name="project"
-                    value={this.state.project === "4" ? "none" : "4"}
-                    onClick={this.handleChange}
-                >{button4}</button>
-                : null}
-                {projectLength >= 5 ?
-                  <button
-                    style={this.state.project === "5" ? clicked : null}
-                    name="project"
-                    value={this.state.project === "5" ? "none" : "5"}
-                    onClick={this.handleChange}
-                >{button5}</button>
-                : null}
-                {projectLength >= 6 ?
-                  <button
-                    style={this.state.project === "6" ? clicked : null}
-                    name="project"
-                    value={this.state.project === "6" ? "none" : "6"}
-                    onClick={this.handleChange}
-                >{button6}</button>
-                : null}
 
-                {/*Rendering the project description.*/}
-                {this.state.project !== "none" ? <div>
-                {/*Only renders the git repo is it exists*/}
-                {gitRep !== null ?
-                  <p>Link to the git repository: {gitRep}</p> :
-                  null}
-                <p>{projectDesc}</p>
-                </div> :
-                <div><br /></div>
+
+            {/*KNOWN BUG: buttons are initially centered, but upon being selected
+            they align to the left of the text below them*/}
+
+                {(projectLength >= 1) &&
+                    <button type="submit"
+                        className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+                        style={{cursor:'pointer'}}
+                        name="project"
+                        value={this.state.project === "1" ? "none" : "1"}
+                        onClick = {this.handleChange}
+                    >{button1}</button>
                 }
 
-                {/*Debug info.
-                <p>DEBUG INFO:</p>
-                <p>{this.state.author}</p>
-                <p>{this.state.author === this.props.author ? "True" : "False"}</p>
-                <p>{console.log(this.state)}</p>
-                <p>{console.log(this.props)}</p>*/}
+                {(projectLength >= 2) &&
+                    <button type="submit"
+                        className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+                        style={{cursor:'pointer'}}
+                        name="project"
+                        value={this.state.project === "2" ? "none" : "2"}
+                        onClick = {this.handleChange}
+                    >{button2}</button>
+                }
+
+                {(projectLength >= 3) &&
+                    <button type="submit"
+                        className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+                        style={{cursor:'pointer'}}
+                        name="project"
+                        value={this.state.project === "3" ? "none" : "3"}
+                        onClick = {this.handleChange}
+                    >{button3}</button>
+                }
+
+                {(projectLength >= 4) &&
+                    <button type="submit"
+                        className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+                        style={{cursor:'pointer'}}
+                        name="project"
+                        value={this.state.project === "4" ? "none" : "4"}
+                        onClick = {this.handleChange}
+                    >{button4}</button>
+                }
+
+                {(projectLength >= 5) &&
+                    <button type="submit"
+                        className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+                        style={{cursor:'pointer'}}
+                        name="project"
+                        value={this.state.project === "5" ? "none" : "5"}
+                        onClick = {this.handleChange}
+                    >{button5}</button>
+                }
+
+                {(projectLength >= 6) &&
+                    <button type="submit"
+                        className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+                        style={{cursor:'pointer'}}
+                        name="project"
+                        value={this.state.project === "6" ? "none" : "6"}
+                        onClick = {this.handleChange}
+                    >{button6}</button>
+                }
+
+                {/*Rendering the project description. Only renders the git repo if it exists*/}
+                {(this.state.project !== "none") &&
+                <div>
+                {gitRep && <p>Link to the git repository: {gitRep}</p>}
+                <p>{projectDesc}</p>
+                </div>}
 
             </div>
         )
