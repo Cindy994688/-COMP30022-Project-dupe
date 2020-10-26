@@ -53,31 +53,29 @@ export default class ToggleProj extends Component {
 
     render() {
         return (
-          <>
-            <Container className={"bottomTriangle"+this.props.colourMode+ " bgSecondary"+this.props.colourMode}>
-              <Row>
-                {/*<div  style={{display: 'inline-block'}}>*/}
-                  <Col md="6">
-                    <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname} colourMode = {this.props.colourMode}/>
-                  </Col>
-                  {/*<div style={{display: 'inline-block'}}>*/}
-                  <Col md="6">
-                    <UserInfo clientname = {this.props.name} type = "description" colourMode = {this.props.colourMode}/>
-                    <UserInfo clientname = {this.props.name} type = "skills" colourMode = {this.props.colourMode}/>
-                    <UserInfo clientname = {this.props.name} type = "email" colourMode = {this.props.colourMode}/>
-                  </Col>
-                  <Row>
+          <div className="profile">
+          <div className="profileRow">
+          <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname} colourMode = {this.props.colourMode}/>
+
+          <div className="profileColumn">
+          <div className="profileInfo">
+            <UserInfo clientname = {this.props.name} type = "description" colourMode = {this.props.colourMode}/>
+            <UserInfo clientname = {this.props.name} type = "skills" colourMode = {this.props.colourMode}/>
+            <UserInfo clientname = {this.props.name} type = "email" colourMode = {this.props.colourMode}/>
+          </div>
+
                   <div className={"buttondiv"+this.props.colourMode}>
                     <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
                     <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
                   </div>
-                  </Row>
-              </Row>
-            </Container>
+            </div>
+            </div>
+
+
             {this.state.cv &&
               <div className = {"box"+this.props.colourMode}>
-              <Image source={"/image/MengyanResume.jpg"}
-                  style={{width:636, height:900}}/>
+              <img src={"/image/"+this.props.name+"Resume.jpg"}
+                  className="cvPhoto" alt={this.props.name+"CV"}/>
               </div>
             }
 
@@ -85,8 +83,7 @@ export default class ToggleProj extends Component {
               <div className = {"box"+this.props.colourMode}>
               <p>This is a 100% verified real personal project</p>
               </div>}
-
-      </>
+        </div>
 
         )
     }

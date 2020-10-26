@@ -6,11 +6,16 @@ import './pages.css'
 import './access.css'
 
 import Contact from './Contact.js'
+import ProjectsPage from './ProjectsPage.js'
+import Login from './Login.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
+import Snow from './Snow.js'
 import ToggleRight from './ToggleRight.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
+import { Link } from 'react-router-dom'
+
 import ChaoHover from './chaohover.png'
 import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
@@ -44,6 +49,7 @@ class HomePage extends Component {
       onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
      ].map((i) => <div key={i}>{i}</div>),
      colourMode: "",
+     snowHeight: 0,
   }
 
     // Keep the below definition, and always remember to provide a return to default option in the colour buttons
@@ -69,10 +75,15 @@ class HomePage extends Component {
   setDarkMode= () => {
     this.setState({colourMode: "Dark"})
   };
-
+  
   setAccessMode= () => {
     this.setState({colourMode: "AC"})
   };
+  componentDidMount = () => {
+    let height = document.getElementById('snowHolder').offsetHeight
+    console.log("The height I be readin: " + height)
+    this.setState({snowHeight: height})
+  }
 
   responsive = {
     0: { items: 1 },
@@ -103,9 +114,10 @@ render () {
       <div className = {"fullPage" + this.state.colourMode}>
 
         <Jumbotron className = {"banner" + this.state.colourMode}>
+        <div className = "borderTitle">
           <div className = {"maintitle" + this.state.colourMode}>
-          <h1>SWEN90016 </h1>
-          <div id="subheading">Group CRXMM</div>
+          <h1>CRXMM </h1>
+          </div>
           </div>
           {/*<p> really awesome people </p>*/}
         </Jumbotron>
@@ -136,9 +148,10 @@ render () {
         />
         </div>
 
-        <div className = {"divider" + this.state.colourMode}>
-        <div className= {"dividerTitleSmall" + this.state.colourMode}>
-        <h1> - Harry - Ron - Mustafa - Kelly - Zoe -</h1>
+
+        <div className = {"divider" + this.state.colourMode + " inFront"}>
+        <div className= {"dividerTitleSmall" + this.state.colourMode + " inFront"}>
+        <h1 className = "inFront"> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
         </div>
         </div>
 
@@ -146,41 +159,40 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
-
-        <div className={"intro" + this.state.colourMode}>
-        <div className={"title" + this.state.colourMode} id="intro">Intro</div>
-        <p>Hi, this is CRXMM, we are a team of
-           5 from the University of Melbourne.
-          While we have different backgrounds,
-          different passions, and are even in
-          different timezones, we are in unity.
-          We believe that as individuals we are
-          strong, but together we are incredible.
-        </p>
+        <div id="snowHolder" className = {"aboutTriangle thirdColor"+this.state.colourMode}>
+          <div className = "snowHolder">
+            {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
+          </div>
+          
+          <div className={"intro" + this.state.colourMode}>
+          <div className = {"quote1"+ this.state.colourMode}>“</div>
+          <div className = "quote">Hi, this is
+            CRXMM. We are a team of
+            5 from the University of Melbourne.
+            While we have different backgrounds,
+            different passions, and are even in
+            different timezones, we are in unity.
+            As individuals we are
+            strong, but together we are incredible.
+          </div>
+          <div className = {"quote2"+ this.state.colourMode}>”</div>
+          </div>
         </div>
 
         {/*<ToggleB>hello</ToggleB>*/}
 
+
         <ToggleProj colourMode = {this.state.colourMode}>
-        <div className = {"drop-down" + this.state.colourMode + " intro" + this.state.colourMode}>
-          In this project, we help Beth, a local business owner of beauty care services
-          in Melbourne, build the e-commerce website for her business. It is expected
-          that the system can not just make the appointment procedure automation but also
-          help promote the business to different regions.
-          <div id="drop-down introtext">
-          Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
-            Test Manager - Mustafa;
-            Developer - Chao-Wei and Zoe
-          </div>
-        </div>
+
       </ToggleProj>
 
-
+      <div className="solid"><br/></div>
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
+
+      <div className="solid2"><br/></div>
         {/*first person*/}
         <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
-
         {/*second person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
 
@@ -190,16 +202,18 @@ render () {
         {/*fourth person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
         {/*fifth person*/}
+
         <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
 
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
         <Contact colourMode = {this.state.colourMode} />
 
+        <div className= {"footer" + this.state.colourMode}><p>last edited: 26/10/2020</p></div>
 
-        <div className= {"footer" + this.state.colourMode}><p>last edited: 21/10/2020</p></div>
 
 
       </div>
+
     )
   }
 }

@@ -3,6 +3,8 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom'
 // ahhhhhhhhhhhhh
 import HomePage from './pages/HomePage'
 import ProjectsPage from './pages/ProjectsPage'
+import Login from './pages/Login'
+import EditProjects from './pages/EditProjects'
 
 class App extends Component {
   state = {data:null};
@@ -29,7 +31,9 @@ class App extends Component {
       <BrowserRouter>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/:id" component={ProjectsPage} />
+        <Route path="/Projects" component={ProjectsPage} />
+        <Route path="/Login" component={Login} />
+        <Route exact path="/SecretProjectEdit" component={EditProjects} />
         <p>this.state.data</p>
       </Switch>
       </BrowserRouter>
