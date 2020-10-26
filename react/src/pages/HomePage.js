@@ -234,14 +234,14 @@ render () {
           <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
         </Element>
 
-        <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
+      <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
 
-        <Element name="contactUs">
-        <Contact colourMode = {this.state.colourMode} ref={this.contactReference}/>
-        </Element>
+      <Element name="contactUs">
+      <Contact colourMode = {this.state.colourMode} ref={this.contactReference}/>
+      </Element>
 
 
-        <div className= {"footer" + this.state.colourMode}><p>last edited: 27/10/2020</p></div>
+      <div className= {"footer" + this.state.colourMode}><p>last edited: 27/10/2020</p></div>
 
 
       </div>
