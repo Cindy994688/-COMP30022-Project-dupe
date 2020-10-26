@@ -28,24 +28,20 @@ class HomePage extends Component {
     galleryItems: [
     <img src="/image/ChaoWei.jpg" alt="chaowei"
       onMouseOver={e => (e.currentTarget.src = ChaoHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}
-      alt="Photo of Chao Wei"/>,
+      onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
     <img src="/image/Mengyan.jpg" alt="mengyan"
       onMouseOver={e => (e.currentTarget.src = MengHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}
-      alt="Photo of Mengyan"/>,
+      onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
     <img src="/image/MustafaFullBody.jpg" alt="mustafa"
       onMouseOver={e => (e.currentTarget.src = MusHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}
       alt="Photo of Mustafa"/>,
     <img src="/image/Ron.jpg" alt="ron"
     onMouseOver={e => (e.currentTarget.src = RonHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}
-    alt="Photo of Ron"/>,
+    onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
     <img src="/image/Xu.jpg" alt="xuhan"
     onMouseOver={e => (e.currentTarget.src = XuHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}
-    alt="Photo of Xu"/>
+    onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
      ].map((i) => <div key={i}>{i}</div>),
      colourMode: "",
   }
