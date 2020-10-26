@@ -11,7 +11,7 @@ export default function SnowFlake(props) {
       width: "10px",
       backgroundColor: "#bbb",
       borderRadius: "50%",
-      zIndex: 1,
+      zIndex: 0.5,
     }
   };
 
