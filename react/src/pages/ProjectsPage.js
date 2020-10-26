@@ -182,7 +182,7 @@ class ProjectsPage extends React.Component {
 
                 {/*Rendering the project description. Only renders the git repo if it exists*/}
                 {(this.state.project !== "none") &&
-                <div>
+                <div className = {"bioText"+this.props.colourMode}>
                 {gitRep && <p>Link to the git repository: {gitRep}</p>}
                 <p>{projectDesc}</p>
                 </div>}
