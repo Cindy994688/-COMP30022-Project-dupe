@@ -13,8 +13,7 @@ class Profile extends React.Component {
           <Image
             //source={require('./imgbanner.jpg')}
             source={this.props.img}
-            style={{width: 300, height: 300, borderRadius: 300/ 2}}
-            alt={"Photo of " + this.props.name}/>
+            style={{width: 300, height: 300, borderRadius: 300/ 2}}/>
           <div className = {"profileName"+this.props.colourMode}>{this.props.clientname}</div>
         </div>
 

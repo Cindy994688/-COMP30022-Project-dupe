@@ -56,7 +56,7 @@ export default class ToggleProj extends Component {
                     <Row>
                       {/*<div  style={{display: 'inline-block'}}>*/}
                         <Col md="6">
-                          <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname} colourMode = {this.props.colourMode} name ={this.props.name}/>
+                          <Profile img = {'/image/'+this.props.name+'.jpg'} clientname = {this.state.fullname} colourMode = {this.props.colourMode}/>
                         </Col>
                         {/*<div style={{display: 'inline-block'}}>*/}
                         <Col md="6">
