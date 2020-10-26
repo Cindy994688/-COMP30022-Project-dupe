@@ -3,15 +3,12 @@ import React, {Component} from 'react'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import './darkmode.css'
 import './pages.css'
+import './access.css'
 
-import Profile from './Profile.js'
-import Biotext from './Biotext.js'
 import Contact from './Contact.js'
 import ToggleProj from './ToggleProj.js'
 import ToggleLeft from './ToggleLeft.js'
 import ToggleRight from './ToggleRight.js'
-import ToggleB from './ToggleB.js'
-import UserInfo from './userInfo.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
 import ChaoHover from './chaohover.png'
@@ -19,8 +16,8 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-import { ToggleButton } from 'react-bootstrap'
 import { Image } from 'react-native';
+import { Link, Element } from 'react-scroll';
 
 
 //import axios from 'axios'
@@ -29,25 +26,28 @@ import { Image } from 'react-native';
 
 
 class HomePage extends Component {
-  state = {
-    galleryItems: [
-    <img src="/image/ChaoWei.jpg" alt="chaowei"
-      onMouseOver={e => (e.currentTarget.src = ChaoHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
-    <img src="/image/Mengyan.jpg" alt="mengyan"
-      onMouseOver={e => (e.currentTarget.src = MengHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
-    <img src="/image/MustafaFullBody.jpg" alt="mustafa"
-      onMouseOver={e => (e.currentTarget.src = MusHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
-    <img src="/image/Ron.jpg" alt="ron"
-    onMouseOver={e => (e.currentTarget.src = RonHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
-    <img src="/image/Xu.jpg" alt="xuhan"
-    onMouseOver={e => (e.currentTarget.src = XuHover)}
-    onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
-     ].map((i) => <h2 key={i}>{i}</h2>),
-     colourMode: "",
+  constructor() {
+    super();
+    this.state = {
+      galleryItems: [
+      <img src="/image/ChaoWei.jpg" alt="Image of Chao-Wei Chiang on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = ChaoHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
+      <img src="/image/Mengyan.jpg" alt="Image of Meng-Yan Hou on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = MengHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
+      <img src="/image/MustafaFullBody.jpg" alt="Image of Mustafa Awni on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = MusHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
+      <img src="/image/Ron.jpg" alt="Image of Ron Chiu on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = RonHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
+      <img src="/image/Xu.jpg" alt="Image of Xu Han on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = XuHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
+       ].map((i) => <div key={i}>{i}</div>),
+       colourMode: "",
+    }
   }
 
     // Keep the below definition, and always remember to provide a return to default option in the colour buttons
@@ -66,13 +66,19 @@ class HomePage extends Component {
   // <button onClick={this.setDefaultMode}>Set default Mode</button>
 
 
-  setDefaultMode = () => {
-    this.setState({colourMode: ""})
+  setColourMode = (event) => {
+    const { value } = event.target;
+    this.setState({colourMode: value});
   };
 
-  setDarkMode= () => {
-    this.setState({colourMode: "Dark"})
-  };
+  handleNavClick = (event) => {
+    if(this.contactReference.current){
+      this.contactReference.current.scrollIntoView({
+        behaviour: "smooth",
+        block: "nearest"
+      });
+    }
+  }
 
   toLogin = () => {
     this.props.history.push('/Login');
@@ -105,24 +111,38 @@ class HomePage extends Component {
 render () {
     return (
       <div className = {"fullPage" + this.state.colourMode}>
+        <Element name="top">
+          <Jumbotron className = {"banner" + this.state.colourMode}>
+            <div className = {"maintitle" + this.state.colourMode}>
+            <h1>SWEN90016 </h1>
+            <div id="subheading">Group CRXMM</div>
+            </div>
+            {/*<p> really awesome people </p>*/}
+          </Jumbotron>
+        </Element>
 
-        <div className = "buttonBox">
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set default Mode</button>
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
-        </div>
+      <div className = "buttonBox">
+        <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
+      </div>
 
-        <Jumbotron className = {"banner" + this.state.colourMode}>
-          <div className = {"maintitle" + this.state.colourMode}>
-          <h1>SWEN90016 </h1>
-          <div id="subheading">Group CRXMM</div>
-          </div>
-          {/*<p> really awesome people </p>*/}
-        </Jumbotron>
+      {/*NAVBAR HERE*/}
+      <div className = "buttonBox">
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="top" spy={true} smooth={true} duration={500} offset={0}>Top</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="intro" spy={true} smooth={true} duration={500} offset={270}>Intro</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="project" spy={true} smooth={true} duration={500} offset={450}>Project</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="ChaoWei" spy={true} smooth={true} duration={500} offset={-25}>Harry</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Ron" spy={true} smooth={true} duration={500} offset={50}>Ron</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mustafa" spy={true} smooth={true} duration={500} offset={-25}>Mustafa</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Xu" spy={true} smooth={true} duration={500} offset={50}>Zoe</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mengyan" spy={true} smooth={true} duration={500} offset={-25}>Kelly</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="contactUs" spy={true} smooth={true} duration={500} offset={0}>Contact Us</Link>
+      </div>
 
-
+      <p>&nbsp;&nbsp;</p>
         <div className = {"alice" + this.state.colourMode}>
-        <AliceCarousel className = {"alice" + this.state.colourMode}
+        <AliceCarousel
         items={this.state.galleryItems}
         responsive={this.responsive}
         controlsStrategy="responsive"
@@ -140,10 +160,9 @@ render () {
         />
         </div>
 
-
         <div className = {"divider" + this.state.colourMode}>
         <div className= {"dividerTitleSmall" + this.state.colourMode}>
-        <h1> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
+        <h1> - Harry - Ron - Mustafa - Kelly - Zoe -</h1>
         </div>
         </div>
 
@@ -151,55 +170,70 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
-
-        <div className={"intro" + this.state.colourMode}>
-        <div className={"title" + this.state.colourMode} id="intro">Intro</div>
-        <p>Hi, this is CRXMM, we are a team of
-           5 from the University of Melbourne.
-          While we have different backgrounds,
-          different passions, and are even in
-          different timezones, we are in unity.
-          We believe that as individuals we are
-          strong, but together we are incredible.
-        </p>
-        </div>
+        <Element name="intro">
+          <div className={"intro" + this.state.colourMode}>
+          <div className={"title" + this.state.colourMode} id="intro">Intro</div>
+          <p>Hi, this is CRXMM, we are a team of
+             5 from the University of Melbourne.
+            While we have different backgrounds,
+            different passions, and are even in
+            different timezones, we are in unity.
+            We believe that as individuals we are
+            strong, but together we are incredible.
+          </p>
+          </div>
+        </Element>
 
         {/*<ToggleB>hello</ToggleB>*/}
-
-        <ToggleProj colourMode = {this.state.colourMode}>
-        <div className = {"drop-down" + this.state.colourMode + " intro" + this.state.colourMode}>
-          In this project, we help Beth, a local business owner of beauty care services
-          in Melbourne, build the e-commerce website for her business. It is expected
-          that the system can not just make the appointment procedure automation but also
-          help promote the business to different regions.
-          <div id="drop-down introtext">
-          Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
-            Test Manager - Mustafa;
-            Developer - Chao-Wei and Zoe
+        <Element name="project">
+          <ToggleProj colourMode = {this.state.colourMode}>
+          <div className = {"drop-down" + this.state.colourMode + " intro" + this.state.colourMode}>
+            In this project, we help Beth, a local business owner of beauty care services
+            in Melbourne, build the e-commerce website for her business. It is expected
+            that the system can not just make the appointment procedure automation but also
+            help promote the business to different regions.
+            <div id="drop-down introtext">
+            Team roles: Project Manager - Kelly; Risk Manager - Hsin-Jung;
+              Test Manager - Mustafa;
+              Developer - Chao-Wei and Zoe
+            </div>
           </div>
-        </div>
-      </ToggleProj>
+        </ToggleProj>
+      </Element>
 
 
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
         {/*first person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei" author = "chaowei"/>
+        <Element name="ChaoWei">
+          <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
+        </Element>
 
         {/*second person*/}
-        <ToggleRight colourMode = {this.state.colourMode} name = "Ron" author = "ronchiu"/>
+        <Element name="Ron">
+          <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
+        </Element>
 
         {/*third person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa" author = "mustafa"/>
+        <Element name="Mustafa">
+          <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa"/>
+        </Element>
 
         {/*fourth person*/}
-        <ToggleRight colourMode = {this.state.colourMode} name = "Xu" author = "xuhan"/>
+        <Element name="Xu">
+          <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
+        </Element>
 
         {/*fifth person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
+        <Element name="Mengyan">
+          <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
+        </Element>
 
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
-        <Contact colourMode = {this.state.colourMode} />
+
+        <Element name="contactUs">
+        <Contact colourMode = {this.state.colourMode} ref={this.contactReference}/>
+        </Element>
 
 
         <div className= {"footer" + this.state.colourMode}><p>last edited: 21/10/2020</p></div>

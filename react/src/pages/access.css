@@ -1,14 +1,14 @@
 :root {
-  --bg-color-dark: #132743;
-  --second-color-dark: #dbedf3;
-  --third-color-dark: #686d76; /*#91C4F2 ;*/
-  --fourth-color-dark: #9ba4b4;  /*buttons  */
-  --fifth-color-dark: #394867;  /*buttons on hover */
-  --txt-color-dark: #f1f6f9; /*most text */
+  --bg-color-ac: #ffeeda;
+  --second-color-ac: #ffeeda;
+  --third-color-ac: #ffeeda; /*#91C4F2 ;*/
+  --fourth-color-ac: #277da1;  /*buttons  */
+  --fifth-color-ac: #ffeeda;  /*buttons on hover */
+  --txt-color-ac: #071941; /*most text */
 
-  --title-font: 'Montserrat-Bold';
-  --subtitle-font: 'Lora';
-  --body-font: 'HindMadurai-Light';
+  --title-font-ac: 'Helvetica';
+  --subtitle-font-ac: 'Calibri';
+  --body-font-ac: 'Arial';
 }
 
 /** {
@@ -51,6 +51,8 @@
 }
 
 
+
+
 @font-face {
   font-family: 'Noto';
   src: local('Noto'), url(./fonts/NotoSerif-Bold.ttf) format('truetype');
@@ -66,9 +68,9 @@
   src: local('Kaushan'), url(./fonts/KaushanScript-Regular.ttf) format('truetype');
 }
 
-.bannerDark {
-    font-family:var(--title-font), 'Times New Roman', Times, serif;
-    color: var(--fifth-color-dark);
+.bannerAC {
+    font-family:var(--title-font-ac), 'Times New Roman', Times, serif;
+    color: var(--fifth-color-ac);
     font-size: 35px;
     border: 2px double white;
     text-align: center;
@@ -83,10 +85,10 @@
     padding-bottom: 10%;
 
   }
-#subheadingDark{
+#subheadingAC{
   margin-top:-5%;
 }
-  .punkDark {
+  .punkAC {
     position: -webkit-sticky;
     position: sticky;
     top: 75%;
@@ -94,117 +96,125 @@
     z-index: 10;
   }
 
-  .footerDark{
+  .footerAC{
     font-family: var(--main-font);
-    color: var(--txt-color-dark);
+    color: var(--txt-color-ac);
     font-size: 15px;
     text-align: center;
-    background-color: var(--third-color-dark);
+    background-color: var(--third-color-ac);
     margin-top: -20px;
+    font-weight: bold;
   }
 
-  .maintitleDark{
-    font-family: var(--title-font), 'Times New Roman';
-    color: var(--second-color-dark);
+  .maintitleAC{
+    font-family: var(--title-font-ac), 'Arial';
+    color: var(--txt-color-ac);
     vertical-align: middle;
     text-align: center;
-    font-size: 60px;
-    background-color:var(--fifth-color-dark);
+    font-size: 80px;
+    background-color:var(--fifth-color-ac);
     width:80%;
     margin-left:auto;
     margin-right:auto;
+    letter-spacing: 5px;
 
   }
 
-  #introDark{
+  #introAC{
     margin-top:-10%;
   }
-  #whoweareDark{}
-  .cvDark {
+  #whoweareAC{}
+  .cvAC {
     width : 90%;
     height : 90%;
   }
-.userskillsDark{
+.userskillsAC{
   margin-top: -5%;
 }
-  .spaceDark {
+  .spaceAC {
     padding: 10em inherit;
   }
 
-  .introDark {
+  .introAC {
     text-align: center;
-    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+    font-family: var(--subtitle-font-ac), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
-    color: var(--txt-color-dark);
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    color: var(--txt-color-ac);
     margin-top: -20%;
     padding-top:25%;
     padding-bottom:1%;
-    background-color: var(--third-color-dark);
+    background-color: var(--third-color-ac);
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
 
-.subDark{
-  font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+.subAC{
+  font-family: var(--subtitle-font-ac), "Junge-Regular", Helvetica, sans-serif;
   /*text-shadow: none;*/
   text-transform: none;
   text-align: center;
   padding-top:2em;
   font-size: 35px;
   margin-top:-1%;
-  color:var(--second-color-dark);
+  color:var(--txt-color-ac);
 }
-#ourprojectDark{
-  color:var(--bg-color-dark);
+#ourprojectAC{
+  color:var(--bg-color-ac);
 }
-  .getInTouchHeaderDark {
+  .getInTouchHeaderAC {
     padding: 40px;
     text-align: center;
     padding-left: auto;
     padding-right: auto;
-    background-color: var(--third-color-dark);
-    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 35px;
-    color: var(--txt-color-dark);
+    background-color: var(--third-color-ac);
+    font-family: var(--subtitle-font-ac), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 55px;
+    letter-spacing: 0.05em;
+    color: var(--txt-color-ac);
     padding-top: 10%;
     clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
   }
 
-  .descrDark {
+  .descrAC {
     width: 800px;
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .aliceDark {
+  .aliceAC {
     margin-left: 30px;
     margin-right: auto;
     margin-top:15%;
     z-index: 80;
     transform: translateY(-10em);
     position: relative;
+
   }
 
-  .bottomTriangleDark{
+  .bottomTriangleAC{
     clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 100%);
     padding-top: 10%;
     margin-top: -3%;
   }
 
-  .topTriangleDark{
+  .topTriangleAC{
     margin-top: 2%;
   }
 
-  .thirdColorDark{
-    background-color: var(--third-color-dark);
+  .thirdColorAC{
+    background-color: var(--third-color-ac);
   }
 
-  .dividerDark {
+  .dividerAC {
     color: white;
     font-size: 25px;
     /*border: 2px double black;*/
     text-align: center;
-    background-color: var(--bg-color-dark);
+    background-color: var(--bg-color-ac);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,22 +230,22 @@
     z-index: 100;
   }
 
-  .dividerTitleDark {
-    font-family: var(--body-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--second-color-dark);
+  .dividerTitleAC {
+    font-family: var(--body-font-ac), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--second-color-ac);
     font-size: 50px;
     size: 200px;
     text-align: center;
-    z-index:1;
-    /*text-shadow: 5px 5px var(--bg-color-dark);*/
+    z-index: 1;
+    /*text-shadow: 5px 5px var(--bg-color-ac);*/
   }
 
-  .fullPageDark{
-    background-color: var(--bg-color-dark);
+  .fullPageAC{
+    background-color: var(--bg-color-ac);
   }
 
-  .groupPrDark{
-    background-color: var(--txt-color-dark);
+  .groupPrAC{
+    background-color: var(--txt-color-ac);
     font-size: 50px;
     text-align: center;
     background-position: center center;
@@ -243,7 +253,7 @@
     background-size: cover;
     height: 5em;
     padding: 10em inherit;
-    /*border: 20px double var(--second-color-dark);*/
+    /*border: 20px double var(--second-color-ac);*/
     /*border-radius: 25px;*/
 
     transition: 0.5s;
@@ -254,24 +264,26 @@
     cursor: pointer;
   }
 
-  .groupPrDark:hover{
+  .groupPrAC:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     /*margin: 8px 10px 12px;*/
   }
 
-  .gradient-button-3Dark {background-image: linear-gradient(to right, var(--third-color-dark) 0%, var(--third-color-dark) 15%, var(--second-color-dark) 100%)}
-  .gradient-button-3Dark:hover { background-position: right center; }
-  .titleDark{
-    font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
-    font-size: 50px;
+  .gradient-button-3AC {background-image: linear-gradient(to right, var(--third-color-ac) 0%, var(--third-color-ac) 15%, var(--second-color-ac) 100%)}
+  .gradient-button-3AC:hover { background-position: right center; }
+  
+  .titleAC{
+    font-family: var(--subtitle-font-ac),'Trirong-ExtraLightItalic';
+    font-size: 90px;
+    letter-spacing: 0.1em;
     size: 500px;
     text-align: center;
-    color:var(--second-color-dark);
+    color:var(--txt-color-ac);
 
   }
-  .groupPrTitleDark{
-    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
-    color: var(--bg-color-dark);
+  .groupPrTitleAC{
+    font-family: var(--body-font-ac), 'Trirong-ExtraLightItalic';
+    color: var(--bg-color-ac);
     font-size: 0.5em;
     size: 500px;
     text-align: center;
@@ -279,16 +291,16 @@
 
   }
 
-  .bgSecondaryDark{
-    background-color: var(--third-color-dark);
+  .bgSecondaryAC{
+    background-color: var(--third-color-ac);
   }
 
-  .contactDark{
-    background-color: var(--third-color-dark);
+  .contactAC{
+    background-color: var(--third-color-ac);
     padding-bottom: 3%;
   }
 
-  .buttonsubmitDark{
+  .buttonsubmitAC{
     margin-top:25px;
     font-size: 20px;
     border-radius: 3px;
@@ -297,7 +309,7 @@
     margin-left:35%;
   }
 
-  .buttonDark{
+  .buttonAC{
     margin-top:25px;
     font-size: 20px;
     border-radius: 3px;
@@ -305,10 +317,10 @@
     display: inline-block;
     margin:1em;
     padding:0.5em;
-    color:var(--second-color-dark);
+    color:var(--second-color-ac);
   }
 
-  .togglelDark{
+  .togglelAC{
     margin-top:25px;
 
     margin-left: 40%;
@@ -318,33 +330,34 @@
     text-align: center;
     display: inline-block;
   }
-  .buttondivDark{
+  .buttondivAC{
     width:30%;
     margin: auto;
   }
 
 
 
-  .btn-primaryDark, .btn-primaryDark:active, .btn-primaryDark.active, .btn-primaryDark:focus {
-    color: var(--bg-color-dark);
-    background-color: var(--fourth-color-dark);
-    border-color: var(--fourth-color-dark); /*set the color you want here*/
+  .btn-primaryAC, .btn-primaryAC:active, .btn-primary.activeAC, .btn-primaryAC:focus {
+    color: var(--bg-color-ac);
+    background-color: var(--fourth-color-ac);
+    border-color: var(--fourth-color-ac); /*set the color you want here*/
 }
 
-  .btn-primaryDark:hover, .open>.dropdown-toggle.btn-primary{
-    color: var(--second-color-dark);
-    background-color: var(--third-color-dark);
-    border-color: var(--text-color); /*set the color you want here*/
+  .btn-primaryAC:hover, .open>.dropdown-toggle.btn-primaryAC{
+    color: var(--second-color-ac);
+    background-color: var(--txt-color-ac);
+    border-color: var(--txt-color); /*set the color you want here*/
 }
-#introtextDark{margin-top:1em}
+#introtextAC{margin-top:1em}
 
-  .contactFormDark{
-    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
-    color: var(--txt-color-dark);
+  .contactFormAC{
+    font-family: var(--body-font-ac),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--txt-color-ac);
     font-size: 20px;
+    letter-spacing: 0.05em;
     border: 2px double black;
     text-align: left;
-    background-color: var(--bg-color-dark);
+    background-color: var(--bg-color-ac);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -355,13 +368,14 @@
 
   }
 
-  .messageFormDark{
-    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
-    color: var(--txt-color-dark);
+  .messageFormAC{
+    font-family: var(--body-font-ac),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--txt-color-ac);
     font-size: 20px;
+    letter-spacing: 0.05em;
     border: 2px double black;
     text-align: left;
-    background-color: var(--bg-color-dark);
+    background-color: var(--bg-color-ac);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -380,7 +394,7 @@
   font-size: 20px;
   border: 2px double black;
   text-align: left;
-  background-color: var(--fourth-color-dark)!important;
+  background-color: var(--fourth-color-ac)!important;
 
   background-position: center center;
   background-repeat: no-repeat;
@@ -392,14 +406,17 @@
 
 }*/
 
-  .profileNameDark{
-    font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
-    color: var(--txt-color-dark);
-    font-size: 2em;
+  .profileNameAC{
+    font-family: var(--body-font-ac),"Kaushan", 'Times New Roman', Times, serif;
+    color: var(--txt-color-ac);
+    font-size: 3.5em;
+    letter-spacing: 0.05em;
     text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 
-  .profileImageDark{
+  .profileImageAC{
     width: 20%;
     display: block;
     margin-left: auto;
@@ -410,7 +427,7 @@
   /*lets try a hover thingo*/
 
 
-  .contentDark {
+  .contentAC {
     opacity: 0;
     font-size: 40px;
     position: absolute;
@@ -428,13 +445,13 @@
     text-align: center;
   }
 
-  .boxDark {
+  .boxAC {
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .vertBoxDark {
+  .vertBoxAC {
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -442,55 +459,62 @@
 
   }
 
-  .bioTextStableDark {
-    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 25px;
-    width: 35%;
+  .bioTextStableAC {
+    font-family: var(--body-font-ac), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 35px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    width: 55%;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: var(--txt-color-dark);
-    padding-left: 32.5%;
+    color: var(--txt-color-ac);
+    padding-left: 25.5%;
   }
 
 
-  .bioTextContactDark {
-    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
+  .bioTextContactAC {
+    font-family: var(--body-font-ac), "Junge-Regular", Helvetica, sans-serif;
     font-size: 25px;
+    letter-spacing: 0.05em;
     /*width: 800px;*/
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    color: var(--txt-color-dark);
+    color: var(--txt-color-ac);
     padding-left: 35%;
     padding-right: 100px;
   }
 
-  .bioTextDark {
-    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 25px;
+  .bioTextAC {
+    font-family: var(--body-font-ac), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 30px;
     max-width: 800px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
     /*display: inline-block;*/
     vertical-align: middle;
     text-align:center;
-    margin-left: 25%;
-    width:50%;
+    padding-left: 20%;
+    padding-right: 5%;
+    width:80%;
 
     /*position: relative;*/
     /*top: 50%;*/
     /*transform: translate(50px,-100px);*/
-    color: var(--txt-color-dark);
+    color: var(--txt-color-ac);
     /*padding-left: 25px;*/
     /*padding-right: 100px;*/
   }
 
-  .dividerTitleSmallDark {
-    font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--second-color-dark);
-    font-size: 30px;
+  .dividerTitleSmallAC {
+    font-family: var(--subtitle-font-ac), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--txt-color-ac);
+    font-size: 25px;
+    letter-spacing: 5px;
     size: 200px;
-    /*text-shadow: 5px 5px var(--bg-color-dark);*/
+    /*text-shadow: 5px 5px var(--bg-color-ac);*/
     flex-shrink: 5;
     align-self: center;
     flex-basis: auto;
@@ -498,8 +522,8 @@
 
 
 
-  .groupPrButtonDark{
-    background-color: var(--third-color-dark);
+  .groupPrButtonAC{
+    background-color: var(--third-color-ac);
     font-size: 20px;
     text-align: center;
     background-position: center center;
@@ -509,7 +533,7 @@
     height: 200px;
     width: 50px;
     padding: 10em inherit;
-    /*border: 20px double var(--second-color-dark);*/
+    /*border: 20px double var(--second-color-ac);*/
     border-radius: 25px;
 
     text-transform: uppercase;
@@ -521,57 +545,41 @@
     cursor: pointer;
   }
 
-  .groupPrButtonDark:hover{
+  .groupPrButtonAC:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     /*margin: 8px 10px 12px;*/
   }
 
-  .flexHorizDark {
+  .flexHorizAC {
     display: flex;
     justify-content: space-evenly;
   }
 
-  .buttonBoxDark {
+  .buttonBoxAC {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .modeButtonDark {
-    box-shadow:inset 0px -3px 7px 0px var(--second-color-dark);
-	  background:linear-gradient(to bottom, var(--third-color-dark) 5%, var(--fifth-color-dark) 100%);
+  .modeButtonAC {
+    box-shadow:inset 0px -3px 7px 0px var(--second-color-ac);
+	  background:linear-gradient(to bottom, var(--third-color-ac) 5%, var(--fifth-color-ac) 100%);
 	  background-color:white;
 	  border-radius:3px;
 	  display:inline-block;
 	  cursor:pointer;
-	  color:var(--txt-color-dark);
-	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  color:var(--txt-color-ac);
+	  font-family:var(--title-font-ac), Arial, Helvetica, sans-serif;
 	  font-size:20px;
     padding: 10px;
     font-weight: bold;
   }
 
-  .modeButtonDark:hover {
-    background:linear-gradient(to bottom, var(--bg-color-dark) 5%, var(--txt-color-dark) 100%);
+  .modeButtonAC:hover {
+    background:linear-gradient(to bottom, var(--bg-color-ac) 5%, var(--txt-color-ac) 100%);
     background-color:white;
   }
-  .modeButtonDark:active {
+  .modeButtonAC:active {
     position:relative;
     top:1px;
-  }
-
-  /* James nonsense that will be dealt with later today :) */
-  .loginButtonDark {
-
-  }
-
-  .loginButtonDark:hover {
-
-  }
-  .loginButtonDark:active {
-
-  }
-
-  .textAreaDark {
-    resize: none;
   }
