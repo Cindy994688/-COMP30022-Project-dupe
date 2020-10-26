@@ -179,26 +179,25 @@ render () {
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
 
-      <div className="solid1"><br/></div>
+      <div className="solid2"><br/></div>
         {/*first person*/}
         <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
-        <div className="solid1"><br/></div>
         {/*second person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
-        <div className="solid1"><br/></div>
+
         {/*third person*/}
         <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa"/>
-        <div className="solid1"><br/></div>
+
         {/*fourth person*/}
         <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
         {/*fifth person*/}
-        <div className="solid1"><br/></div>
+
         <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
-        <div className="solid1"><br/></div>
+
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
         <Contact colourMode = {this.state.colourMode} />
 
-        <div className= {"footer" + this.state.colourMode}><p>last edited: 21/10/2020</p></div>
+        <div className= {"footer" + this.state.colourMode}><p>last edited: 26/10/2020</p></div>
 
 
 

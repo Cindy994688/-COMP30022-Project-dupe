@@ -318,6 +318,27 @@
   font-family: var(--body-font);
 }
 
+
+.profileRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-top: 2px double var(--third-color);
+  border-bottom: 2px double var(--third-color);
+}
+
+.profileColumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 60%;
+  border: 0px double black;
+}
+
   .row{
     margin-top: 3%;
     margin-bottom: 3%;
@@ -335,8 +356,7 @@
   }
 
   .profile{
-
-    margin-top: 10%;
+    margin-top: 5%;
     color: var(--txt-color);
     font-family: var(--title-font);
   }
@@ -391,8 +411,8 @@
 
     transition: 0.5s;
     background-size: 200% auto;
-    box-shadow: 0 0 20px #eee;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    /*box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     cursor: pointer;
   }
@@ -427,6 +447,19 @@
   }
 
   .solid1 {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background:var(--second-color);
+    margin-top: 4%;
+    margin-top: 0%;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-radius: 10%;
+    transform: rotate(90deg);
+  }
+
+  .solid2 {
     display: inline-block;
     width: 30%;
     height: 3px;
@@ -488,8 +521,9 @@
     display: inline-block;
   }
   .buttondiv{
-    width:30%;
+    width:60%;
     margin: auto;
+
   }
 
   .cvPhoto{
@@ -502,13 +536,14 @@
   .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
     color: var(--fourth-color);
     background-color: var(--third-color);
-    border-color: var(--third-color); /*set the color you want here*/
+    border-color: var(--bg-color);
+    border-radius: 7px;/*set the color you want here*/
 }
 
   .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
     color: var(--bg-color);
     background-color: var(--fourth-color);
-    border-color: var(--txt-color); /*set the color you want here*/
+    border-color: var(--fourth-color);  /*set the color you want here*/
 }
 #introtext{margin-top:1em}
 
@@ -569,8 +604,15 @@
   .profileName{
     font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
     color: var(--second-color);
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+    margin-top: 12%;
+    padding-top: 8%;
+  }
+
+  .profileInfo{
+    margin-top: 2%;
+    text-align: justify;
   }
 
   .profileImage{
@@ -643,7 +685,7 @@
 
   .bioText {
     font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     max-width: 800px;
     /*display: inline-block;*/
     vertical-align: middle;
@@ -679,18 +721,18 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 2px 2px black;
+    /*text-shadow: 2px 2px black;*/
     height: 200px;
     width: 50px;
     padding: 10em inherit;
     /*border: 20px double var(--second-color);*/
-    border-radius: 25px;
+    border-radius: 40px;
 
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    box-shadow: 0 0 20px #eee;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  /*  box-shadow: 0 0 20px #eee;*/
+    /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     cursor: pointer;
   }
@@ -712,7 +754,7 @@
   }
 
   .modeButton {
-    box-shadow:inset 0px -3px 7px 0px var(--second-color);
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
 	  background:linear-gradient(to bottom, var(--third-color) 5%, var(--fifth-color) 100%);
 	  background-color:white;
 	  border-radius:3px;
