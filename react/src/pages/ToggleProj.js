@@ -3,9 +3,10 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 import './pages.css'
 import './darkmode.css'
+import './access.css'
+
 import { View, Image } from 'react-native';
 import { Container, Row, Col } from 'reactstrap';
-import './access.css'
 
 export default class ToggleProj extends Component {
     state = {
