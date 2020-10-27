@@ -72,10 +72,6 @@ class HomePage extends Component {
     this.setState({colourMode: value});
   };
 
-  setDarkMode= () => {
-    this.setState({colourMode: "Dark"})
-  };
-
   componentDidMount = () => {
     let height = document.getElementById('snowHolder').offsetHeight
     console.log("The height I be readin: " + height)
@@ -85,10 +81,6 @@ class HomePage extends Component {
   toLogin = () => {
     this.props.history.push('/Login');
   }
-
-  setAccessMode= () => {
-    this.setState({colourMode: "AC"})
-  };
 
   responsive = {
     0: { items: 1 },
@@ -127,12 +119,12 @@ render () {
           </Jumbotron>
         </Element>
 
-      <div className = "buttonBox">
+      {/*<div className = "buttonBox">
         <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
         <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
         <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
         <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
-      </div>
+      </div>*/}
       {/*
       <div className = "buttonBox">
         <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="top" spy={true} smooth={true} duration={500} offset={0}>Top</Link>
@@ -243,6 +235,12 @@ render () {
 
       <div className= {"footer" + this.state.colourMode}><p>last edited: 27/10/2020</p></div>
 
+      <div className = {"buttonBox footer" + this.state.colourMode}>
+        <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
+      </div>
 
       </div>
 
