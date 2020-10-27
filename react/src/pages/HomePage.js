@@ -110,13 +110,14 @@ render () {
     return (
       <div className = {"fullPage" + this.state.colourMode}>
         <Element name="top">
-          <Jumbotron className = {"banner" + this.state.colourMode}>
-            <div className = {"maintitle" + this.state.colourMode}>
-            <h1>SWEN90016 </h1>
-            <div id="subheading">Group CRXMM</div>
-            </div>
-            {/*<p> really awesome people </p>*/}
-          </Jumbotron>
+        <Jumbotron className = {"banner"}>
+        <div className = {"borderTitle" + this.state.colourMode}>
+          <div className = {"maintitle" + this.state.colourMode}>
+          <h1>CRXMM </h1>
+          </div>
+          </div>
+          {/*<p> really awesome people </p>*/}
+        </Jumbotron>
         </Element>
 
       {/*<div className = "buttonBox">
