@@ -145,10 +145,10 @@ render () {
         <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mengyan" spy={true} smooth={true} duration={500} offset={-25}>Kelly</Link>
         <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="contactUs" spy={true} smooth={true} duration={500} offset={0}>Contact Us</Link>
       </div>
-      */}     
+      */}
 
       <p>&nbsp;&nbsp;</p>
-        <div className = {"alice" + this.state.colourMode}>
+        <div className = {"alice"}>
         <AliceCarousel
         items={this.state.galleryItems}
         responsive={this.responsive}
@@ -178,7 +178,7 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
-        <div id="snowHolder" className = {"aboutTriangle thirdColor"+this.state.colourMode}>
+        <div id="snowHolder" className = {"aboutTriangle"+this.state.colourMode}>
           <div className = "snowHolder">
             {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
           </div>
@@ -186,7 +186,7 @@ render () {
           <Element to="intro">
           <div className={"intro" + this.state.colourMode}>
           <div className = {"quote1"+ this.state.colourMode}>“</div>
-          <div className = "quote">Hi, this is
+          <div className = {"quote"+this.state.colourMode}>Hi, this is
             CRXMM. We are a team of
             5 from the University of Melbourne.
             While we have different backgrounds,
@@ -206,10 +206,11 @@ render () {
         <ToggleProj colourMode = {this.state.colourMode} />
       </Element>
 
-      <div className="solid"><br/></div>
+      <div className={"solid"+this.state.colourMode}><br/></div>
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
-        <div className="solid2"><br/></div>
+
+      <div className={"solid2"+this.state.colourMode}><br/></div>
         {/*first person*/}
         <Element name="ChaoWei">
           <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei" author = "chaowei"/>

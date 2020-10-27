@@ -59,7 +59,7 @@ export default class ToggleProj extends Component {
                       )}
 
                   <div className="row">
-                      <div className="col textExp">
+                      <div className={"col textExp"+ this.props.colourMode}>
                         In this project, we help Beth, a local business owner of beauty care services
                         in Melbourne, build the e-commerce website for her business. It is expected
                         that the system can not just make the appointment procedure automation but also

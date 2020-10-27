@@ -106,19 +106,7 @@
     font-weight: bold;
   }
 
-  .maintitleAC{
-    font-family: var(--title-font-ac), 'Arial';
-    color: var(--txt-color-ac);
-    vertical-align: middle;
-    text-align: center;
-    font-size: 80px;
-    background-color:var(--fifth-color-ac);
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
-    letter-spacing: 5px;
 
-  }
 
   #introAC{
     margin-top:-10%;
@@ -136,7 +124,7 @@
   }
 
   .introAC {
-    text-align: center;
+    text-align: left;
     font-family: var(--subtitle-font-ac), "Junge-Regular", Helvetica, sans-serif;
     font-size: 35px;
     letter-spacing: 0.05em;
@@ -465,7 +453,7 @@
     line-height: 1.5;
     letter-spacing: 0.05em;
     width: 55%;
-    text-align: center;
+    text-align: left;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -485,6 +473,7 @@
     color: var(--txt-color-ac);
     padding-left: 35%;
     padding-right: 100px;
+    text-align: left;
   }
 
   .bioTextAC {
@@ -499,6 +488,7 @@
     padding-left: 20%;
     padding-right: 5%;
     width:80%;
+    text-align: left;
 
     /*position: relative;*/
     /*top: 50%;*/
@@ -583,3 +573,44 @@
     position:relative;
     top:1px;
   }
+
+
+  /*yehahaa*/
+
+  .borderTitleAC{
+    height: 40%;
+    /*background-color:var(--fifth-color);*/
+    border: 6px solid white;
+    width:60%;
+    position: absolute;
+    left: 20%;
+    top:25%;
+    background-color: var(--bg-color-ac);
+  }
+
+  .maintitleAC{
+    font-family: var(--title-font), 'Times New Roman';
+    color: var(--txt-color-ac);
+
+    margin-top: -7%;
+    font-size: 200%;
+
+    margin-left:auto;
+    margin-right:auto;
+
+  }
+
+  .textExpAC{
+    width:50%;
+    padding-top: 10%;
+    padding-left: 0%;
+    padding-right: 8%;
+    border: 0px double white;
+    color: var(--txt-color-ac);
+    font-family: var(--body-font-ac);
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 0.05em;
+    word-spacing: 0.2em;
+  }
+  
