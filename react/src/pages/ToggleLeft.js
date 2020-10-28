@@ -10,6 +10,7 @@ import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
 import { Image } from 'react-native';
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
+import ProjectsPage from './ProjectsPage';
 
 export default class ToggleProj extends Component {
     state = {
@@ -79,7 +80,7 @@ export default class ToggleProj extends Component {
 
                 {this.state.personalproj &&
                     <div className = {"box"+this.props.colourMode}>
-                    <p>This is a 100% verified real personal project</p>
+                    <ProjectsPage author = {this.props.author} colourMode = {this.props.colourMode}/>
                     </div>}
               </div>
 

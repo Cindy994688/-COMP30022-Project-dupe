@@ -22,6 +22,7 @@ class Contact extends React.Component {
       return (
         <div>
         <div className={"contact"+this.props.colourMode}>
+        <br /><br />
 
 
           <div className = {"bioTextStable"+this.props.colourMode}>If you are interested in any of the

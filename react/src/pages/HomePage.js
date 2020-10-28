@@ -14,14 +14,13 @@ import Snow from './Snow.js'
 import ToggleRight from './ToggleRight.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import { Link } from 'react-router-dom'
-
 import ChaoHover from './chaohover.png'
 import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
 import { Image } from 'react-native';
+import { Link, Element } from 'react-scroll';
 
 
 //import axios from 'axios'
@@ -68,21 +67,19 @@ class HomePage extends Component {
   // <button onClick={this.setDefaultMode}>Set default Mode</button>
 
 
-  setDefaultMode = () => {
-    this.setState({colourMode: ""})
+  setColourMode = (event) => {
+    const { value } = event.target;
+    this.setState({colourMode: value});
   };
 
-  setDarkMode= () => {
-    this.setState({colourMode: "Dark"})
-  };
-  
-  setAccessMode= () => {
-    this.setState({colourMode: "AC"})
-  };
   componentDidMount = () => {
     let height = document.getElementById('snowHolder').offsetHeight
     console.log("The height I be readin: " + height)
     this.setState({snowHeight: height})
+  }
+
+  toLogin = () => {
+    this.props.history.push('/Login');
   }
 
   responsive = {
@@ -112,24 +109,39 @@ class HomePage extends Component {
 render () {
     return (
       <div className = {"fullPage" + this.state.colourMode}>
-
-        <Jumbotron className = {"banner" + this.state.colourMode}>
-        <div className = "borderTitle">
+        <Element name="top">
+        <Jumbotron className = {"banner"}>
+        <div className = {"borderTitle" + this.state.colourMode}>
           <div className = {"maintitle" + this.state.colourMode}>
           <h1>CRXMM </h1>
           </div>
           </div>
           {/*<p> really awesome people </p>*/}
         </Jumbotron>
+        </Element>
 
+      {/*<div className = "buttonBox">
+        <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
+      </div>*/}
+      {/*
       <div className = "buttonBox">
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDefaultMode}>Set Default Mode</button>
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setAccessMode}>Set Accessibility Mode</button>
-        <button className = {"modeButton" + this.state.colourMode} onClick={this.setDarkMode}>Set Dark Mode</button>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="top" spy={true} smooth={true} duration={500} offset={0}>Top</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="intro" spy={true} smooth={true} duration={500} offset={270}>Intro</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="project" spy={true} smooth={true} duration={500} offset={450}>Project</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="ChaoWei" spy={true} smooth={true} duration={500} offset={-25}>Harry</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Ron" spy={true} smooth={true} duration={500} offset={50}>Ron</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mustafa" spy={true} smooth={true} duration={500} offset={-25}>Mustafa</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Xu" spy={true} smooth={true} duration={500} offset={50}>Zoe</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mengyan" spy={true} smooth={true} duration={500} offset={-25}>Kelly</Link>
+        <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="contactUs" spy={true} smooth={true} duration={500} offset={0}>Contact Us</Link>
       </div>
+      */}
 
       <p>&nbsp;&nbsp;</p>
-        <div className = {"alice" + this.state.colourMode}>
+        <div className = {"alice"}>
         <AliceCarousel
         items={this.state.galleryItems}
         responsive={this.responsive}
@@ -151,7 +163,7 @@ render () {
 
         <div className = {"divider" + this.state.colourMode + " inFront"}>
         <div className= {"dividerTitleSmall" + this.state.colourMode + " inFront"}>
-        <h1 className = "inFront"> Harry - Ron - Mustafa - Kelly - Zoe -</h1>
+        <h1 className = "inFront">- Harry - Ron - Mustafa - Kelly - Zoe -</h1>
         </div>
         </div>
 
@@ -159,14 +171,15 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
-        <div id="snowHolder" className = {"aboutTriangle thirdColor"+this.state.colourMode}>
+        <div id="snowHolder" className = {"aboutTriangle"+this.state.colourMode}>
           <div className = "snowHolder">
             {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
           </div>
-          
+
+          <Element to="intro">
           <div className={"intro" + this.state.colourMode}>
           <div className = {"quote1"+ this.state.colourMode}>“</div>
-          <div className = "quote">Hi, this is
+          <div className = {"quote"+this.state.colourMode}>Hi, this is
             CRXMM. We are a team of
             5 from the University of Melbourne.
             While we have different backgrounds,
@@ -177,40 +190,58 @@ render () {
           </div>
           <div className = {"quote2"+ this.state.colourMode}>”</div>
           </div>
+          </Element>
         </div>
 
         {/*<ToggleB>hello</ToggleB>*/}
 
+      <Element to="project">
+        <ToggleProj colourMode = {this.state.colourMode} />
+      </Element>
 
-        <ToggleProj colourMode = {this.state.colourMode}>
-
-      </ToggleProj>
-
-      <div className="solid"><br/></div>
+      <div className={"solid"+this.state.colourMode}><br/></div>
 
       <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
 
-      <div className="solid2"><br/></div>
+      <div className={"solid2"+this.state.colourMode}><br/></div>
         {/*first person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei"/>
+        <Element name="ChaoWei">
+          <ToggleLeft colourMode = {this.state.colourMode} name = "ChaoWei" author = "chaowei"/>
+        </Element>
+
         {/*second person*/}
-        <ToggleRight colourMode = {this.state.colourMode} name = "Ron"/>
+        <Element name="Ron">
+          <ToggleRight colourMode = {this.state.colourMode} name = "Ron" author = "ronchiu"/>
+        </Element>
 
         {/*third person*/}
-        <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa"/>
+        <Element name="Mustafa">
+          <ToggleLeft colourMode = {this.state.colourMode} name = "Mustafa" author = "mustafa"/>
+        </Element>
 
         {/*fourth person*/}
-        <ToggleRight colourMode = {this.state.colourMode} name = "Xu"/>
+        <Element name="Xu">
+          <ToggleRight colourMode = {this.state.colourMode} name = "Xu" author = "xuhan"/>
+        </Element>
+
         {/*fifth person*/}
+        <Element name="Mengyan">
+          <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
+        </Element>
 
-        <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan"/>
+      <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
+      <Element name="contactUs">
+      <Contact colourMode = {this.state.colourMode} ref={this.contactReference}/>
+      </Element>
 
-        <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
-        <Contact colourMode = {this.state.colourMode} />
+      <div className= {"footer" + this.state.colourMode}><p>last edited: 27/10/2020</p></div>
 
-        <div className= {"footer" + this.state.colourMode}><p>last edited: 26/10/2020</p></div>
-
-
+      <div className = {"buttonBox footer" + this.state.colourMode}>
+        <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
+        <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
+      </div>
 
       </div>
 

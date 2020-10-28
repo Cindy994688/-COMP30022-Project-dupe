@@ -1,23 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import axios from 'axios'
+import React from 'react';
+import axios from 'axios';
+
+import './darkmode.css';
 
 class EditProjects extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             person: "",
-            projects: {
-                chaowei: "1",
-                ronchiu: "2",
-                mustafa: "3",
-                xuhan: "4",
-                mengyan: "5"
-            },
             title: "",
             description: "",
             giturl: "",
-            position: 0
+            position: 0,
+            display: ""
         };
     }
 
@@ -25,30 +20,38 @@ class EditProjects extends React.Component {
     handleChange = (event) => {
         const {name, value} = event.target;
         this.setState({
-            [name]: value
+            [name]: value,
+            display: ""
         })
     }
 
 
     handleSubmit = (event) => {
         event.preventDefault();
-        var person = this.state.projects[this.state.person];
-        console.log(person + ": " + this.state.description);
-        axios.post('/project', {name: this.state.person,
-        projectTitle: this.state.title,
-        linktogitrepo: this.state.giturl,
-        description: this.state.description,
-        position: this.state.position});
+        if(this.state.person && this.state.title && this.state.description && (this.state.position !== 0)){
+          axios.post('/project', {name: this.state.person,
+            projectTitle: this.state.title,
+            linktogitrepo: this.state.giturl,
+            description: this.state.description,
+            position: this.state.position});
+          this.setState({person: "",
+                        title: "",
+                        description: "",
+                        giturl: "",
+                        position: 0,
+                        display: "Project successfully sent."})
+        } else {
+          this.setState({display: "Project could not be sent. Please ensure all required fields have been given a value."});
+        }
 
     }
 
 
-    render(){
+    render(props){
         return(
-            <div>
-            <h1>Enter any changes to your personal projects here! <Link to="/">Home</Link></h1>
+            <div className = "bioTextDark">
 
-            <label>Select person: </label>
+            <label>Select Person: </label>
             <select
                 value={this.state.person}
                 onChange={this.handleChange}
@@ -61,35 +64,38 @@ class EditProjects extends React.Component {
                 <option value="xuhan">Xu Han</option>
                 <option value="mengyan">Mengyan Hou</option>
             </select>
-            <br /><br />
+            <br />
 
-            <label>Project title: </label>
+            <label>Project Title: </label>
             <input
                 type="text"
                 name="title"
                 value={this.state.title}
                 onChange={this.handleChange}
             />
-            <br /><br />
+            <br />
 
-            <p>Project Description: </p>
+            <label>Project Description: </label>
             <textarea
+                className = "textAreaDark"
                 name="description"
+                cols="120"
+                rows="8"
                 value={this.state.description}
                 onChange={this.handleChange}
             />
-            <br /><br />
+            <br />
 
-            <label>Github url: </label>
+            <label>(Optional) Github URL: </label>
             <input
                 type="text"
                 name="giturl"
                 value={this.state.giturl}
                 onChange={this.handleChange}
             />
-            <br /><br />
+            <br />
 
-            <label>Select priority: </label>
+            <label>Select Priority: </label>
             <select
                 value={this.state.position}
                 onChange={this.handleChange}
@@ -103,9 +109,16 @@ class EditProjects extends React.Component {
                 <option value="5">5</option>
                 <option value="6">6</option>
             </select>
-            <br /><br />
+            <br />
 
-            <button onClick={this.handleSubmit}>Submit</button>
+            <button
+              type="submit"
+              className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
+              style={{cursor:'pointer'}}
+              onClick={this.handleSubmit}
+            >Submit</button>
+
+            <p>{this.state.display}</p>
 
             </div>
         )

@@ -1,72 +1,183 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './darkmode.css';
+import './pages.css';
+import './login.css';
+
+import EditProjects from './EditProjects';
+import DeleteProjects from './DeleteProjects';
 
 class Login extends React.Component{
     constructor() {
         super();
         this.state = {
             username: "",
-            password: ""
+            password: "",
+            login: false,
+            title: "Login to add and delete projects.",
+            mode: ""
         };
+        this.onKeyDown = this.onKeyDown.bind(this);
     }
 
 
     handleChange = (event) => {
         const {name, value} = event.target;
-        console.log("bye");
         this.setState({
             [name]: value
         })
+    }
 
-        console.log("Edit");
+
+    toHome = () => {
+      this.props.history.push('/');
+    }
+
+    onKeyDown(e){
+      if(e.keyCode === 13){
+        axios.post('/login', {username:this.state.username, password:this.state.password})
+            .then((res)=>{
+              console.log(res);
+                if(res.data===true){
+                    console.log('Login success.');
+                    this.setState({login: true,
+                                   username: "",
+                                   password: "",
+                                   title: "Logged in."});
+                } else if (res.data===false){
+                    console.log('Login failure.');
+                    this.setState({login: false,
+                                   username: "",
+                                   password: "",
+                                   title: "Login failed. Please try again.",});
+                }
+            })
+      }
     }
 
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const description = axios.post('/login', {username:this.state.username, password:this.state.password})
+        axios.post('/login', {username:this.state.username, password:this.state.password})
             .then((res)=>{
               console.log(res);
                 if(res.data===true){
                     console.log('1');
+                    this.setState({login: true,
+                                   username: "",
+                                   password: "",
+                                   title: "Logged in."});
                 } else if (res.data===false){
                     console.log('2');
+                    this.setState({login: false,
+                                   username: "",
+                                   password: "",
+                                   title: "Login failed. Please try again."});
                 }
             })
 
-        console.log("Submit");
+        //console.log("Submit");
+    }
+
+
+    toEdit = () => {
+      this.setState({
+          mode: "edit"
+      })
+    }
+
+    toDelete = () => {
+      this.setState({
+          mode: "delete"
+      })
     }
 
 
     render() {
+      if(!this.state.login){
         return(
-            <div>
-            <h1>This is a login page! :)      <Link to="/">Home</Link></h1>
-            <br />
+            <div className = "fullPageDark">
 
-            <input
-                type="text"
-                name="username"
-                value={this.state.username}
-                placeholder="Username"
-                onChange={this.handleChange}
-            />
-            <br />
+              <button
+                className = {"modeButtonDark"}
+                onClick={this.toHome}
+              >Home</button>
+              <div className = "bioTextDark">
+              <h1 className={"title"}>{this.state.title}</h1>
 
-            <input
-                type="text"
-                name="password"
-                value={this.state.password}
-                placeholder="Password"
-                onChange={this.handleChange}
-            />
-            <br />
+              <br />
 
-            <button onClick={this.handleSubmit}>Login</button>
+              <input
+                  type="text"
+                  name="username"
+                  value={this.state.username}
+                  placeholder="Username"
+                  onChange={this.handleChange}
+                  onKeyDown={this.onKeyDown}
+              />
+              <br />
+
+              <input
+                  type="password"
+                  name="password"
+                  value={this.state.password}
+                  placeholder="Password"
+                  onChange={this.handleChange}
+                  onKeyDown={this.onKeyDown}
+              />
+              <br /><br />
+
+              <button className = "modeButtonDark" onClick={this.handleSubmit}>Login</button>
+
+              </div>
 
             </div>
         )
+
+      } else {
+
+        var editDelete, status;
+        if(this.state.mode === "edit"){
+          editDelete = <EditProjects />
+          status = "Adding Projects."
+        } else if(this.state.mode === "delete"){
+          editDelete = <DeleteProjects />
+          status = "Deleting Projects."
+        }
+
+        return(
+          <div className = {"fullPageDark"}>
+            <button
+              className = {"modeButtonDark"}
+              onClick={this.toHome}
+            >Home</button>
+
+            <h1 className="title">{this.state.title}</h1>
+            <br />
+
+
+            <div className = "buttonBox">
+              <button
+              className = {"modeButtonDark"}
+              onClick={this.toEdit}
+              >Add Projects</button>
+
+              <button
+              className = {"modeButtonDark"}
+              onClick={this.toDelete}
+              >Delete Projects</button>
+            </div>
+
+
+            <h1 className="title">{status}</h1>
+            <br />
+
+
+            {editDelete}
+
+          </div>
+        )
+      }
     }
 }
 
