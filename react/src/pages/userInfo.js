@@ -2,6 +2,8 @@ import React from 'react';
 import Biotext from './Biotext.js'
 import axios from 'axios'
 import './pages.css'
+import './darkmode.css'
+import './access.css'
 
 
 class UserInfo extends React.Component {
@@ -31,16 +33,14 @@ class UserInfo extends React.Component {
           }
           if(this.props.type==="email"){
             this.setState({
-              output: res.data[0].email,
+              output: "Contact: " + res.data[0].contact[0],
             })
           }
           if(this.props.type==="skills"){
             this.setState({
-              output: res.data[0].skills,
+              output: "Field: "+res.data[0].skills,
             })
           }
-
-
         });
   }
 
@@ -49,7 +49,7 @@ class UserInfo extends React.Component {
     const data = this.state.output;
 
     return (
-      <div className = "bioText">{data}</div>
+      <div className = {"bioText"+this.props.colourMode}>{data}</div>
     )
   }
 }

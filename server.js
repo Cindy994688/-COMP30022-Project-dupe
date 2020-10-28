@@ -1,36 +1,77 @@
 // app.js is the file that is actually executed on the server.
 // All of the servers functionality is linked to this file
 
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var IS_HEROKU = process.env.IS_HEROKU || 0
+// Config local environment variables
+const dotenv = require('dotenv');
+dotenv.config();
 
-const PORT = process.env.PORT || 5000;
-var app = express();
-
-var tryConnect = require('./routes/connected');
-var userInfo = require('./routes/users');
-var imageMd5 = require('./routes/image');
-
+// Imports
+const express = require('express');
+const bodyParser = require('body-parser');
+const http = require('http');
+const methodOverride = require('method-override');
+const session = require('express-session');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const createError = require('http-errors');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const app = express();
 const connectDB = require('./config/db');
+const LocalStrategy = require('passport-local').Strategy;
 
-// view engine setup
+
+//  Detect heroku
+const IS_HEROKU = process.env.IS_HEROKU || 0;
+
+// Required routes
+const tryConnect = require('./routes/connected');
+const userInfo = require('./routes/users');
+const imageMd5 = require('./routes/image');
+const login = require('./routes/login');
+const name = require('./routes/name');
+var contact= require('./routes/contact');
+
+// Middleware setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(methodOverride());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser('potatoes'));
+app.use(session({
+  saveUninitialized: true,
+  resave: true,
+  secret: 'potatoes'
+}));
 app.use(express.static(path.join(__dirname, 'react/build')));
+app.use(passport.initialize());
+app.use(passport.session());
 
+// Routes setup
 app.use('/', tryConnect);
 app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
+app.use('/login', login);
+app.use('/name/:name', name);
+app.use('/email', contact);
 
+
+// Passport configuration
+var Admin = require('./routes/models/admin');
+passport.use(Admin.createStrategy());
+passport.serializeUser(Admin.serializeUser());
+passport.deserializeUser(Admin.deserializeUser());
+
+// Runs mongoose config
+connectDB();
+
+
+// Configuration for online / offline functionality
 if (IS_HEROKU){
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/react/build/index.html'));
@@ -57,11 +98,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-connectDB();
-
+// Starts the server
+const PORT = process.env.PORT || 5000;
 // Lol
 app.listen(PORT, function(){
-  console.log("Listening on :" + PORT);
+  console.log("Express server started. Listeninig on port:" + PORT);
 });
 
 module.exports = app;
