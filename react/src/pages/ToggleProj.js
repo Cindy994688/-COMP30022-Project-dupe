@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
-import Jumbotron from 'react-bootstrap/Jumbotron'
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 import './pages.css'
 import './darkmode.css'
 import './access.css'
-
-import { View, Image } from 'react-native';
-import { Container, Row, Col } from 'reactstrap';
-import { render } from "react-dom";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
 
@@ -28,9 +23,12 @@ export default class ToggleProj extends Component {
         return (
 
             <div className = "ourProject">
-                    <div className={ " title"+this.props.colourMode}> Our Project </div>
-                    {/*<div className="title" id="ourproject">*/}
-                    {/*<div className="title"> Our Project </div>*/}
+                    <div className={"solid"+this.props.colourMode}><br/></div>
+
+                    <div className={ "title"+this.props.colourMode}> Our Project </div>
+
+                    <div className={"solid2"+this.props.colourMode}><br/></div>
+
                     <div className={"sub"+this.props.colourMode}> Beth’s Beauty - Your best beauty services </div>
                     <div className={"buttondiv"+this.props.colourMode}>
                     </div>
