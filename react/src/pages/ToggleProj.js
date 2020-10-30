@@ -28,9 +28,12 @@ export default class ToggleProj extends Component {
         return (
 
             <div className = "ourProject">
-                    <div className={ " title"+this.props.colourMode}> Our Project </div>
-                    {/*<div className="title" id="ourproject">*/}
-                    {/*<div className="title"> Our Project </div>*/}
+                    <div className={"solid"+this.props.colourMode}><br/></div>
+
+                    <div className={ "title"+this.props.colourMode}> Our Project </div>
+
+                    <div className={"solid2"+this.props.colourMode}><br/></div>
+
                     <div className={"sub"+this.props.colourMode}> Beth’s Beauty - Your best beauty services </div>
                     <div className={"buttondiv"+this.props.colourMode}>
                     </div>

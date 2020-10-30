@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-//import {View} from 'react-native'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import './darkmode.css'
 import './pages.css'
@@ -20,12 +19,7 @@ import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
 import { Image } from 'react-native';
-import { Link, Element } from 'react-scroll';
-
-
-//import axios from 'axios'
-//import {clientBanner} from './clientbanner.jpg'
-//const clientBanner = "../../src/pages/clientbanner.jpg";
+import { Element } from 'react-scroll';
 
 
 class HomePage extends Component {
@@ -150,9 +144,7 @@ render () {
         autoPlayDirection="ltr"
         autoPlay={true}
         fadeOutAnimation={true}
-        /*mouseTrackingEnabled={true}*/
         playButtonEnabled={true}
-        /*disableAutoPlayOnAction={true}*/
         stopAutoPlayOnHover={false}
         onSlideChange={this.onSlideChange}
         onSlideChanged={this.onSlideChanged}
@@ -172,14 +164,15 @@ render () {
         </div>
 
         <div id="snowHolder" className = {"aboutTriangle"+this.state.colourMode}>
-          <div className = "snowHolder">
+          <div className = {"snowHolder"+this.state.colourMode}>
             {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
           </div>
 
           <Element to="intro">
-          <div className={"intro" + this.state.colourMode}>
-          <div className = {"quote1"+ this.state.colourMode}>“</div>
-          <div className = {"quote"+this.state.colourMode}>Hi, this is
+          <div className = {"aboutTriangle"+this.state.colourMode}>
+            <div className={"intro" + this.state.colourMode + " quotebox"}>
+            <div className = {"quote1"+ this.state.colourMode}>“</div>
+            <div className = {"quote"+this.state.colourMode}>Hi, this is
             CRXMM. We are a team of
             5 from the University of Melbourne.
             While we have different backgrounds,
@@ -188,8 +181,9 @@ render () {
             As individuals we are
             strong, but together we are incredible.
           </div>
-          <div className = {"quote2"+ this.state.colourMode}>”</div>
+          <div className = {"quote2"+ this.state.colourMode}>"</div>
           </div>
+        </div>
           </Element>
         </div>
 
@@ -229,13 +223,18 @@ render () {
           <ToggleLeft colourMode = {this.state.colourMode} name = "Mengyan" author = "mengyan"/>
         </Element>
 
+        <div>&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;</div>
+        <div>&nbsp;&nbsp;</div>
+
       <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
       <Element name="contactUs">
       <Contact colourMode = {this.state.colourMode} ref={this.contactReference}/>
       </Element>
 
       <div className= {"footer" + this.state.colourMode}><p>last edited: 27/10/2020</p></div>
-
+      
       <div className = {"buttonBox footer" + this.state.colourMode}>
         <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
         <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>

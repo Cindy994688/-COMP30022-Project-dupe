@@ -143,7 +143,7 @@
     font-size: 35px;
     color: var(--txt-color-dark);
     padding-top: 10%;
-    clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
+    /*clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);*/
   }
 
   .descrDark {
@@ -219,6 +219,7 @@
 
   .gradient-button-3Dark {background-image: linear-gradient(to right, var(--third-color-dark) 0%, var(--third-color-dark) 15%, var(--second-color-dark) 100%)}
   .gradient-button-3Dark:hover { background-position: right center; }
+
   .titleDark{
     font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
     font-size: 50px;
@@ -520,6 +521,17 @@
 
   /*  yaehha */
 
+  .maintitleDark{
+    font-family: var(--title-font), 'Times New Roman';
+    color: var(--background-color);
+
+    font-size: 4.5vw;
+
+    margin-left:auto;
+    margin-right:auto;
+
+  }
+
   .borderTitleDark{
     height: 40%;
     /*background-color:var(--fifth-color);*/
@@ -528,18 +540,9 @@
     position: absolute;
     left: 20%;
     top:25%;
-  }
-
-  .maintitleDark{
-    font-family: var(--title-font), 'Times New Roman';
-    color: var(--background-color);
-
-    margin-top: -7%;
-    font-size: 200%;
-
-    margin-left:auto;
-    margin-right:auto;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .dividerDark {
@@ -570,38 +573,43 @@
     color: var(--txt-color-dark);
     margin-top: -25%;
     padding-top:15%;
-    padding-bottom:1%;
+    padding-bottom:9%;
     background-color: var(--second-color-dark);
   }
 
+  .quotebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
   .quoteDark{
     width: 35%;
     text-align: justify;
-    margin-left: 32.5%;
-    margin-right: auto;
+    /*margin-left: 32.5%;*/
+    /*margin-right: auto;*/
     margin-top: 7%;
-    position:absolute;
+    /*position:absolute;*/
     z-index: 3;
     text-align: center;
     font-family: var(--subtitle-font);
     color: var(--bg-color-dark);
     flex-shrink: 2;
   }
-
   .quote1Dark{
     margin-top: -10%;
-    margin-left: 15%;
-    position:absolute;
+    /*margin-left: 15%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color-dark);
     font-size: 2000%;
     font-family: var(--quote-font);
     flex-shrink: 1;
   }
-
   .quote2Dark{
     margin-top: 17%;
-    margin-left: 65%;
+    /*margin-left: 65%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color-dark);
     font-size: 2000%;
@@ -609,7 +617,6 @@
     flex-shrink: 1;
     max-height: 0.5em;
   }
-
 
   .solidDark {
     display: inline-block;
@@ -622,6 +629,19 @@
     border-radius: 10%;
   }
 
+  .solid1Dark {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background:var(--second-color-dark);
+    margin-top: 4%;
+    margin-top: 0%;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-radius: 10%;
+    transform: rotate(90deg);
+  }
+
   .solid2Dark {
     display: inline-block;
     width: 30%;
@@ -631,6 +651,16 @@
     margin-right: 35%;
     margin-top: 0%;
     border-radius: 10%;
+  }
+
+  .groupPrTitle{
+    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
+    color: var(--bg-color);
+    font-size: 0.5em;
+    size: 500px;
+    text-align: center;
+    transform: translateY(30px);
+
   }
 
 
@@ -659,4 +689,8 @@
 
   .textAreaDark {
     resize: none;
+  }
+
+  .snowHolderDark{
+    position: relative;
   }
