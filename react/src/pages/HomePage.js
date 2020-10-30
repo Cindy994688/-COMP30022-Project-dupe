@@ -15,11 +15,18 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-import { Image } from 'react-native';
-import { Element } from 'react-scroll';
+import { Image } from 'react-native'
+import { Element } from 'react-scroll'
+
+/* Descr:
+This is the main "structure" of the entire site. Each section of code corresponds
+ to a section on the main page of the website 
+*/
 
 
 class HomePage extends Component {
+
+  /*the contents of the image carousel*/
   state = {
     galleryItems: [
     <img src="/image/ChaoWei.jpg" alt="Chao-Wei Chiang on an image carousel"
@@ -41,6 +48,8 @@ class HomePage extends Component {
      colourMode: "",
      snowHeight: 0,
   }
+
+  /* How to set different "colour modes" */
 
     // Keep the below definition, and always remember to provide a return to default option in the colour buttons
   // Make a new function for each colourscheme like the one below
@@ -102,6 +111,8 @@ class HomePage extends Component {
       <div className = {"fullPage" + this.state.colourMode}>
 
         <Element name="top">
+
+          {/* Jumbotron is a bootstrap component */}
           <Jumbotron className = {"banner"}>
             <div className = {"borderTitle" + this.state.colourMode}>
               <div className = {"maintitle" + this.state.colourMode}>
@@ -133,6 +144,8 @@ class HomePage extends Component {
 
         <p>&nbsp;&nbsp;</p>
 
+        {/* image carousel*/}
+
         <div className = {"alice"}>
           <AliceCarousel
             items={this.state.galleryItems}
@@ -150,6 +163,7 @@ class HomePage extends Component {
           />
         </div>
 
+        {/* divider with "names" */}
 
         <div className = {"divider" + this.state.colourMode + " inFront"}>
 
@@ -159,9 +173,13 @@ class HomePage extends Component {
 
         </div>
 
+        {/* fixed potato logo*/}
+
         <div className={"punk" + this.state.colourMode}>
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
+
+        {/* introduction section */}
 
         <div id="snowHolder" className = {"aboutTriangle"+this.state.colourMode}>
           <div className = {"snowHolder"+this.state.colourMode}>
@@ -186,9 +204,14 @@ class HomePage extends Component {
           </Element>
         </div>
 
+        {/* group project */}
+
         <Element to="project">
           <ToggleProj colourMode = {this.state.colourMode} />
         </Element>
+
+
+        {/* individual biographies */}
 
         <div className={"solid"+this.state.colourMode}><br/></div>
 
@@ -226,13 +249,19 @@ class HomePage extends Component {
         <div>&nbsp;&nbsp;</div>
         <div>&nbsp;&nbsp;</div>
 
+        {/* contact section */}
+
         <div className={"getInTouchHeader" + this.state.colourMode}>Contact Us</div>
 
         <Element name="contactUs">
           <Contact colourMode = {this.state.colourMode} ref={this.contactReference}/>
         </Element>
 
-        <div className= {"footer" + this.state.colourMode}><p>last edited: 27/10/2020</p></div>
+        {/* "last edited" footer */}
+
+        <div className= {"footer" + this.state.colourMode}><p>last edited: 30/10/2020</p></div>
+
+        {/* colour mode buttons */}
           
         <div className = {"buttonBox footer" + this.state.colourMode}>
           <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
