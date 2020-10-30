@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import {Jumbotron,Col,Row, ToggleButton, Card, Container} from 'reactstrap'
 import Profile from './Profile.js'
 import UserInfo from './userInfo.js'
 import axios from 'axios'
 import './pages.css'
 import './darkmode.css'
 import './access.css'
-import { Button, ButtonGroup, ButtonToolbar } from 'react-bootstrap-buttons';
 import 'react-bootstrap-buttons/dist/react-bootstrap-buttons.css';
-import { Image } from 'react-native';
 //thank you to https://www.youtube.com/watch?v=x5oiX93DeHA
 import ProjectsPage from './ProjectsPage';
 

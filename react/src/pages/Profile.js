@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, View, Image, Text } from 'react-native';
+import React from 'react';
+import { Image } from 'react-native';
 import './pages.css'
 import './darkmode.css'
 import './access.css'
