@@ -511,6 +511,7 @@
     text-align: center;
     display: inline-block;
     margin-left:46%;
+    border:none;
   }
 
   .button{
@@ -522,6 +523,7 @@
     margin:1em;
     padding:0.5em;
     color:var(--second-color);
+    border: none;
   }
 
   .togglel{
@@ -550,6 +552,7 @@
   .btn-primary, .btn-primary:active, .btn-primary.active, .btn-primary:focus {
     color: var(--fourth-color);
     background-color: var(--third-color);
+    border:none;
     border-color: var(--bg-color);
     border-radius: 7px;/*set the color you want here*/
 }
@@ -557,6 +560,7 @@
   .btn-primary:hover, .open>.dropdown-toggle.btn-primary{
     color: var(--bg-color);
     background-color: var(--fourth-color);
+    border:none;
     border-color: var(--fourth-color);  /*set the color you want here*/
 }
 #introtext{margin-top:1em}
@@ -768,24 +772,81 @@
     z-index: 100000;
   }
 
+  .nav {
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    top:0%;
+    width: 100%;
+    margin-left: 0%;
+    z-index: 10;
+    z-index: 100001;
+    background-color: var(--bg-color);
+  }
+
+
   .modeButton {
     /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
-	  background:linear-gradient(to bottom, var(--third-color) 5%, var(--fifth-color) 100%);
-	  background-color:white;
-	  border-radius:3px;
+
+	  background-color:var(--bg-color);
+
 	  display:inline-block;
 	  cursor:pointer;
 	  color:var(--txt-color);
 	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
 	  font-size:20px;
+    padding: 15px;
+    padding-bottom: 0;
+    font-weight: bold;
+    /*margin-top: 10px;*/
+    border: none;
+  }
+
+  .modeButtonMain {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+	  background-color:var(--bg-color);
+	  border-radius:3px;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color);
+	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  font-size:35px;
     padding: 10px;
     font-weight: bold;
+    border:none;
+  }
+
+  .leftNav {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+    width:70%;
+    padding-left: 3%;
+  }
+
+  .rightNav {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+    display: flex;
+    flex-direction: row;
+    padding-right: 3%;
+    width: 35%;
+
+  }
+
+  .elevation{
+    margin-top: 20px;
+    margin-right: 6%;
   }
 
   .modeButton:hover {
-    background:linear-gradient(to bottom, var(--bg-color) 5%, var(--txt-color) 100%);
-    background-color:white;
+    opacity: 0.5;
   }
+
+  .modeButtonMain:hover {
+    opacity: 0.5;
+  }
+
   .modeButton:active {
     position:relative;
     top:1px;

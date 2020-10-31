@@ -57,6 +57,7 @@ class Contact extends React.Component {
               </div>
             <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " buttonsubmit"+this.props.colourMode}>Submit</button>
           </form>
+
         </div>
         </div>
       )
