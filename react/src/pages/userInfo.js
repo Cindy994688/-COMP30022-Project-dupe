@@ -1,5 +1,4 @@
 import React from 'react';
-import Biotext from './Biotext.js'
 import axios from 'axios'
 import './pages.css'
 import './darkmode.css'
@@ -43,6 +42,7 @@ class UserInfo extends React.Component {
           }
         });
   }
+
 
 
   render ( props ) {

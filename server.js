@@ -18,6 +18,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const app = express();
+
 const connectDB = require('./config/db');
 const LocalStrategy = require('passport-local').Strategy;
 
@@ -32,6 +33,9 @@ const imageMd5 = require('./routes/image');
 const login = require('./routes/login');
 const name = require('./routes/name');
 var contact= require('./routes/contact');
+//someone check these two lines, JL not sure if they're necessary
+const personalProject = require('./routes/personalproject');
+const projects = require('./routes/projects');
 
 // Middleware setup
 app.set('views', path.join(__dirname, 'views'));
@@ -56,6 +60,8 @@ app.use(passport.session());
 app.use('/', tryConnect);
 app.use('/user/:name', userInfo);
 app.use('/image/:name', imageMd5);
+app.use('/projects', projects);
+app.use('/project', personalProject);
 app.use('/login', login);
 app.use('/name/:name', name);
 app.use('/email', contact);

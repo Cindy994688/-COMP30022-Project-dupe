@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, View, Image, Text } from 'react-native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import './pages.css'
 import './darkmode.css'
 import './access.css'
 import axios from 'axios'
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 
 
 class Contact extends React.Component {
@@ -22,6 +20,7 @@ class Contact extends React.Component {
       return (
         <div>
         <div className={"contact"+this.props.colourMode}>
+        <br /><br />
 
 
           <div className = {"bioTextStable"+this.props.colourMode}>If you are interested in any of the

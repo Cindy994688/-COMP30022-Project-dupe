@@ -103,18 +103,6 @@
     margin-top: -20px;
   }
 
-  .maintitleDark{
-    font-family: var(--title-font), 'Times New Roman';
-    color: var(--second-color-dark);
-    vertical-align: middle;
-    text-align: center;
-    font-size: 60px;
-    background-color:var(--fifth-color-dark);
-    width:80%;
-    margin-left:auto;
-    margin-right:auto;
-
-  }
 
   #introDark{
     margin-top:-10%;
@@ -129,17 +117,6 @@
 }
   .spaceDark {
     padding: 10em inherit;
-  }
-
-  .introDark {
-    text-align: center;
-    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
-    font-size: 35px;
-    color: var(--txt-color-dark);
-    margin-top: -20%;
-    padding-top:25%;
-    padding-bottom:1%;
-    background-color: var(--third-color-dark);
   }
 
 
@@ -166,7 +143,7 @@
     font-size: 35px;
     color: var(--txt-color-dark);
     padding-top: 10%;
-    clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
+    /*clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);*/
   }
 
   .descrDark {
@@ -199,26 +176,7 @@
     background-color: var(--third-color-dark);
   }
 
-  .dividerDark {
-    color: white;
-    font-size: 25px;
-    /*border: 2px double black;*/
-    text-align: center;
-    background-color: var(--bg-color-dark);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*text-shadow: 2px 2px black;*/
 
-    padding: 10em inherit;
-    display: flex;
-    flex-direction: column;
-    margin-top: -52%;
-    padding-top: 50%;
-    padding-bottom: 7%;
-    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 85%);
-    z-index: 100;
-  }
 
   .dividerTitleDark {
     font-family: var(--body-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -261,6 +219,7 @@
 
   .gradient-button-3Dark {background-image: linear-gradient(to right, var(--third-color-dark) 0%, var(--third-color-dark) 15%, var(--second-color-dark) 100%)}
   .gradient-button-3Dark:hover { background-position: right center; }
+
   .titleDark{
     font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
     font-size: 50px;
@@ -558,4 +517,180 @@
   .modeButtonDark:active {
     position:relative;
     top:1px;
+  }
+
+  /*  yaehha */
+
+  .maintitleDark{
+    font-family: var(--title-font), 'Times New Roman';
+    color: var(--background-color);
+
+    font-size: 4.5vw;
+
+    margin-left:auto;
+    margin-right:auto;
+
+  }
+
+  .borderTitleDark{
+    height: 40%;
+    /*background-color:var(--fifth-color);*/
+    border: 6px solid white;
+    width:60%;
+    position: absolute;
+    left: 20%;
+    top:25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dividerDark {
+    color: var(--bg-color-dark);
+    font-size: 25px;
+    /*border: 2px double black;*/
+    text-align: center;
+    background-color: var(--bg-color-dark);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-shadow: 2px 2px black;*/
+
+    padding: 10em inherit;
+    display: flex;
+    flex-direction: column;
+    margin-top: -52%;
+    padding-top: 50%;
+    padding-bottom: 7%;
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 85%);
+    z-index: 100;
+  }
+
+  .introDark {
+    text-align: center;
+    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--txt-color-dark);
+    margin-top: -25%;
+    padding-top:15%;
+    padding-bottom:9%;
+    background-color: var(--second-color-dark);
+  }
+
+  .quotebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .quoteDark{
+    width: 35%;
+    text-align: justify;
+    /*margin-left: 32.5%;*/
+    /*margin-right: auto;*/
+    margin-top: 7%;
+    /*position:absolute;*/
+    z-index: 3;
+    text-align: center;
+    font-family: var(--subtitle-font);
+    color: var(--bg-color-dark);
+    flex-shrink: 2;
+  }
+  .quote1Dark{
+    margin-top: -10%;
+    /*margin-left: 15%;*/
+    /*position:absolute;*/
+    z-index: 1;
+    color: var(--bg-color-dark);
+    font-size: 2000%;
+    font-family: var(--quote-font);
+    flex-shrink: 1;
+  }
+  .quote2Dark{
+    margin-top: 17%;
+    /*margin-left: 65%;*/
+    /*position:absolute;*/
+    z-index: 1;
+    color: var(--bg-color-dark);
+    font-size: 2000%;
+    font-family: var(--quote-font);
+    flex-shrink: 1;
+    max-height: 0.5em;
+  }
+
+  .solidDark {
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background:var(--second-color-dark);
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%;
+    border-radius: 10%;
+  }
+
+  .solid1Dark {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background:var(--second-color-dark);
+    margin-top: 4%;
+    margin-top: 0%;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-radius: 10%;
+    transform: rotate(90deg);
+  }
+
+  .solid2Dark {
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background:var(--second-color-dark);
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 0%;
+    border-radius: 10%;
+  }
+
+  .groupPrTitle{
+    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
+    color: var(--bg-color);
+    font-size: 0.5em;
+    size: 500px;
+    text-align: center;
+    transform: translateY(30px);
+
+  }
+
+
+  .textExpDark{
+    text-align: center;
+    width:50%;
+    padding-top: 10%;
+    padding-left: 0%;
+    padding-right: 8%;
+    border: 0px double white;
+    color: var(--txt-color-dark);
+    font-family: var(--body-font);
+  }
+
+  /* James nonsense that will be dealt with later today :) */
+  .loginButtonDark {
+
+  }
+
+  .loginButtonDark:hover {
+
+  }
+  .loginButtonDark:active {
+
+  }
+
+  .textAreaDark {
+    resize: none;
+  }
+
+  .snowHolderDark{
+    position: relative;
   }
