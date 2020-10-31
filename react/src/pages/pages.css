@@ -113,8 +113,7 @@
     font-family: var(--title-font), 'Times New Roman';
     color: var(--background-color);
 
-    margin-top: -7%;
-    font-size: 200%;
+    font-size: 4.5vw;
 
     margin-left:auto;
     margin-right:auto;
@@ -129,6 +128,9 @@
     position: absolute;
     left: 20%;
     top:25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   #intro{
@@ -153,7 +155,7 @@
     color: var(--txt-color);
     margin-top: -25%;
     padding-top:15%;
-    padding-bottom:1%;
+    padding-bottom:9%;
     background-color: var(--second-color);
   }
 
@@ -182,7 +184,7 @@
     font-size: 35px;
     color: var(--txt-color);
     padding-top: 80px;
-    clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);
+    /*clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);*/
   }
 
   .quotebox {
@@ -191,34 +193,39 @@
     justify-content: center;
   }
 
+  .quotebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
   .quote{
     width: 35%;
     text-align: justify;
-    margin-left: 32.5%;
-    margin-right: auto;
+    /*margin-left: 32.5%;*/
+    /*margin-right: auto;*/
     margin-top: 7%;
-    position:absolute;
+    /*position:absolute;*/
     z-index: 3;
     text-align: center;
     font-family: var(--subtitle-font);
     color: var(--bg-color);
     flex-shrink: 2;
   }
-
   .quote1{
     margin-top: -10%;
-    margin-left: 15%;
-    position:absolute;
+    /*margin-left: 15%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color);
     font-size: 2000%;
     font-family: var(--quote-font);
     flex-shrink: 1;
   }
-
   .quote2{
     margin-top: 17%;
-    margin-left: 65%;
+    /*margin-left: 65%;*/
+    /*position:absolute;*/
     z-index: 1;
     color: var(--bg-color);
     font-size: 2000%;
