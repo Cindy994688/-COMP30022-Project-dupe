@@ -260,6 +260,7 @@ render () {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
+
         {/* introduction section */}
 
         <div id="snowHolder" className = {"aboutTriangle"+this.state.colourMode}>
@@ -287,9 +288,6 @@ render () {
 
         {/* group project */}
 
-        <Element to="project">
-          <ToggleProj colourMode = {this.state.colourMode} />
-        </Element>
 
 
         {/* individual biographies */}
