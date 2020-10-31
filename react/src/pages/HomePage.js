@@ -149,14 +149,14 @@ render () {
         <div className = 'leftNav'>
           <Link activeClass="active" className={"modeButtonMain" + this.state.colourMode} to="top" spy={true} smooth={true} duration={500} offset={0}>CRXMM</Link>
           <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="intro" spy={true} smooth={true} duration={500} offset={60}>Intro</Link>
-          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="project" spy={true} smooth={true} duration={500} offset={-30}>Project</Link>
-          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="ChaoWei" spy={true} smooth={true} duration={500} offset={-60}>Profiles</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="project" spy={true} smooth={true} duration={500} offset={-60}>Project</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="ChaoWei" spy={true} smooth={true} duration={500} offset={-320}>Profiles</Link>
           {/*
           <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Ron" spy={true} smooth={true} duration={500} offset={-60}>Ron</Link>
           <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mustafa" spy={true} smooth={true} duration={500} offset={-60}>Mustafa</Link>
           <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Xu" spy={true} smooth={true} duration={500} offset={-60}>Zoe</Link>
           <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mengyan" spy={true} smooth={true} duration={500} offset={-60}>Kelly</Link>*/}
-          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="contactUs" spy={true} smooth={true} duration={500} offset={-10}>Contact Us</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="contactUs" spy={true} smooth={true} duration={500} offset={-200}>Contact Us</Link>
         </div>
         <div className = 'rightNav'>
 
