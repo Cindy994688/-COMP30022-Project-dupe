@@ -86,6 +86,16 @@ class HomePage extends Component {
     }
   };
 
+  setAccessibilityModeMode= () => {
+    console.log(this.state.colourMode);
+    if(this.state.colourMode === 'AC'){
+      this.setState({colourMode: ""});
+    }
+    else{
+      this.setState({colourMode: 'AC'});
+    }
+  };
+
 
   dark= () => {
     if(this.state.colourMode === 'Dark'){
@@ -162,7 +172,7 @@ render () {
 
           <DarkModeToggle className = 'elevation' onChange={this.setDarkMode} checked={dark} size={80}/>
 
-          <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Accessibility Mode</button>
+          <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setAccessibilityModeMode}>Accessibility Mode</button>
           <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
         </div>
 
