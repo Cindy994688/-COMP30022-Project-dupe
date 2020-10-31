@@ -4,14 +4,14 @@ import { Platform, StyleSheet, View, Image, Text } from 'react-native';
 class Biotext extends React.Component {
   render (props) {
       return (
-      <View style={styles.MainContainer2}>
-          <Text style={styles.text2}>{this.props.clientdescr}</Text>
+      <View >
+          <Text >{this.props.clientdescr}</Text>
       </View>
       )
     }
-  }
+  };
 
-  const styles = StyleSheet.create({
+  /*const styles = StyleSheet.create({
     MainContainer2: {
       flex: 1,
       justifyContent: 'center',
@@ -30,5 +30,5 @@ class Biotext extends React.Component {
 
     },
   });
-
+*/
 export default Biotext;

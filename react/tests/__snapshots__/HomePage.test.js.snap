@@ -1,0 +1,832 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders correctly 1`] = `
+<div
+  className="fullPage"
+>
+  <div
+    className="banner jumbotron"
+  >
+    <div
+      className="maintitle"
+    >
+      <h1>
+        SWEN90016 
+      </h1>
+      <div
+        id="subheading"
+      >
+        Group CRXMM
+      </div>
+    </div>
+  </div>
+  <div
+    className="buttonBox"
+  >
+    <button
+      className="modeButton"
+      onClick={[Function]}
+    >
+      Set Default Mode
+    </button>
+    <button
+      className="modeButton"
+      onClick={[Function]}
+    >
+      Set Accessibility Mode
+    </button>
+    <button
+      className="modeButton"
+      onClick={[Function]}
+    >
+      Set Dark Mode
+    </button>
+  </div>
+  <p>
+      
+  </p>
+  <div
+    className="alice"
+  >
+    <div
+      className="alice-carousel"
+    >
+      <div>
+        <div
+          className="alice-carousel__wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "height": false,
+              "paddingLeft": "0px",
+              "paddingRight": "0px",
+              "transition": false,
+            }
+          }
+        >
+          <ul
+            className="alice-carousel__stage"
+            style={
+              Object {
+                "height": undefined,
+                "transform": "translate3d(0px, 0, 0)",
+                "transition": "transform 0ms ",
+              }
+            }
+          >
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Image of Xu Han on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Xu.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item __active"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Image of Chao-Wei Chiang on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/ChaoWei.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Image of Meng-Yan Hou on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Mengyan.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Image of Mustafa Awni on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/MustafaFullBody.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Image of Ron Chiu on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Ron.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Image of Xu Han on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Xu.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Image of Chao-Wei Chiang on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/ChaoWei.jpg"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul
+        className="alice-carousel__dots"
+      >
+        <li
+          className="alice-carousel__dots-item __active"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+      </ul>
+      <div
+        className="alice-carousel__play-btn"
+      >
+        <div
+          className="alice-carousel__play-btn-wrapper"
+        >
+          <div
+            className="alice-carousel__play-btn-item __pause"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="divider"
+  >
+    <div
+      className="dividerTitleSmall"
+    >
+      <h1>
+         - Harry - Ron - Mustafa - Kelly - Zoe -
+      </h1>
+    </div>
+  </div>
+  <div
+    className="punk"
+  >
+    <Image
+      source="/image/logo.jpg"
+      style={
+        Object {
+          "height": 107.9,
+          "width": 291.5,
+        }
+      }
+    />
+  </div>
+  <div
+    className="intro"
+  >
+    <div
+      className="title"
+      id="intro"
+    >
+      Intro
+    </div>
+    <p>
+      Hi, this is CRXMM, we are a team of 5 from the University of Melbourne. While we have different backgrounds, different passions, and are even in different timezones, we are in unity. We believe that as individuals we are strong, but together we are incredible.
+    </p>
+  </div>
+  <div>
+    <div
+      className="topTriangle thirdColor"
+    >
+      <div
+        className="intro title"
+      >
+         Our Project 
+      </div>
+      <div
+        className="sub"
+      >
+         Beth’s Beauty - Your best beauty services 
+      </div>
+      <div
+        className="buttondiv"
+      >
+        <button
+          className="btn btn-primary button"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          type="submit"
+        >
+          learn about our project
+        </button>
+      </div>
+      <div>
+          
+      </div>
+    </div>
+  </div>
+  <div
+    className="title"
+    id="whoweare"
+  >
+    Who we are
+  </div>
+  <div
+    className="topTriangle container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/ChaoWei.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileName"
+          >
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="buttondiv"
+        >
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="leftCVbutton"
+            type="submit"
+          >
+            See CV
+          </button>
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="leftProjectbutton"
+            type="submit"
+          >
+            See Personal Projects
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="bottomTriangle bgSecondary container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Ron.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileName"
+          >
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="buttondiv"
+        >
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="rightCVbutton"
+            type="submit"
+          >
+            See CV
+          </button>
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="rightProjectbutton"
+            type="submit"
+          >
+            See Personal Projects
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="topTriangle container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Mustafa.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileName"
+          >
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="buttondiv"
+        >
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="leftCVbutton"
+            type="submit"
+          >
+            See CV
+          </button>
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="leftProjectbutton"
+            type="submit"
+          >
+            See Personal Projects
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="bottomTriangle bgSecondary container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Xu.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileName"
+          >
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="buttondiv"
+        >
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="rightCVbutton"
+            type="submit"
+          >
+            See CV
+          </button>
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="rightProjectbutton"
+            type="submit"
+          >
+            See Personal Projects
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="topTriangle container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Mengyan.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileName"
+          >
+            
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-md-6"
+      >
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+        <div
+          className="bioText"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="buttondiv"
+        >
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="leftCVbutton"
+            type="submit"
+          >
+            See CV
+          </button>
+          <button
+            className="btn btn-primary button"
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+            testID="leftProjectbutton"
+            type="submit"
+          >
+            See Personal Projects
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="getInTouchHeader"
+  >
+    Contact Us
+  </div>
+  <div>
+    <div
+      className="contact"
+    >
+      <div
+        className="bioTextStable"
+      >
+        If you are interested in any of the projects or information you see on this page, please contact us below, or email us directly through one of the email addresses listed in our profiles. We look forward to hearing from you!  
+        <p />
+         
+      </div>
+      <form
+        action="/email"
+        id="contact-form"
+        method="POST"
+        onSubmit={[Function]}
+      >
+        <div>
+          <div
+            className="bioTextContact"
+          >
+            <label
+              htmlFor="name"
+            >
+              Name
+            </label>
+          </div>
+          <input
+            className="form-control contactForm"
+            onChange={[Function]}
+            placeholder="Enter Name"
+            type="text"
+            value=""
+          />
+        </div>
+        <div>
+          <div
+            className="bioTextContact"
+          >
+            <label
+              htmlFor="exampleInputEmail1"
+            >
+              Email address
+            </label>
+          </div>
+          <input
+            aria-describedby="emailHelp"
+            className="contactForm"
+            onChange={[Function]}
+            placeholder="Enter Email"
+            type="email"
+            value=""
+          />
+        </div>
+        <div>
+          <div
+            className="bioTextContact"
+          >
+            <label
+              htmlFor="message"
+            >
+              Message
+            </label>
+          </div>
+          <div>
+            <textarea
+              className="messageForm"
+              onChange={[Function]}
+              placeholder="Enter Message"
+              rows="5"
+              value=""
+            />
+          </div>
+        </div>
+        <button
+          className="btn btn-primary buttonsubmit"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    className="footer"
+  >
+    <p>
+      last edited: 21/10/2020
+    </p>
+  </div>
+</div>
+`;

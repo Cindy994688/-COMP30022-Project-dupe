@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders correctly 1`] = `
+<div>
+  <div
+    className="topTriangle thirdColorundefined"
+  >
+    <div
+      className="introundefined titleundefined"
+    >
+       Our Project 
+    </div>
+    <div
+      className="subundefined"
+    >
+       Beth’s Beauty - Your best beauty services 
+    </div>
+    <div
+      className="buttondivundefined"
+    >
+      <button
+        className="btnundefined btn-primaryundefined buttonundefined"
+        onClick={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+        type="submit"
+      >
+        learn about our project
+      </button>
+    </div>
+    <div>
+        
+    </div>
+  </div>
+</div>
+`;

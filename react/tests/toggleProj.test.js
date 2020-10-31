@@ -1,4 +1,18 @@
+/**
+ * @jest-environment jsdom
+ */
+
 const puppeteer = require('puppeteer');
+import React from 'react';
+import renderer from 'react-test-renderer';
+import ToggleProj from '../src/pages/ToggleProj';
+
+
+test('it renders correctly', () => {
+  component = renderer.create(<ToggleProj/>)
+  let tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});
 
 test('E2E: Main project section expands when clicked', async() => {
   const puppet = await puppeteer.launch({
@@ -29,4 +43,4 @@ test('E2E: Main project section dissapears when clicked again', async() => {
   response = response == null;
   await puppet.close();
   expect(response).toBe(true)
-} 10000);
+}, 10000);

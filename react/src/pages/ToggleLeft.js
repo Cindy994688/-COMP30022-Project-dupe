@@ -67,8 +67,8 @@ export default class ToggleProj extends Component {
                         </Col>
                         <Row>
                         <div className={"buttondiv"+this.props.colourMode}>
-                          <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
-                          <button type="submit" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
+                          <button type="submit" testID="leftCVbutton" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglecv}  style={{cursor:'pointer'}}>See CV</button>
+                          <button type="submit" testID="leftProjectbutton" className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode} onClick = {this.togglepersonalproj} style={{cursor:'pointer'}}>See Personal Projects</button>
                         </div>
                         </Row>
                     </Row>
