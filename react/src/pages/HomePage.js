@@ -255,7 +255,7 @@ render () {
           <div className = {"snowHolder"+this.state.colourMode}>
             {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
           </div>
-          <Element to="intro">
+          <Element name="intro">
             <div className = {"aboutTriangle"+this.state.colourMode}>
               <div className={"intro" + this.state.colourMode + " quotebox"}>
                 <div className = {"quote1"+ this.state.colourMode}>“</div>
