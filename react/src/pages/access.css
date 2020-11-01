@@ -79,7 +79,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: 200;
+    z-index: 19;
 
     height: 12em;
     padding-bottom: 10%;
@@ -177,7 +177,7 @@
     margin-left: 30px;
     margin-right: auto;
     margin-top:15%;
-    z-index: 80;
+    z-index: 19;
     transform: translateY(-10em);
     position: relative;
 
@@ -202,7 +202,7 @@
     font-size: 25px;
     /*border: 2px double black;*/
     text-align: center;
-    background-color: var(--bg-color-ac);
+    /*background-color: var(--bg-color-ac);*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -215,7 +215,7 @@
     padding-top: 50%;
     padding-bottom: 7%;
     clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 85%);
-    z-index: 100;
+    z-index: 18;
   }
 
   .dividerTitleAC {
@@ -551,7 +551,7 @@
     justify-content: space-evenly;
   }
 
-  .modeButtonAC {
+  /*.modeButtonAC {
     box-shadow:inset 0px -3px 7px 0px var(--second-color-ac);
 	  background:linear-gradient(to bottom, var(--third-color-ac) 5%, var(--fifth-color-ac) 100%);
 	  background-color:white;
@@ -572,7 +572,7 @@
   .modeButtonAC:active {
     position:relative;
     top:1px;
-  }
+  } */
 
 
   /*yehahaa*/
@@ -614,5 +614,62 @@
     text-align: left;
     letter-spacing: 0.05em;
     word-spacing: 0.2em;
+  }
+
+  .modeButtonAC {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+
+	  background-color:var(--bg-color-ac);
+
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color-ac);
+	  font-family:var(--title-font-ac), Arial, Helvetica, sans-serif;
+	  font-size:20px;
+    padding: 15px;
+    padding-bottom: 0;
+    font-weight: bold;
+    /*margin-top: 10px;*/
+    border: none;
+  }
+
+  .modeButtonMainAC {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+	  background-color:var(--bg-color-ac);
+	  border-radius:3px;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color-ac);
+	  font-family:var(--title-font-ac), Arial, Helvetica, sans-serif;
+	  font-size:35px;
+    padding: 10px;
+    font-weight: bold;
+    border:none;
+  }
+  .navAC {
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    top:0%;
+    width: 100%;
+    margin-left: 0%;
+    z-index: 20;
+    background-color: var(--bg-color-ac);
+  }
+
+  .modeButtonAC:hover {
+    opacity: 0.5;
+  }
+
+  .modeButtonAC:hover {
+    opacity: 0.5;
+  }
+
+  .modeButtonAC:active {
+    position:relative;
+    top:1px;
   }
   
