@@ -21,6 +21,7 @@ export default class Snow extends Component {
   render() {
     return (
         <div>
+            mocked snow yo
         </div>
       );
   };

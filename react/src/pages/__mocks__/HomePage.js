@@ -40,7 +40,7 @@ class HomePage extends Component {
       onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
     <img src="/image/Ron.jpg" alt="Ron Chiu on an image carousel"
       onMouseOver={e => (e.currentTarget.src = RonHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
+      onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,2
     <img src="/image/Xu.jpg" alt="Xu Han on an image carousel"
       onMouseOver={e => (e.currentTarget.src = XuHover)}
       onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>

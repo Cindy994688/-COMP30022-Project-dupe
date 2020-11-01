@@ -1,46 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`it renders correctly 1`] = `
+exports[`it changes colour mode when access mode is clicked 1`] = `
 <div
-  className="fullPage"
+  className="fullPageAC"
 >
   <div
-    className="banner jumbotron"
+    name="top"
   >
     <div
-      className="maintitle"
+      className="banner jumbotron"
     >
-      <h1>
-        SWEN90016 
-      </h1>
       <div
-        id="subheading"
+        className="borderTitleAC"
       >
-        Group CRXMM
+        <div
+          className="maintitleAC"
+        >
+          <h1>
+            CRXMM 
+          </h1>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="buttonBox"
-  >
-    <button
-      className="modeButton"
-      onClick={[Function]}
-    >
-      Set Default Mode
-    </button>
-    <button
-      className="modeButton"
-      onClick={[Function]}
-    >
-      Set Accessibility Mode
-    </button>
-    <button
-      className="modeButton"
-      onClick={[Function]}
-    >
-      Set Dark Mode
-    </button>
   </div>
   <p>
       
@@ -85,7 +66,7 @@ exports[`it renders correctly 1`] = `
             >
               <div>
                 <img
-                  alt="Image of Xu Han on an image carousel"
+                  alt="Xu Han on an image carousel"
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
                   src="/image/Xu.jpg"
@@ -102,7 +83,7 @@ exports[`it renders correctly 1`] = `
             >
               <div>
                 <img
-                  alt="Image of Chao-Wei Chiang on an image carousel"
+                  alt="Chao-Wei Chiang on an image carousel"
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
                   src="/image/ChaoWei.jpg"
@@ -119,7 +100,7 @@ exports[`it renders correctly 1`] = `
             >
               <div>
                 <img
-                  alt="Image of Meng-Yan Hou on an image carousel"
+                  alt="Meng-Yan Hou on an image carousel"
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
                   src="/image/Mengyan.jpg"
@@ -136,7 +117,7 @@ exports[`it renders correctly 1`] = `
             >
               <div>
                 <img
-                  alt="Image of Mustafa Awni on an image carousel"
+                  alt="Mustafa Awni on an image carousel"
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
                   src="/image/MustafaFullBody.jpg"
@@ -153,7 +134,7 @@ exports[`it renders correctly 1`] = `
             >
               <div>
                 <img
-                  alt="Image of Ron Chiu on an image carousel"
+                  alt="Ron Chiu on an image carousel"
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
                   src="/image/Ron.jpg"
@@ -170,7 +151,7 @@ exports[`it renders correctly 1`] = `
             >
               <div>
                 <img
-                  alt="Image of Xu Han on an image carousel"
+                  alt="Xu Han on an image carousel"
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
                   src="/image/Xu.jpg"
@@ -187,7 +168,7 @@ exports[`it renders correctly 1`] = `
             >
               <div>
                 <img
-                  alt="Image of Chao-Wei Chiang on an image carousel"
+                  alt="Chao-Wei Chiang on an image carousel"
                   onMouseLeave={[Function]}
                   onMouseOver={[Function]}
                   src="/image/ChaoWei.jpg"
@@ -236,13 +217,2017 @@ exports[`it renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="divider"
+    className="dividerAC inFront"
   >
     <div
-      className="dividerTitleSmall"
+      className="dividerTitleSmallAC inFront"
     >
-      <h1>
-         - Harry - Ron - Mustafa - Kelly - Zoe -
+      <h1
+        className="inFront"
+      >
+        - Harry - Ron - Mustafa - Kelly - Zoe -
+      </h1>
+    </div>
+  </div>
+  <div
+    className="punkAC"
+  >
+    <Image
+      source="/image/logo.jpg"
+      style={
+        Object {
+          "height": 107.9,
+          "width": 291.5,
+        }
+      }
+    />
+  </div>
+  <div
+    className="aboutTriangleAC"
+    id="snowHolder"
+  >
+    <div
+      className="snowHolderAC"
+    />
+    <div
+      to="intro"
+    >
+      <div
+        className="aboutTriangleAC"
+      >
+        <div
+          className="introAC quotebox"
+        >
+          <div
+            className="quote1AC"
+          >
+            “
+          </div>
+          <div
+            className="quoteAC"
+          >
+            Hi, this is CRXMM. We are a team of 5 from the University of Melbourne. While we have different backgrounds, different passions, and are even in different timezones, we are in unity. As individuals we are strong, but together we are incredible.
+          </div>
+          <div
+            className="quote2AC"
+          >
+            "
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    to="project"
+  >
+    <div
+      className="ourProject"
+    >
+      <div
+        className="solidAC"
+      >
+        <br />
+      </div>
+      <div
+        className="titleAC"
+      >
+         Our Project 
+      </div>
+      <div
+        className="solid2AC"
+      >
+        <br />
+      </div>
+      <div
+        className="subAC"
+      >
+         Beth’s Beauty - Your best beauty services 
+      </div>
+      <div
+        className="buttondivAC"
+      />
+      <div>
+          
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col textExpAC"
+        >
+          In this project, we help Beth, a local business owner of beauty care services in Melbourne, build the e-commerce website for her business. It is expected that the system can not just make the appointment procedure automation but also help promote the business to different regions.
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="first page"
+            className="pictureform1"
+            onClick={[Function]}
+            src="/image/page0.png"
+          />
+           
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <img
+          alt="second page"
+          className="pictureform4"
+          onClick={[Function]}
+          src="/image/page1.png"
+        />
+        <div
+          className="col"
+        >
+          <img
+            alt="second page"
+            className="pictureform2"
+            onClick={[Function]}
+            src="/image/page2.png"
+          />
+          <img
+            alt="fourth page"
+            className="pictureform2"
+            onClick={[Function]}
+            src="/image/page3.png"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="third page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page4.png"
+          />
+           
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="third page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page5.png"
+          />
+           
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="fourth page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page6.png"
+          />
+           
+        </div>
+        <div
+          className="col textEnd"
+        >
+          <p>
+            Team roles:
+          </p>
+          <p>
+             Project Manager - Kelly
+          </p>
+          <p>
+             Risk Manager - Hsin-Jung
+          </p>
+          <p>
+            Test Manager - Mustafa
+          </p>
+          <p>
+            Developer - Chao-Wei and Zoe
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="solidAC"
+  >
+    <br />
+  </div>
+  <div
+    className="titleAC"
+    id="whoweare"
+  >
+    Who we are
+  </div>
+  <div
+    className="solid2AC"
+  >
+    <br />
+  </div>
+  <div
+    name="ChaoWei"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/ChaoWei.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameAC"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivAC"
+          >
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Ron"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Ron.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameAC"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivAC"
+          >
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Mustafa"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Mustafa.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameAC"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivAC"
+          >
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Xu"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Xu.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameAC"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivAC"
+          >
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Mengyan"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Mengyan.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameAC"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+            <div
+              className="bioTextAC"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivAC"
+          >
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnAC btn-primaryAC buttonAC"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div
+    className="getInTouchHeaderAC"
+  >
+    Contact Us
+  </div>
+  <div
+    name="contactUs"
+  >
+    <div>
+      <div
+        className="contactAC"
+      >
+        <br />
+        <br />
+        <div
+          className="bioTextStableAC"
+        >
+          If you are interested in any of the projects or information you see on this page, please contact us below, or email us directly through one of the email addresses listed in our profiles. We look forward to hearing from you!  
+          <p />
+           
+        </div>
+        <form
+          action="/email"
+          id="contact-form"
+          method="POST"
+          onSubmit={[Function]}
+        >
+          <div>
+            <div
+              className="bioTextContactAC"
+            >
+              <label
+                htmlFor="name"
+              >
+                Name
+              </label>
+            </div>
+            <input
+              className="form-controlAC contactFormAC"
+              onChange={[Function]}
+              placeholder="Enter Name"
+              type="text"
+              value=""
+            />
+          </div>
+          <div>
+            <div
+              className="bioTextContactAC"
+            >
+              <label
+                htmlFor="exampleInputEmail1"
+              >
+                Email address
+              </label>
+            </div>
+            <input
+              aria-describedby="emailHelp"
+              className="contactFormAC"
+              onChange={[Function]}
+              placeholder="Enter Email"
+              type="email"
+              value=""
+            />
+          </div>
+          <div>
+            <div
+              className="bioTextContactAC"
+            >
+              <label
+                htmlFor="message"
+              >
+                Message
+              </label>
+            </div>
+            <div>
+              <textarea
+                className="messageFormAC"
+                onChange={[Function]}
+                placeholder="Enter Message"
+                rows="5"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            className="btnAC btn-primaryAC buttonsubmitAC"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    className="footerAC"
+  >
+    <p>
+      last edited: 30/10/2020
+    </p>
+  </div>
+  <div
+    className="buttonBox footerAC"
+  >
+    <button
+      className="modeButtonAC"
+      onClick={[Function]}
+      value=""
+    >
+      Set Default Mode
+    </button>
+    <button
+      className="modeButtonAC"
+      onClick={[Function]}
+      value="AC"
+    >
+      Set Accessibility Mode
+    </button>
+    <button
+      className="modeButtonAC"
+      onClick={[Function]}
+      value="Dark"
+    >
+      Set Dark Mode
+    </button>
+    <button
+      className="modeButtonAC"
+      onClick={[Function]}
+      testID="login-btn"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;
+
+exports[`it changes colour mode when dark mode is clicked 1`] = `
+<div
+  className="fullPageDark"
+>
+  <div
+    name="top"
+  >
+    <div
+      className="banner jumbotron"
+    >
+      <div
+        className="borderTitleDark"
+      >
+        <div
+          className="maintitleDark"
+        >
+          <h1>
+            CRXMM 
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+      
+  </p>
+  <div
+    className="alice"
+  >
+    <div
+      className="alice-carousel"
+    >
+      <div>
+        <div
+          className="alice-carousel__wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "height": false,
+              "paddingLeft": "0px",
+              "paddingRight": "0px",
+              "transition": false,
+            }
+          }
+        >
+          <ul
+            className="alice-carousel__stage"
+            style={
+              Object {
+                "height": undefined,
+                "transform": "translate3d(0px, 0, 0)",
+                "transition": "transform 0ms ",
+              }
+            }
+          >
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Xu Han on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Xu.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item __active"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Chao-Wei Chiang on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/ChaoWei.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Meng-Yan Hou on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Mengyan.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Mustafa Awni on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/MustafaFullBody.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Ron Chiu on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Ron.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Xu Han on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Xu.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Chao-Wei Chiang on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/ChaoWei.jpg"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul
+        className="alice-carousel__dots"
+      >
+        <li
+          className="alice-carousel__dots-item __active"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+      </ul>
+      <div
+        className="alice-carousel__play-btn"
+      >
+        <div
+          className="alice-carousel__play-btn-wrapper"
+        >
+          <div
+            className="alice-carousel__play-btn-item __pause"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="dividerDark inFront"
+  >
+    <div
+      className="dividerTitleSmallDark inFront"
+    >
+      <h1
+        className="inFront"
+      >
+        - Harry - Ron - Mustafa - Kelly - Zoe -
+      </h1>
+    </div>
+  </div>
+  <div
+    className="punkDark"
+  >
+    <Image
+      source="/image/logo.jpg"
+      style={
+        Object {
+          "height": 107.9,
+          "width": 291.5,
+        }
+      }
+    />
+  </div>
+  <div
+    className="aboutTriangleDark"
+    id="snowHolder"
+  >
+    <div
+      className="snowHolderDark"
+    />
+    <div
+      to="intro"
+    >
+      <div
+        className="aboutTriangleDark"
+      >
+        <div
+          className="introDark quotebox"
+        >
+          <div
+            className="quote1Dark"
+          >
+            “
+          </div>
+          <div
+            className="quoteDark"
+          >
+            Hi, this is CRXMM. We are a team of 5 from the University of Melbourne. While we have different backgrounds, different passions, and are even in different timezones, we are in unity. As individuals we are strong, but together we are incredible.
+          </div>
+          <div
+            className="quote2Dark"
+          >
+            "
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    to="project"
+  >
+    <div
+      className="ourProject"
+    >
+      <div
+        className="solidDark"
+      >
+        <br />
+      </div>
+      <div
+        className="titleDark"
+      >
+         Our Project 
+      </div>
+      <div
+        className="solid2Dark"
+      >
+        <br />
+      </div>
+      <div
+        className="subDark"
+      >
+         Beth’s Beauty - Your best beauty services 
+      </div>
+      <div
+        className="buttondivDark"
+      />
+      <div>
+          
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col textExpDark"
+        >
+          In this project, we help Beth, a local business owner of beauty care services in Melbourne, build the e-commerce website for her business. It is expected that the system can not just make the appointment procedure automation but also help promote the business to different regions.
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="first page"
+            className="pictureform1"
+            onClick={[Function]}
+            src="/image/page0.png"
+          />
+           
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <img
+          alt="second page"
+          className="pictureform4"
+          onClick={[Function]}
+          src="/image/page1.png"
+        />
+        <div
+          className="col"
+        >
+          <img
+            alt="second page"
+            className="pictureform2"
+            onClick={[Function]}
+            src="/image/page2.png"
+          />
+          <img
+            alt="fourth page"
+            className="pictureform2"
+            onClick={[Function]}
+            src="/image/page3.png"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="third page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page4.png"
+          />
+           
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="third page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page5.png"
+          />
+           
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="fourth page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page6.png"
+          />
+           
+        </div>
+        <div
+          className="col textEnd"
+        >
+          <p>
+            Team roles:
+          </p>
+          <p>
+             Project Manager - Kelly
+          </p>
+          <p>
+             Risk Manager - Hsin-Jung
+          </p>
+          <p>
+            Test Manager - Mustafa
+          </p>
+          <p>
+            Developer - Chao-Wei and Zoe
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="solidDark"
+  >
+    <br />
+  </div>
+  <div
+    className="titleDark"
+    id="whoweare"
+  >
+    Who we are
+  </div>
+  <div
+    className="solid2Dark"
+  >
+    <br />
+  </div>
+  <div
+    name="ChaoWei"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/ChaoWei.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameDark"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivDark"
+          >
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Ron"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Ron.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameDark"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivDark"
+          >
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Mustafa"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Mustafa.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameDark"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivDark"
+          >
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Xu"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Xu.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameDark"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivDark"
+          >
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    name="Mengyan"
+  >
+    <div
+      className="profile"
+    >
+      <div
+        className="profileRow"
+      >
+        <div
+          className="profileImage"
+        >
+          <Image
+            source="/image/Mengyan.jpg"
+            style={
+              Object {
+                "borderRadius": 150,
+                "height": 300,
+                "width": 300,
+              }
+            }
+          />
+          <div
+            className="profileNameDark"
+          >
+            
+          </div>
+        </div>
+        <div
+          className="profileColumn"
+        >
+          <div
+            className="profileInfo"
+          >
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+            <div
+              className="bioTextDark"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondivDark"
+          >
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btnDark btn-primaryDark buttonDark"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div
+    className="getInTouchHeaderDark"
+  >
+    Contact Us
+  </div>
+  <div
+    name="contactUs"
+  >
+    <div>
+      <div
+        className="contactDark"
+      >
+        <br />
+        <br />
+        <div
+          className="bioTextStableDark"
+        >
+          If you are interested in any of the projects or information you see on this page, please contact us below, or email us directly through one of the email addresses listed in our profiles. We look forward to hearing from you!  
+          <p />
+           
+        </div>
+        <form
+          action="/email"
+          id="contact-form"
+          method="POST"
+          onSubmit={[Function]}
+        >
+          <div>
+            <div
+              className="bioTextContactDark"
+            >
+              <label
+                htmlFor="name"
+              >
+                Name
+              </label>
+            </div>
+            <input
+              className="form-controlDark contactFormDark"
+              onChange={[Function]}
+              placeholder="Enter Name"
+              type="text"
+              value=""
+            />
+          </div>
+          <div>
+            <div
+              className="bioTextContactDark"
+            >
+              <label
+                htmlFor="exampleInputEmail1"
+              >
+                Email address
+              </label>
+            </div>
+            <input
+              aria-describedby="emailHelp"
+              className="contactFormDark"
+              onChange={[Function]}
+              placeholder="Enter Email"
+              type="email"
+              value=""
+            />
+          </div>
+          <div>
+            <div
+              className="bioTextContactDark"
+            >
+              <label
+                htmlFor="message"
+              >
+                Message
+              </label>
+            </div>
+            <div>
+              <textarea
+                className="messageFormDark"
+                onChange={[Function]}
+                placeholder="Enter Message"
+                rows="5"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            className="btnDark btn-primaryDark buttonsubmitDark"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    className="footerDark"
+  >
+    <p>
+      last edited: 30/10/2020
+    </p>
+  </div>
+  <div
+    className="buttonBox footerDark"
+  >
+    <button
+      className="modeButtonDark"
+      onClick={[Function]}
+      value=""
+    >
+      Set Default Mode
+    </button>
+    <button
+      className="modeButtonDark"
+      onClick={[Function]}
+      value="AC"
+    >
+      Set Accessibility Mode
+    </button>
+    <button
+      className="modeButtonDark"
+      onClick={[Function]}
+      value="Dark"
+    >
+      Set Dark Mode
+    </button>
+    <button
+      className="modeButtonDark"
+      onClick={[Function]}
+      testID="login-btn"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;
+
+exports[`it renders correctly 1`] = `
+<div
+  className="fullPage"
+>
+  <div
+    name="top"
+  >
+    <div
+      className="banner jumbotron"
+    >
+      <div
+        className="borderTitle"
+      >
+        <div
+          className="maintitle"
+        >
+          <h1>
+            CRXMM 
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+      
+  </p>
+  <div
+    className="alice"
+  >
+    <div
+      className="alice-carousel"
+    >
+      <div>
+        <div
+          className="alice-carousel__wrapper"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "height": false,
+              "paddingLeft": "0px",
+              "paddingRight": "0px",
+              "transition": false,
+            }
+          }
+        >
+          <ul
+            className="alice-carousel__stage"
+            style={
+              Object {
+                "height": undefined,
+                "transform": "translate3d(0px, 0, 0)",
+                "transition": "transform 0ms ",
+              }
+            }
+          >
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Xu Han on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Xu.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item __active"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Chao-Wei Chiang on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/ChaoWei.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Meng-Yan Hou on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Mengyan.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Mustafa Awni on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/MustafaFullBody.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Ron Chiu on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Ron.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Xu Han on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/Xu.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="alice-carousel__stage-item"
+              style={
+                Object {
+                  "width": "0px",
+                }
+              }
+            >
+              <div>
+                <img
+                  alt="Chao-Wei Chiang on an image carousel"
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  src="/image/ChaoWei.jpg"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul
+        className="alice-carousel__dots"
+      >
+        <li
+          className="alice-carousel__dots-item __active"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+        <li
+          className="alice-carousel__dots-item"
+          onClick={[Function]}
+        />
+      </ul>
+      <div
+        className="alice-carousel__play-btn"
+      >
+        <div
+          className="alice-carousel__play-btn-wrapper"
+        >
+          <div
+            className="alice-carousel__play-btn-item __pause"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="divider inFront"
+  >
+    <div
+      className="dividerTitleSmall inFront"
+    >
+      <h1
+        className="inFront"
+      >
+        - Harry - Ron - Mustafa - Kelly - Zoe -
       </h1>
     </div>
   </div>
@@ -260,26 +2245,60 @@ exports[`it renders correctly 1`] = `
     />
   </div>
   <div
-    className="intro"
+    className="aboutTriangle"
+    id="snowHolder"
   >
     <div
-      className="title"
-      id="intro"
-    >
-      Intro
-    </div>
-    <p>
-      Hi, this is CRXMM, we are a team of 5 from the University of Melbourne. While we have different backgrounds, different passions, and are even in different timezones, we are in unity. We believe that as individuals we are strong, but together we are incredible.
-    </p>
-  </div>
-  <div>
+      className="snowHolder"
+    />
     <div
-      className="topTriangle thirdColor"
+      to="intro"
     >
       <div
-        className="intro title"
+        className="aboutTriangle"
+      >
+        <div
+          className="intro quotebox"
+        >
+          <div
+            className="quote1"
+          >
+            “
+          </div>
+          <div
+            className="quote"
+          >
+            Hi, this is CRXMM. We are a team of 5 from the University of Melbourne. While we have different backgrounds, different passions, and are even in different timezones, we are in unity. As individuals we are strong, but together we are incredible.
+          </div>
+          <div
+            className="quote2"
+          >
+            "
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    to="project"
+  >
+    <div
+      className="ourProject"
+    >
+      <div
+        className="solid"
+      >
+        <br />
+      </div>
+      <div
+        className="title"
       >
          Our Project 
+      </div>
+      <div
+        className="solid2"
+      >
+        <br />
       </div>
       <div
         className="sub"
@@ -288,24 +2307,122 @@ exports[`it renders correctly 1`] = `
       </div>
       <div
         className="buttondiv"
-      >
-        <button
-          className="btn btn-primary button"
-          onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
-          type="submit"
-        >
-          learn about our project
-        </button>
-      </div>
+      />
       <div>
           
       </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col textExp"
+        >
+          In this project, we help Beth, a local business owner of beauty care services in Melbourne, build the e-commerce website for her business. It is expected that the system can not just make the appointment procedure automation but also help promote the business to different regions.
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="first page"
+            className="pictureform1"
+            onClick={[Function]}
+            src="/image/page0.png"
+          />
+           
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <img
+          alt="second page"
+          className="pictureform4"
+          onClick={[Function]}
+          src="/image/page1.png"
+        />
+        <div
+          className="col"
+        >
+          <img
+            alt="second page"
+            className="pictureform2"
+            onClick={[Function]}
+            src="/image/page2.png"
+          />
+          <img
+            alt="fourth page"
+            className="pictureform2"
+            onClick={[Function]}
+            src="/image/page3.png"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="third page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page4.png"
+          />
+           
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="third page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page5.png"
+          />
+           
+        </div>
+        <div
+          className="col"
+        >
+           
+          <img
+            alt="fourth page"
+            className="pictureform3"
+            onClick={[Function]}
+            src="/image/page6.png"
+          />
+           
+        </div>
+        <div
+          className="col textEnd"
+        >
+          <p>
+            Team roles:
+          </p>
+          <p>
+             Project Manager - Kelly
+          </p>
+          <p>
+             Risk Manager - Hsin-Jung
+          </p>
+          <p>
+            Test Manager - Mustafa
+          </p>
+          <p>
+            Developer - Chao-Wei and Zoe
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
+  <div
+    className="solid"
+  >
+    <br />
   </div>
   <div
     className="title"
@@ -314,13 +2431,18 @@ exports[`it renders correctly 1`] = `
     Who we are
   </div>
   <div
-    className="topTriangle container"
+    className="solid2"
+  >
+    <br />
+  </div>
+  <div
+    name="ChaoWei"
   >
     <div
-      className="row"
+      className="profile"
     >
       <div
-        className="col-md-6"
+        className="profileRow"
       >
         <div
           className="profileImage"
@@ -341,70 +2463,70 @@ exports[`it renders correctly 1`] = `
             
           </div>
         </div>
-      </div>
-      <div
-        className="col-md-6"
-      >
         <div
-          className="bioText"
+          className="profileColumn"
         >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="buttondiv"
-        >
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftCVbutton"
-            type="submit"
+          <div
+            className="profileInfo"
           >
-            See CV
-          </button>
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftProjectbutton"
-            type="submit"
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondiv"
           >
-            See Personal Projects
-          </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="bottomTriangle bgSecondary container"
+    name="Ron"
   >
     <div
-      className="row"
+      className="profile"
     >
       <div
-        className="col-md-6"
+        className="profileRow"
       >
         <div
           className="profileImage"
@@ -425,70 +2547,70 @@ exports[`it renders correctly 1`] = `
             
           </div>
         </div>
-      </div>
-      <div
-        className="col-md-6"
-      >
         <div
-          className="bioText"
+          className="profileColumn"
         >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="buttondiv"
-        >
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="rightCVbutton"
-            type="submit"
+          <div
+            className="profileInfo"
           >
-            See CV
-          </button>
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="rightProjectbutton"
-            type="submit"
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondiv"
           >
-            See Personal Projects
-          </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="topTriangle container"
+    name="Mustafa"
   >
     <div
-      className="row"
+      className="profile"
     >
       <div
-        className="col-md-6"
+        className="profileRow"
       >
         <div
           className="profileImage"
@@ -509,70 +2631,70 @@ exports[`it renders correctly 1`] = `
             
           </div>
         </div>
-      </div>
-      <div
-        className="col-md-6"
-      >
         <div
-          className="bioText"
+          className="profileColumn"
         >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="buttondiv"
-        >
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftCVbutton"
-            type="submit"
+          <div
+            className="profileInfo"
           >
-            See CV
-          </button>
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftProjectbutton"
-            type="submit"
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondiv"
           >
-            See Personal Projects
-          </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="bottomTriangle bgSecondary container"
+    name="Xu"
   >
     <div
-      className="row"
+      className="profile"
     >
       <div
-        className="col-md-6"
+        className="profileRow"
       >
         <div
           className="profileImage"
@@ -593,70 +2715,70 @@ exports[`it renders correctly 1`] = `
             
           </div>
         </div>
-      </div>
-      <div
-        className="col-md-6"
-      >
         <div
-          className="bioText"
+          className="profileColumn"
         >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="buttondiv"
-        >
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="rightCVbutton"
-            type="submit"
+          <div
+            className="profileInfo"
           >
-            See CV
-          </button>
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="rightProjectbutton"
-            type="submit"
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondiv"
           >
-            See Personal Projects
-          </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="rightProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="topTriangle container"
+    name="Mengyan"
   >
     <div
-      className="row"
+      className="profile"
     >
       <div
-        className="col-md-6"
+        className="profileRow"
       >
         <div
           className="profileImage"
@@ -677,156 +2799,206 @@ exports[`it renders correctly 1`] = `
             
           </div>
         </div>
-      </div>
-      <div
-        className="col-md-6"
-      >
         <div
-          className="bioText"
+          className="profileColumn"
         >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-        <div
-          className="bioText"
-        >
-          
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="buttondiv"
-        >
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftCVbutton"
-            type="submit"
+          <div
+            className="profileInfo"
           >
-            See CV
-          </button>
-          <button
-            className="btn btn-primary button"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftProjectbutton"
-            type="submit"
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+            <div
+              className="bioText"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="buttondiv"
           >
-            See Personal Projects
-          </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftCVbutton"
+              type="submit"
+            >
+              See CV
+            </button>
+            <button
+              className="btn btn-primary button"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              testID="leftProjectbutton"
+              type="submit"
+            >
+              See Personal Projects
+            </button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
+  </div>
+  <div>
+      
   </div>
   <div
     className="getInTouchHeader"
   >
     Contact Us
   </div>
-  <div>
-    <div
-      className="contact"
-    >
+  <div
+    name="contactUs"
+  >
+    <div>
       <div
-        className="bioTextStable"
+        className="contact"
       >
-        If you are interested in any of the projects or information you see on this page, please contact us below, or email us directly through one of the email addresses listed in our profiles. We look forward to hearing from you!  
-        <p />
-         
-      </div>
-      <form
-        action="/email"
-        id="contact-form"
-        method="POST"
-        onSubmit={[Function]}
-      >
-        <div>
-          <div
-            className="bioTextContact"
-          >
-            <label
-              htmlFor="name"
-            >
-              Name
-            </label>
-          </div>
-          <input
-            className="form-control contactForm"
-            onChange={[Function]}
-            placeholder="Enter Name"
-            type="text"
-            value=""
-          />
+        <br />
+        <br />
+        <div
+          className="bioTextStable"
+        >
+          If you are interested in any of the projects or information you see on this page, please contact us below, or email us directly through one of the email addresses listed in our profiles. We look forward to hearing from you!  
+          <p />
+           
         </div>
-        <div>
-          <div
-            className="bioTextContact"
-          >
-            <label
-              htmlFor="exampleInputEmail1"
-            >
-              Email address
-            </label>
-          </div>
-          <input
-            aria-describedby="emailHelp"
-            className="contactForm"
-            onChange={[Function]}
-            placeholder="Enter Email"
-            type="email"
-            value=""
-          />
-        </div>
-        <div>
-          <div
-            className="bioTextContact"
-          >
-            <label
-              htmlFor="message"
-            >
-              Message
-            </label>
-          </div>
+        <form
+          action="/email"
+          id="contact-form"
+          method="POST"
+          onSubmit={[Function]}
+        >
           <div>
-            <textarea
-              className="messageForm"
+            <div
+              className="bioTextContact"
+            >
+              <label
+                htmlFor="name"
+              >
+                Name
+              </label>
+            </div>
+            <input
+              className="form-control contactForm"
               onChange={[Function]}
-              placeholder="Enter Message"
-              rows="5"
+              placeholder="Enter Name"
+              type="text"
               value=""
             />
           </div>
-        </div>
-        <button
-          className="btn btn-primary buttonsubmit"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
+          <div>
+            <div
+              className="bioTextContact"
+            >
+              <label
+                htmlFor="exampleInputEmail1"
+              >
+                Email address
+              </label>
+            </div>
+            <input
+              aria-describedby="emailHelp"
+              className="contactForm"
+              onChange={[Function]}
+              placeholder="Enter Email"
+              type="email"
+              value=""
+            />
+          </div>
+          <div>
+            <div
+              className="bioTextContact"
+            >
+              <label
+                htmlFor="message"
+              >
+                Message
+              </label>
+            </div>
+            <div>
+              <textarea
+                className="messageForm"
+                onChange={[Function]}
+                placeholder="Enter Message"
+                rows="5"
+                value=""
+              />
+            </div>
+          </div>
+          <button
+            className="btn btn-primary buttonsubmit"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   </div>
   <div
     className="footer"
   >
     <p>
-      last edited: 21/10/2020
+      last edited: 30/10/2020
     </p>
+  </div>
+  <div
+    className="buttonBox footer"
+  >
+    <button
+      className="modeButton"
+      onClick={[Function]}
+      value=""
+    >
+      Set Default Mode
+    </button>
+    <button
+      className="modeButton"
+      onClick={[Function]}
+      value="AC"
+    >
+      Set Accessibility Mode
+    </button>
+    <button
+      className="modeButton"
+      onClick={[Function]}
+      value="Dark"
+    >
+      Set Dark Mode
+    </button>
+    <button
+      className="modeButton"
+      onClick={[Function]}
+      testID="login-btn"
+    >
+      Login
+    </button>
   </div>
 </div>
 `;
