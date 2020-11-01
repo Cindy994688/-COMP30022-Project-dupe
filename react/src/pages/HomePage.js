@@ -186,10 +186,10 @@ render () {
         </div>
         <div className = 'rightNav'>
 
-          <DarkModeToggle className = 'elevation' onChange={this.setDarkMode} checked={dark} size={80}/>
+          {!this.props.noDarkModeToggle && <DarkModeToggle className = 'elevation' onChange={this.setDarkMode} checked={dark} size={80}/>}
 
           <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setAccessibilityMode}>{accessibilityMode}</button>
-          <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
+          <button className = {"modeButton" + this.state.colourMode} testID="login-btn" onClick={this.toLogin}>Login</button>
         </div>
 
 
