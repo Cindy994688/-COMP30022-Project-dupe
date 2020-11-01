@@ -166,7 +166,7 @@ render () {
       <div className = {"fullPage" + this.state.colourMode}>
 
 
-      <div className = 'nav'>
+      <div className = {'nav'+this.state.colourMode}>
         <div className = 'leftNav'>
           <Link activeClass="active" className={"modeButtonMain" + this.state.colourMode} to="top" spy={true} smooth={true} duration={500} offset={0}>CRXMM</Link>
           <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="intro" spy={true} smooth={true} duration={500} offset={60}>Intro</Link>

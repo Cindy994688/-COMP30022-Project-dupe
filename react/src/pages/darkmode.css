@@ -70,14 +70,14 @@
     font-family:var(--title-font), 'Times New Roman', Times, serif;
     color: var(--fifth-color-dark);
     font-size: 35px;
-    border: 2px double white;
+    /*border: 2px double white;*/
     text-align: center;
     background-image: url('clientbannertint.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    z-index: 200;
+    z-index: 19;
 
     height: 12em;
     padding-bottom: 10%;
@@ -157,7 +157,7 @@
     margin-left: 30px;
     margin-right: auto;
     margin-top:15%;
-    z-index: 80;
+    z-index: 19;
     transform: translateY(-10em);
     position: relative;
   }
@@ -496,7 +496,7 @@
     justify-content: space-evenly;
   }
 
-  .modeButtonDark {
+  /*.modeButtonDark {
     box-shadow:inset 0px -3px 7px 0px var(--second-color-dark);
 	  background:linear-gradient(to bottom, var(--third-color-dark) 5%, var(--fifth-color-dark) 100%);
 	  background-color:white;
@@ -518,6 +518,7 @@
     position:relative;
     top:1px;
   }
+  */
 
   /*  yaehha */
 
@@ -693,4 +694,62 @@
 
   .snowHolderDark{
     position: relative;
+  }
+
+
+  .modeButtonDark {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+
+	  background-color:var(--bg-color-dark);
+
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color-dark);
+	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  font-size:20px;
+    padding: 15px;
+    padding-bottom: 0;
+    font-weight: bold;
+    /*margin-top: 10px;*/
+    border: none;
+  }
+
+  .modeButtonMainDark {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+	  background-color:var(--bg-color-dark);
+	  border-radius:3px;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color-dark);
+	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  font-size:35px;
+    padding: 10px;
+    font-weight: bold;
+    border:none;
+  }
+  .navDark {
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    top:0%;
+    width: 100%;
+    margin-left: 0%;
+    z-index: 20;
+    background-color: var(--bg-color-dark);
+  }
+
+  .modeButtonDark:hover {
+    opacity: 0.5;
+  }
+
+  .modeButtonMainDark:hover {
+    opacity: 0.5;
+  }
+
+  .modeButtonDark:active {
+    position:relative;
+    top:1px;
   }
