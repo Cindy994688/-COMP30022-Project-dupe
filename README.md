@@ -38,4 +38,4 @@ this folder as well.
 ## API
 Please refer to "API Documentation"
 
-
+This project is licensed under the terms of the MIT license.
