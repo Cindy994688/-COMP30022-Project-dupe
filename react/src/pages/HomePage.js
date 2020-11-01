@@ -269,7 +269,7 @@ class HomePage extends Component {
         {/* colour mode buttons */}
           
         <div className = {"buttonBox footer" + this.state.colourMode}>
-          <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
+          <button className = {"modeButton" + this.state.colourMode} testID="defaultStyle" value="" onClick={this.setColourMode}>Set Default Mode</button>
           <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
           <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
           <button className = {"modeButton" + this.state.colourMode} testID="login-btn" onClick={this.toLogin}>Login</button>

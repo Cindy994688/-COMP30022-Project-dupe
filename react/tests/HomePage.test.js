@@ -7,8 +7,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import HomePage from '../src/pages/HomePage';
 
-
-
 test('it renders correctly', () => {
     component = renderer.create(<HomePage noSnow={true}/>)
     let tree = component.toJSON();
@@ -30,11 +28,11 @@ test('it changes colour mode when dark mode is clicked', () => {
 test('it returns to normal mode from both colour modes', () => {
     component.root.findByProps({value:"AC"}).props.onClick({target:{value: "AC"}})
     let tree = component.toJSON();
-    component.root.findByProps({value:""}).props.onClick({target:{value: ""}});
+    component.root.findByProps({testID:"defaultStyle"}).props.onClick({target:{value: ""}});
     expect(tree).toMatchSnapshot();
     component.root.findByProps({value:"Dark"}).props.onClick({target:{value: "Dark"}});
     tree = component.toJSON();
-    component.root.findByProps({value:""}).props.onClick({target:{value: ""}});
+    component.root.findByProps({testID:"defaultStyle"}).props.onClick({target:{value: ""}});
     expect(tree).toMatchSnapshot();
 });
 
