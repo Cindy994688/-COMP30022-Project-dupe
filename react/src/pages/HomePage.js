@@ -15,12 +15,16 @@ import RonHover from './ronhover.png'
 import MusHover from './mushover.png'
 import XuHover from './xuhover.png'
 import MengHover from './menghover.png'
-import { Image } from 'react-native'
-import { Element } from 'react-scroll'
+import { Image } from 'react-native';
+import { Link, Element } from 'react-scroll';
+import DarkModeToggle from "react-dark-mode-toggle";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+
 
 /* Descr:
 This is the main "structure" of the entire site. Each section of code corresponds
- to a section on the main page of the website 
+ to a section on the main page of the website
 */
 
 
@@ -72,6 +76,47 @@ class HomePage extends Component {
     this.setState({colourMode: value});
   };
 
+  setDarkMode= () => {
+    console.log(this.state.colourMode);
+    if(this.state.colourMode === 'Dark'){
+      this.setState({colourMode: ""});
+    }
+    else{
+      this.setState({colourMode: 'Dark'});
+    }
+  };
+
+  setAccessibilityMode= () => {
+    console.log(this.state.colourMode);
+    if(this.state.colourMode === 'AC'){
+      this.setState({colourMode: ""});
+    }
+    else{
+      this.setState({colourMode: 'AC'});
+    }
+  };
+
+  accessibilityMode= () => {
+    console.log(this.state.colourMode);
+    if(this.state.colourMode === 'AC'){
+      return "Default Mode";
+    }
+    else{
+      return "Accessibility Mode";
+    }
+  };
+
+
+  dark= () => {
+    if(this.state.colourMode === 'Dark'){
+      return true;
+    }
+    else{
+      return false;
+    }
+  };
+
+
   componentDidMount = () => {
     let height = document.getElementById('snowHolder').offsetHeight
     console.log("The height I be readin: " + height)
@@ -105,10 +150,46 @@ class HomePage extends Component {
     color: '#8B008B'
   }
 
+  toggle = () => this.setState({dropdownOpen: true});
 
-  render () {
+
+
+render () {
+  const dark = this.dark();
+  const accessibilityMode = this.accessibilityMode();
+
+
+
+
+
     return (
       <div className = {"fullPage" + this.state.colourMode}>
+
+
+      <div className = 'nav'>
+        <div className = 'leftNav'>
+          <Link activeClass="active" className={"modeButtonMain" + this.state.colourMode} to="top" spy={true} smooth={true} duration={500} offset={0}>CRXMM</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="intro" spy={true} smooth={true} duration={500} offset={60}>Intro</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="project" spy={true} smooth={true} duration={500} offset={-60}>Project</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="ChaoWei" spy={true} smooth={true} duration={500} offset={-320}>Profiles</Link>
+          {/*
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Ron" spy={true} smooth={true} duration={500} offset={-60}>Ron</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mustafa" spy={true} smooth={true} duration={500} offset={-60}>Mustafa</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Xu" spy={true} smooth={true} duration={500} offset={-60}>Zoe</Link>
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="Mengyan" spy={true} smooth={true} duration={500} offset={-60}>Kelly</Link>*/}
+          <Link activeClass="active" className={"modeButton" + this.state.colourMode} to="contactUs" spy={true} smooth={true} duration={500} offset={-200}>Contact Us</Link>
+        </div>
+        <div className = 'rightNav'>
+
+          <DarkModeToggle className = 'elevation' onChange={this.setDarkMode} checked={dark} size={80}/>
+
+          <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setAccessibilityMode}>{accessibilityMode}</button>
+          <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
+        </div>
+
+
+      </div>
+
 
         <Element name="top">
 
@@ -179,13 +260,14 @@ class HomePage extends Component {
           <Image  source="/image/logo.jpg" style={{width: 291.5, height: 107.9}}/>
         </div>
 
+
         {/* introduction section */}
 
         <div id="snowHolder" className = {"aboutTriangle"+this.state.colourMode}>
           <div className = {"snowHolder"+this.state.colourMode}>
             {this.state.snowHeight != 0 && <Snow density={2} height={this.state.snowHeight}/>}
           </div>
-          <Element to="intro">
+          <Element name="intro">
             <div className = {"aboutTriangle"+this.state.colourMode}>
               <div className={"intro" + this.state.colourMode + " quotebox"}>
                 <div className = {"quote1"+ this.state.colourMode}>“</div>
@@ -197,7 +279,7 @@ class HomePage extends Component {
                   different timezones, we are in unity.
                   As individuals we are
                   strong, but together we are incredible.
-                </div>  
+                </div>
                 <div className = {"quote2"+ this.state.colourMode}>"</div>
               </div>
             </div>
@@ -206,13 +288,13 @@ class HomePage extends Component {
 
         {/* group project */}
 
-        <Element to="project">
-          <ToggleProj colourMode = {this.state.colourMode} />
-        </Element>
 
 
         {/* individual biographies */}
 
+      <Element name="project">
+        <ToggleProj colourMode = {this.state.colourMode} />
+      </Element>
         <div className={"solid"+this.state.colourMode}><br/></div>
 
         <div className={"title" + this.state.colourMode} id="whoweare">Who we are</div>
@@ -262,13 +344,7 @@ class HomePage extends Component {
         <div className= {"footer" + this.state.colourMode}><p>last edited: 30/10/2020</p></div>
 
         {/* colour mode buttons */}
-          
-        <div className = {"buttonBox footer" + this.state.colourMode}>
-          <button className = {"modeButton" + this.state.colourMode} value="" onClick={this.setColourMode}>Set Default Mode</button>
-          <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setColourMode}>Set Accessibility Mode</button>
-          <button className = {"modeButton" + this.state.colourMode} value="Dark" onClick={this.setColourMode}>Set Dark Mode</button>
-          <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
-        </div>
+
 
       </div>
 
