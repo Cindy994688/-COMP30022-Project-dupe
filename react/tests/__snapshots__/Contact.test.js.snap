@@ -5,6 +5,8 @@ exports[`it renders correctly 1`] = `
   <div
     className="contactundefined"
   >
+    <br />
+    <br />
     <div
       className="bioTextStableundefined"
     >

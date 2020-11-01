@@ -127,7 +127,7 @@ class Login extends React.Component{
               />
               <br /><br />
 
-              <button className = "modeButtonDark" onClick={this.handleSubmit}>Login</button>
+              <button className = "modeButtonDark" testID="submitButton" onClick={this.handleSubmit}>Login</button>
 
               </div>
 

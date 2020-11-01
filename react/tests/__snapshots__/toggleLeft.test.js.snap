@@ -1,159 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`it expands after the cv button is clicked 1`] = `
-Array [
-  <div
-    className="topTriangleundefined container"
-  >
-    <div
-      className="row"
-    >
-      <div
-        className="col-md-6"
-      >
-        <div
-          className="profileImage"
-        >
-          <Image
-            source="/image/ronchiu.jpg"
-            style={
-              Object {
-                "borderRadius": 150,
-                "height": 300,
-                "width": 300,
-              }
-            }
-          />
-          <div
-            className="profileNameundefined"
-          >
-            
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-md-6"
-      >
-        <div
-          className="bioTextundefined"
-        >
-          
-        </div>
-        <div
-          className="bioTextundefined"
-        >
-          
-        </div>
-        <div
-          className="bioTextundefined"
-        >
-          
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="buttondivundefined"
-        >
-          <button
-            className="btnundefined btn-primaryundefined buttonundefined"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftCVbutton"
-            type="submit"
-          >
-            See CV
-          </button>
-          <button
-            className="btnundefined btn-primaryundefined buttonundefined"
-            onClick={[Function]}
-            style={
-              Object {
-                "cursor": "pointer",
-              }
-            }
-            testID="leftProjectbutton"
-            type="submit"
-          >
-            See Personal Projects
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>,
-  <div
-    className="boxundefined"
-  >
-    <Image
-      source="/image/MengyanResume.jpg"
-      style={
-        Object {
-          "height": 900,
-          "width": 636,
-        }
-      }
-    />
-  </div>,
-]
-`;
-
-exports[`it expands after the project button is clicked 1`] = `
 <div
-  className="topTriangleundefined container"
+  className="profile"
 >
   <div
-    className="row"
+    className="profileRow"
   >
     <div
-      className="col-md-6"
+      className="profileImage"
+    >
+      <Image
+        source="/image/ronchiu.jpg"
+        style={
+          Object {
+            "borderRadius": 150,
+            "height": 300,
+            "width": 300,
+          }
+        }
+      />
+      <div
+        className="profileNameundefined"
+      >
+        
+      </div>
+    </div>
+    <div
+      className="profileColumn"
     >
       <div
-        className="profileImage"
+        className="profileInfo"
       >
-        <Image
-          source="/image/ronchiu.jpg"
-          style={
-            Object {
-              "borderRadius": 150,
-              "height": 300,
-              "width": 300,
-            }
-          }
-        />
         <div
-          className="profileNameundefined"
+          className="bioTextundefined"
+        >
+          
+        </div>
+        <div
+          className="bioTextundefined"
+        >
+          
+        </div>
+        <div
+          className="bioTextundefined"
         >
           
         </div>
       </div>
-    </div>
-    <div
-      className="col-md-6"
-    >
-      <div
-        className="bioTextundefined"
-      >
-        
-      </div>
-      <div
-        className="bioTextundefined"
-      >
-        
-      </div>
-      <div
-        className="bioTextundefined"
-      >
-        
-      </div>
-    </div>
-    <div
-      className="row"
-    >
       <div
         className="buttondivundefined"
       >
@@ -186,61 +80,160 @@ exports[`it expands after the project button is clicked 1`] = `
       </div>
     </div>
   </div>
+  <div
+    className="boxundefined"
+  >
+    <img
+      alt="ronchiuCV"
+      className="cvPhoto"
+      src="/image/ronchiuResume.jpg"
+    />
+  </div>
+</div>
+`;
+
+exports[`it expands after the project button is clicked 1`] = `
+<div
+  className="profile"
+>
+  <div
+    className="profileRow"
+  >
+    <div
+      className="profileImage"
+    >
+      <Image
+        source="/image/ronchiu.jpg"
+        style={
+          Object {
+            "borderRadius": 150,
+            "height": 300,
+            "width": 300,
+          }
+        }
+      />
+      <div
+        className="profileNameundefined"
+      >
+        
+      </div>
+    </div>
+    <div
+      className="profileColumn"
+    >
+      <div
+        className="profileInfo"
+      >
+        <div
+          className="bioTextundefined"
+        >
+          
+        </div>
+        <div
+          className="bioTextundefined"
+        >
+          
+        </div>
+        <div
+          className="bioTextundefined"
+        >
+          
+        </div>
+      </div>
+      <div
+        className="buttondivundefined"
+      >
+        <button
+          className="btnundefined btn-primaryundefined buttonundefined"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          testID="leftCVbutton"
+          type="submit"
+        >
+          See CV
+        </button>
+        <button
+          className="btnundefined btn-primaryundefined buttonundefined"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          testID="leftProjectbutton"
+          type="submit"
+        >
+          See Personal Projects
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="boxundefined"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="buttonBox"
+      />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`it renders correctly 1`] = `
 <div
-  className="topTriangleundefined container"
+  className="profile"
 >
   <div
-    className="row"
+    className="profileRow"
   >
     <div
-      className="col-md-6"
+      className="profileImage"
+    >
+      <Image
+        source="/image/ronchiu.jpg"
+        style={
+          Object {
+            "borderRadius": 150,
+            "height": 300,
+            "width": 300,
+          }
+        }
+      />
+      <div
+        className="profileNameundefined"
+      >
+        
+      </div>
+    </div>
+    <div
+      className="profileColumn"
     >
       <div
-        className="profileImage"
+        className="profileInfo"
       >
-        <Image
-          source="/image/ronchiu.jpg"
-          style={
-            Object {
-              "borderRadius": 150,
-              "height": 300,
-              "width": 300,
-            }
-          }
-        />
         <div
-          className="profileNameundefined"
+          className="bioTextundefined"
+        >
+          
+        </div>
+        <div
+          className="bioTextundefined"
+        >
+          
+        </div>
+        <div
+          className="bioTextundefined"
         >
           
         </div>
       </div>
-    </div>
-    <div
-      className="col-md-6"
-    >
-      <div
-        className="bioTextundefined"
-      >
-        
-      </div>
-      <div
-        className="bioTextundefined"
-      >
-        
-      </div>
-      <div
-        className="bioTextundefined"
-      >
-        
-      </div>
-    </div>
-    <div
-      className="row"
-    >
       <div
         className="buttondivundefined"
       >
