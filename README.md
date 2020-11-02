@@ -106,6 +106,8 @@ If you are using Heroku navigate to the settings section of your homepage, reave
     DB_NAME=<<mongoDB database-name>>
     EMAIL_PASSWORD=<<gmail password>>
     EMAIL=<<email address>>
+    SKIP_PREFLIGHT_CHECK=true
+    IS_HEROKU=1
 
 If you are not using Heroku instead look for the configuration variables section and set the above variables. 
 
