@@ -4,9 +4,9 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import HomePage from '../src/pages/HomePage';
+import HomePage from '../../src/pages/HomePage';
 
-jest.mock('../src/pages/HomePage');
+jest.mock('../../src/pages/HomePage');
 
 test('it renders correctly', () => {
     jest.mock('react-dark-mode-toggle');

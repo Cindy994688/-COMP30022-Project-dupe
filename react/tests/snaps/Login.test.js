@@ -4,7 +4,7 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Login from '../src/pages/Login';
+import Login from '../../src/pages/Login';
 
 test('it renders correctly', () => {
     component = renderer.create(<Login/>)

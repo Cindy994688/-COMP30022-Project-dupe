@@ -158,11 +158,13 @@ class Login extends React.Component{
 
             <div className = "buttonBox">
               <button
+              testID = "add-proj-btn"
               className = {"modeButtonDark"}
               onClick={this.toEdit}
               >Add Projects</button>
 
               <button
+              testID = "del-proj-btn"
               className = {"modeButtonDark"}
               onClick={this.toDelete}
               >Delete Projects</button>

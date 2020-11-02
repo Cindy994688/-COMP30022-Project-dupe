@@ -112,6 +112,7 @@ class EditProjects extends React.Component {
             <br />
 
             <button
+              testID="add-proj-submit"
               type="submit"
               className={"btn"+this.props.colourMode+ " btn-primary"+this.props.colourMode+ " button"+this.props.colourMode}
               style={{cursor:'pointer'}}

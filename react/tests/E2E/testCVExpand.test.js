@@ -5,7 +5,8 @@ test('E2E: CV expands when "show cv" button is clicked', async() => {
     headless:true,
   });
   const page = await puppet.newPage();
-  await page.goto(
+  await page.setDefaultNavigationTimeout(0); 
+  page.goto(
     'http://localhost:3000'
   );
   const button = page.waitForXPath("//button[@className='togglel']");
@@ -14,4 +15,4 @@ test('E2E: CV expands when "show cv" button is clicked', async() => {
   response = response ==null;
   console.log(response);
   expect(response).toBe(false)
-}, 100000);
+}, 1000000);
