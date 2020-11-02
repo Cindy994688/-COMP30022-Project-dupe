@@ -7,7 +7,7 @@ var transport = {
     host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
     port: 587,
     auth: {
-    user: 'potatopoweredportfolios@gmail.com',
+    user: process.env.EMAIL,
     pass: process.env.EMAIL_PASSWORD
   }
 }

@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const db = 'mongodb+srv://Snow:' + process.env.DB_PASSWORD + '@fire451.jxyew.mongodb.net/potato_powered?retryWrites=true&w=majority';
+
+// Edit the line below with your own connection string
+const db = 'mongodb+srv://' + process.env.DB_USERNAME +':' + process.env.DB_PASSWORD + '@fire451.jxyew.mongodb.net/' + process.env.DB_NAME + '?retryWrites=true&w=majority';
 
 const connectDB = async () => {
   try {

@@ -31,28 +31,31 @@ This is the main "structure" of the entire site. Each section of code correspond
 class HomePage extends Component {
 
   /*the contents of the image carousel*/
-  state = {
-    galleryItems: [
-    <img src="/image/ChaoWei.jpg" alt="Chao-Wei Chiang on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = ChaoHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
-    <img src="/image/Mengyan.jpg" alt="Meng-Yan Hou on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = MengHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
-    <img src="/image/MustafaFullBody.jpg" alt="Mustafa Awni on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = MusHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
-    <img src="/image/Ron.jpg" alt="Ron Chiu on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = RonHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
-    <img src="/image/Xu.jpg" alt="Xu Han on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = XuHover)}
-      onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
-     ].map((i) => <div key={i}>{i}</div>),
-     colourMode: "",
-     snowHeight: 0,
-  }
+  constructor(props) {
+    super(props)
+    this.state = {
+      galleryItems: [
+      <img src="/image/ChaoWei.jpg" alt="Chao-Wei Chiang on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = ChaoHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
+      <img src="/image/Mengyan.jpg" alt="Meng-Yan Hou on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = MengHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
+      <img src="/image/MustafaFullBody.jpg" alt="Mustafa Awni on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = MusHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
+      <img src="/image/Ron.jpg" alt="Ron Chiu on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = RonHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
+      <img src="/image/Xu.jpg" alt="Xu Han on an image carousel"
+        onMouseOver={e => (e.currentTarget.src = XuHover)}
+        onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
+      ].map((i) => <div key={i}>{i}</div>),
+      colourMode: "",
+      snowHeight: 0,
+    }
 
+}
   /* How to set different "colour modes" */
 
     // Keep the below definition, and always remember to provide a return to default option in the colour buttons
@@ -118,9 +121,11 @@ class HomePage extends Component {
 
 
   componentDidMount = () => {
-    let height = document.getElementById('snowHolder').offsetHeight
-    console.log("The height I be readin: " + height)
-    this.setState({snowHeight: height})
+    if (!this.props.noSnow) {
+      let height = document.getElementById('snowHolder').offsetHeight
+      console.log("The height I be readin: " + height)
+      this.setState({snowHeight: height})
+    }
   }
 
   toLogin = () => {
@@ -181,10 +186,10 @@ render () {
         </div>
         <div className = 'rightNav'>
 
-          <DarkModeToggle className = 'elevation' onChange={this.setDarkMode} checked={dark} size={80}/>
+          {!this.props.noDarkModeToggle && <DarkModeToggle className = 'elevation' onChange={this.setDarkMode} checked={dark} size={80}/>}
 
           <button className = {"modeButton" + this.state.colourMode} value="AC" onClick={this.setAccessibilityMode}>{accessibilityMode}</button>
-          <button className = {"modeButton" + this.state.colourMode} onClick={this.toLogin}>Login</button>
+          <button className = {"modeButton" + this.state.colourMode} testID="login-btn" onClick={this.toLogin}>Login</button>
         </div>
 
 
@@ -344,7 +349,6 @@ render () {
         <div className= {"footer" + this.state.colourMode}><p>last edited: 30/10/2020</p></div>
 
         {/* colour mode buttons */}
-
 
       </div>
 

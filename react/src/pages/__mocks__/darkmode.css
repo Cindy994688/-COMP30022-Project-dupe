@@ -1,0 +1,755 @@
+:root {
+  --bg-color-dark: #132743;
+  --second-color-dark: #dbedf3;
+  --third-color-dark: #686d76; /*#91C4F2 ;*/
+  --fourth-color-dark: #9ba4b4;  /*buttons  */
+  --fifth-color-dark: #394867;  /*buttons on hover */
+  --txt-color-dark: #f1f6f9; /*most text */
+
+  --title-font: 'Montserrat-Bold';
+  --subtitle-font: 'Lora';
+  --body-font: 'HindMadurai-Light';
+}
+
+/** {
+  box-sizing: border-box;
+}*/
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat-Bold'), url(./fonts/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: local('Lora'), url(./fonts/Lora.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HindMadurai-Light';
+  src: local('HindMadurai-Light'), url(./fonts/HindMadurai-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: local('Lato-Bold'), url(./fonts/Lato-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Junge-Regular';
+  src: local('Junge-Regular'), url(./fonts/Junge-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Trirong-ExtraLightItalic';
+  src: local('Trirong-ExtraLightItalic'), url(./fonts/Trirong-ExtraLightItalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lobster-Regular';
+  src: local('Lobster-Regular'), url(./fonts/Lobster-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Abel-Regular';
+  src: local('Abel-Regular'), url(./fonts/Abel-Regular.ttf) format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Noto';
+  src: local('Noto'), url(./fonts/NotoSerif-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Tinos';
+  src: local('Tinos'), url(./fonts/Tinos-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Kaushan';
+  src: local('Kaushan'), url(./fonts/KaushanScript-Regular.ttf) format('truetype');
+}
+
+.bannerDark {
+    font-family:var(--title-font), 'Times New Roman', Times, serif;
+    color: var(--fifth-color-dark);
+    font-size: 35px;
+    /*border: 2px double white;*/
+    text-align: center;
+    background-image: url('clientbannertint.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 19;
+
+    height: 12em;
+    padding-bottom: 10%;
+
+  }
+#subheadingDark{
+  margin-top:-5%;
+}
+  .punkDark {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75%;
+    margin-left: 75%;
+    z-index: 10;
+  }
+
+  .footerDark{
+    font-family: var(--main-font);
+    color: var(--txt-color-dark);
+    font-size: 15px;
+    text-align: center;
+    background-color: var(--third-color-dark);
+    margin-top: -20px;
+  }
+
+
+  #introDark{
+    margin-top:-10%;
+  }
+  #whoweareDark{}
+  .cvDark {
+    width : 90%;
+    height : 90%;
+  }
+.userskillsDark{
+  margin-top: -5%;
+}
+  .spaceDark {
+    padding: 10em inherit;
+  }
+
+
+.subDark{
+  font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+  /*text-shadow: none;*/
+  text-transform: none;
+  text-align: center;
+  padding-top:2em;
+  font-size: 35px;
+  margin-top:-1%;
+  color:var(--second-color-dark);
+}
+#ourprojectDark{
+  color:var(--bg-color-dark);
+}
+  .getInTouchHeaderDark {
+    padding: 40px;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: var(--third-color-dark);
+    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--txt-color-dark);
+    padding-top: 10%;
+    /*clip-path: polygon(0 0%, 100% 75%, 100% 100%, 0 100%);*/
+  }
+
+  .descrDark {
+    width: 800px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aliceDark {
+    margin-left: 30px;
+    margin-right: auto;
+    margin-top:15%;
+    z-index: 19;
+    transform: translateY(-10em);
+    position: relative;
+  }
+
+  .bottomTriangleDark{
+    clip-path: polygon(0 0%, 100% 25%, 100% 100%, 0 100%);
+    padding-top: 10%;
+    margin-top: -3%;
+  }
+
+  .topTriangleDark{
+    margin-top: 2%;
+  }
+
+  .thirdColorDark{
+    background-color: var(--third-color-dark);
+  }
+
+
+
+  .dividerTitleDark {
+    font-family: var(--body-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--second-color-dark);
+    font-size: 50px;
+    size: 200px;
+    text-align: center;
+    z-index:1;
+    /*text-shadow: 5px 5px var(--bg-color-dark);*/
+  }
+
+  .fullPageDark{
+    background-color: var(--bg-color-dark);
+  }
+
+  .groupPrDark{
+    background-color: var(--txt-color-dark);
+    font-size: 50px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 5em;
+    padding: 10em inherit;
+    /*border: 20px double var(--second-color-dark);*/
+    /*border-radius: 25px;*/
+
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+  }
+
+  .groupPrDark:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /*margin: 8px 10px 12px;*/
+  }
+
+  .gradient-button-3Dark {background-image: linear-gradient(to right, var(--third-color-dark) 0%, var(--third-color-dark) 15%, var(--second-color-dark) 100%)}
+  .gradient-button-3Dark:hover { background-position: right center; }
+
+  .titleDark{
+    font-family: var(--subtitle-font),'Trirong-ExtraLightItalic';
+    font-size: 50px;
+    size: 500px;
+    text-align: center;
+    color:var(--second-color-dark);
+
+  }
+  .groupPrTitleDark{
+    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
+    color: var(--bg-color-dark);
+    font-size: 0.5em;
+    size: 500px;
+    text-align: center;
+    transform: translateY(30px);
+
+  }
+
+  .bgSecondaryDark{
+    background-color: var(--third-color-dark);
+  }
+
+  .contactDark{
+    background-color: var(--third-color-dark);
+    padding-bottom: 3%;
+  }
+
+  .buttonsubmitDark{
+    margin-top:25px;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+    margin-left:35%;
+  }
+
+  .buttonDark{
+    margin-top:25px;
+    font-size: 20px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+    margin:1em;
+    padding:0.5em;
+    color:var(--second-color-dark);
+  }
+
+  .togglelDark{
+    margin-top:25px;
+
+    margin-left: 40%;
+    font-size: 20px;
+    width: 40%;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+  }
+  .buttondivDark{
+    width:30%;
+    margin: auto;
+  }
+
+
+
+  .btn-primaryDark, .btn-primaryDark:active, .btn-primaryDark.active, .btn-primaryDark:focus {
+    color: var(--bg-color-dark);
+    background-color: var(--fourth-color-dark);
+    border-color: var(--fourth-color-dark); /*set the color you want here*/
+}
+
+  .btn-primaryDark:hover, .open>.dropdown-toggle.btn-primary{
+    color: var(--second-color-dark);
+    background-color: var(--third-color-dark);
+    border-color: var(--text-color); /*set the color you want here*/
+}
+#introtextDark{margin-top:1em}
+
+  .contactFormDark{
+    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--txt-color-dark);
+    font-size: 20px;
+    border: 2px double black;
+    text-align: left;
+    background-color: var(--bg-color-dark);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20px;
+    margin-left: 32.5%;
+    width: 35%;
+    padding: 10em inherit;
+
+  }
+
+  .messageFormDark{
+    font-family: var(--body-font),"Abel-Regular", Helvetica, sans-serif;
+    color: var(--txt-color-dark);
+    font-size: 20px;
+    border: 2px double black;
+    text-align: left;
+    background-color: var(--bg-color-dark);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    margin-left: 32.5%;
+    width: 35%;
+    padding: 10em inherit;
+
+  }
+
+
+/*
+.button{
+  font-family: "Abel-Regular", "Helvetica", "sans-serif";
+  color: black;
+  font-size: 20px;
+  border: 2px double black;
+  text-align: left;
+  background-color: var(--fourth-color-dark)!important;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  margin-left: 9%;
+  width: 100px;
+  padding: 10em inherit;
+
+}*/
+
+  .profileNameDark{
+    font-family: var(--body-font),"Kaushan", 'Times New Roman', Times, serif;
+    color: var(--txt-color-dark);
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .profileImageDark{
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+  }
+
+  /*lets try a hover thingo*/
+
+
+  .contentDark {
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--text-color);
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 300px;
+    height: 300px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+  }
+
+  .boxDark {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .vertBoxDark {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-height:5%;
+
+  }
+
+  .bioTextStableDark {
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 25px;
+    width: 35%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    color: var(--txt-color-dark);
+    padding-left: 32.5%;
+  }
+
+
+  .bioTextContactDark {
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 25px;
+    /*width: 800px;*/
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    color: var(--txt-color-dark);
+    padding-left: 35%;
+    padding-right: 100px;
+  }
+
+  .bioTextDark {
+    font-family: var(--body-font), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 25px;
+    max-width: 800px;
+    /*display: inline-block;*/
+    vertical-align: middle;
+    text-align:center;
+    margin-left: 25%;
+    width:50%;
+
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translate(50px,-100px);*/
+    color: var(--txt-color-dark);
+    /*padding-left: 25px;*/
+    /*padding-right: 100px;*/
+  }
+
+  .dividerTitleSmallDark {
+    font-family: var(--subtitle-font), 'Kaushan', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--second-color-dark);
+    font-size: 30px;
+    size: 200px;
+    /*text-shadow: 5px 5px var(--bg-color-dark);*/
+    flex-shrink: 5;
+    align-self: center;
+    flex-basis: auto;
+  }
+
+
+
+  .groupPrButtonDark{
+    background-color: var(--third-color-dark);
+    font-size: 20px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 2px 2px black;
+    height: 200px;
+    width: 50px;
+    padding: 10em inherit;
+    /*border: 20px double var(--second-color-dark);*/
+    border-radius: 25px;
+
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 20px #eee;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+  }
+
+  .groupPrButtonDark:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /*margin: 8px 10px 12px;*/
+  }
+
+  .flexHorizDark {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .buttonBoxDark {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  /*.modeButtonDark {
+    box-shadow:inset 0px -3px 7px 0px var(--second-color-dark);
+	  background:linear-gradient(to bottom, var(--third-color-dark) 5%, var(--fifth-color-dark) 100%);
+	  background-color:white;
+	  border-radius:3px;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color-dark);
+	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  font-size:20px;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .modeButtonDark:hover {
+    background:linear-gradient(to bottom, var(--bg-color-dark) 5%, var(--txt-color-dark) 100%);
+    background-color:white;
+  }
+  .modeButtonDark:active {
+    position:relative;
+    top:1px;
+  }
+  */
+
+  /*  yaehha */
+
+  .maintitleDark{
+    font-family: var(--title-font), 'Times New Roman';
+    color: var(--background-color);
+
+    font-size: 4.5vw;
+
+    margin-left:auto;
+    margin-right:auto;
+
+  }
+
+  .borderTitleDark{
+    height: 40%;
+    /*background-color:var(--fifth-color);*/
+    border: 6px solid white;
+    width:60%;
+    position: absolute;
+    left: 20%;
+    top:25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dividerDark {
+    color: var(--bg-color-dark);
+    font-size: 25px;
+    /*border: 2px double black;*/
+    text-align: center;
+    background-color: var(--bg-color-dark);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*text-shadow: 2px 2px black;*/
+
+    padding: 10em inherit;
+    display: flex;
+    flex-direction: column;
+    margin-top: -52%;
+    padding-top: 50%;
+    padding-bottom: 7%;
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 85%);
+    z-index: 100;
+  }
+
+  .introDark {
+    text-align: center;
+    font-family: var(--subtitle-font), "Junge-Regular", Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--txt-color-dark);
+    margin-top: -25%;
+    padding-top:15%;
+    padding-bottom:9%;
+    background-color: var(--second-color-dark);
+  }
+
+  .quotebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .quoteDark{
+    width: 35%;
+    text-align: justify;
+    /*margin-left: 32.5%;*/
+    /*margin-right: auto;*/
+    margin-top: 7%;
+    /*position:absolute;*/
+    z-index: 3;
+    text-align: center;
+    font-family: var(--subtitle-font);
+    color: var(--bg-color-dark);
+    flex-shrink: 2;
+  }
+  .quote1Dark{
+    margin-top: -10%;
+    /*margin-left: 15%;*/
+    /*position:absolute;*/
+    z-index: 1;
+    color: var(--bg-color-dark);
+    font-size: 2000%;
+    font-family: var(--quote-font);
+    flex-shrink: 1;
+  }
+  .quote2Dark{
+    margin-top: 17%;
+    /*margin-left: 65%;*/
+    /*position:absolute;*/
+    z-index: 1;
+    color: var(--bg-color-dark);
+    font-size: 2000%;
+    font-family: var(--quote-font);
+    flex-shrink: 1;
+    max-height: 0.5em;
+  }
+
+  .solidDark {
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background:var(--second-color-dark);
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%;
+    border-radius: 10%;
+  }
+
+  .solid1Dark {
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background:var(--second-color-dark);
+    margin-top: 4%;
+    margin-top: 0%;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-radius: 10%;
+    transform: rotate(90deg);
+  }
+
+  .solid2Dark {
+    display: inline-block;
+    width: 30%;
+    height: 3px;
+    background:var(--second-color-dark);
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 0%;
+    border-radius: 10%;
+  }
+
+  .groupPrTitle{
+    font-family: var(--body-font), 'Trirong-ExtraLightItalic';
+    color: var(--bg-color);
+    font-size: 0.5em;
+    size: 500px;
+    text-align: center;
+    transform: translateY(30px);
+
+  }
+
+
+  .textExpDark{
+    text-align: center;
+    width:50%;
+    padding-top: 10%;
+    padding-left: 0%;
+    padding-right: 8%;
+    border: 0px double white;
+    color: var(--txt-color-dark);
+    font-family: var(--body-font);
+  }
+
+  /* James nonsense that will be dealt with later today :) */
+  .loginButtonDark {
+
+  }
+
+  .loginButtonDark:hover {
+
+  }
+  .loginButtonDark:active {
+
+  }
+
+  .textAreaDark {
+    resize: none;
+  }
+
+  .snowHolderDark{
+    position: relative;
+  }
+
+
+  .modeButtonDark {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+
+	  background-color:var(--bg-color-dark);
+
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color-dark);
+	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  font-size:20px;
+    padding: 15px;
+    padding-bottom: 0;
+    font-weight: bold;
+    /*margin-top: 10px;*/
+    border: none;
+  }
+
+  .modeButtonMainDark {
+    /*box-shadow:inset 0px -3px 7px 0px var(--second-color);*/
+	  background-color:var(--bg-color-dark);
+	  border-radius:3px;
+	  display:inline-block;
+	  cursor:pointer;
+	  color:var(--txt-color-dark);
+	  font-family:var(--title-font), Arial, Helvetica, sans-serif;
+	  font-size:35px;
+    padding: 10px;
+    font-weight: bold;
+    border:none;
+  }
+  .navDark {
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    top:0%;
+    width: 100%;
+    margin-left: 0%;
+    z-index: 20;
+    background-color: var(--bg-color-dark);
+  }
+
+  .modeButtonDark:hover {
+    opacity: 0.5;
+  }
+
+  .modeButtonMainDark:hover {
+    opacity: 0.5;
+  }
+
+  .modeButtonDark:active {
+    position:relative;
+    top:1px;
+  }
