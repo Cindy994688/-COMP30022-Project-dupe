@@ -11,9 +11,8 @@ individuals of CRXMM, whilst also displaying their group project, "Beth Beauty C
 
 ## Usage
 #This Eportfolio runs off the MERN stack.
-#It is currently being hosted on heroku, which requires you to connect a git repo to 
+#It is used to showcase your personal achievements and as a personal advertisment to potential employers. 
 
-@Richard, finish the above line
 
 
 ## Important information if you wish to edit the portfolio
@@ -31,9 +30,6 @@ HomePage.js stores the overall structure of the user interface, and the rest of 
 this folder as well.
 
 
-@crystal/richard pls help
-<p>Connect desired cloud platform to host your site to the master branch</p>
-<p>Connect database to ????</p>
 
 ## API
 Please refer to "API Documentation"
@@ -132,3 +128,4 @@ The secondary test suite is comprosed of End to End tests that utilize puppeteer
 $ npm run e2e
 
 The strength of these tests is that they can simulate the user experience, and given some tweaking in the code can be run with the browser open to visualise the tests running. 
+This project is licensed under the terms of the MIT license.
