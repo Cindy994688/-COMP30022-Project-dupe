@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
 
   var mail = {
     from: name,
-    to: 'cbrazilek@student.unimelb.edu.au',  // Change to email address that you want to receive messages on
+    to: 'chaoweic@student.unimelb.edu.au',  // Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',
     text: content
   }

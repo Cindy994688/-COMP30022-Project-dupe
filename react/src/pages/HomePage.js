@@ -10,11 +10,6 @@ import Snow from './Snow.js'
 import ToggleRight from './ToggleRight.js'
 import AliceCarousel from 'react-alice-carousel'
 import 'react-alice-carousel/lib/alice-carousel.css'
-import ChaoHover from './chaohover.png'
-import RonHover from './ronhover.png'
-import MusHover from './mushover.png'
-import XuHover from './xuhover.png'
-import MengHover from './menghover.png'
 import { Image } from 'react-native';
 import { Link, Element } from 'react-scroll';
 import DarkModeToggle from "react-dark-mode-toggle";
@@ -34,19 +29,19 @@ class HomePage extends Component {
   state = {
     galleryItems: [
     <img src="/image/ChaoWei.jpg" alt="Chao-Wei Chiang on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = ChaoHover)}
+      onMouseOver={e => (e.currentTarget.src = "/image/chaohover.png")}
       onMouseLeave={e => (e.currentTarget.src = "/image/ChaoWei.jpg")}/>,
     <img src="/image/Mengyan.jpg" alt="Meng-Yan Hou on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = MengHover)}
+      onMouseOver={e => (e.currentTarget.src = "/image/menghover.png")}
       onMouseLeave={e => (e.currentTarget.src = "/image/Mengyan.jpg")}/>,
     <img src="/image/MustafaFullBody.jpg" alt="Mustafa Awni on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = MusHover)}
+      onMouseOver={e => (e.currentTarget.src = "/image/mushover.png")}
       onMouseLeave={e => (e.currentTarget.src = "/image/MustafaFullBody.jpg")}/>,
     <img src="/image/Ron.jpg" alt="Ron Chiu on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = RonHover)}
+      onMouseOver={e => (e.currentTarget.src = "/image/ronhover.png")}
       onMouseLeave={e => (e.currentTarget.src = "/image/Ron.jpg")}/>,
     <img src="/image/Xu.jpg" alt="Xu Han on an image carousel"
-      onMouseOver={e => (e.currentTarget.src = XuHover)}
+      onMouseOver={e => (e.currentTarget.src = "/image/xuhover.png")}
       onMouseLeave={e => (e.currentTarget.src = "/image/Xu.jpg")}/>
      ].map((i) => <div key={i}>{i}</div>),
      colourMode: "",
