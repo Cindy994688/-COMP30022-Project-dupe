@@ -127,7 +127,7 @@ class Login extends React.Component{
               />
               <br /><br />
 
-              <button className = "modeButtonDark" onClick={this.handleSubmit}>Login</button>
+              <button className = "modeButtonDark" testID="submitButton" onClick={this.handleSubmit}>Login</button>
 
               </div>
 
@@ -158,11 +158,13 @@ class Login extends React.Component{
 
             <div className = "buttonBox">
               <button
+              testID = "add-proj-btn"
               className = {"modeButtonDark"}
               onClick={this.toEdit}
               >Add Projects</button>
 
               <button
+              testID = "del-proj-btn"
               className = {"modeButtonDark"}
               onClick={this.toDelete}
               >Delete Projects</button>

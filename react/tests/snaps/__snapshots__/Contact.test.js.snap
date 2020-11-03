@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders correctly 1`] = `
+<div>
+  <div
+    className="contactundefined"
+  >
+    <br />
+    <br />
+    <div
+      className="bioTextStableundefined"
+    >
+      If you are interested in any of the projects or information you see on this page, please contact us below, or email us directly through one of the email addresses listed in our profiles. We look forward to hearing from you!  
+      <p />
+       
+    </div>
+    <form
+      action="/email"
+      id="contact-form"
+      method="POST"
+      onSubmit={[Function]}
+    >
+      <div>
+        <div
+          className="bioTextContactundefined"
+        >
+          <label
+            htmlFor="name"
+          >
+            Name
+          </label>
+        </div>
+        <input
+          className="form-controlundefined contactFormundefined"
+          onChange={[Function]}
+          placeholder="Enter Name"
+          type="text"
+          value=""
+        />
+      </div>
+      <div>
+        <div
+          className="bioTextContactundefined"
+        >
+          <label
+            htmlFor="exampleInputEmail1"
+          >
+            Email address
+          </label>
+        </div>
+        <input
+          aria-describedby="emailHelp"
+          className="contactFormundefined"
+          onChange={[Function]}
+          placeholder="Enter Email"
+          type="email"
+          value=""
+        />
+      </div>
+      <div>
+        <div
+          className="bioTextContactundefined"
+        >
+          <label
+            htmlFor="message"
+          >
+            Message
+          </label>
+        </div>
+        <div>
+          <textarea
+            className="messageFormundefined"
+            onChange={[Function]}
+            placeholder="Enter Message"
+            rows="5"
+            value=""
+          />
+        </div>
+      </div>
+      <button
+        className="btnundefined btn-primaryundefined buttonsubmitundefined"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;

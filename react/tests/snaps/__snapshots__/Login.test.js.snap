@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it renders a failure message upon bad imput 1`] = `
+<div
+  className="fullPageDark"
+>
+  <button
+    className="modeButtonDark"
+    onClick={[Function]}
+  >
+    Home
+  </button>
+  <div
+    className="bioTextDark"
+  >
+    <h1
+      className="title"
+    >
+      Login to add and delete projects.
+    </h1>
+    <br />
+    <input
+      name="username"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Username"
+      type="text"
+      value=""
+    />
+    <br />
+    <input
+      name="password"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+    <br />
+    <br />
+    <button
+      className="modeButtonDark"
+      onClick={[Function]}
+      testID="submitButton"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;
+
+exports[`it renders correctly 1`] = `
+<div
+  className="fullPageDark"
+>
+  <button
+    className="modeButtonDark"
+    onClick={[Function]}
+  >
+    Home
+  </button>
+  <div
+    className="bioTextDark"
+  >
+    <h1
+      className="title"
+    >
+      Login to add and delete projects.
+    </h1>
+    <br />
+    <input
+      name="username"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Username"
+      type="text"
+      value=""
+    />
+    <br />
+    <input
+      name="password"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+    <br />
+    <br />
+    <button
+      className="modeButtonDark"
+      onClick={[Function]}
+      testID="submitButton"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;

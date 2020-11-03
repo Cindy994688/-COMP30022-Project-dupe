@@ -92,24 +92,4 @@ class Contact extends React.Component {
 
 
 
-  const styles = StyleSheet.create({
-    MainContainer: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: "50px"
-    },
-    text: {
-      marginTop: 30,
-      fontSize: 40,
-      color: '#43203A',
-      fontFamily: ' "Kaushan", Times, serif',
-      fontWeight: 'bold',
-      alignItems: 'center',
-      padding: "10px",
-      display: 'inline-block',
-      textAlign: 'center'
-    },
-  });
-
 export default Contact;
